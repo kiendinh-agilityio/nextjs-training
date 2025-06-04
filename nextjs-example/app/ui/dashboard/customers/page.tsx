@@ -1,3 +1,1 @@
-export default function Page() {
-  return <p>Customers Page</p>;
-}
+export const Page = () => <p>Customers Page</p>;
