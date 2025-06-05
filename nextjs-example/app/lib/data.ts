@@ -6,31 +6,31 @@ import {
   LatestInvoiceRaw,
   Revenue,
   Invoice,
-} from "./definitions";
-import { formatCurrency } from "./utils";
-import { invoices, customers } from "./placeholder-data";
+} from './definitions';
+import { formatCurrency } from './utils';
+import { invoices, customers } from './placeholder-data';
 
 export const fetchRevenue = async () => {
   try {
     const response = await fetch(
-      "https://683ff7ba5b39a8039a564c58.mockapi.io/revenue",
+      'https://683ff7ba5b39a8039a564c58.mockapi.io/revenue',
       {
-        method: "GET",
+        method: 'GET',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       }
     );
 
     if (!response.ok) {
-      throw new Error("Failed to fetch revenue data");
+      throw new Error('Failed to fetch revenue data');
     }
 
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("API Error:", error);
-    throw new Error("Failed to fetch revenue data.");
+    console.error('API Error:', error);
+    throw new Error('Failed to fetch revenue data.');
   }
 };
 
@@ -52,14 +52,14 @@ export const fetchLatestInvoices = async (): Promise<LatestInvoiceRaw[]> => {
         customer_id: invoice.customer_id,
         amount: invoice.amount,
         date: invoice.date,
-        status: invoice.status as "pending" | "paid", // Type assertion for status
+        status: invoice.status as 'pending' | 'paid', // Type assertion for status
       })
     );
 
     return latestInvoicesRaw;
   } catch (error) {
-    console.error("Error fetching latest invoices:", error);
-    throw new Error("Failed to fetch the latest invoices.");
+    console.error('Error fetching latest invoices:', error);
+    throw new Error('Failed to fetch the latest invoices.');
   }
 };
 
@@ -78,8 +78,8 @@ export const fetchCardData = async () => {
       totalPendingInvoices: formatCurrency(totalPendingInvoices),
     };
   } catch (error) {
-    console.error("Error fetching card data:", error);
-    throw new Error("Failed to fetch card data.");
+    console.error('Error fetching card data:', error);
+    throw new Error('Failed to fetch card data.');
   }
 };
 
@@ -91,63 +91,68 @@ export const fetchFilteredInvoices = async (
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
   try {
-    const response = await fetch(
-      `https://api.example.com/invoices?query=${query}&page=${currentPage}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
+    // Filter invoices based on query
+    const filteredInvoices = invoices.filter((invoice) => {
+      const customer = customers.find((c) => c.id === invoice.customer_id);
+      return (
+        customer?.name.toLowerCase().includes(query.toLowerCase()) ||
+        customer?.email.toLowerCase().includes(query.toLowerCase()) ||
+        invoice.amount.toString().includes(query) ||
+        invoice.status.toLowerCase().includes(query.toLowerCase())
+      );
+    });
+
+    // Sort by date
+    const sortedInvoices = filteredInvoices.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     );
 
-    if (!response.ok) {
-      throw new Error("Failed to fetch invoices");
-    }
+    // Paginate results
+    const paginatedInvoices = sortedInvoices.slice(
+      offset,
+      offset + ITEMS_PER_PAGE
+    );
 
-    const data = await response.json();
-    return data;
+    return paginatedInvoices;
   } catch (error) {
-    console.error("API Error:", error);
-    throw new Error("Failed to fetch invoices.");
+    console.error('Error:', error);
+    throw new Error('Failed to fetch invoices.');
   }
 };
 
 export const fetchInvoicesPages = async (query: string) => {
   try {
-    const response = await fetch(
-      `https://api.example.com/invoices/pages?query=${query}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    // Filter invoices based on query
+    const filteredInvoices = invoices.filter((invoice) => {
+      const customer = customers.find((c) => c.id === invoice.customer_id);
+      return (
+        customer?.name.toLowerCase().includes(query.toLowerCase()) ||
+        customer?.email.toLowerCase().includes(query.toLowerCase()) ||
+        invoice.amount.toString().includes(query) ||
+        invoice.status.toLowerCase().includes(query.toLowerCase())
+      );
+    });
 
-    if (!response.ok) {
-      throw new Error("Failed to fetch invoice pages");
-    }
-
-    const data = await response.json();
-    return data.totalPages;
+    // Calculate total pages
+    const totalPages = Math.ceil(filteredInvoices.length / ITEMS_PER_PAGE);
+    return totalPages;
   } catch (error) {
-    console.error("API Error:", error);
-    throw new Error("Failed to fetch total number of invoices.");
+    console.error('Error:', error);
+    throw new Error('Failed to fetch total number of invoices.');
   }
 };
 
 export const fetchInvoiceById = async (id: string) => {
   try {
     const response = await fetch(`https://api.example.com/invoices/${id}`, {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
 
     if (!response.ok) {
-      throw new Error("Failed to fetch invoice");
+      throw new Error('Failed to fetch invoice');
     }
 
     const data = await response.json();
@@ -156,8 +161,8 @@ export const fetchInvoiceById = async (id: string) => {
       amount: data.amount / 100,
     };
   } catch (error) {
-    console.error("API Error:", error);
-    throw new Error("Failed to fetch invoice.");
+    console.error('API Error:', error);
+    throw new Error('Failed to fetch invoice.');
   }
 };
 
@@ -166,8 +171,8 @@ export const fetchCustomers = async (): Promise<CustomerField[]> => {
     // Return mock customer data instead of fetching from API
     return customers;
   } catch (error) {
-    console.error("Error fetching customers:", error);
-    throw new Error("Failed to fetch all customers.");
+    console.error('Error fetching customers:', error);
+    throw new Error('Failed to fetch all customers.');
   }
 };
 
@@ -176,21 +181,21 @@ export const fetchFilteredCustomers = async (query: string) => {
     const response = await fetch(
       `https://api.example.com/customers?query=${query}`,
       {
-        method: "GET",
+        method: 'GET',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       }
     );
 
     if (!response.ok) {
-      throw new Error("Failed to fetch filtered customers");
+      throw new Error('Failed to fetch filtered customers');
     }
 
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("API Error:", error);
-    throw new Error("Failed to fetch filtered customers.");
+    console.error('API Error:', error);
+    throw new Error('Failed to fetch filtered customers.');
   }
 };
