@@ -142,26 +142,25 @@ export const fetchInvoicesPages = async (query: string) => {
   }
 };
 
-export const fetchInvoiceById = async (id: string) => {
+export const fetchInvoiceById = async (
+  id: string
+): Promise<InvoiceForm | null> => {
   try {
-    const response = await fetch(`https://api.example.com/invoices/${id}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    // Find invoice in mock data
+    const invoice = invoices.find((inv) => inv.id === id);
 
-    if (!response.ok) {
-      throw new Error('Failed to fetch invoice');
+    if (!invoice) {
+      return null;
     }
 
-    const data = await response.json();
     return {
-      ...data,
-      amount: data.amount / 100,
+      id: invoice.id,
+      customer_id: invoice.customer_id,
+      amount: invoice.amount / 100, // Convert cents to dollars
+      status: invoice.status as 'pending' | 'paid',
     };
   } catch (error) {
-    console.error('API Error:', error);
+    console.error('Error:', error);
     throw new Error('Failed to fetch invoice.');
   }
 };
