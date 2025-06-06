@@ -19,7 +19,7 @@ const InvoicesTable = async ({
     const customer = customers.find((c) => c.id === invoice.customer_id);
     return {
       ...invoice,
-      id: `${invoice.customer_id}-${invoice.date}`, // Create a unique id using customer_id and date
+      id: invoice.id, // Use the id from mock data
       name: customer?.name || '',
       email: customer?.email || '',
       image_url: customer?.image_url || '',
