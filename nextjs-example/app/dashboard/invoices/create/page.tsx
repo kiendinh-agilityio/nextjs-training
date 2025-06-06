@@ -1,5 +1,10 @@
 import Form from "@/app/ui/invoices/create-form";
 import { CustomerField } from "@/app/lib/definitions";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Create Invoice",
+};
 
 const customers: CustomerField[] = [];
 
