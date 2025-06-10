@@ -1,6 +1,7 @@
 import "@/app/ui/global.css";
 import { inter } from "@/app/ui/fonts";
 import { Metadata } from "next";
+import { GracefullyDegradingErrorBoundary } from "./dashboard/error";
 
 export const metadata: Metadata = {
   title: {
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
-    <body className={`${inter.className} antialiased`}>{children}</body>
+    <body className={`${inter.className} antialiased`}>
+      <GracefullyDegradingErrorBoundary>
+        {children}
+      </GracefullyDegradingErrorBoundary>
+    </body>
   </html>
 );
 
