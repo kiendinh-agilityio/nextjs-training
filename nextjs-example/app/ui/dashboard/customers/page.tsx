@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import LikeButton from "@/app/ui/like-button";
 import ViewCount from "@/app/ui/view-count";
 import CommentForm from "@/app/ui/comment-form";
+import TravelList from "@/app/ui/dashboard/travel-list";
 
 interface Customer {
   id: string;
@@ -94,5 +95,6 @@ export const Page = () => (
         </Suspense>
       </div>
     </div>
+    <TravelList />
   </>
 );
