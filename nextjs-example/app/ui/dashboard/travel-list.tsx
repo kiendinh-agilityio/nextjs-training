@@ -28,20 +28,25 @@ const TravelList = () => {
   }, [visibleCount]);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
-      {TRAVEL_DATA.slice(0, visibleCount).map((item) => (
-        <TravelCard
-          key={item.id}
-          image={item.image}
-          category={item.category}
-          title={item.title}
-          date={item.date}
-        />
-      ))}
-      {visibleCount < TRAVEL_DATA.length && (
-        <div ref={loadMoreRef} className="col-span-full h-10"></div>
-      )}
-    </div>
+    <>
+      <h1 className="text-center text-4xl font-helveticaBold m-8">
+        Explore Travel Destinations
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+        {TRAVEL_DATA.slice(0, visibleCount).map((item) => (
+          <TravelCard
+            key={item.id}
+            image={item.image}
+            category={item.category}
+            title={item.title}
+            date={item.date}
+          />
+        ))}
+        {visibleCount < TRAVEL_DATA.length && (
+          <div ref={loadMoreRef} className="col-span-full h-10"></div>
+        )}
+      </div>
+    </>
   );
 };
 
