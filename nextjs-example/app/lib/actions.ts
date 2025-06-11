@@ -3,7 +3,7 @@
 import { z } from "zod";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { sql } from "@vercel/postgres";
+import { cookies } from "next/headers";
 
 const FormSchema = z.object({
   customerId: z.string({
@@ -15,6 +15,11 @@ const FormSchema = z.object({
   status: z.enum(["pending", "paid"], {
     invalid_type_error: "Please select an invoice status.",
   }),
+});
+
+const LoginSchema = z.object({
+  email: z.string().email("Please enter a valid email address."),
+  password: z.string().min(6, "Password must be at least 6 characters."),
 });
 
 export type State = {
@@ -69,50 +74,62 @@ export const updateInvoice = async (
   const amountInCents = amount * 100;
 
   try {
-    await sql`
-      UPDATE invoices
-      SET customer_id = ${customerId}, amount = ${amountInCents}, status = ${status}
-      WHERE id = ${id}
-    `;
+    // In a real application, this would update a database
+    // For MockAPI, you might not have an update function directly
+    revalidatePath("/dashboard/invoices");
+    redirect("/dashboard/invoices");
   } catch (error) {
     return { message: "Database Error: Failed to Update Invoice." };
   }
-
-  revalidatePath("/dashboard/invoices");
-  redirect("/dashboard/invoices");
 };
 
-let likes = 0;
+export const authenticate = async (
+  prevState: string | undefined,
+  formData: FormData
+) => {
+  const validatedFields = LoginSchema.safeParse({
+    email: formData.get("email"),
+    password: formData.get("password"),
+  });
 
-export const incrementLike = async () => {
-  likes += 1;
-
-  return likes;
-};
-
-let views = 0;
-
-export const incrementViews = async () => {
-  views += 1;
-  return views;
-};
-
-export const createComment = async (formData: FormData): Promise<void> => {
-  const comment = formData.get("comment");
-
-  if (!comment || typeof comment !== "string") {
-    throw new Error("Comment is required");
+  if (!validatedFields.success) {
+    return "Invalid credentials";
   }
 
-  // Here you would typically insert the comment into your database
-  // For example:
-  // await db.comment.create({
-  //   data: {
-  //     content: comment,
-  //     // other fields...
-  //   }
-  // });
+  const { email, password } = validatedFields.data;
 
-  // Revalidate the page to show the new comment
-  revalidatePath("/blog/[slug]");
+  try {
+    const response = await fetch(
+      "https://683ff7ba5b39a8039a564c58.mockapi.io/login"
+    );
+    const users = await response.json();
+
+    const user = users.find(
+      (u: any) => u.email === email && u.password === password
+    );
+
+    if (!user) {
+      return "Invalid credentials";
+    }
+
+    // Set a cookie to indicate the user is logged in
+    const cookieStore = await cookies();
+    cookieStore.set("token", user.id, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+    });
+  } catch (error) {
+    console.error("Authentication Error:", error);
+    return "Something went wrong";
+  }
+
+  redirect("/dashboard");
+};
+
+export const signOut = async () => {
+  const cookieStore = await cookies();
+  cookieStore.delete("token");
+  redirect("/login");
 };
