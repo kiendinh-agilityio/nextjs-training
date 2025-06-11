@@ -3,7 +3,6 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { lusitana } from "@/app/ui/fonts";
 import Image from "next/image";
-import NavLinks from "@/app/ui/dashboard/nav-links";
 import { headers } from "next/headers";
 import Script from "next/script";
 
@@ -14,9 +13,6 @@ const Page = async () => {
     <main className="flex min-h-screen flex-col p-6">
       <div className="flex flex-col items-start h-auto shrink-0 rounded-lg bg-blue-500 p-4 md:flex-row md:items-end md:h-52 md:justify-between">
         <AcmeLogo />
-        <div className="flex gap-2 md:gap-8">
-          <NavLinks />
-        </div>
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
