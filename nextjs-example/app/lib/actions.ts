@@ -3,7 +3,7 @@
 import { z } from "zod";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { cookies } from "next/headers";
+import { signIn } from "@/app/auth";
 
 const FormSchema = z.object({
   customerId: z.string({
@@ -15,11 +15,6 @@ const FormSchema = z.object({
   status: z.enum(["pending", "paid"], {
     invalid_type_error: "Please select an invoice status.",
   }),
-});
-
-const LoginSchema = z.object({
-  email: z.string().email("Please enter a valid email address."),
-  password: z.string().min(6, "Password must be at least 6 characters."),
 });
 
 export type State = {
@@ -83,53 +78,23 @@ export const updateInvoice = async (
   }
 };
 
-export const authenticate = async (
+export const authenticateUser = async (
   prevState: string | undefined,
   formData: FormData
 ) => {
-  const validatedFields = LoginSchema.safeParse({
-    email: formData.get("email"),
-    password: formData.get("password"),
-  });
-
-  if (!validatedFields.success) {
-    return "Invalid credentials";
-  }
-
-  const { email, password } = validatedFields.data;
-
   try {
-    const response = await fetch(
-      "https://683ff7ba5b39a8039a564c58.mockapi.io/login"
-    );
-    const users = await response.json();
-
-    const user = users.find(
-      (u: any) => u.email === email && u.password === password
-    );
-
-    if (!user) {
-      return "Invalid credentials";
-    }
-
-    // Set a cookie to indicate the user is logged in
-    const cookieStore = await cookies();
-    cookieStore.set("token", user.id, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 60 * 60 * 24 * 7, // 1 week
+    await signIn("credentials", {
+      email: formData.get("email"),
+      password: formData.get("password"),
+      redirect: false,
     });
   } catch (error) {
-    console.error("Authentication Error:", error);
-    return "Something went wrong";
+    if (error instanceof Error) {
+      if (error.message.includes("CredentialsSignin")) {
+        return "Invalid email or password";
+      }
+    }
+    throw error; // Re-throw other errors
   }
-
-  redirect("/dashboard");
-};
-
-export const signOut = async () => {
-  const cookieStore = await cookies();
-  cookieStore.delete("token");
-  redirect("/login");
+  return ""; // Return an empty string on success
 };
