@@ -14,5 +14,109 @@
       "phoneNumber": "098-765-4321",
       "status": "inactive"
     }
+  ],
+  "foods": [
+    {
+      "id": "1",
+      "name": "Royal Cheese Burger with extra Fries",
+      "description": "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium",
+      "price": 12.99,
+      "image": "/foods/fries.png",
+      "category": "Fries",
+      "rating": 4.5,
+      "reviews": 128,
+      "ingredients": [
+        "Beef",
+        "Lettuce",
+        "Tomato",
+        "Onion",
+        "Cheese",
+        "Special Sauce"
+      ],
+      "nutritionalInfo": {
+        "calories": 650,
+        "protein": 35,
+        "carbs": 45,
+        "fat": 38
+      }
+    },
+    {
+      "id": "2",
+      "name": "Royal Cheese Burger with extra Fries",
+      "description": "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium",
+      "price": 14.99,
+      "image": "/foods/cold-drinks.png",
+      "category": "Drink",
+      "rating": 4.7,
+      "reviews": 256,
+      "ingredients": [
+        "Dough",
+        "Tomato Sauce",
+        "Mozzarella",
+        "Basil",
+        "Olive Oil"
+      ],
+      "nutritionalInfo": {
+        "calories": 800,
+        "protein": 25,
+        "carbs": 90,
+        "fat": 30
+      }
+    },
+    {
+      "id": "3",
+      "name": "The classics for 3",
+      "description": "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries , 3 cold drinks",
+      "price": 9.99,
+      "image": "/foods/fries-classic.png",
+      "category": "Fries",
+      "rating": 4.3,
+      "reviews": 89,
+      "ingredients": [
+        "Romaine Lettuce",
+        "Croutons",
+        "Parmesan",
+        "Caesar Dressing"
+      ],
+      "nutritionalInfo": {
+        "calories": 350,
+        "protein": 12,
+        "carbs": 20,
+        "fat": 25
+      }
+    },
+    {
+      "id": "4",
+      "name": "Spicy Chicken Sandwich",
+      "description": "Crispy chicken breast with spicy sauce and pickles on a bun",
+      "price": 10.5,
+      "image": "/foods/burgers.png",
+      "category": "Sandwiches",
+      "rating": 4.6,
+      "reviews": 95,
+      "ingredients": [
+        "Chicken Breast",
+        "Spicy Sauce",
+        "Pickles",
+        "Bun",
+        "Lettuce"
+      ],
+      "nutritionalInfo": {
+        "calories": 580,
+        "protein": 40,
+        "carbs": 40,
+        "fat": 30
+      }
+    }
+  ],
+  "coupons": [
+    {
+      "code": "WELCOME10",
+      "discount": 10
+    },
+    {
+      "code": "FOOD20",
+      "discount": 20
+    }
   ]
 }
