@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { CartState, Food } from "../types";
+import { CartState, Food, CartItem } from "../types";
 
 export const useCartStore = create<CartState>()(
   persist(
@@ -50,3 +50,7 @@ export const useCartStore = create<CartState>()(
     }
   )
 );
+
+// Helper function to calculate cart total
+export const calculateCartTotal = (items: CartItem[]) =>
+  items.reduce((sum, item) => sum + item.price * item.quantity, 0);
