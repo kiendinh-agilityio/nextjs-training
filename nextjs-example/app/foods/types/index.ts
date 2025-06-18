@@ -33,7 +33,13 @@ export interface Order {
   id: string;
   items: CartItem[];
   total: number;
-  status: 'pending' | 'processing' | 'completed' | 'cancelled';
+  status: "pending" | "processing" | "completed" | "cancelled";
   createdAt: string;
   coupon?: string;
+}
+
+export interface CouponState {
+  success: boolean;
+  discount: number;
+  error: string | null;
 }
