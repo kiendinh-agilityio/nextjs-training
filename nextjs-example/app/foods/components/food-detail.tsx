@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useTransition } from "react";
+import { useTransition, useOptimistic } from "react";
 import Image from "next/image";
 import { Minus, Plus } from "lucide-react";
 
@@ -22,6 +22,42 @@ export const FoodDetail = ({ food }: FoodDetailProps) => {
   const [isPending, startTransition] = useTransition();
   const { addItem, removeItem, items } = useCartStore();
   const isInCart = items.some((item) => item.id === food.id);
+
+  // Optimistic state for cart items
+  const [optimisticItems, updateOptimisticItems] = useOptimistic(
+    items,
+    (state, action: { type: "add" | "remove"; item: Food }) => {
+      if (action.type === "add") {
+        const existingItem = state.find((i) => i.id === action.item.id);
+        if (existingItem) {
+          return state.map((i) =>
+            i.id === action.item.id ? { ...i, quantity: i.quantity + 1 } : i
+          );
+        }
+        return [...state, { ...action.item, quantity: 1 }];
+      } else {
+        return state.filter((item) => item.id !== action.item.id);
+      }
+    }
+  );
+
+  const handleCartAction = () => {
+    if (isInCart) {
+      startTransition(() => {
+        updateOptimisticItems({ type: "remove", item: food });
+        removeItem(food.id);
+      });
+    } else {
+      startTransition(() => {
+        updateOptimisticItems({ type: "add", item: food });
+        addItem(food);
+      });
+    }
+  };
+
+  const optimisticIsInCart = optimisticItems.some(
+    (item) => item.id === food.id
+  );
 
   return (
     <Card className="w-full max-w-4xl mx-auto flex flex-col md:flex-row">
@@ -66,16 +102,12 @@ export const FoodDetail = ({ food }: FoodDetailProps) => {
           </span>
           <Button
             className="rounded-full w-12 h-12 p-0 shadow-lg"
-            onClick={() =>
-              startTransition(() =>
-                isInCart ? removeItem(food.id) : addItem(food)
-              )
-            }
+            onClick={handleCartAction}
             disabled={isPending}
           >
             {isPending ? (
               <span className="animate-pulse">...</span>
-            ) : isInCart ? (
+            ) : optimisticIsInCart ? (
               <Minus className="h-6 w-6" />
             ) : (
               <Plus className="h-6 w-6" />

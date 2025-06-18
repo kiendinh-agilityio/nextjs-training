@@ -11,7 +11,7 @@ import {
 import Image from "next/image";
 import { useCartStore } from "../store/cart-store";
 
-export function CartDialog() {
+export const CartDialog = () => {
   const totalItems = useCartStore((state) =>
     state.items.reduce((sum, item) => sum + item.quantity, 0)
   );
@@ -36,4 +36,4 @@ export function CartDialog() {
       </DialogContent>
     </Dialog>
   );
-}
+};
