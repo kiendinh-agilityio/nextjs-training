@@ -18,7 +18,7 @@
   "foods": [
     {
       "id": "1",
-      "name": "Royal Cheese Burger with extra Fries",
+      "name": "Crispy Potato Chips",
       "description": "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium",
       "price": 12.99,
       "image": "/foods/fries.png",
@@ -42,7 +42,7 @@
     },
     {
       "id": "2",
-      "name": "Royal Cheese Burger with extra Fries",
+      "name": "Coke Coca Cola",
       "description": "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium",
       "price": 14.99,
       "image": "/foods/cold-drinks.png",
@@ -65,7 +65,7 @@
     },
     {
       "id": "3",
-      "name": "The classics for 3",
+      "name": "Fried chicken with cheese",
       "description": "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries , 3 cold drinks",
       "price": 9.99,
       "image": "/foods/fries-classic.png",
@@ -87,11 +87,11 @@
     },
     {
       "id": "4",
-      "name": "Spicy Chicken Sandwich",
+      "name": "Royal Cheeseburger",
       "description": "Crispy chicken breast with spicy sauce and pickles on a bun",
       "price": 10.5,
       "image": "/foods/burgers.png",
-      "category": "Sandwiches",
+      "category": "Burgers",
       "rating": 4.6,
       "reviews": 95,
       "ingredients": [
