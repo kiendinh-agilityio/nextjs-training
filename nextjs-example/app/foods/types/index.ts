@@ -43,3 +43,7 @@ export interface CouponState {
   discount: number;
   error: string | null;
 }
+
+export interface Category {
+  name: string;
+}
