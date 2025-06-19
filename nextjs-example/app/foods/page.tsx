@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { getFoods } from "./actions/food-actions";
-import { FoodCard } from "./components/food-card";
 import { CartDialog } from "./components/cart-dialog";
+import { FoodsList } from "./components/foods-list";
 
 const FoodsPage = async () => {
   const foods = await getFoods();
@@ -14,19 +14,8 @@ const FoodsPage = async () => {
           <CartDialog />
         </Suspense>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-3">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {foods.map((food) => (
-              <Suspense key={food.id} fallback={<div>Loading...</div>}>
-                <FoodCard food={food} />
-              </Suspense>
-            ))}
-          </div>
-        </div>
-      </div>
+      <FoodsList initialFoods={foods} />
     </div>
   );
 };
-
 export default FoodsPage;
