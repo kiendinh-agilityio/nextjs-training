@@ -96,24 +96,25 @@ export const Cart = () => {
   };
 
   const handleQuantityChange = (id: string, newQuantity: number) => {
-    if (newQuantity < 1) {
-      updateOptimisticItems({ type: "remove", id });
-
-      removeItem(id);
-    } else {
-      updateOptimisticItems({ type: "update", id, quantity: newQuantity });
-
-      updateQuantity(id, newQuantity);
-    }
+    startTransition(() => {
+      if (newQuantity < 1) {
+        updateOptimisticItems({ type: "remove", id });
+        removeItem(id);
+      } else {
+        updateOptimisticItems({ type: "update", id, quantity: newQuantity });
+        updateQuantity(id, newQuantity);
+      }
+    });
   };
 
   const handleCouponCodeChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setCouponCode(e.target.value);
 
   const handleRemoveItem = (id: string) => {
-    updateOptimisticItems({ type: "remove", id });
-
-    removeItem(id);
+    startTransition(() => {
+      updateOptimisticItems({ type: "remove", id });
+      removeItem(id);
+    });
   };
 
   const handleClearCart = () => clearCart();
