@@ -3,8 +3,12 @@
 import { revalidatePath } from "next/cache";
 import { Food, Order, CouponState } from "../types";
 
-export const getFoods = async (): Promise<Food[]> => {
-  const response = await fetch("http://localhost:3000/api/foods", {
+export const getFoods = async (category?: string): Promise<Food[]> => {
+  let url = "http://localhost:3000/api/foods";
+  if (category) {
+    url += `?category=${encodeURIComponent(category)}`;
+  }
+  const response = await fetch(url, {
     cache: "no-store",
   });
   if (!response.ok) {
