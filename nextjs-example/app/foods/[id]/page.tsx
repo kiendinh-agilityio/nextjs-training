@@ -1,3 +1,4 @@
+import { use } from "react";
 import { getFoodById } from "../actions/food-actions";
 import { FoodDetail } from "../components/food-detail";
 
@@ -7,8 +8,8 @@ interface FoodDetailPageProps {
   };
 }
 
-const FoodDetailPage = async ({ params }: FoodDetailPageProps) => {
-  const food = await getFoodById(params.id);
+const FoodDetailPage = ({ params }: FoodDetailPageProps) => {
+  const food = use(getFoodById(params.id));
 
   return (
     <div className="container mx-auto py-8">
