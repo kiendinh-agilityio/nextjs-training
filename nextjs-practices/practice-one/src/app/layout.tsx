@@ -1,0 +1,32 @@
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+
+// Components
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Food Delivery Website',
+  description: 'Food-Delivery-Website',
+  icons: [
+    {
+      rel: 'icon',
+      url: '/favicon.ico',
+    },
+  ],
+};
+
+const RootLayout = ({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) => {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
+};
+
+export default RootLayout;
