@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { FontPoppins } from '@/lib/fonts';
 
 // Components
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Food Delivery Website',
@@ -24,7 +22,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={FontPoppins.className}>{children}</body>
     </html>
   );
 };
