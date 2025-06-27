@@ -58,6 +58,7 @@ export interface ButtonProps
   asChild?: boolean;
   isLoading?: boolean;
   icon?: React.ReactNode;
+  ariaLabel: string;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -71,6 +72,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       disabled,
       icon,
       children,
+      ariaLabel,
       ...props
     },
     ref,
@@ -81,6 +83,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         disabled={isLoading || disabled}
+        aria-label={ariaLabel}
         {...props}
       >
         {isLoading && <Spinner />}
@@ -90,6 +93,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
+
 Button.displayName = 'Button';
 
 export { Button, buttonVariants };
