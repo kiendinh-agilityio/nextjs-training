@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 
 export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  size?: 'default' | 'sm' | 'lg' | 'xl';
+  size?: 'default' | 'sm' | 'md' | 'lg' | 'xl';
 }
 
 const sizeClasses = {
