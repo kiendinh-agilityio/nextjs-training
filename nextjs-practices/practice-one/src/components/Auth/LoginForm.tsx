@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+
+import { useState, useActionState, startTransition } from 'react';
 import { EyeIcon, EyeOffIcon } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -20,10 +21,36 @@ const LoginForm = () => {
   const router = useRouter();
 
   type FormData = z.infer<typeof loginSchema>;
+
+  // Use useActionState for better state management
+  const [state, formAction, isPending] = useActionState(
+    async (prevState: { error?: string }, formData: FormData) => {
+      try {
+        const res = await userLogin({
+          email: formData.email,
+          password: formData.password,
+        });
+
+        if (res) {
+          return { error: res };
+        }
+
+        // Success - redirect
+        router.push(ROUTERS.HOME);
+        return { error: undefined };
+      } catch {
+        toast.error('Failed to log in. Please try again.');
+
+        return { error: 'Failed to log in. Please try again.' };
+      }
+    },
+    { error: undefined },
+  );
+
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
     setError,
   } = useForm<FormData>({
     resolver: zodResolver(loginSchema),
@@ -33,29 +60,25 @@ const LoginForm = () => {
     setShowPassword((prev) => !prev);
   };
 
-  const onSubmit = async (data: FormData) => {
-    try {
-      const res = await userLogin({
-        email: data.email,
-        password: data.password,
-      });
+  const onSubmit = (data: FormData) => {
+    // Clear previous errors
+    setError('email', { message: '' });
+    setError('password', { message: '' });
 
-      if (res) {
-        setError('email', { message: res });
-        setError('password', { message: '' });
-        return;
-      }
-    } catch {
-      toast.error('Failed to log in. Please try again.');
-      return;
-    }
-
-    router.push(ROUTERS.HOME);
+    // Wrap formAction in startTransition to avoid the async function error
+    startTransition(() => {
+      formAction(data);
+    });
   };
+
+  // Set form errors from action state
+  if (state.error && !errors.email?.message && !errors.password?.message) {
+    setError('password', { message: state.error });
+  }
 
   return (
     <form
-      className="w-full max-w-md space-y-2"
+      className="w-full max-w-md space-y-2 lg:space-y-3"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="flex items-center gap-2 mb-2">
@@ -96,10 +119,10 @@ const LoginForm = () => {
       <Button
         type="submit"
         className="w-full rounded-lg"
-        disabled={isSubmitting}
+        disabled={isPending}
         ariaLabel="Button Login"
       >
-        {isSubmitting ? 'Logging in...' : 'Log In'}
+        {isPending ? 'Logging in...' : 'Log In'}
       </Button>
     </form>
   );
