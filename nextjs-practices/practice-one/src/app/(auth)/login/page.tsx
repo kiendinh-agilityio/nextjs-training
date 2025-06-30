@@ -15,11 +15,11 @@ export const metadata = createMetadata({
   imageAlt: 'Order.uk Login',
 });
 
-const LoginPage = () => {
-  return (
-    <div className="px-4 pt-[27px] md:px-[100px]">
-      <Logo href="/" src="/images/logo.svg" />
-      <div className="border border-muted shadow-base mx-auto mt-60 w-fit rounded-xl p-16">
+const LoginPage = () => (
+  <div className="min-h-screen px-4 pt-[27px] md:px-[100px]">
+    <Logo href="/" src="/images/logo.svg" />
+    <div className="flex items-center justify-center min-h-[calc(100vh-120px)]">
+      <div className="border border-muted shadow-base w-fit rounded-xl p-16 bg-white lg:w-[578px]">
         <Heading size="md" className="text-primary">
           Welcome
         </Heading>
@@ -29,7 +29,7 @@ const LoginPage = () => {
         <LoginForm />
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default LoginPage;
