@@ -1,0 +1,184 @@
+'use client';
+
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+
+import { Logo } from '@/components/common/ui/logo';
+import { Button } from '@/components/common/ui/button';
+import { UserIcon } from '@/components/Icons/UserIcon';
+import { ROUTERS } from '@/constants/router';
+
+const navLinks = [
+  { label: 'Home', href: ROUTERS.HOME },
+  { label: 'Special Offers', href: '/offers', disabled: true },
+  { label: 'Restaurants', href: ROUTERS.SHOP },
+  { label: 'Track Order', href: '/track-order', disabled: true },
+];
+
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const handleToggleMenu = () => setOpen((v) => !v);
+  const handleCloseMenu = () => setOpen(false);
+
+  return (
+    <div className="flex w-full items-center justify-end gap-4 md:gap-8">
+      {/* Desktop Nav */}
+      <div className="flex lg:gap-[24px] xl:gap-[53px]">
+        <nav className="hidden lg:font-medium lg:text-black lg:text-[18px] lg:flex items-center justify-center gap-4 xl:gap-8">
+          {navLinks.map((link) =>
+            link.disabled ? (
+              <Link
+                href="#"
+                key={link.label}
+                className={
+                  'text-black font-medium px-3 py-2 opacity-60 cursor-not-allowed select-none' +
+                  (pathname === link.href
+                    ? ' bg-primary text-white rounded-full font-semibold shadow'
+                    : '')
+                }
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={
+                  pathname === link.href
+                    ? 'bg-primary text-white rounded-full px-6 py-2 font-medium shadow'
+                    : 'text-black font-medium px-3 py-2'
+                }
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
+        </nav>
+
+        {/* Desktop Login/Signup */}
+        <div className="hidden lg:flex">
+          <Link href="/login" className="flex items-center">
+            <Button
+              variant="secondary"
+              className="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33]"
+              icon={<UserIcon />}
+              ariaLabel="Login or Signup"
+              type="button"
+              tabIndex={0}
+            >
+              Login/Signup
+            </Button>
+          </Link>
+        </div>
+      </div>
+
+      {/* Mobile Hamburger */}
+      <button
+        className="lg:hidden ml-auto"
+        aria-label="Toggle menu"
+        onClick={handleToggleMenu}
+      >
+        <svg
+          width="32"
+          height="32"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+
+      {/* Mobile Nav Overlay */}
+      {open && (
+        <button
+          className="lg:hidden fixed inset-0 bg-black bg-opacity-40 z-40"
+          onClick={handleCloseMenu}
+        />
+      )}
+
+      {/* Mobile Nav Drawer */}
+      <nav
+        className={`lg:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-200 ${open ? 'translate-x-0' : 'translate-x-full'}`}
+      >
+        <div className="flex items-center justify-between p-4 border-b">
+          <Logo href="/" src="/images/logo.svg" />
+          <button aria-label="Close menu" onClick={handleCloseMenu}>
+            <svg
+              width="28"
+              height="28"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul className="flex flex-col gap-2 p-4">
+          {navLinks.map((link) => (
+            <li key={link.href || link.label}>
+              {link.disabled ? (
+                <span
+                  className={
+                    'block text-black font-medium px-3 py-2 opacity-60 cursor-not-allowed select-none' +
+                    (pathname === link.href
+                      ? ' bg-orange-500 text-white rounded-full font-semibold shadow'
+                      : '')
+                  }
+                >
+                  {link.label}
+                </span>
+              ) : (
+                <Link
+                  href={link.href}
+                  className={
+                    pathname === link.href
+                      ? 'block bg-orange-500 text-white rounded-full px-6 py-2 font-semibold shadow'
+                      : 'block text-black font-medium px-3 py-2'
+                  }
+                  onClick={handleCloseMenu}
+                >
+                  {link.label}
+                </Link>
+              )}
+            </li>
+          ))}
+          <li className="mt-4">
+            <Link
+              href="/login"
+              onClick={handleCloseMenu}
+              className="flex items-center"
+            >
+              <Button
+                variant="secondary"
+                className="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33] w-full"
+                icon={<UserIcon />}
+                ariaLabel="Login or Signup"
+                type="button"
+                tabIndex={0}
+              >
+                Login/Signup
+              </Button>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;
