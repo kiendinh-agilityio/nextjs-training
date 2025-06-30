@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPage should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="min-h-screen px-4 pt-[27px] md:px-[100px]"
+  >
+    <div
+      data-testid="logo-mock"
+      href="/"
+      src="/images/logo.svg"
+    />
+    <div
+      class="flex items-center justify-center min-h-[calc(100vh-120px)]"
+    >
+      <div
+        class="border border-muted shadow-base w-fit rounded-xl p-16 bg-white lg:w-[578px]"
+      >
+        <h2
+          class="text-primary"
+          data-testid="heading-mock"
+        >
+          Welcome
+        </h2>
+        <p
+          class="text-md font-bold text-[#a0aec0] my-[15px]"
+        >
+          Enter your email and password to log in
+        </p>
+        <form
+          data-testid="login-form-mock"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
