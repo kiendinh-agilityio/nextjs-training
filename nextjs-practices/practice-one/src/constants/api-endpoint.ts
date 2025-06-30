@@ -1,3 +1,1 @@
-export const API_ENDPOINT = {
-  CATEGORY_LIST: 'categories',
-};
+export const AUTH_API_URL = process.env.AUTH_API_URL || '';

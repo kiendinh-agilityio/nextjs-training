@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { FontPoppins } from '@/lib/fonts';
+import Footer from '@/layouts/Footer/footer';
 
 // Components
 import './globals.css';
@@ -22,7 +23,10 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={FontPoppins.className}>{children}</body>
+      <body className={FontPoppins.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 };

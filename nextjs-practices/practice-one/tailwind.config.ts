@@ -31,6 +31,14 @@ const config: Config = {
         semiBold: '600',
         bold: '700',
       },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '6.25rem',
+        },
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
