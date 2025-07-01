@@ -2,12 +2,6 @@ import { ReactNode, HTMLAttributes } from 'react';
 import { render } from '@testing-library/react';
 import LoginPage from './page';
 
-jest.mock('@/components/common/ui/logo', () => ({
-  Logo: (props: HTMLAttributes<HTMLDivElement>) => (
-    <div data-testid="logo-mock" {...props} />
-  ),
-}));
-
 jest.mock('@/components/common/ui/heading', () => ({
   Heading: ({
     children,

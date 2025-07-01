@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { FontPoppins } from '@/lib/fonts';
 import Footer from '@/layouts/Footer/footer';
+import Header from '@/layouts/Header/header';
 
 // Components
 import './globals.css';
@@ -23,8 +24,9 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={FontPoppins.className}>
-        {children}
+      <body className={`${FontPoppins.className} flex flex-col min-h-screen`}>
+        <Header />
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>

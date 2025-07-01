@@ -6,11 +6,6 @@ exports[`LoginPage should match snapshot 1`] = `
     class="min-h-screen px-4 pt-[27px] md:px-[100px]"
   >
     <div
-      data-testid="logo-mock"
-      href="/"
-      src="/images/logo.svg"
-    />
-    <div
       class="flex items-center justify-center min-h-[calc(100vh-120px)]"
     >
       <div
