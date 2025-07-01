@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const Footer = () => (
-  <footer className="bg-secondary">
+  <footer className="bg-secondary mt-[45px]">
     <div className="container py-[31px] flex flex-col items-center xl:flex-row xl:justify-between">
       <p className="text-white text-[15px] text-center md:text-left w-full md:w-auto">
         Order.uk Copyright 2025, All Rights Reserved.
