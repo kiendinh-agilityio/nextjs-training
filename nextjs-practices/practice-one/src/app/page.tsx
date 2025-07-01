@@ -1,11 +1,10 @@
-import { Heading } from '@/components/common/ui/heading';
+import { HeroSection, PromotionsSection } from '@/components/Home';
 
 const Homepage = () => {
   return (
-    <main className="container mx-auto">
-      <Heading as="h1" size="xl">
-        Feast Your Senses, <span className="text-primary">Fast and Fresh</span>
-      </Heading>
+    <main className="container mx-auto lg:px-0">
+      <HeroSection />
+      <PromotionsSection />
     </main>
   );
 };
