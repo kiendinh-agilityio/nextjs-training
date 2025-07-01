@@ -39,3 +39,12 @@
     box-shadow: var(--shadow-card);
   }
 }
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
