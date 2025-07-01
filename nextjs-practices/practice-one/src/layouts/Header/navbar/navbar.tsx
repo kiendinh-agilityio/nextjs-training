@@ -7,14 +7,7 @@ import Link from 'next/link';
 import { Logo } from '@/components/common/ui/logo';
 import { Button } from '@/components/common/ui/button';
 import { UserIcon } from '@/components/Icons/UserIcon';
-import { ROUTERS } from '@/constants/router';
-
-const navLinks = [
-  { label: 'Home', href: ROUTERS.HOME },
-  { label: 'Special Offers', href: '/offers', disabled: true },
-  { label: 'Restaurants', href: ROUTERS.SHOP },
-  { label: 'Track Order', href: '/track-order', disabled: true },
-];
+import { NAV_LINKS } from '@/constants/nav-links';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -27,8 +20,11 @@ const Navbar = () => {
     <div className="flex w-full items-center justify-end gap-4 md:gap-8">
       {/* Desktop Nav */}
       <div className="flex lg:gap-[24px] xl:gap-[53px]">
-        <nav className="hidden lg:font-medium lg:text-black lg:text-[18px] lg:flex items-center justify-center gap-4 xl:gap-8">
-          {navLinks.map((link) =>
+        <nav
+          data-testid="desktop-nav"
+          className="hidden lg:font-medium lg:text-black lg:text-[18px] lg:flex items-center justify-center gap-4 xl:gap-8"
+        >
+          {NAV_LINKS.map((link) =>
             link.disabled ? (
               <Link
                 href="#"
@@ -107,6 +103,7 @@ const Navbar = () => {
 
       {/* Mobile Nav Drawer */}
       <nav
+        data-testid="mobile-nav"
         className={`lg:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-200 ${open ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="flex items-center justify-between p-4 border-b">
@@ -129,7 +126,7 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="flex flex-col gap-2 p-4">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <li key={link.href || link.label}>
               {link.disabled ? (
                 <span
