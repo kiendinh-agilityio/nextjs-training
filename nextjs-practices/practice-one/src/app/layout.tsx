@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { FontPoppins } from '@/lib/fonts';
 import Footer from '@/layouts/Footer/footer';
 import Header from '@/layouts/Header/header';
+import { SessionProvider } from 'next-auth/react';
 
 // Components
 import './globals.css';
@@ -25,9 +26,11 @@ const RootLayout = ({
   return (
     <html lang="en">
       <body className={`${FontPoppins.className} flex flex-col min-h-screen`}>
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <SessionProvider>
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </SessionProvider>
       </body>
     </html>
   );
