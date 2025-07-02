@@ -29,4 +29,5 @@ export const ArrowRightIcon = (props: React.SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 );
+
 export default ArrowRightIcon;
