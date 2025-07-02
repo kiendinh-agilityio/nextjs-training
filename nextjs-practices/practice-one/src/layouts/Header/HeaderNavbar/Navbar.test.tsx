@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { usePathname } from 'next/navigation';
 
 import { NAV_LINKS } from '@/constants/nav-links';
-import Navbar from './Navbar';
+import Navbar from './HeaderNavbar';
 
 jest.mock('@/components/common/ui/logo', () => ({
   Logo: (props: React.ComponentPropsWithoutRef<'div'>) => (
