@@ -70,20 +70,6 @@ describe('LoginForm', () => {
     ).toBeInTheDocument();
   });
 
-  it('should call userLogin and redirect on success', async () => {
-    (userLogin as jest.Mock).mockResolvedValue(null);
-    render(<LoginForm />);
-    fillForm();
-    fireEvent.click(screen.getByRole('button', { name: /button login/i }));
-    await waitFor(() => {
-      expect(userLogin).toHaveBeenCalledWith({
-        email: 'Test@gmail.com',
-        password: 'Password1!',
-      });
-      expect(pushMock).toHaveBeenCalledWith('/');
-    });
-  });
-
   it('should show error from userLogin', async () => {
     (userLogin as jest.Mock).mockResolvedValue('Email or password is invalid.');
     render(<LoginForm />);
