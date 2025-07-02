@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfilePage UI should render loading state and match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container px-0 min-h-screen flex flex-col items-start pt-12"
+  >
+    <div
+      class="mb-8 h-10 w-32 rounded"
+      data-testid="skeleton-mock"
+    />
+    <div
+      class="bg-white rounded-xl border border-muted shadow-base px-8 py-6 mb-6 min-w-[400px]"
+    >
+      <div
+        class="h-6 w-20 mb-2 rounded"
+        data-testid="skeleton-mock"
+      />
+      <div
+        class="h-6 w-48 rounded"
+        data-testid="skeleton-mock"
+      />
+    </div>
+    <div
+      class="px-6 py-2 rounded-md w-[140px] h-12"
+      data-testid="skeleton-mock"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProfilePage UI should render nothing if no session or no email 1`] = `<DocumentFragment />`;
+
+exports[`ProfilePage UI should render profile info and logout button, match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container px-0 min-h-screen flex flex-col items-start pt-12"
+  >
+    <h1
+      as="h1"
+      class="mb-8"
+      data-testid="heading-mock"
+    >
+      Profile
+    </h1>
+    <div
+      class="bg-white rounded-xl border border-muted shadow-base px-8 py-6 mb-6 min-w-[400px]"
+    >
+      <p
+        class="font-bold text-lg mb-2"
+      >
+        Email
+      </p>
+      <p
+        class="text-gray-500 text-base"
+      >
+        test@example.com
+      </p>
+    </div>
+    <button
+      aria-label="Logout"
+      class="px-6 py-2 rounded-md"
+      data-testid="button-mock"
+      type="submit"
+      variant="primary"
+    >
+      Logout
+    </button>
+  </div>
+</DocumentFragment>
+`;
