@@ -1,5 +1,5 @@
 import { Logo } from '@/components/common/ui/logo';
-import Navbar from './HeaderNavbar/HeaderNavbar';
+import Navbar from './Navbar/Navbar';
 
 const Header = () => (
   <header className="w-full border-b bg-white">
