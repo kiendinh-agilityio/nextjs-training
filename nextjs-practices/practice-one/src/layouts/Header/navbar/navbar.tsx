@@ -101,7 +101,7 @@ const Navbar = () => {
         />
       )}
 
-      {/* Mobile Nav Drawer */}
+      {/* Mobile Nav */}
       <nav
         data-testid="mobile-nav"
         className={`lg:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-200 ${open ? 'translate-x-0' : 'translate-x-full'}`}
