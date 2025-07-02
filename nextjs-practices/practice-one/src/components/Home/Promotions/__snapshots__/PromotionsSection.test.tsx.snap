@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PromotionsSection should match snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="mt-[29px] mb-[23px] lg:mt-[54px]"
+  >
+    <h2
+      class="text-[16px] lg:text-[32px] lg:leading-[32px] font-bold mb-[30px] lg:mb-[54px]"
+    >
+      Up to -40% Discount Offers 🎊
+    </h2>
+    <div
+      class="-mx-4 px-4 flex flex-row gap-[14px] overflow-x-auto scroll-snap-x [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:overflow-hidden lg:justify-between"
+    >
+      <div
+        class="flex flex-col items-start min-w-[150px] w-[150px] flex-shrink-0 scroll-snap-start md:w-[225px] lg:w-[325px] xl:w-[400px] 2xl:w-[496px] lg:relative"
+      >
+        <ul
+          class="relative rounded-[12px] overflow-hidden shadow-md w-full"
+        >
+          <li>
+            <img
+              alt="Chef Burgers London"
+              class="w-full h-[150px] lg:h-[325px] object-cover"
+              data-nimg="1"
+              decoding="async"
+              height="325"
+              sizes="(max-width: 1024px) 150px, 325px"
+              src="/_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=3840&q=75 3840w"
+              style="color: transparent;"
+              width="496"
+            />
+          </li>
+          <li
+            class="absolute top-0 right-0 mr-[16px] bg-secondary text-white text-[15px] font-bold px-[5px] py-[8px] rounded-bl-[4px] rounded-br-[4px] lg:text-[18px] lg:leading-[18px] lg:px-[17px] lg:pt-[21px] lg:pb-[18px] lg:mr-[24px]"
+          >
+            -40%
+          </li>
+        </ul>
+        <div
+          class="font-bold text-[13px] leading-[17px] mt-[10px] lg:text-[24px] lg:leading-[24px] lg:absolute lg:bottom-0 lg:px-[36px] lg:py-[46px]"
+        >
+          <p
+            class="text-primary mb-[2px] lg:mb-[6px]"
+          >
+            Restaurant
+          </p>
+          <p
+            class="text-secondary lg:text-white"
+          >
+            Chef Burgers London
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-start min-w-[150px] w-[150px] flex-shrink-0 scroll-snap-start md:w-[225px] lg:w-[325px] xl:w-[400px] 2xl:w-[496px] lg:relative"
+      >
+        <ul
+          class="relative rounded-[12px] overflow-hidden shadow-md w-full"
+        >
+          <li>
+            <img
+              alt="Grand Ai Cafe London"
+              class="w-full h-[150px] lg:h-[325px] object-cover"
+              data-nimg="1"
+              decoding="async"
+              height="325"
+              sizes="(max-width: 1024px) 150px, 325px"
+              src="/_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fpromotions-image-two.webp&w=3840&q=75 3840w"
+              style="color: transparent;"
+              width="496"
+            />
+          </li>
+          <li
+            class="absolute top-0 right-0 mr-[16px] bg-secondary text-white text-[15px] font-bold px-[5px] py-[8px] rounded-bl-[4px] rounded-br-[4px] lg:text-[18px] lg:leading-[18px] lg:px-[17px] lg:pt-[21px] lg:pb-[18px] lg:mr-[24px]"
+          >
+            -20%
+          </li>
+        </ul>
+        <div
+          class="font-bold text-[13px] leading-[17px] mt-[10px] lg:text-[24px] lg:leading-[24px] lg:absolute lg:bottom-0 lg:px-[36px] lg:py-[46px]"
+        >
+          <p
+            class="text-primary mb-[2px] lg:mb-[6px]"
+          >
+            Restaurant
+          </p>
+          <p
+            class="text-secondary lg:text-white"
+          >
+            Grand Ai Cafe London
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-start min-w-[150px] w-[150px] flex-shrink-0 scroll-snap-start md:w-[225px] lg:w-[325px] xl:w-[400px] 2xl:w-[496px] lg:relative"
+      >
+        <ul
+          class="relative rounded-[12px] overflow-hidden shadow-md w-full"
+        >
+          <li>
+            <img
+              alt="Butterbrot Caf'e London"
+              class="w-full h-[150px] lg:h-[325px] object-cover"
+              data-nimg="1"
+              decoding="async"
+              height="325"
+              sizes="(max-width: 1024px) 150px, 325px"
+              src="/_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fpromotions-image-one.webp&w=3840&q=75 3840w"
+              style="color: transparent;"
+              width="496"
+            />
+          </li>
+          <li
+            class="absolute top-0 right-0 mr-[16px] bg-secondary text-white text-[15px] font-bold px-[5px] py-[8px] rounded-bl-[4px] rounded-br-[4px] lg:text-[18px] lg:leading-[18px] lg:px-[17px] lg:pt-[21px] lg:pb-[18px] lg:mr-[24px]"
+          >
+            -17%
+          </li>
+        </ul>
+        <div
+          class="font-bold text-[13px] leading-[17px] mt-[10px] lg:text-[24px] lg:leading-[24px] lg:absolute lg:bottom-0 lg:px-[36px] lg:py-[46px]"
+        >
+          <p
+            class="text-primary mb-[2px] lg:mb-[6px]"
+          >
+            Restaurant
+          </p>
+          <p
+            class="text-secondary lg:text-white"
+          >
+            Butterbrot Caf'e London
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

@@ -18,6 +18,7 @@ const config: Config = {
       },
       borderColor: {
         base: 'var(--border-base)',
+        sm: 'var(--border-sm)',
       },
       boxShadow: {
         base: 'var(--shadow-base)',
@@ -34,7 +35,7 @@ const config: Config = {
       container: {
         center: true,
         padding: {
-          DEFAULT: '1rem',
+          DEFAULT: '11px',
           sm: '2rem',
           lg: '6.25rem',
         },
