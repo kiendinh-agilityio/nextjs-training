@@ -2,7 +2,6 @@
 
 import { useState, useActionState, startTransition } from 'react';
 import { EyeIcon, EyeOffIcon } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
@@ -18,7 +17,6 @@ import { userLogin } from '@/actions/auth';
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const router = useRouter();
 
   type FormData = z.infer<typeof loginSchema>;
 
@@ -36,7 +34,7 @@ const LoginForm = () => {
         }
 
         // Success - redirect
-        router.push(ROUTERS.HOME);
+        window.location.href = ROUTERS.HOME;
         return { error: undefined };
       } catch {
         toast.error('Failed to log in. Please try again.');
