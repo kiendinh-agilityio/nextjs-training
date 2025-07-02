@@ -40,22 +40,17 @@ exports[`Navbar should match snapshot 1`] = `
       <div
         class="hidden lg:flex"
       >
-        <a
-          class="flex items-center"
-          href="/login"
+        <button
+          aria-label="Login or Signup"
+          class="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33]"
+          data-testid="button-mock"
+          icon="[object Object]"
+          tabindex="0"
+          type="button"
+          variant="secondary"
         >
-          <button
-            aria-label="Login or Signup"
-            class="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33]"
-            data-testid="button-mock"
-            icon="[object Object]"
-            tabindex="0"
-            type="button"
-            variant="secondary"
-          >
-            Login/Signup
-          </button>
-        </a>
+          Login/Signup
+        </button>
       </div>
     </div>
     <button
@@ -144,22 +139,17 @@ exports[`Navbar should match snapshot 1`] = `
         <li
           class="mt-4"
         >
-          <a
-            class="flex items-center"
-            href="/login"
+          <button
+            aria-label="Login or Signup"
+            class="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33] w-full"
+            data-testid="button-mock"
+            icon="[object Object]"
+            tabindex="0"
+            type="button"
+            variant="secondary"
           >
-            <button
-              aria-label="Login or Signup"
-              class="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33] w-full"
-              data-testid="button-mock"
-              icon="[object Object]"
-              tabindex="0"
-              type="button"
-              variant="secondary"
-            >
-              Login/Signup
-            </button>
-          </a>
+            Login/Signup
+          </button>
         </li>
       </ul>
     </nav>
