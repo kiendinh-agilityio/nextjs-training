@@ -31,6 +31,18 @@ jest.mock('@/components/Icons/UserIcon', () => ({
 
 jest.mock('next/navigation', () => ({
   usePathname: jest.fn(),
+  useRouter: () => ({
+    push: jest.fn(),
+    replace: jest.fn(),
+    prefetch: jest.fn(),
+  }),
+}));
+
+jest.mock('next-auth/react', () => ({
+  useSession: () => ({
+    data: null,
+    status: 'unauthenticated',
+  }),
 }));
 
 describe('Navbar', () => {

@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 
 import { Logo } from '@/components/common/ui/logo';
 import { Button } from '@/components/common/ui/button';
@@ -12,9 +13,20 @@ import { NAV_LINKS } from '@/constants/nav-links';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+  const { data: session } = useSession();
 
   const handleToggleMenu = () => setOpen((v) => !v);
   const handleCloseMenu = () => setOpen(false);
+
+  const handleLoginClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (session && session.user?.email) {
+      router.push('/profile');
+    } else {
+      router.push('/login');
+    }
+  };
 
   return (
     <div className="flex w-full items-center justify-end gap-4 md:gap-8">
@@ -56,18 +68,17 @@ const Navbar = () => {
 
         {/* Desktop Login/Signup */}
         <div className="hidden lg:flex">
-          <Link href="/login" className="flex items-center">
-            <Button
-              variant="secondary"
-              className="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33]"
-              icon={<UserIcon />}
-              ariaLabel="Login or Signup"
-              type="button"
-              tabIndex={0}
-            >
-              Login/Signup
-            </Button>
-          </Link>
+          <Button
+            variant="secondary"
+            className="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33]"
+            icon={<UserIcon />}
+            ariaLabel="Login or Signup"
+            type="button"
+            tabIndex={0}
+            onClick={handleLoginClick}
+          >
+            Login/Signup
+          </Button>
         </div>
       </div>
 
@@ -155,22 +166,17 @@ const Navbar = () => {
             </li>
           ))}
           <li className="mt-4">
-            <Link
-              href="/login"
-              onClick={handleCloseMenu}
-              className="flex items-center"
+            <Button
+              variant="secondary"
+              className="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33] w-full"
+              icon={<UserIcon />}
+              ariaLabel="Login or Signup"
+              type="button"
+              tabIndex={0}
+              onClick={handleLoginClick}
             >
-              <Button
-                variant="secondary"
-                className="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33] w-full"
-                icon={<UserIcon />}
-                ariaLabel="Login or Signup"
-                type="button"
-                tabIndex={0}
-              >
-                Login/Signup
-              </Button>
-            </Link>
+              Login/Signup
+            </Button>
           </li>
         </ul>
       </nav>
