@@ -8,7 +8,7 @@ exports[`RestaurantHeaderSection (Restaurants) should match snapshot 1`] = `
     <h2
       class="text-[16px] lg:text-[32px] lg:leading-[32px] font-bold mb-8 lg:mb-0"
     >
-      All Offers from McDonald's East London
+      All Offers from McDonald’s East London
     </h2>
     <div
       class="w-full lg:max-w-[344px]"
