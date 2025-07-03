@@ -40,6 +40,9 @@ const config: Config = {
           lg: '6.25rem',
         },
       },
+      backgroundImage: {
+        'hero-restaurant': "url('/images/bg-hero-restaurant.webp')",
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
