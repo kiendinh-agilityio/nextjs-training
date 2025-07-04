@@ -37,21 +37,20 @@ exports[`Navbar should match snapshot 1`] = `
           Track Order
         </a>
       </nav>
-      <div
-        class="hidden lg:flex"
+      <a
+        aria-label="Login or Signup"
+        class="hidden rounded-full px-[25px] py-[17px] font-medium gap-2 bg-secondary text-white hover:bg-[#1a1f33] lg:flex items-center transition-colors"
+        href="/login"
       >
-        <button
-          aria-label="Login or Signup"
-          class="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33]"
-          data-testid="button-mock"
-          icon="[object Object]"
-          tabindex="0"
-          type="button"
-          variant="secondary"
+        <svg
+          data-testid="usericon-mock"
+        />
+        <span
+          class="ml-2"
         >
           Login/Signup
-        </button>
-      </div>
+        </span>
+      </a>
     </div>
     <button
       aria-label="Toggle menu"
@@ -136,21 +135,20 @@ exports[`Navbar should match snapshot 1`] = `
             Track Order
           </span>
         </li>
-        <li
-          class="mt-4"
+        <a
+          aria-label="Login or Signup"
+          class="rounded-full px-[25px] py-[17px] font-medium gap-2 bg-secondary text-white hover:bg-[#1a1f33] w-full flex items-center justify-center transition-colors mt-2"
+          href="/login"
         >
-          <button
-            aria-label="Login or Signup"
-            class="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33] w-full"
-            data-testid="button-mock"
-            icon="[object Object]"
-            tabindex="0"
-            type="button"
-            variant="secondary"
+          <svg
+            data-testid="usericon-mock"
+          />
+          <span
+            class="ml-2"
           >
             Login/Signup
-          </button>
-        </li>
+          </span>
+        </a>
       </ul>
     </nav>
   </div>
