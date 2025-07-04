@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RestaurantsCard should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="text-card-foreground flex py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px]"
+  >
+    <div
+      class="flex-1 text-black"
+    >
+      <p
+        class="text-xl leading-[23px] font-semiBold mb-[24px]"
+      >
+        Pizza
+      </p>
+      <p
+        class="font-base text-sm leading-[25px] mb-[15px]"
+      >
+        Delicious pizza
+      </p>
+      <p
+        class="font-bold text-lg leading-[18px]"
+      >
+        GDP 10
+      </p>
+    </div>
+    <div
+      class="relative w-40 h-40 flex-shrink-0"
+    >
+      <img
+        alt="Pizza"
+        class="object-cover rounded-xl"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        sizes="100vw"
+        src="/_next/image?url=%2Fpizza.jpg&w=3840&q=75"
+        srcset="/_next/image?url=%2Fpizza.jpg&w=640&q=75 640w, /_next/image?url=%2Fpizza.jpg&w=750&q=75 750w, /_next/image?url=%2Fpizza.jpg&w=828&q=75 828w, /_next/image?url=%2Fpizza.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fpizza.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fpizza.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fpizza.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fpizza.jpg&w=3840&q=75 3840w"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      />
+      <div
+        class="absolute bottom-2 right-2 bg-white/70 rounded-full p-2 shadow"
+      >
+        <span
+          class="block w-6 h-6 text-2xl text-black flex items-center justify-center"
+        >
+          +
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
