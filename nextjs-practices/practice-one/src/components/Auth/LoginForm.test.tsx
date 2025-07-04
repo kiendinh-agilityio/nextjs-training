@@ -1,6 +1,16 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import LoginForm from './LoginForm';
+import { signIn } from 'next-auth/react';
+import { toast } from 'sonner';
+
+jest.mock('next-auth/react', () => ({
+  useSession: jest.fn(() => ({
+    data: null,
+    status: 'unauthenticated',
+  })),
+  signIn: jest.fn(),
+}));
 
 // Mock next/navigation useRouter
 const pushMock = jest.fn();
@@ -8,18 +18,10 @@ jest.mock('next/navigation', () => ({
   useRouter: jest.fn(() => ({ push: pushMock })),
 }));
 
-// Mock userLogin action
-jest.mock('@/actions/auth', () => ({
-  userLogin: jest.fn(),
-}));
-
 // Mock toast from sonner
 jest.mock('sonner', () => ({
   toast: { error: jest.fn() },
 }));
-
-import { userLogin } from '@/actions/auth';
-import { toast } from 'sonner';
 
 const fillForm = (email = 'Test@gmail.com', password = 'Password1!') => {
   fireEvent.change(screen.getByPlaceholderText(/email/i), {
@@ -70,8 +72,10 @@ describe('LoginForm', () => {
     ).toBeInTheDocument();
   });
 
-  it('should show error from userLogin', async () => {
-    (userLogin as jest.Mock).mockResolvedValue('Email or password is invalid.');
+  it('should show error from signIn', async () => {
+    (signIn as jest.Mock).mockResolvedValue({
+      error: 'Email or password is invalid.',
+    });
     render(<LoginForm />);
     fillForm();
     fireEvent.click(screen.getByRole('button', { name: /button login/i }));
@@ -81,7 +85,7 @@ describe('LoginForm', () => {
   });
 
   it('should show toast error on exception', async () => {
-    (userLogin as jest.Mock).mockImplementation(() => {
+    (signIn as jest.Mock).mockImplementation(() => {
       throw new Error('Network error');
     });
     render(<LoginForm />);

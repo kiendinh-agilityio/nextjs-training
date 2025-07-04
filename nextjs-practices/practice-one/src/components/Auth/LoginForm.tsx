@@ -6,6 +6,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { z } from 'zod';
+import { useRouter } from 'next/navigation';
+import { signIn } from 'next-auth/react';
 
 import { ROUTERS } from '@/constants/router';
 
@@ -13,10 +15,10 @@ import { Button } from '@/components/common/ui/button';
 import { Input } from '@/components/common/ui/input';
 
 import { loginSchema } from '@/lib/schema';
-import { userLogin } from '@/actions/auth';
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
 
   type FormData = z.infer<typeof loginSchema>;
 
@@ -24,21 +26,19 @@ const LoginForm = () => {
   const [state, formAction, isPending] = useActionState(
     async (prevState: { error?: string }, formData: FormData) => {
       try {
-        const res = await userLogin({
+        const res = await signIn('credentials', {
           email: formData.email,
           password: formData.password,
+          redirect: false,
         });
-
-        if (res) {
-          return { error: res };
+        if (res?.error) {
+          return { error: res.error };
         }
-
         // Success - redirect
-        window.location.href = ROUTERS.HOME;
+        router.push(ROUTERS.HOME);
         return { error: undefined };
       } catch {
         toast.error('Failed to log in. Please try again.');
-
         return { error: 'Failed to log in. Please try again.' };
       }
     },
