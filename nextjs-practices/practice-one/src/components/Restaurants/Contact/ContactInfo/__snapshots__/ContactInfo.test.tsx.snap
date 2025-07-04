@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactInfo should render correctly and match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="test-container"
+  >
+    <p
+      class="flex items-center gap-[22px] mb-[22px] font-bold text-xl leading-[48px] 2xl:text-[32px] lg:gap-[15px] test-title"
+    >
+      <svg
+        data-testid="icon"
+      />
+      Test Title
+    </p>
+    <ul
+      class="test-list"
+    >
+      <li>
+        <span>
+          Item 1
+        </span>
+      </li>
+      <li>
+        <span>
+          Item 2
+        </span>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

@@ -16,7 +16,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     const inputName = name ?? id ?? 'input';
     const sizeClass =
       inputSize === 'xl'
-        ? 'rounded-[120px] md:px-[28px] px-3 py-2 md:py-[19px]'
+        ? 'rounded-[120px] md:px-[28px] px-3 py-2'
         : 'rounded-[12px] px-3 py-2';
     return (
       <div
