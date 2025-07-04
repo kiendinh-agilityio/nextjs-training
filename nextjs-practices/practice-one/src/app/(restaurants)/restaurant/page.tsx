@@ -1,10 +1,15 @@
-import { HeroSection, RestaurantHeaderSection } from '@/components/Restaurants';
+import {
+  HeroSection,
+  RestaurantHeaderSection,
+  ContactSection,
+} from '@/components/Restaurants';
 
 const RestaurantPage = () => (
-  <div className="min-h-screen">
+  <>
     <HeroSection />
     <RestaurantHeaderSection />
-  </div>
+    <ContactSection />
+  </>
 );
 
 export default RestaurantPage;
