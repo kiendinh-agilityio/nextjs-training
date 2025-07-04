@@ -4,3 +4,6 @@ export { default as SnapchatIcon } from './SnapchatIcon';
 export { default as TiktokIcon } from './TiktokIcon';
 export { default as MotoIcon } from './MotoIcon';
 export { default as OrderCompletedIcon } from './OrderCompletedIcon';
+export { default as ClockIcon } from './ClockIcon';
+export { default as IDVerifyIcon } from './IDVerifyIcon';
+export { default as TrackingIcon } from './TrackingIcon';
