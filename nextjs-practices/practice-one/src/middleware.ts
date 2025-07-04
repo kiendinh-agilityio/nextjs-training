@@ -9,7 +9,15 @@ const generateNonce = () => {
   return btoa(String.fromCharCode(...array));
 };
 
-export default auth((_req: NextRequest) => {
+export const middleware = auth(async (req: NextRequest) => {
+  if (req.nextUrl.pathname === '/profile') {
+    // @ts-expect-error: auth wrapper injects req.auth
+    if (!req.auth || !req.auth.user) {
+      const loginUrl = new URL('/login', req.url);
+      return NextResponse.redirect(loginUrl);
+    }
+  }
+
   // Generate a unique nonce for each request (Edge Runtime compatible)
   const nonce = generateNonce();
 
@@ -56,5 +64,6 @@ export const config = {
         { type: 'header', key: 'purpose', value: 'prefetch' },
       ],
     },
+    '/profile',
   ],
 };

@@ -25,7 +25,10 @@ const ProfilePage = () => {
       </div>
     );
   }
-  if (!session || !session.user?.email) return null;
+
+  if (!session || !session.user?.email) {
+    return null;
+  }
 
   const handleLogout = async () => {
     setIsLoggingOut(true);

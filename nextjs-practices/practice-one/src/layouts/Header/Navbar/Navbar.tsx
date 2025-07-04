@@ -1,32 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 
 import { Logo } from '@/components/common/ui/logo';
-import { Button } from '@/components/common/ui/button';
 import { UserIcon } from '@/components/Icons/UserIcon';
 import { NAV_LINKS } from '@/constants/nav-links';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
   const { data: session } = useSession();
 
   const handleToggleMenu = () => setOpen((v) => !v);
   const handleCloseMenu = () => setOpen(false);
-
-  const handleLoginClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (session && session.user?.email) {
-      router.push('/profile');
-    } else {
-      router.push('/login');
-    }
-  };
 
   return (
     <div className="flex w-full items-center justify-end gap-4 md:gap-8">
@@ -67,19 +56,14 @@ const Navbar = () => {
         </nav>
 
         {/* Desktop Login/Signup */}
-        <div className="hidden lg:flex">
-          <Button
-            variant="secondary"
-            className="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33]"
-            icon={<UserIcon />}
-            ariaLabel="Login or Signup"
-            type="button"
-            tabIndex={0}
-            onClick={handleLoginClick}
-          >
-            Login/Signup
-          </Button>
-        </div>
+        <Link
+          href={session && session.user?.email ? '/profile' : '/login'}
+          className="hidden rounded-full px-[25px] py-[17px] font-medium gap-2 bg-secondary text-white hover:bg-[#1a1f33] lg:flex items-center transition-colors"
+          aria-label="Login or Signup"
+        >
+          <UserIcon />
+          <span className="ml-2">Login/Signup</span>
+        </Link>
       </div>
 
       {/* Mobile Hamburger */}
@@ -165,19 +149,15 @@ const Navbar = () => {
               )}
             </li>
           ))}
-          <li className="mt-4">
-            <Button
-              variant="secondary"
-              className="rounded-full px-6 py-2 font-semibold gap-2 bg-[#0A0C1B] text-white hover:bg-[#1a1f33] w-full"
-              icon={<UserIcon />}
-              ariaLabel="Login or Signup"
-              type="button"
-              tabIndex={0}
-              onClick={handleLoginClick}
-            >
-              Login/Signup
-            </Button>
-          </li>
+          <Link
+            href={session && session.user?.email ? '/profile' : '/login'}
+            className="rounded-full px-[25px] py-[17px] font-medium gap-2 bg-secondary text-white hover:bg-[#1a1f33] w-full flex items-center justify-center transition-colors mt-2"
+            aria-label="Login or Signup"
+            onClick={handleCloseMenu}
+          >
+            <UserIcon />
+            <span className="ml-2">Login/Signup</span>
+          </Link>
         </ul>
       </nav>
     </div>
