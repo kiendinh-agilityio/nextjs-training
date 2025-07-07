@@ -10,6 +10,7 @@ describe('RestaurantsCard', () => {
       description: 'Delicious pizza',
       price: '10',
       image: '/pizza.jpg',
+      category: 'Pizza',
     };
     const { asFragment } = render(<RestaurantsCard {...mockProduct} />);
 
