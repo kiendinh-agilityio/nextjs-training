@@ -11,6 +11,7 @@ describe('RestaurantsCategoryList', () => {
         description: 'Delicious pizza',
         price: '10',
         image: '/pizza.jpg',
+        category: 'Pizza',
       },
       {
         id: '2',
@@ -18,6 +19,7 @@ describe('RestaurantsCategoryList', () => {
         description: 'Juicy burger',
         price: '8',
         image: '/burger.jpg',
+        category: 'Fast Food',
       },
     ];
     const { asFragment } = render(
