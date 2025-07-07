@@ -8,6 +8,7 @@ import { useSession } from 'next-auth/react';
 import { Logo } from '@/components/common/ui/logo';
 import { UserIcon } from '@/components/Icons/UserIcon';
 import { NAV_LINKS } from '@/constants/nav-links';
+import { cn } from '@/lib/utils';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -99,7 +100,11 @@ const Navbar = () => {
       {/* Mobile Nav */}
       <nav
         data-testid="mobile-nav"
-        className={`lg:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-200 ${open ? 'translate-x-0' : 'translate-x-full'}`}
+        className={cn(
+          'lg:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50',
+          'transform transition-transform duration-200',
+          open ? 'translate-x-0' : 'translate-x-full',
+        )}
       >
         <div className="flex items-center justify-between p-4 border-b">
           <Logo href="/" src="/images/logo.svg" />

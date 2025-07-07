@@ -2,6 +2,7 @@ import ContactInfo from './ContactInfo/ContactInfo';
 
 import { TrackingIcon, IDVerifyIcon, ClockIcon } from '@/components/Icons';
 import { TIMES, CONTACT_INFO } from '@/constants/data';
+import { cn } from '@/lib/utils';
 
 const ContactSection = () => {
   const getDeliveryItems = () => {
@@ -60,28 +61,44 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="container mt-[28px] sm:px-0 lg:mt-[151px]">
-      <div className="bg-[#fbfbfb] shadow-[5px_5px_14px_0_rgba(0,0,0,0.25)] rounded pt-[69px] px-[11px] pb-9 lg:p-0 lg:flex lg:flex-row lg:rounded-xl xl:gap-7 2xl:gap-[45px]">
+    <section className={cn('container', 'mt-[28px] sm:px-0 lg:mt-[151px]')}>
+      <div
+        className={cn(
+          'bg-[#fbfbfb] shadow-[5px_5px_14px_0_rgba(0,0,0,0.25)] rounded',
+          'pt-[69px] px-[11px] pb-9',
+          'lg:p-0 lg:flex lg:flex-row lg:rounded-xl xl:gap-7 2xl:gap-[45px]',
+        )}
+      >
         <ContactInfo
           icon={<TrackingIcon />}
           title="Delivery information"
           items={getDeliveryItems()}
-          containerClassName="mb-6 px-[15px] lg:w-1/3 lg:px-0 lg:pl-[56px] lg:pt-[67px] lg:pb-[43px]"
-          listClassName="text-secondary font-base text-sm leading-[46px]"
+          containerClassName={cn(
+            'mb-6 px-[15px]',
+            'lg:w-1/3 lg:px-0 lg:pl-[56px] lg:pt-[67px] lg:pb-[43px]',
+          )}
+          listClassName={cn('text-secondary font-base text-sm leading-[46px]')}
         />
         <ContactInfo
           icon={<IDVerifyIcon />}
           title="Contact information"
           items={getContactItems()}
-          containerClassName="mb-6 px-[15px] lg:w-1/3 lg:px-0 lg:pt-[67px] lg:pb-[43px]"
-          listClassName="text-secondary font-base leading-[48px]"
+          containerClassName={cn(
+            'mb-6 px-[15px]',
+            'lg:w-1/3 lg:px-0 lg:pt-[67px] lg:pb-[43px]',
+          )}
+          listClassName={cn('text-secondary font-base leading-[48px]')}
         />
         <ContactInfo
           icon={<ClockIcon />}
           title="Operational Times"
           items={getOperationalItems()}
-          containerClassName="bg-secondary text-white rounded pt-4 pb-[26px] px-[43px] shadow-[5px_5px_14px_0_rgba(0,0,0,0.25)] lg:w-1/3 lg:pt-[67px] lg:pb-[43px] 2xl:px-[60px]"
-          listClassName="text-base font-base leading-[46px]"
+          containerClassName={cn(
+            'bg-secondary text-white rounded pt-4 pb-[26px] px-[43px]',
+            'shadow-[5px_5px_14px_0_rgba(0,0,0,0.25)]',
+            'lg:w-1/3 lg:pt-[67px] lg:pb-[43px] 2xl:px-[60px]',
+          )}
+          listClassName={cn('text-base font-base leading-[46px]')}
         />
       </div>
     </section>
