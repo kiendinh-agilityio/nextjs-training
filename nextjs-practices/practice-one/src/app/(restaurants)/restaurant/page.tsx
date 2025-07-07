@@ -7,13 +7,11 @@ import {
   RestaurantListSection,
 } from '@/components/Restaurants';
 
-// Accept searchParams as a Promise in Next.js 15
 interface RestaurantPageProps {
   searchParams: Promise<{ category?: string }>;
 }
 
 const RestaurantPage = ({ searchParams }: RestaurantPageProps) => {
-  // Unwrap the searchParams promise using React 19 use() hook
   const { category } = use(searchParams);
 
   return (
@@ -21,7 +19,6 @@ const RestaurantPage = ({ searchParams }: RestaurantPageProps) => {
       <HeroSection />
       <RestaurantHeaderSection />
       <CategorySection />
-      {/* Pass category from searchParams to RestaurantListSection */}
       <RestaurantListSection category={category} />
       <ContactSection />
     </>
