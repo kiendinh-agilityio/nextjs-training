@@ -1,28 +1,43 @@
-import RestaurantsCategoryList from './RestaurantsCategoryList/RestaurantsCategoryList';
+'use client';
+
+import { useEffect, useState } from 'react';
 import { Product } from '@/types/product';
 import { getRestaurantList } from '@/actions/product';
+
+import RestaurantsCategoryList from './RestaurantsCategoryList/RestaurantsCategoryList';
+import CategorySkeletonSection from '@/components/ProductSkeleton/CategorySkeleton';
 
 // Accept category as a prop
 interface RestaurantListSectionProps {
   category?: string;
 }
 
-const RestaurantListSection = async ({
-  category,
-}: RestaurantListSectionProps) => {
-  // Treat 'Offers' as no filter (fetch all products)
-  const isAll = !category || category === 'Offers';
-  const data = await getRestaurantList(isAll ? undefined : category);
+const RestaurantListSection = ({ category }: RestaurantListSectionProps) => {
+  const [data, setData] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+
+    getRestaurantList(!category || category === 'Offers' ? undefined : category)
+      .then((res) => setData(res))
+
+      .finally(() => setLoading(false));
+  }, [category]);
+
+  if (loading) {
+    return (
+      <section className="container mx-auto sm:px-0 flex flex-col gap-32">
+        <CategorySkeletonSection count={6} />
+      </section>
+    );
+  }
 
   // If a category is selected and not 'Offers', show only that category
   if (category && category !== 'Offers') {
     return (
       <section className="container mx-auto sm:px-0 flex flex-col gap-32">
-        <RestaurantsCategoryList
-          key={category}
-          category={category}
-          products={data}
-        />
+        <RestaurantsCategoryList key={category} category={category} />
       </section>
     );
   }
@@ -31,19 +46,17 @@ const RestaurantListSection = async ({
   const categories: [string, Product[]][] = Array.from(
     data.reduce((map: Map<string, Product[]>, item) => {
       if (!map.has(item.category)) map.set(item.category, []);
+
       map.get(item.category)!.push(item);
+
       return map;
     }, new Map()),
   );
 
   return (
     <section className="container mx-auto sm:px-0 flex flex-col gap-32">
-      {categories.map(([category, products]) => (
-        <RestaurantsCategoryList
-          key={category}
-          category={category}
-          products={products}
-        />
+      {categories.map(([category]) => (
+        <RestaurantsCategoryList key={category} category={category} />
       ))}
     </section>
   );
