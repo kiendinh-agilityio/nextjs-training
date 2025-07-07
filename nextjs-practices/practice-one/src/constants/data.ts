@@ -132,3 +132,15 @@ export const CONTACT_INFO: ContactInfo[] = [
     value: 'http://mcdonalds.uk/',
   },
 ];
+
+export const CATEGORIES_ITEM = [
+  'Offers',
+  'Burgers',
+  'Fries',
+  'Snacks',
+  'Salads',
+  'Cold drinks',
+  'Desserts',
+  'Hot drinks',
+  'Sauces',
+];
