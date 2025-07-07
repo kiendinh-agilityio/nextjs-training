@@ -9,6 +9,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 's7d1.scene7.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
