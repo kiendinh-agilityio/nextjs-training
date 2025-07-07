@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
-import { CATEGORIES_ITEM } from '@/constants/data';
+import { CATEGORIES_ITEM } from '@/constants/restaurants-data';
 import { cn } from '@/lib/utils';
 
 const getCategoryHref = (category: string) =>
