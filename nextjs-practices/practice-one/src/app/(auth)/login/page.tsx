@@ -2,6 +2,7 @@ import { BASE_URL } from '@/constants/url';
 import { ROUTERS } from '@/constants/router';
 import { Heading } from '@/components/common/ui/heading';
 import LoginForm from '@/components/Auth/LoginForm';
+import { cn } from '@/lib/utils';
 
 import { createMetadata } from '@/utils/metadata';
 
@@ -15,13 +16,21 @@ export const metadata = createMetadata({
 });
 
 const LoginPage = () => (
-  <div className="min-h-screen px-4 pt-[27px] md:px-[100px]">
-    <div className="flex items-center justify-center min-h-[calc(100vh-120px)]">
-      <div className="border border-muted shadow-base w-fit rounded-xl p-16 bg-white lg:w-[578px]">
-        <Heading size="md" className="text-primary">
+  <div className={cn('min-h-screen px-4 pt-[27px] md:px-[100px]')}>
+    <div
+      className={cn(
+        'flex items-center justify-center min-h-[calc(100vh-120px)]',
+      )}
+    >
+      <div
+        className={cn(
+          'border border-muted shadow-base w-fit rounded-xl p-16 bg-white lg:w-[578px]',
+        )}
+      >
+        <Heading size="md" className={cn('text-primary')}>
           Welcome
         </Heading>
-        <p className="text-md font-bold text-[#a0aec0] my-[15px]">
+        <p className={cn('text-md font-bold text-[#a0aec0] my-[15px]')}>
           Enter your email and password to log in
         </p>
         <LoginForm />

@@ -30,7 +30,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] leading-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
+          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
         >
           <p
             class="font-bold text-secondary leading-tight"
@@ -61,7 +61,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] leading-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
+          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
         >
           <p
             class="font-bold text-secondary leading-tight"
@@ -92,7 +92,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] leading-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
+          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
         >
           <p
             class="font-bold text-secondary leading-tight"
@@ -123,7 +123,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] leading-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
+          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
         >
           <p
             class="font-bold text-secondary leading-tight"
@@ -154,7 +154,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] leading-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
+          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
         >
           <p
             class="font-bold text-secondary leading-tight"
@@ -185,7 +185,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] leading-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
+          class="w-full bg-[#f5f5f5] py-[7px] px-[18px] flex flex-col text-[13px] lg:text-[18px] leading-[18px] rounded-bl-[12px] rounded-br-[12px]"
         >
           <p
             class="font-bold text-secondary leading-tight"

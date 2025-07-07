@@ -14,7 +14,7 @@ exports[`HeroSection (Restaurants) should match snapshot 1`] = `
         <p
           class="font-base text-[20px] leading-[66px]"
         >
-          I'm lovin' it!
+          I’m lovin’ it!
         </p>
         <h1
           class="text-[34px] leading-[36px] lg:text-[54px] lg:leading-[66px] font-semiBold"

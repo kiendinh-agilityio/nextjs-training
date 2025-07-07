@@ -3,6 +3,7 @@ import { FontPoppins } from '@/lib/fonts';
 import Footer from '@/layouts/Footer/footer';
 import Header from '@/layouts/Header/header';
 import { SessionProvider } from 'next-auth/react';
+import { cn } from '@/lib/utils';
 
 // Components
 import './globals.css';
@@ -25,7 +26,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={`${FontPoppins.className} flex flex-col min-h-screen`}>
+      <body className={cn(FontPoppins.className, 'flex flex-col min-h-screen')}>
         <SessionProvider>
           <Header />
           <main className="flex-grow">{children}</main>

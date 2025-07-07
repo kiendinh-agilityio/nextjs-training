@@ -5,7 +5,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'loremflickr.com',
+        hostname: 'i.postimg.cc',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 's7d1.scene7.com',
         port: '',
         pathname: '/**',
       },

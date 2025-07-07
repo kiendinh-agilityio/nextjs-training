@@ -7,10 +7,16 @@ import {
   SnapchatIcon,
   TiktokIcon,
 } from '@/components/Icons';
+import { cn } from '@/lib/utils';
 
 const Footer = () => (
   <footer className="mt-[45px]">
-    <div className="bg-[rgba(217,217,217,0.6)] pt-[58px] pb-[45px] px-[26px] flex flex-col lg:pt-[93px] lg:pb-[58px] xl:flex-row xl:justify-center">
+    <div
+      className={cn(
+        'bg-[rgba(217,217,217,0.6)] pt-[58px] pb-[45px] px-[26px] flex flex-col',
+        'lg:pt-[93px] lg:pb-[58px] xl:flex-row xl:justify-center',
+      )}
+    >
       <div className="container px-0 xl:flex xl:gap-44">
         <div className="flex flex-col items-center mb-[61px] xl:items-start xl:max-w-[361px]">
           <Logo

@@ -1,3 +1,5 @@
+import { cn } from '@/lib/utils';
+
 interface InfoSectionItem {
   key: string;
   content: React.ReactNode;
@@ -22,7 +24,11 @@ const ContactInfo = ({
 }: InfoSectionProps) => (
   <div className={containerClassName}>
     <p
-      className={`flex items-center gap-[22px] mb-[22px] font-bold text-xl leading-[48px] 2xl:text-[32px] lg:gap-[15px] ${titleClassName}`}
+      className={cn(
+        'flex items-center gap-[22px] mb-[22px] font-bold text-xl leading-[48px]',
+        '2xl:text-[32px] lg:gap-[15px]',
+        titleClassName,
+      )}
     >
       {icon}
       {title}

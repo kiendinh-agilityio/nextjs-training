@@ -75,7 +75,7 @@ exports[`HeroSection should match snapshot 1`] = `
         </button>
         <button
           aria-label="Search postcode"
-          class="hidden absolute right-0 ml-4 flex items-center justify-center w-[188px] h-[57px] rounded-full bg-primary shadow cursor-not-allowed text-white text-base xl:block"
+          class="hidden absolute right-0 ml-4 xl:flex items-center justify-center w-[188px] h-[57px] rounded-full bg-primary shadow cursor-not-allowed text-white text-base"
         >
           Search
         </button>

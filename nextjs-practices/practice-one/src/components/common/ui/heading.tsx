@@ -11,7 +11,7 @@ const sizeClasses = {
   default: 'text-xl leading-[23px] font-semibold',
   sm: 'text-lg leading-[43px] font-bold',
   md: 'text-[16px] text-[16px] lg:text-[32px] lg:leading-[32px] font-bold',
-  lg: 'text-[44px] leading-[44px] font-bold',
+  lg: 'text-[16px] text-[16px] text-[44px] leading-[44px] font-bold',
   xl: 'text-[34px] leading-[36px] lg:text-[54px] lg:leading-[66px] font-semiBold',
 };
 
