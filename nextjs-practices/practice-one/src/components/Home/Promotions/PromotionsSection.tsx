@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Heading } from '@/components/common/ui/heading';
-import { PROMOTIONS_DATA } from '@/constants/data';
+import { PROMOTIONS_DATA } from '@/constants/home-data';
 
 const PromotionsSection = () => (
   <section className="mt-[29px] mb-[23px] lg:mt-[54px]">
