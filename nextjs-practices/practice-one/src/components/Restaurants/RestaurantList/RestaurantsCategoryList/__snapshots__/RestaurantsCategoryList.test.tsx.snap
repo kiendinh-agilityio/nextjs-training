@@ -1,6 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RestaurantsCategoryList should match snapshot 1`] = `
+exports[`RestaurantsCategoryList displays correctly when there are no products 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="text-[44px] leading-[44px] font-bold text-primary mb-[40px]"
+    >
+      Fast Food
+    </h2>
+    <div
+      class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RestaurantsCategoryList displays heading and product list after loading 1`] = `
 <DocumentFragment>
   <div>
     <h2
@@ -39,13 +54,7 @@ exports[`RestaurantsCategoryList should match snapshot 1`] = `
           <img
             alt="Pizza"
             class="object-cover rounded-xl"
-            data-nimg="fill"
-            decoding="async"
-            loading="lazy"
-            sizes="100vw"
-            src="/_next/image?url=%2Fpizza.jpg&w=3840&q=75"
-            srcset="/_next/image?url=%2Fpizza.jpg&w=640&q=75 640w, /_next/image?url=%2Fpizza.jpg&w=750&q=75 750w, /_next/image?url=%2Fpizza.jpg&w=828&q=75 828w, /_next/image?url=%2Fpizza.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fpizza.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fpizza.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fpizza.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fpizza.jpg&w=3840&q=75 3840w"
-            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+            src="/pizza.jpg"
           />
           <button
             aria-label="Button add to cart"
@@ -102,13 +111,7 @@ exports[`RestaurantsCategoryList should match snapshot 1`] = `
           <img
             alt="Burger"
             class="object-cover rounded-xl"
-            data-nimg="fill"
-            decoding="async"
-            loading="lazy"
-            sizes="100vw"
-            src="/_next/image?url=%2Fburger.jpg&w=3840&q=75"
-            srcset="/_next/image?url=%2Fburger.jpg&w=640&q=75 640w, /_next/image?url=%2Fburger.jpg&w=750&q=75 750w, /_next/image?url=%2Fburger.jpg&w=828&q=75 828w, /_next/image?url=%2Fburger.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fburger.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fburger.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fburger.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fburger.jpg&w=3840&q=75 3840w"
-            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+            src="/burger.jpg"
           />
           <button
             aria-label="Button add to cart"
