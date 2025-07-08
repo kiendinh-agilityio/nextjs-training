@@ -1,3 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductRelatedSection matches snapshot 1`] = `<div />`;
+exports[`ProductRelatedSection matches snapshot 1`] = `
+<div>
+  <section
+    class="mt-20"
+  >
+    <h2
+      class="lg:text-[32px] lg:leading-[32px] text-3xl font-bold text-center mb-12"
+    >
+      RELATED PRODUCTS
+    </h2>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
+    >
+      <a
+        class="border rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg transition justify-end"
+        href="/product-detail/2"
+      >
+        <img
+          alt="Burger"
+          class="mb-4"
+          data-nimg="1"
+          decoding="async"
+          height="80"
+          loading="lazy"
+          src="/_next/image?url=%2Fburger.jpg&w=384&q=75"
+          srcset="/_next/image?url=%2Fburger.jpg&w=256&q=75 1x, /_next/image?url=%2Fburger.jpg&w=384&q=75 2x"
+          style="color: transparent;"
+          width="150"
+        />
+        <p
+          class="font-semibold text-xs md:min-h-[40px] lg:min-h-[48px] lg:text-base mb-2"
+        >
+          Burger
+        </p>
+      </a>
+      <a
+        class="border rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg transition justify-end"
+        href="/product-detail/3"
+      >
+        <img
+          alt="Pasta"
+          class="mb-4"
+          data-nimg="1"
+          decoding="async"
+          height="80"
+          loading="lazy"
+          src="/_next/image?url=%2Fpasta.jpg&w=384&q=75"
+          srcset="/_next/image?url=%2Fpasta.jpg&w=256&q=75 1x, /_next/image?url=%2Fpasta.jpg&w=384&q=75 2x"
+          style="color: transparent;"
+          width="150"
+        />
+        <p
+          class="font-semibold text-xs md:min-h-[40px] lg:min-h-[48px] lg:text-base mb-2"
+        >
+          Pasta
+        </p>
+      </a>
+    </div>
+  </section>
+</div>
+`;

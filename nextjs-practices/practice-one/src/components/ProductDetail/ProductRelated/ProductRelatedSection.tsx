@@ -4,22 +4,15 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Product } from '@/types/product';
 import { Heading } from '@/components/common/ui/heading';
-import { getRestaurantList } from '@/actions/product';
 
 interface ProductRelatedSectionProps {
-  product: Product;
+  relatedProducts: Product[];
 }
 
-const ProductRelatedSection = async ({
-  product,
+const ProductRelatedSection = ({
+  relatedProducts,
 }: ProductRelatedSectionProps) => {
-  if (!product?.category) return null;
-
-  const all = await getRestaurantList(product.category);
-
-  const related = all.filter((p) => p.id !== product.id).slice(0, 4);
-
-  if (!related || related.length === 0) return null;
+  if (!relatedProducts || relatedProducts.length === 0) return null;
 
   return (
     <section className={cn('mt-20')}>
@@ -29,7 +22,7 @@ const ProductRelatedSection = async ({
       <div
         className={cn('grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6')}
       >
-        {related.map((item) => (
+        {relatedProducts.map((item) => (
           <Link
             key={item.id}
             href={`/product-detail/${item.id}`}
