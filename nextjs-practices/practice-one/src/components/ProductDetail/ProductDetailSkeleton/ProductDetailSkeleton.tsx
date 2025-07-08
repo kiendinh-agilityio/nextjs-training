@@ -61,7 +61,6 @@ const ProductDetailSkeleton = ({
         {/* Category Skeleton */}
         <div className="mb-4 flex items-center gap-2">
           <Skeleton className="h-5 w-24" />
-          <Skeleton className="h-5 w-24" />
         </div>
         {/* Ingredients Skeleton */}
         <div className="mb-4">

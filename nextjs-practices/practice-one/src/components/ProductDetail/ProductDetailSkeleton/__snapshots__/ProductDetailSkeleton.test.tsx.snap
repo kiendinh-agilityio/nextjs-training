@@ -75,9 +75,6 @@ exports[`ProductDetailSkeleton matches snapshot 1`] = `
           <div
             class="animate-pulse rounded-md bg-muted h-5 w-24"
           />
-          <div
-            class="animate-pulse rounded-md bg-muted h-5 w-24"
-          />
         </div>
         <div
           class="mb-4"
