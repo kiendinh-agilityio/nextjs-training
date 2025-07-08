@@ -5,4 +5,6 @@ export interface Product {
   price: string;
   image: string;
   category: string;
+  rating?: string;
+  ingredients?: string[];
 }
