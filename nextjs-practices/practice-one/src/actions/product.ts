@@ -22,3 +22,17 @@ export const getRestaurantList = async (
 
   return response.json();
 };
+
+export const getProductDetail = async (
+  id: string | number,
+): Promise<Product> => {
+  const url = `${PRODUCT_API_URL}/${id}`;
+
+  const response = await fetch(url, { cache: 'no-store' });
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch product detail');
+  }
+
+  return response.json();
+};
