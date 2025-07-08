@@ -60,7 +60,7 @@ exports[`ProductDetailContent matches snapshot 1`] = `
       class="flex flex-col md:flex-row gap-8 mt-20"
     >
       <div
-        class="flex-1 flex justify-between items-center"
+        class="flex-1 flex justify-center items-center"
       >
         <img
           alt="Pizza"

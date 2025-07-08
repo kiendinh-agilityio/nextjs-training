@@ -28,7 +28,7 @@ const ProductDetailContent = ({ product }: ProductDetailContentProps) => (
       </BreadcrumbList>
     </Breadcrumb>
     <div className={cn('flex flex-col md:flex-row gap-8 mt-20')}>
-      <div className={cn('flex-1 flex justify-between items-center')}>
+      <div className={cn('flex-1 flex justify-center items-center')}>
         <Image
           src={product.image}
           alt={product.name}
