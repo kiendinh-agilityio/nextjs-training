@@ -33,120 +33,130 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
       <div
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
       >
-        <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        <a
+          class="block"
+          href="/product-detail/1"
         >
           <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px] cursor-pointer"
           >
-            <p
-              class="text-xl leading-[23px] font-semiBold mb-[15px]"
+            <div
+              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
             >
-              Pizza
-            </p>
-            <p
-              class="font-base text-sm leading-[25px] mb-2"
-            >
-              Delicious pizza
-            </p>
-            <p
-              class="font-bold text-lg leading-[18px]"
-            >
-              GDP 10
-            </p>
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0"
-          >
-            <img
-              alt="Pizza"
-              class="object-cover rounded-xl"
-              src="/pizza.jpg"
-            />
-            <button
-              aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-plus h-[25px] w-[25px]"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="text-xl leading-[23px] font-semiBold mb-[15px]"
               >
-                <path
-                  d="M5 12h14"
-                />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
+                Pizza
+              </p>
+              <p
+                class="font-base text-sm leading-[25px] mb-2"
+              >
+                Delicious pizza
+              </p>
+              <p
+                class="font-bold text-lg leading-[18px]"
+              >
+                GDP 10
+              </p>
+            </div>
+            <div
+              class="relative w-40 h-40 flex-shrink-0"
+            >
+              <img
+                alt="Pizza"
+                class="object-cover rounded-xl"
+                src="/pizza.jpg"
+              />
+              <button
+                aria-label="Button add to cart"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus h-[25px] w-[25px]"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        </a>
+        <a
+          class="block"
+          href="/product-detail/2"
         >
           <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px] cursor-pointer"
           >
-            <p
-              class="text-xl leading-[23px] font-semiBold mb-[15px]"
+            <div
+              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
             >
-              Sushi
-            </p>
-            <p
-              class="font-base text-sm leading-[25px] mb-2"
-            >
-              Fresh sushi
-            </p>
-            <p
-              class="font-bold text-lg leading-[18px]"
-            >
-              GDP 15
-            </p>
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0"
-          >
-            <img
-              alt="Sushi"
-              class="object-cover rounded-xl"
-              src="/sushi.jpg"
-            />
-            <button
-              aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-plus h-[25px] w-[25px]"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="text-xl leading-[23px] font-semiBold mb-[15px]"
               >
-                <path
-                  d="M5 12h14"
-                />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
+                Sushi
+              </p>
+              <p
+                class="font-base text-sm leading-[25px] mb-2"
+              >
+                Fresh sushi
+              </p>
+              <p
+                class="font-bold text-lg leading-[18px]"
+              >
+                GDP 15
+              </p>
+            </div>
+            <div
+              class="relative w-40 h-40 flex-shrink-0"
+            >
+              <img
+                alt="Sushi"
+                class="object-cover rounded-xl"
+                src="/sushi.jpg"
+              />
+              <button
+                aria-label="Button add to cart"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus h-[25px] w-[25px]"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
     <div>
@@ -158,120 +168,130 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
       <div
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
       >
-        <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        <a
+          class="block"
+          href="/product-detail/1"
         >
           <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px] cursor-pointer"
           >
-            <p
-              class="text-xl leading-[23px] font-semiBold mb-[15px]"
+            <div
+              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
             >
-              Pizza
-            </p>
-            <p
-              class="font-base text-sm leading-[25px] mb-2"
-            >
-              Delicious pizza
-            </p>
-            <p
-              class="font-bold text-lg leading-[18px]"
-            >
-              GDP 10
-            </p>
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0"
-          >
-            <img
-              alt="Pizza"
-              class="object-cover rounded-xl"
-              src="/pizza.jpg"
-            />
-            <button
-              aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-plus h-[25px] w-[25px]"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="text-xl leading-[23px] font-semiBold mb-[15px]"
               >
-                <path
-                  d="M5 12h14"
-                />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
+                Pizza
+              </p>
+              <p
+                class="font-base text-sm leading-[25px] mb-2"
+              >
+                Delicious pizza
+              </p>
+              <p
+                class="font-bold text-lg leading-[18px]"
+              >
+                GDP 10
+              </p>
+            </div>
+            <div
+              class="relative w-40 h-40 flex-shrink-0"
+            >
+              <img
+                alt="Pizza"
+                class="object-cover rounded-xl"
+                src="/pizza.jpg"
+              />
+              <button
+                aria-label="Button add to cart"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus h-[25px] w-[25px]"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        </a>
+        <a
+          class="block"
+          href="/product-detail/2"
         >
           <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px] cursor-pointer"
           >
-            <p
-              class="text-xl leading-[23px] font-semiBold mb-[15px]"
+            <div
+              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
             >
-              Sushi
-            </p>
-            <p
-              class="font-base text-sm leading-[25px] mb-2"
-            >
-              Fresh sushi
-            </p>
-            <p
-              class="font-bold text-lg leading-[18px]"
-            >
-              GDP 15
-            </p>
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0"
-          >
-            <img
-              alt="Sushi"
-              class="object-cover rounded-xl"
-              src="/sushi.jpg"
-            />
-            <button
-              aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-plus h-[25px] w-[25px]"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="text-xl leading-[23px] font-semiBold mb-[15px]"
               >
-                <path
-                  d="M5 12h14"
-                />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
+                Sushi
+              </p>
+              <p
+                class="font-base text-sm leading-[25px] mb-2"
+              >
+                Fresh sushi
+              </p>
+              <p
+                class="font-bold text-lg leading-[18px]"
+              >
+                GDP 15
+              </p>
+            </div>
+            <div
+              class="relative w-40 h-40 flex-shrink-0"
+            >
+              <img
+                alt="Sushi"
+                class="object-cover rounded-xl"
+                src="/sushi.jpg"
+              />
+              <button
+                aria-label="Button add to cart"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus h-[25px] w-[25px]"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -292,120 +312,130 @@ exports[`RestaurantListSection renders all categories when no category is select
       <div
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
       >
-        <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        <a
+          class="block"
+          href="/product-detail/1"
         >
           <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px] cursor-pointer"
           >
-            <p
-              class="text-xl leading-[23px] font-semiBold mb-[15px]"
+            <div
+              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
             >
-              Pizza
-            </p>
-            <p
-              class="font-base text-sm leading-[25px] mb-2"
-            >
-              Delicious pizza
-            </p>
-            <p
-              class="font-bold text-lg leading-[18px]"
-            >
-              GDP 10
-            </p>
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0"
-          >
-            <img
-              alt="Pizza"
-              class="object-cover rounded-xl"
-              src="/pizza.jpg"
-            />
-            <button
-              aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-plus h-[25px] w-[25px]"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="text-xl leading-[23px] font-semiBold mb-[15px]"
               >
-                <path
-                  d="M5 12h14"
-                />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
+                Pizza
+              </p>
+              <p
+                class="font-base text-sm leading-[25px] mb-2"
+              >
+                Delicious pizza
+              </p>
+              <p
+                class="font-bold text-lg leading-[18px]"
+              >
+                GDP 10
+              </p>
+            </div>
+            <div
+              class="relative w-40 h-40 flex-shrink-0"
+            >
+              <img
+                alt="Pizza"
+                class="object-cover rounded-xl"
+                src="/pizza.jpg"
+              />
+              <button
+                aria-label="Button add to cart"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus h-[25px] w-[25px]"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        </a>
+        <a
+          class="block"
+          href="/product-detail/2"
         >
           <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px] cursor-pointer"
           >
-            <p
-              class="text-xl leading-[23px] font-semiBold mb-[15px]"
+            <div
+              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
             >
-              Sushi
-            </p>
-            <p
-              class="font-base text-sm leading-[25px] mb-2"
-            >
-              Fresh sushi
-            </p>
-            <p
-              class="font-bold text-lg leading-[18px]"
-            >
-              GDP 15
-            </p>
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0"
-          >
-            <img
-              alt="Sushi"
-              class="object-cover rounded-xl"
-              src="/sushi.jpg"
-            />
-            <button
-              aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-plus h-[25px] w-[25px]"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="text-xl leading-[23px] font-semiBold mb-[15px]"
               >
-                <path
-                  d="M5 12h14"
-                />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
+                Sushi
+              </p>
+              <p
+                class="font-base text-sm leading-[25px] mb-2"
+              >
+                Fresh sushi
+              </p>
+              <p
+                class="font-bold text-lg leading-[18px]"
+              >
+                GDP 15
+              </p>
+            </div>
+            <div
+              class="relative w-40 h-40 flex-shrink-0"
+            >
+              <img
+                alt="Sushi"
+                class="object-cover rounded-xl"
+                src="/sushi.jpg"
+              />
+              <button
+                aria-label="Button add to cart"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus h-[25px] w-[25px]"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
     <div>
@@ -417,120 +447,130 @@ exports[`RestaurantListSection renders all categories when no category is select
       <div
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
       >
-        <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        <a
+          class="block"
+          href="/product-detail/1"
         >
           <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px] cursor-pointer"
           >
-            <p
-              class="text-xl leading-[23px] font-semiBold mb-[15px]"
+            <div
+              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
             >
-              Pizza
-            </p>
-            <p
-              class="font-base text-sm leading-[25px] mb-2"
-            >
-              Delicious pizza
-            </p>
-            <p
-              class="font-bold text-lg leading-[18px]"
-            >
-              GDP 10
-            </p>
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0"
-          >
-            <img
-              alt="Pizza"
-              class="object-cover rounded-xl"
-              src="/pizza.jpg"
-            />
-            <button
-              aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-plus h-[25px] w-[25px]"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="text-xl leading-[23px] font-semiBold mb-[15px]"
               >
-                <path
-                  d="M5 12h14"
-                />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
+                Pizza
+              </p>
+              <p
+                class="font-base text-sm leading-[25px] mb-2"
+              >
+                Delicious pizza
+              </p>
+              <p
+                class="font-bold text-lg leading-[18px]"
+              >
+                GDP 10
+              </p>
+            </div>
+            <div
+              class="relative w-40 h-40 flex-shrink-0"
+            >
+              <img
+                alt="Pizza"
+                class="object-cover rounded-xl"
+                src="/pizza.jpg"
+              />
+              <button
+                aria-label="Button add to cart"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus h-[25px] w-[25px]"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        </a>
+        <a
+          class="block"
+          href="/product-detail/2"
         >
           <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px] cursor-pointer"
           >
-            <p
-              class="text-xl leading-[23px] font-semiBold mb-[15px]"
+            <div
+              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
             >
-              Sushi
-            </p>
-            <p
-              class="font-base text-sm leading-[25px] mb-2"
-            >
-              Fresh sushi
-            </p>
-            <p
-              class="font-bold text-lg leading-[18px]"
-            >
-              GDP 15
-            </p>
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0"
-          >
-            <img
-              alt="Sushi"
-              class="object-cover rounded-xl"
-              src="/sushi.jpg"
-            />
-            <button
-              aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
-            >
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-plus h-[25px] w-[25px]"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="text-xl leading-[23px] font-semiBold mb-[15px]"
               >
-                <path
-                  d="M5 12h14"
-                />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
+                Sushi
+              </p>
+              <p
+                class="font-base text-sm leading-[25px] mb-2"
+              >
+                Fresh sushi
+              </p>
+              <p
+                class="font-bold text-lg leading-[18px]"
+              >
+                GDP 15
+              </p>
+            </div>
+            <div
+              class="relative w-40 h-40 flex-shrink-0"
+            >
+              <img
+                alt="Sushi"
+                class="object-cover rounded-xl"
+                src="/sushi.jpg"
+              />
+              <button
+                aria-label="Button add to cart"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus h-[25px] w-[25px]"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -550,191 +590,23 @@ exports[`RestaurantListSection renders nothing if getRestaurantList returns empt
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
       >
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
       </div>
     </div>
     <div>
@@ -745,191 +617,23 @@ exports[`RestaurantListSection renders nothing if getRestaurantList returns empt
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
       >
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
       </div>
     </div>
     <div>
@@ -940,191 +644,23 @@ exports[`RestaurantListSection renders nothing if getRestaurantList returns empt
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
       >
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
-        >
-          <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
-          >
-            <div
-              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
-            />
-            <div
-              class="animate-pulse rounded-md bg-muted h-6 w-24"
-            />
-          </div>
-          <div
-            class="relative w-40 h-40 flex-shrink-0 flex items-end"
-          >
-            <div
-              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
-            />
-            <div
-              class="absolute bottom-0 right-0"
-            >
-              <div
-                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+        />
       </div>
     </div>
   </section>
