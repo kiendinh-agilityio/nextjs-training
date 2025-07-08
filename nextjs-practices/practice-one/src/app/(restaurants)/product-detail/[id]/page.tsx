@@ -1,4 +1,4 @@
-import { getProductDetail } from '@/actions/product';
+import { getProductDetail, getRestaurantList } from '@/actions/product';
 import { Product } from '@/types/product';
 import {
   ProductRelatedSection,
@@ -6,7 +6,7 @@ import {
 } from '@/components/ProductDetail';
 
 interface ProductDetailPageProps {
-  params: Promise<{ id: string }> | { id: string };
+  params: Promise<{ id: string }>;
 }
 
 const ProductDetailPage = async ({ params }: ProductDetailPageProps) => {
@@ -15,10 +15,13 @@ const ProductDetailPage = async ({ params }: ProductDetailPageProps) => {
 
   if (!product) return <div>Product not found</div>;
 
+  const all = await getRestaurantList(product.category);
+  const related = all.filter((p) => p.id !== product.id).slice(0, 4);
+
   return (
     <div className="container mx-auto py-8 lg:px-0">
       <ProductDetailContent product={product} />
-      <ProductRelatedSection product={product} />
+      <ProductRelatedSection relatedProducts={related} />
     </div>
   );
 };
