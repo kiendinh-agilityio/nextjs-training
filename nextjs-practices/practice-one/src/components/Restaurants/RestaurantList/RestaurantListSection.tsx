@@ -30,6 +30,8 @@ const RestaurantListSection = ({ category }: RestaurantListSectionProps) => {
     return (
       <section className={cn('container mx-auto sm:px-0 flex flex-col gap-32')}>
         <CategorySkeletonSection count={6} />
+        <CategorySkeletonSection count={6} />
+        <CategorySkeletonSection count={6} />
       </section>
     );
   }
