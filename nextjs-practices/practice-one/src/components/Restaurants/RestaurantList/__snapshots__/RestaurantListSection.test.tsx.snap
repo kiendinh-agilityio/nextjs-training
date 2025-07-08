@@ -737,6 +737,396 @@ exports[`RestaurantListSection renders nothing if getRestaurantList returns empt
         </div>
       </div>
     </div>
+    <div>
+      <div
+        class="animate-pulse bg-muted mb-[40px] h-[44px] w-[240px] rounded-md"
+      />
+      <div
+        class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+      >
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="animate-pulse bg-muted mb-[40px] h-[44px] w-[240px] rounded-md"
+      />
+      <div
+        class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+      >
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg 2xl:w-[496px]"
+        >
+          <div
+            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px] w-full"
+          >
+            <div
+              class="animate-pulse rounded-md bg-muted mb-[15px] h-7 w-40"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted mb-2 h-5 w-60"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted h-6 w-24"
+            />
+          </div>
+          <div
+            class="relative w-40 h-40 flex-shrink-0 flex items-end"
+          >
+            <div
+              class="animate-pulse bg-muted absolute top-0 left-0 w-full h-full rounded-xl"
+            />
+            <div
+              class="absolute bottom-0 right-0"
+            >
+              <div
+                class="animate-pulse bg-muted rounded-full w-[49px] h-[49px] shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </DocumentFragment>
 `;
