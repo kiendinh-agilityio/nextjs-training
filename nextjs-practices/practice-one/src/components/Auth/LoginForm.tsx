@@ -15,6 +15,7 @@ import { Button } from '@/components/common/ui/button';
 import { Input } from '@/components/common/ui/input';
 
 import { loginSchema } from '@/lib/schema';
+import { authValidations } from '@/utils/authValidations';
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -32,13 +33,15 @@ const LoginForm = () => {
           redirect: false,
         });
         if (res?.error) {
-          return { error: res.error };
+          return { error: authValidations(res.error) };
         }
         // Success - redirect
         router.push(ROUTERS.HOME);
+
         return { error: undefined };
       } catch {
         toast.error('Failed to log in. Please try again.');
+
         return { error: 'Failed to log in. Please try again.' };
       }
     },
