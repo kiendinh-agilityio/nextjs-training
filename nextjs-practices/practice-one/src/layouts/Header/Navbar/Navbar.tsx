@@ -33,7 +33,10 @@ const Navbar = () => {
                 key={link.label}
                 className={
                   'text-black font-medium px-3 py-2 opacity-60 cursor-not-allowed select-none' +
-                  (pathname === link.href
+                  (pathname === link.href ||
+                  (link.href === '/restaurant' &&
+                    (pathname.startsWith('/restaurant') ||
+                      pathname.startsWith('/product-detail')))
                     ? ' bg-primary text-white rounded-full font-semibold shadow'
                     : '')
                 }
@@ -45,7 +48,10 @@ const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 className={
-                  pathname === link.href
+                  pathname === link.href ||
+                  (link.href === '/restaurant' &&
+                    (pathname.startsWith('/restaurant') ||
+                      pathname.startsWith('/product-detail')))
                     ? 'bg-primary text-white rounded-full px-6 py-2 font-medium shadow'
                     : 'text-black font-medium px-3 py-2'
                 }
@@ -132,8 +138,11 @@ const Navbar = () => {
                 <span
                   className={
                     'block text-black font-medium px-3 py-2 opacity-60 cursor-not-allowed select-none' +
-                    (pathname === link.href
-                      ? ' bg-orange-500 text-white rounded-full font-semibold shadow'
+                    (pathname === link.href ||
+                    (link.href === '/restaurant' &&
+                      (pathname.startsWith('/restaurant') ||
+                        pathname.startsWith('/product-detail')))
+                      ? ' bg-primary text-white rounded-full font-semibold shadow'
                       : '')
                   }
                 >
@@ -143,8 +152,11 @@ const Navbar = () => {
                 <Link
                   href={link.href}
                   className={
-                    pathname === link.href
-                      ? 'block bg-orange-500 text-white rounded-full px-6 py-2 font-semibold shadow'
+                    pathname === link.href ||
+                    (link.href === '/restaurant' &&
+                      (pathname.startsWith('/restaurant') ||
+                        pathname.startsWith('/product-detail')))
+                      ? 'block bg-primary text-white rounded-full px-6 py-2 font-semibold shadow'
                       : 'block text-black font-medium px-3 py-2'
                   }
                   onClick={handleCloseMenu}

@@ -107,7 +107,7 @@ exports[`Navbar should match snapshot 1`] = `
       >
         <li>
           <a
-            class="block bg-orange-500 text-white rounded-full px-6 py-2 font-semibold shadow"
+            class="block bg-primary text-white rounded-full px-6 py-2 font-semibold shadow"
             href="/"
           >
             Home
