@@ -9,45 +9,33 @@ interface ProductDetailSkeletonProps {
 
 const ProductDetailSkeleton = ({
   starCount = 5,
-  ingredientCount = 4,
+  ingredientCount = 6,
 }: ProductDetailSkeletonProps) => (
-  <section>
+  <section className={cn('container mx-auto py-8 lg:px-0', 'mb-4')}>
     {/* Breadcrumb Skeleton */}
-    <div className={cn('container mx-auto py-8 lg:px-0', 'mb-4')}>
-      <div className={cn('flex gap-2 items-center')}>
-        <Skeleton className="h-6 w-32" />
-        <span className="text-gray-400">/</span>
-        <Skeleton className="h-6 w-40" />
-      </div>
+    <div className={cn('flex gap-2 items-center')}>
+      <Skeleton className="h-6 w-32" />
+      <span className="text-gray-400">/</span>
+      <Skeleton className="h-6 w-40" />
     </div>
-    <div
-      className={cn(
-        'container mx-auto py-8 lg:px-0',
-        'flex flex-col md:flex-row gap-8 mt-0 md:mt-20',
-      )}
-    >
+    <div className={cn('flex flex-col md:flex-row gap-8 mt-20')}>
       {/* Image Skeleton */}
-      <div
-        className={cn(
-          'flex-1 flex justify-center items-start md:items-center',
-          'min-h-[400px]',
-        )}
-      >
+      <div className={cn('flex-1')}>
         <Skeleton
           className={cn(
-            'w-full max-w-[400px] h-[320px] md:h-[400px] rounded-xl object-cover',
+            'w-full max-w-[400px] h-[320px] md:h-[400px] rounded-xl object-contain lg:max-w-[752px] lg:h-[488px]',
           )}
         />
       </div>
       <div
         className={cn(
-          'flex-1 font-regular text-gray-700 flex flex-col justify-center',
+          'flex-1 font-regular text-gray-700 flex flex-col lg:max-w-[752px]',
         )}
       >
         {/* Name Skeleton */}
-        <Skeleton className="h-10 w-60 mb-4" />
+        <Skeleton className="h-[32px] w-full" />
         {/* Rating Skeleton */}
-        <div className="flex items-center gap-1 mt-4 mb-4">
+        <div className="flex items-center gap-1 mt-8 h-[32px]">
           {Array.from({ length: starCount }).map((_, i) => (
             <Skeleton key={i} className="w-8 h-8 rounded-full" />
           ))}
@@ -55,7 +43,7 @@ const ProductDetailSkeleton = ({
           <Skeleton className="h-6 w-6" />
         </div>
         {/* Price Skeleton */}
-        <Skeleton className="h-8 w-32 mb-4" />
+        <Skeleton className="h-8 w-32 mt-8 mb-4" />
         {/* Description Skeleton */}
         <Skeleton className="h-5 w-full max-w-[500px] mb-4" />
         {/* Category Skeleton */}
