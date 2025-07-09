@@ -7,7 +7,7 @@ const Header = () => (
     <div
       className={cn(
         'container mx-auto flex items-center justify-between',
-        'py-3 px-2 md:px-0 lg:py-[41px]',
+        'px-2 py-3 md:px-0 lg:py-[41px]',
       )}
     >
       <Logo href="/" src="/images/logo.svg" />

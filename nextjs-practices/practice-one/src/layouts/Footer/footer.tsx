@@ -13,18 +13,20 @@ const Footer = () => (
   <footer className="mt-[45px]">
     <div
       className={cn(
-        'bg-[rgba(217,217,217,0.6)] pt-[58px] pb-[45px] px-[26px] flex flex-col',
-        'lg:pt-[93px] lg:pb-[58px] xl:flex-row xl:justify-center',
+        'flex flex-col xl:flex-row xl:justify-center',
+        'px-[26px] pb-[45px] pt-[58px]',
+        'bg-[rgba(217,217,217,0.6)]',
+        'lg:pb-[58px] lg:pt-[93px]',
       )}
     >
       <div className="container px-0 xl:flex xl:gap-44">
-        <div className="flex flex-col items-center mb-[61px] xl:items-start xl:max-w-[361px]">
+        <div className="mb-[61px] flex flex-col items-center xl:max-w-[361px] xl:items-start">
           <Logo
             href="/"
             src="/images/logo.svg"
-            className="w-[268px] h-[66px] mb-[31px]"
+            className="mb-[31px] h-[66px] w-[268px]"
           />
-          <div className="flex gap-[2px] mb-[21px]">
+          <div className="mb-[21px] flex gap-[2px]">
             <button>
               <Image
                 src="/images/app-store.svg"
@@ -42,35 +44,40 @@ const Footer = () => (
               />
             </button>
           </div>
-          <p className="font-base text-left text-black text-[15px] mb-4 px-[30px] lg:px-0">
+          <p className="mb-4 px-[30px] text-left font-base text-[15px] text-black lg:px-0">
             Company # 490039-445, Registered with House of companies.
           </p>
         </div>
-        <div className="lg:flex lg:justify-between xl:gap-11 xl:w-[calc(1527px-361px)]">
-          <div className="w-full flex flex-col mb-2 md:items-center lg:items-start">
-            <p className="font-bold text-[18px] leading-[43px] mb-[13px]">
+        <div className="lg:flex lg:justify-between xl:w-[calc(1527px-361px)] xl:gap-11">
+          <div className="mb-2 flex w-full flex-col md:items-center lg:items-start">
+            <p className="mb-[13px] text-[18px] font-bold leading-[43px]">
               Get Exclusive Deals in your Inbox
             </p>
-            <form className="relative flex w-full mb-1 border rounded-full h-[58px] md:max-w-[485px]">
+            <form className="relative mb-1 flex h-[58px] w-full rounded-full border md:max-w-[485px]">
               <input
                 type="email"
                 placeholder="youremail@gmail.com"
-                className="flex-1 rounded-full text-secondary px-[25px] py-[10px] bg-[#d9d9d9] outline-none placeholder:text-[14px] placeholder:leading-[43px]"
+                className={cn(
+                  'flex-1 rounded-full bg-[#d9d9d9] px-[25px] py-[10px] text-secondary outline-none',
+                  'placeholder:text-[14px] placeholder:leading-[43px]',
+                )}
               />
               <button
                 type="submit"
-                className="absolute rounded-full bg-primary text-white px-[42px] py-[19px] font-medium text-[18px] leading-[18px] right-0"
+                className={cn(
+                  'absolute right-0 rounded-full bg-primary px-[42px] py-[19px] text-[18px] font-medium leading-[18px] text-white',
+                )}
               >
                 Subscribe
               </button>
             </form>
-            <p className="text-secondary text-[13px] leading-[43px] text-center">
+            <p className="text-center text-[13px] leading-[43px] text-secondary">
               we wont spam, read our{' '}
               <Link href="#" className="underline">
                 email policy
               </Link>
             </p>
-            <ul className="flex justify-center gap-6 my-4">
+            <ul className="my-4 flex justify-center gap-6">
               <li>
                 <Link href="#">
                   <FacebookIcon />
@@ -93,9 +100,9 @@ const Footer = () => (
               </li>
             </ul>
           </div>
-          <div className="w-full mt-4 md:flex md:flex-row md:justify-around lg:mt-0 xl:justify-between xl:gap-11">
+          <div className="mt-4 flex w-full md:flex md:flex-row md:justify-around lg:mt-0 xl:justify-between xl:gap-11">
             <div className="mb-9">
-              <p className="font-bold text-[18px] leading-[43px] mb-2">
+              <p className="mb-2 text-[18px] font-bold leading-[43px]">
                 Legal Pages
               </p>
               <ul className="flex flex-col text-[15px] leading-[43px]">
@@ -122,7 +129,7 @@ const Footer = () => (
               </ul>
             </div>
             <div>
-              <p className="font-bold text-[18px] leading-[43px] mb-2">
+              <p className="mb-2 text-[18px] font-bold leading-[43px]">
                 Important Links
               </p>
               <ul className="flex flex-col text-[15px] leading-[43px]">
@@ -152,12 +159,12 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="bg-secondary py-[31px] flex flex-col items-center lg:flex-row lg:justify-between lg:py-[26px]">
-      <div className="container px-0 flex justify-center xl:justify-between">
-        <p className="text-white text-[15px] text-center md:text-left w-full md:w-auto">
+    <div className="flex flex-col items-center bg-secondary py-[31px] lg:flex-row lg:justify-between lg:py-[26px]">
+      <div className="container flex justify-center px-0 xl:justify-between">
+        <p className="w-full text-center text-[15px] text-white md:w-auto md:text-left">
           Order.uk Copyright 2025, All Rights Reserved.
         </p>
-        <div className="hidden xl:flex gap-8 text-white text-[15px]">
+        <div className="hidden gap-8 text-[15px] text-white xl:flex">
           <Link href="#" className="hover:underline">
             Privacy Policy
           </Link>

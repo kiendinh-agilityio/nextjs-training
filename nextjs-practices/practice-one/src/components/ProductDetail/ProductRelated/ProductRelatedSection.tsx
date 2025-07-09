@@ -15,19 +15,18 @@ const ProductRelatedSection = ({
   if (!relatedProducts || relatedProducts.length === 0) return null;
 
   return (
-    <section className={cn('mt-20')}>
-      <Heading size="md" className={cn('text-3xl font-bold text-center mb-12')}>
+    <section className="mt-20">
+      <Heading size="md" className="mb-12 text-center text-3xl font-bold">
         RELATED PRODUCTS
       </Heading>
-      <div
-        className={cn('grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6')}
-      >
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
         {relatedProducts.map((item) => (
           <Link
             key={item.id}
             href={`/product-detail/${item.id}`}
             className={cn(
-              'border rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg transition justify-end',
+              'flex flex-col items-center justify-end text-center transition hover:shadow-lg',
+              'rounded-xl border p-6',
             )}
           >
             <Image
@@ -35,13 +34,9 @@ const ProductRelatedSection = ({
               alt={item.name}
               width={150}
               height={80}
-              className={cn('mb-4')}
+              className="mb-4"
             />
-            <p
-              className={cn(
-                'font-semibold text-xs md:min-h-[40px] lg:min-h-[48px] lg:text-base mb-2',
-              )}
-            >
+            <p className="mb-2 text-xs font-semibold md:min-h-[40px] lg:min-h-[48px] lg:text-base">
               {item.name}
             </p>
           </Link>

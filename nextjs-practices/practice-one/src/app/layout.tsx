@@ -26,7 +26,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={cn(FontPoppins.className, 'flex flex-col min-h-screen')}>
+      <body className={cn(FontPoppins.className, 'flex min-h-screen flex-col')}>
         <SessionProvider>
           <Header />
           <main className="flex-grow">{children}</main>

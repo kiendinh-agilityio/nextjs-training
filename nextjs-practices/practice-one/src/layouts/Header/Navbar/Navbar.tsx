@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="flex lg:gap-[24px] xl:gap-[53px]">
         <nav
           data-testid="desktop-nav"
-          className="hidden lg:font-medium lg:text-black lg:text-[18px] lg:flex items-center justify-center gap-4 xl:gap-8"
+          className="flex hidden items-center justify-center gap-4 lg:flex lg:text-[18px] lg:font-medium lg:text-black xl:gap-8"
         >
           {NAV_LINKS.map((link) =>
             link.disabled ? (
@@ -32,12 +32,12 @@ const Navbar = () => {
                 href="#"
                 key={link.label}
                 className={
-                  'text-black font-medium px-3 py-2 opacity-60 cursor-not-allowed select-none' +
+                  'cursor-not-allowed select-none px-3 py-2 font-medium text-black opacity-60' +
                   (pathname === link.href ||
                   (link.href === '/restaurant' &&
                     (pathname.startsWith('/restaurant') ||
                       pathname.startsWith('/product-detail')))
-                    ? ' bg-primary text-white rounded-full font-semibold shadow'
+                    ? ' rounded-full bg-primary font-semibold text-white shadow'
                     : '')
                 }
               >
@@ -52,8 +52,8 @@ const Navbar = () => {
                   (link.href === '/restaurant' &&
                     (pathname.startsWith('/restaurant') ||
                       pathname.startsWith('/product-detail')))
-                    ? 'bg-primary text-white rounded-full px-6 py-2 font-medium shadow'
-                    : 'text-black font-medium px-3 py-2'
+                    ? 'rounded-full bg-primary px-6 py-2 font-medium text-white shadow'
+                    : 'px-3 py-2 font-medium text-black'
                 }
               >
                 {link.label}
@@ -65,7 +65,7 @@ const Navbar = () => {
         {/* Desktop Login/Signup */}
         <Link
           href={session && session.user?.email ? '/profile' : '/login'}
-          className="hidden rounded-full px-[25px] py-[17px] font-medium gap-2 bg-secondary text-white hover:bg-[#1a1f33] lg:flex items-center transition-colors"
+          className="flex hidden items-center gap-2 rounded-full bg-secondary px-[25px] py-[17px] font-medium text-white transition-colors hover:bg-[#1a1f33] lg:flex"
           aria-label="Login or Signup"
         >
           <UserIcon />
@@ -75,7 +75,7 @@ const Navbar = () => {
 
       {/* Mobile Hamburger */}
       <button
-        className="lg:hidden ml-auto"
+        className="ml-auto lg:hidden"
         aria-label="Toggle menu"
         onClick={handleToggleMenu}
       >
@@ -98,7 +98,7 @@ const Navbar = () => {
       {/* Mobile Nav Overlay */}
       {open && (
         <button
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-40 z-40"
+          className="fixed inset-0 z-40 bg-black bg-opacity-40 lg:hidden"
           onClick={handleCloseMenu}
         />
       )}
@@ -107,12 +107,13 @@ const Navbar = () => {
       <nav
         data-testid="mobile-nav"
         className={cn(
-          'lg:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50',
+          'fixed right-0 top-0 z-50 h-full w-64 bg-white shadow-lg',
           'transform transition-transform duration-200',
+          'lg:hidden',
           open ? 'translate-x-0' : 'translate-x-full',
         )}
       >
-        <div className="flex items-center justify-between p-4 border-b">
+        <div className="flex items-center justify-between border-b p-4">
           <Logo href="/" src="/images/logo.svg" />
           <button aria-label="Close menu" onClick={handleCloseMenu}>
             <svg
@@ -137,12 +138,12 @@ const Navbar = () => {
               {link.disabled ? (
                 <span
                   className={
-                    'block text-black font-medium px-3 py-2 opacity-60 cursor-not-allowed select-none' +
+                    'block cursor-not-allowed select-none px-3 py-2 font-medium text-black opacity-60' +
                     (pathname === link.href ||
                     (link.href === '/restaurant' &&
                       (pathname.startsWith('/restaurant') ||
                         pathname.startsWith('/product-detail')))
-                      ? ' bg-primary text-white rounded-full font-semibold shadow'
+                      ? ' rounded-full bg-primary font-semibold text-white shadow'
                       : '')
                   }
                 >
@@ -156,8 +157,8 @@ const Navbar = () => {
                     (link.href === '/restaurant' &&
                       (pathname.startsWith('/restaurant') ||
                         pathname.startsWith('/product-detail')))
-                      ? 'block bg-primary text-white rounded-full px-6 py-2 font-semibold shadow'
-                      : 'block text-black font-medium px-3 py-2'
+                      ? 'block rounded-full bg-primary px-6 py-2 font-semibold text-white shadow'
+                      : 'block px-3 py-2 font-medium text-black'
                   }
                   onClick={handleCloseMenu}
                 >
@@ -168,7 +169,11 @@ const Navbar = () => {
           ))}
           <Link
             href={session && session.user?.email ? '/profile' : '/login'}
-            className="rounded-full px-[25px] py-[17px] font-medium gap-2 bg-secondary text-white hover:bg-[#1a1f33] w-full flex items-center justify-center transition-colors mt-2"
+            className={cn(
+              'flex items-center justify-center transition-colors',
+              'mt-2 w-full gap-2 px-[25px] py-[17px]',
+              'rounded-full bg-secondary font-medium text-white hover:bg-[#1a1f33]',
+            )}
             aria-label="Login or Signup"
             onClick={handleCloseMenu}
           >

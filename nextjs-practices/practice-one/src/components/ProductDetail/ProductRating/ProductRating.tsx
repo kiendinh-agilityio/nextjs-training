@@ -1,5 +1,4 @@
 import { Star } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 const ProductRating = ({
   rating,
@@ -15,29 +14,26 @@ const ProductRating = ({
   const emptyStars = max - fullStars - (hasHalfStar ? 1 : 0);
 
   return (
-    <div className={cn('flex items-center gap-1 mt-8')}>
+    <div className="mt-8 flex items-center gap-1">
       {Array.from({ length: fullStars }).map((_, i) => (
         <Star
           key={`full-${i}`}
           fill="#ffc107"
           stroke="#ffc107"
-          className={cn('w-8 h-8')}
+          className="h-8 w-8"
         />
       ))}
       {hasHalfStar && (
-        <span
-          key="half"
-          className={cn('relative inline-block w-8 h-8 align-middle')}
-        >
-          <Star fill="#ffc107" stroke="#ffc107" className={cn('w-8 h-8')} />
+        <span key="half" className="relative inline-block h-8 w-8 align-middle">
+          <Star fill="#ffc107" stroke="#ffc107" className="h-8 w-8" />
           <span
-            className={cn('absolute top-0 left-1/2 w-1/2 h-full bg-white')}
+            className="absolute left-1/2 top-0 h-full w-1/2 bg-white"
             style={{ pointerEvents: 'none' }}
           />
           <Star
             fill="none"
             stroke="#ffc107"
-            className={cn('w-8 h-8 absolute top-0 left-0')}
+            className="absolute left-0 top-0 h-8 w-8"
           />
         </span>
       )}
@@ -46,13 +42,11 @@ const ProductRating = ({
           key={`empty-${i}`}
           fill="white"
           stroke="#ffc107"
-          className={cn('w-8 h-8')}
+          className="h-8 w-8"
         />
       ))}
-      <span className={cn('ml-2 text-black font-bold')}>
-        {rating.toFixed(2)}
-      </span>
-      <span className={cn('text-gray-500 text-base')}>/5</span>
+      <span className="ml-2 font-bold text-black">{rating.toFixed(2)}</span>
+      <span className="text-base text-gray-500">/5</span>
     </div>
   );
 };

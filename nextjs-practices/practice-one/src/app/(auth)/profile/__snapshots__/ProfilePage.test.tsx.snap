@@ -3,17 +3,17 @@
 exports[`ProfilePage UI should render loading state and match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="container px-0 min-h-screen flex flex-col items-start pt-12"
+    class="container flex min-h-screen flex-col items-start px-0 pt-12"
   >
     <div
       class="mb-8 h-10 w-32 rounded"
       data-testid="skeleton-mock"
     />
     <div
-      class="bg-white rounded-xl border border-muted shadow-base px-8 py-6 mb-6 min-w-[400px]"
+      class="mb-6 min-w-[400px] rounded-xl border border-muted bg-white px-8 py-6 shadow-base"
     >
       <div
-        class="h-6 w-20 mb-2 rounded"
+        class="mb-2 h-6 w-20 rounded"
         data-testid="skeleton-mock"
       />
       <div
@@ -22,7 +22,7 @@ exports[`ProfilePage UI should render loading state and match snapshot 1`] = `
       />
     </div>
     <div
-      class="px-6 py-2 rounded-md w-[140px] h-12"
+      class="h-12 w-[140px] rounded-md px-6 py-2"
       data-testid="skeleton-mock"
     />
   </div>
@@ -34,7 +34,7 @@ exports[`ProfilePage UI should render nothing if no session or no email 1`] = `<
 exports[`ProfilePage UI should render profile info and logout button, match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="container px-0 min-h-screen flex flex-col items-start pt-12"
+    class="container flex min-h-screen flex-col items-start pt-12 sm:px-0"
   >
     <h1
       as="h1"
@@ -44,22 +44,22 @@ exports[`ProfilePage UI should render profile info and logout button, match snap
       Profile
     </h1>
     <div
-      class="bg-white rounded-xl border border-muted shadow-base px-8 py-6 mb-6 min-w-[400px]"
+      class="border shadow-base mb-6 min-w-[400px] px-8 py-6 rounded-xl border-muted bg-white"
     >
       <p
-        class="font-bold text-lg mb-2"
+        class="mb-2 text-lg font-bold"
       >
         Email
       </p>
       <p
-        class="text-gray-500 text-base"
+        class="text-base text-gray-500"
       >
         test@example.com
       </p>
     </div>
     <button
       aria-label="Logout"
-      class="px-6 py-2 rounded-md"
+      class="rounded-md px-6 py-2"
       data-testid="button-mock"
       type="submit"
       variant="primary"

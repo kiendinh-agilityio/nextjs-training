@@ -6,15 +6,15 @@ exports[`ProductRelatedSection matches snapshot 1`] = `
     class="mt-20"
   >
     <h2
-      class="lg:text-[32px] lg:leading-[32px] text-3xl font-bold text-center mb-12"
+      class="lg:text-[32px] lg:leading-[32px] mb-12 text-center text-3xl font-bold"
     >
       RELATED PRODUCTS
     </h2>
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
+      class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4"
     >
       <a
-        class="border rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg transition justify-end"
+        class="flex flex-col items-center justify-end text-center transition hover:shadow-lg rounded-xl border p-6"
         href="/product-detail/2"
       >
         <img
@@ -30,13 +30,13 @@ exports[`ProductRelatedSection matches snapshot 1`] = `
           width="150"
         />
         <p
-          class="font-semibold text-xs md:min-h-[40px] lg:min-h-[48px] lg:text-base mb-2"
+          class="mb-2 text-xs font-semibold md:min-h-[40px] lg:min-h-[48px] lg:text-base"
         >
           Burger
         </p>
       </a>
       <a
-        class="border rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg transition justify-end"
+        class="flex flex-col items-center justify-end text-center transition hover:shadow-lg rounded-xl border p-6"
         href="/product-detail/3"
       >
         <img
@@ -52,7 +52,7 @@ exports[`ProductRelatedSection matches snapshot 1`] = `
           width="150"
         />
         <p
-          class="font-semibold text-xs md:min-h-[40px] lg:min-h-[48px] lg:text-base mb-2"
+          class="mb-2 text-xs font-semibold md:min-h-[40px] lg:min-h-[48px] lg:text-base"
         >
           Pasta
         </p>

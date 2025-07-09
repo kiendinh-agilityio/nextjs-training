@@ -9,7 +9,6 @@ import {
   BreadcrumbLink,
   BreadcrumbPage,
 } from '@/components/common/ui/breadcrumb';
-import { cn } from '@/lib/utils';
 
 interface ProductDetailContentProps {
   product: Product;
@@ -27,38 +26,31 @@ const ProductDetailContent = ({ product }: ProductDetailContentProps) => (
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-    <div className={cn('flex flex-col md:flex-row gap-8 mt-20')}>
+    <div className="mt-20 flex flex-col gap-8 md:flex-row">
       <Image
         src={product.image}
         alt={product.name}
         width={400}
         height={400}
-        className={cn(
-          'flex-1 rounded-xl flex justify-center items-center object-contain',
-        )}
+        className="flex flex-1 items-center justify-center rounded-xl object-contain"
       />
-      <div className={cn('flex-1 font-regular text-gray-700')}>
+      <div className="font-regular flex-1 text-gray-700">
         <Heading size="md">{product.name}</Heading>
         <ProductRating
           rating={parseFloat(product.rating?.replace('rating ', '') ?? '0')}
         />
-        <p
-          className={cn(
-            'flex items-center mt-8 mb-4 text-2xl font-bold text-gray-900',
-          )}
-        >
+        <p className="mb-4 mt-8 flex items-center text-2xl font-bold text-gray-900">
           GDP {product.price}
         </p>
-        <p className={cn('mb-4 text-gray-700')}>{product.description}</p>
-        <p className={cn('mb-4')}>
-          <span className={cn('font-semibold')}>Category:</span>{' '}
-          {product.category}
+        <p className="mb-4 text-gray-700">{product.description}</p>
+        <p className="mb-4">
+          <span className="font-semibold">Category:</span> {product.category}
         </p>
-        <div className={cn('mb-4')}>
-          <p className={cn('font-semibold')}>Ingredients:</p>
-          <ul className={cn('list-disc list-inside mt-2 flex flex-col gap-2')}>
+        <div className="mb-4">
+          <p className="font-semibold">Ingredients:</p>
+          <ul className="mt-2 flex list-inside list-disc flex-col gap-2">
             {product.ingredients?.map((ing) => (
-              <li className={cn('font-regular text-sm lg:text-base')} key={ing}>
+              <li className="font-regular text-sm lg:text-base" key={ing}>
                 {ing}
               </li>
             ))}

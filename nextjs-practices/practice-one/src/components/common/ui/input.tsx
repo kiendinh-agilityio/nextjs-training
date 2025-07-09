@@ -21,13 +21,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div
         className={cn(
-          'flex items-center w-full border border-secondary bg-background',
+          'flex w-full items-center border border-secondary bg-background',
           icon ? 'gap-[10px]' : '',
           sizeClass,
         )}
       >
         {icon && (
-          <span className="text-gray-400 pointer-events-none flex-shrink-0">
+          <span className="pointer-events-none flex-shrink-0 text-gray-400">
             {icon}
           </span>
         )}
@@ -37,7 +37,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           name={inputName}
           id={id}
           className={cn(
-            'flex-1 h-10 bg-transparent outline-none border-none file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',
+            'file:text-foreground placeholder:text-muted-foreground h-10 flex-1 border-none bg-transparent outline-none file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',
             className,
           )}
           ref={ref}

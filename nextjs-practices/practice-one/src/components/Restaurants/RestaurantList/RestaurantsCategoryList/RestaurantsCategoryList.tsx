@@ -35,7 +35,7 @@ const RestaurantsCategoryList = ({
         <CategorySkeletonSection count={6} />
       ) : (
         <>
-          <Heading size="lg" className={cn('text-primary mb-[40px]')}>
+          <Heading size="lg" className={cn('mb-[40px] text-primary')}>
             {category}
           </Heading>
           <div

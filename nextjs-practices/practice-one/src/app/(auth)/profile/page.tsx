@@ -8,6 +8,7 @@ import { Button } from '@/components/common/ui/button';
 import { Heading } from '@/components/common/ui/heading';
 import { Skeleton } from '@/components/common/ui/skeleton';
 import { ROUTERS } from '@/constants/router';
+import { cn } from '@/lib/utils';
 
 const ProfilePage = () => {
   const { data: session, status } = useSession();
@@ -15,13 +16,13 @@ const ProfilePage = () => {
 
   if (status === 'loading') {
     return (
-      <div className="container px-0 min-h-screen flex flex-col items-start pt-12">
+      <div className="container flex min-h-screen flex-col items-start px-0 pt-12">
         <Skeleton className="mb-8 h-10 w-32 rounded" />
-        <div className="bg-white rounded-xl border border-muted shadow-base px-8 py-6 mb-6 min-w-[400px]">
-          <Skeleton className="h-6 w-20 mb-2 rounded" />
+        <div className="mb-6 min-w-[400px] rounded-xl border border-muted bg-white px-8 py-6 shadow-base">
+          <Skeleton className="mb-2 h-6 w-20 rounded" />
           <Skeleton className="h-6 w-48 rounded" />
         </div>
-        <Skeleton className="px-6 py-2 rounded-md w-[140px] h-12" />
+        <Skeleton className="h-12 w-[140px] rounded-md px-6 py-2" />
       </div>
     );
   }
@@ -43,18 +44,24 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="container px-0 min-h-screen flex flex-col items-start pt-12">
+    <div className="container flex min-h-screen flex-col items-start pt-12 sm:px-0">
       <Heading as="h1" size="md" className="mb-8">
         Profile
       </Heading>
-      <div className="bg-white rounded-xl border border-muted shadow-base px-8 py-6 mb-6 min-w-[400px]">
-        <p className="font-bold text-lg mb-2">Email</p>
-        <p className="text-gray-500 text-base">{session.user.email}</p>
+      <div
+        className={cn(
+          'border shadow-base',
+          'mb-6 min-w-[400px] px-8 py-6',
+          'rounded-xl border-muted bg-white',
+        )}
+      >
+        <p className="mb-2 text-lg font-bold">Email</p>
+        <p className="text-base text-gray-500">{session.user.email}</p>
       </div>
       <Button
         variant="primary"
         type="submit"
-        className="px-6 py-2 rounded-md"
+        className="rounded-md px-6 py-2"
         ariaLabel="Logout"
         onClick={handleLogout}
         disabled={isLoggingOut}
