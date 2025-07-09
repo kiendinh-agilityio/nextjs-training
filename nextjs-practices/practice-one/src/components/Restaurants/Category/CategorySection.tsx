@@ -18,12 +18,12 @@ const CategorySection = () => {
   return (
     <section
       className={cn(
-        'w-full bg-primary flex justify-center items-center py-6 mb-12 lg:mb-[71px]',
+        'mb-12 flex w-full items-center justify-center bg-primary py-6 lg:mb-[71px]',
       )}
     >
       <div
         className={cn(
-          'flex gap-8 overflow-x-auto w-full px-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden 2xl:justify-center 2xl:overflow-x-visible',
+          'flex w-full gap-8 overflow-x-auto px-4 [-ms-overflow-style:none] [scrollbar-width:none] 2xl:justify-center 2xl:overflow-x-visible [&::-webkit-scrollbar]:hidden',
         )}
       >
         {CATEGORIES_ITEM.map((category) => (
@@ -31,7 +31,7 @@ const CategorySection = () => {
             key={category}
             href={getCategoryHref(category)}
             className={cn(
-              'flex-shrink-0 px-8 py-2 rounded-full font-bold text-lg transition-colors duration-200 focus:outline-none',
+              'flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none',
               activeCategory === category
                 ? 'bg-[#0a0a16] text-white'
                 : 'bg-transparent text-white',

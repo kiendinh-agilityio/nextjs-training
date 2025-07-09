@@ -33,7 +33,7 @@ export const Logo = ({
   const logoBox = (
     <div
       className={cn(
-        'relative w-[154px] h-[38px] md:w-[215px] md:h-[53px]',
+        'relative h-[38px] w-[154px] md:h-[53px] md:w-[215px]',
         className,
       )}
       {...props}

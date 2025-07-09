@@ -13,50 +13,50 @@ const ProductDetailSkeleton = ({
 }: ProductDetailSkeletonProps) => (
   <section className={cn('container mx-auto py-8 lg:px-0', 'mb-4')}>
     {/* Breadcrumb Skeleton */}
-    <div className={cn('flex gap-2 items-center')}>
+    <div className={cn('flex items-center gap-2')}>
       <Skeleton className="h-6 w-32" />
       <span className="text-gray-400">/</span>
       <Skeleton className="h-6 w-40" />
     </div>
-    <div className={cn('flex flex-col md:flex-row gap-8 mt-20')}>
+    <div className={cn('mt-20 flex flex-col gap-8 md:flex-row')}>
       {/* Image Skeleton */}
       <div className={cn('flex-1')}>
         <Skeleton
           className={cn(
-            'w-full max-w-[400px] h-[320px] md:h-[400px] rounded-xl object-contain lg:max-w-[752px] lg:h-[488px]',
+            'h-[320px] w-full max-w-[400px] rounded-xl object-contain md:h-[400px] lg:h-[488px] lg:max-w-[752px]',
           )}
         />
       </div>
       <div
         className={cn(
-          'flex-1 font-regular text-gray-700 flex flex-col lg:max-w-[752px]',
+          'font-regular flex flex-1 flex-col text-gray-700 lg:max-w-[752px]',
         )}
       >
         {/* Name Skeleton */}
         <Skeleton className="h-[32px] w-full" />
         {/* Rating Skeleton */}
-        <div className="flex items-center gap-1 mt-8 h-[32px]">
+        <div className="mt-8 flex h-[32px] items-center gap-1">
           {Array.from({ length: starCount }).map((_, i) => (
-            <Skeleton key={i} className="w-8 h-8 rounded-full" />
+            <Skeleton key={i} className="h-8 w-8 rounded-full" />
           ))}
           <Skeleton className="ml-2 h-6 w-10" />
           <Skeleton className="h-6 w-6" />
         </div>
         {/* Price Skeleton */}
-        <Skeleton className="h-8 w-32 mt-8 mb-4" />
+        <Skeleton className="mb-4 mt-8 h-8 w-32" />
         {/* Description Skeleton */}
-        <Skeleton className="h-5 w-full max-w-[500px] mb-4" />
+        <Skeleton className="mb-4 h-5 w-full max-w-[500px]" />
         {/* Category Skeleton */}
         <div className="mb-4 flex items-center gap-2">
           <Skeleton className="h-5 w-24" />
         </div>
         {/* Ingredients Skeleton */}
         <div className="mb-4">
-          <Skeleton className="h-5 w-32 mb-2" />
-          <ul className="list-disc list-inside mt-2 flex flex-col gap-2">
+          <Skeleton className="mb-2 h-5 w-32" />
+          <ul className="mt-2 flex list-inside list-disc flex-col gap-2">
             {Array.from({ length: ingredientCount }).map((_, i) => (
               <li key={i} className="flex items-center gap-2">
-                <Skeleton className="h-4 w-4 rounded-full inline-block" />
+                <Skeleton className="inline-block h-4 w-4 rounded-full" />
                 <Skeleton className="h-4 w-32" />
               </li>
             ))}
@@ -69,7 +69,7 @@ const ProductDetailSkeleton = ({
       <div className="mb-12 flex justify-center">
         <Skeleton className="h-10 w-72" />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
         {Array.from({ length: 4 }).map((_, i) => (
           <ProductSkeleton key={i} />
         ))}

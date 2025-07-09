@@ -82,7 +82,7 @@ const LoginForm = () => {
       className="w-full max-w-md space-y-2 lg:space-y-3"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="flex items-center gap-2 mb-2">
+      <div className="mb-2 flex items-center gap-2">
         <Input
           id="credentials-email"
           type="email"
@@ -92,9 +92,9 @@ const LoginForm = () => {
         />
       </div>
       {errors.email && (
-        <p className="text-error text-[0.8rem]">{errors.email.message}</p>
+        <p className="text-[0.8rem] text-error">{errors.email.message}</p>
       )}
-      <div className="relative flex items-center gap-2 mb-2">
+      <div className="relative mb-2 flex items-center gap-2">
         <Input
           id="credentials-password"
           type={showPassword ? 'text' : 'password'}
@@ -115,7 +115,7 @@ const LoginForm = () => {
         </button>
       </div>
       {errors.password && (
-        <p className="text-error text-[0.8rem]">{errors.password.message}</p>
+        <p className="text-[0.8rem] text-error">{errors.password.message}</p>
       )}
       <Button
         type="submit"

@@ -11,17 +11,17 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
       Popular Restaurants
     </h2>
     <div
-      class="-mx-4 px-4 mt-4 overflow-x-auto scroll-snap-x [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:overflow-hidden lg:mt-[51px]"
+      class="scroll-snap-x -mx-4 mt-4 flex overflow-x-auto px-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mt-[51px] lg:overflow-hidden"
     >
       <div
         class="flex gap-[10px] lg:justify-between"
       >
         <div
-          class="flex flex-col items-center rounded-[12px] shadow-md min-w-[122px] w-[122px] h-[156px] md:w-[160px] lg:w-[200px] lg:h-[266px] overflow-hidden border-primary 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="McDonald's London"
-            class="w-[122px] h-[103px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px] object-cover"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
             data-nimg="1"
             decoding="async"
             height="203"
@@ -33,17 +33,17 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
             width="238"
           />
           <p
-            class="w-full bg-primary text-white text-center py-[10px] px-[14px] text-[13px] leading-[16px] font-bold h-[52px] lg:text-[18px] lg:[leading-18px] lg:px-[28px] lg:py-[18px] lg:h-[63px]"
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
           >
             McDonald's London
           </p>
         </div>
         <div
-          class="flex flex-col items-center rounded-[12px] shadow-md min-w-[122px] w-[122px] h-[156px] md:w-[160px] lg:w-[200px] lg:h-[266px] overflow-hidden border-primary 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="Papa Johns"
-            class="w-[122px] h-[103px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px] object-cover"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
             data-nimg="1"
             decoding="async"
             height="203"
@@ -55,17 +55,17 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
             width="238"
           />
           <p
-            class="w-full bg-primary text-white text-center py-[10px] px-[14px] text-[13px] leading-[16px] font-bold h-[52px] lg:text-[18px] lg:[leading-18px] lg:px-[28px] lg:py-[18px] lg:h-[63px]"
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
           >
             Papa Johns
           </p>
         </div>
         <div
-          class="flex flex-col items-center rounded-[12px] shadow-md min-w-[122px] w-[122px] h-[156px] md:w-[160px] lg:w-[200px] lg:h-[266px] overflow-hidden border-primary 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="KFC West London"
-            class="w-[122px] h-[103px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px] object-cover"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
             data-nimg="1"
             decoding="async"
             height="203"
@@ -77,17 +77,17 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
             width="238"
           />
           <p
-            class="w-full bg-primary text-white text-center py-[10px] px-[14px] text-[13px] leading-[16px] font-bold h-[52px] lg:text-[18px] lg:[leading-18px] lg:px-[28px] lg:py-[18px] lg:h-[63px]"
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
           >
             KFC West London
           </p>
         </div>
         <div
-          class="flex flex-col items-center rounded-[12px] shadow-md min-w-[122px] w-[122px] h-[156px] md:w-[160px] lg:w-[200px] lg:h-[266px] overflow-hidden border-primary 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="Texas Chicken"
-            class="w-[122px] h-[103px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px] object-cover"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
             data-nimg="1"
             decoding="async"
             height="203"
@@ -99,17 +99,17 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
             width="238"
           />
           <p
-            class="w-full bg-primary text-white text-center py-[10px] px-[14px] text-[13px] leading-[16px] font-bold h-[52px] lg:text-[18px] lg:[leading-18px] lg:px-[28px] lg:py-[18px] lg:h-[63px]"
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
           >
             Texas Chicken
           </p>
         </div>
         <div
-          class="flex flex-col items-center rounded-[12px] shadow-md min-w-[122px] w-[122px] h-[156px] md:w-[160px] lg:w-[200px] lg:h-[266px] overflow-hidden border-primary 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="Burger King"
-            class="w-[122px] h-[103px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px] object-cover"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
             data-nimg="1"
             decoding="async"
             height="203"
@@ -121,17 +121,17 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
             width="238"
           />
           <p
-            class="w-full bg-primary text-white text-center py-[10px] px-[14px] text-[13px] leading-[16px] font-bold h-[52px] lg:text-[18px] lg:[leading-18px] lg:px-[28px] lg:py-[18px] lg:h-[63px]"
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
           >
             Burger King
           </p>
         </div>
         <div
-          class="flex flex-col items-center rounded-[12px] shadow-md min-w-[122px] w-[122px] h-[156px] md:w-[160px] lg:w-[200px] lg:h-[266px] overflow-hidden border-primary 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="Shaurma 1"
-            class="w-[122px] h-[103px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px] object-cover"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
             data-nimg="1"
             decoding="async"
             height="203"
@@ -143,7 +143,7 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
             width="238"
           />
           <p
-            class="w-full bg-primary text-white text-center py-[10px] px-[14px] text-[13px] leading-[16px] font-bold h-[52px] lg:text-[18px] lg:[leading-18px] lg:px-[28px] lg:py-[18px] lg:h-[63px]"
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
           >
             Shaurma 1
           </p>

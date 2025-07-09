@@ -6,43 +6,35 @@ import { cn } from '@/lib/utils';
 const HeroSection = () => (
   <section
     className={cn(
-      'flex flex-col justify-center items-center text-white bg-hero-restaurant bg-cover bg-center w-full 2xl:w-[1528px] 2xl:mx-auto',
+      'flex flex-col items-center justify-center',
+      'w-full 2xl:mx-auto 2xl:w-[1528px]',
+      'bg-hero-restaurant bg-cover bg-center text-white',
     )}
   >
     <div
       className={cn(
-        'container flex flex-col-reverse pt-[48px] pb-[49px] sm:px-0 lg:gap-[81px] lg:flex-row lg:pt-[57px] lg:pb-[51px] lg:justify-between xl:px-[57px]',
+        'container flex flex-col-reverse',
+        'pb-[49px] pt-[48px] sm:px-0',
+        'lg:flex-row lg:justify-between lg:gap-[81px] lg:pb-[51px] lg:pt-[57px]',
+        'xl:px-[57px]',
       )}
     >
-      <article
-        className={cn(
-          'flex flex-col justify-center text-center mt-[34px] lg:mt-0 lg:text-left',
-        )}
-      >
+      <article className="mt-[34px] flex flex-col justify-center text-center lg:mt-0 lg:text-left">
         {/* eslint-disable-next-line react/no-unescaped-entities */}
-        <p className={cn('font-base text-[20px] leading-[66px]')}>
-          I’m lovin’ it!
-        </p>
+        <p className="font-base text-[20px] leading-[66px]">I’m lovin’ it!</p>
         <Heading as="h1" size="xl">
           McDonald’s East London
         </Heading>
         <ul
           className={cn(
-            'flex flex-col gap-[15px] mt-7 px-[34px] font-semiBold text-[16px] leading-[66px] lg:px-0 xl:flex-row',
+            'mt-7 flex flex-col gap-[15px] px-[34px] text-[16px] font-semiBold leading-[66px]',
+            'lg:px-0 xl:flex-row',
           )}
         >
-          <li
-            className={cn(
-              'flex items-center justify-center gap-[17px] border border-white text-white px-[33px] rounded-[120px]',
-            )}
-          >
+          <li className="flex items-center justify-center gap-[17px] rounded-[120px] border border-white px-[33px] text-white">
             <OrderCompletedIcon /> Minimum Order: 12 GBP
           </li>
-          <li
-            className={cn(
-              'flex items-center justify-center gap-[17px] border border-white text-white px-[33px] rounded-[120px]',
-            )}
-          >
+          <li className="flex items-center justify-center gap-[17px] rounded-[120px] border border-white px-[33px] text-white">
             <MotoIcon />
             Delivery in 20-25 Minutes
           </li>
@@ -55,7 +47,9 @@ const HeroSection = () => (
         height={369}
         sizes="(min-width: 1728px) 637px, (max-width: 767px) 250px, 100vw"
         className={cn(
-          'mx-auto w-[250px] h-[145px] md:w-[400px] md:h-[230px] 2xl:w-[637px] 2xl:h-[369px] lg:mx-0',
+          'mx-auto',
+          'h-[145px] w-[250px] md:h-[230px] md:w-[400px] 2xl:h-[369px] 2xl:w-[637px]',
+          'lg:mx-0',
         )}
         priority
       />

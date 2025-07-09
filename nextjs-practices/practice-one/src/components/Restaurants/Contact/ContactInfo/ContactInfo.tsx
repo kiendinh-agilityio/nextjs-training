@@ -25,8 +25,8 @@ const ContactInfo = ({
   <div className={containerClassName}>
     <p
       className={cn(
-        'flex items-center gap-[22px] mb-[22px] font-bold text-xl leading-[48px]',
-        '2xl:text-[32px] lg:gap-[15px]',
+        'mb-[22px] flex items-center gap-[22px] text-xl font-bold leading-[48px]',
+        'lg:gap-[15px] 2xl:text-[32px]',
         titleClassName,
       )}
     >

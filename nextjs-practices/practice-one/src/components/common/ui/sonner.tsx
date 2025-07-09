@@ -5,8 +5,8 @@ import { Toaster as Sonner } from 'sonner';
 import { CheckCircle, XCircle } from 'lucide-react';
 
 const icons = {
-  success: <CheckCircle className="text-emerald-400 w-6 h-6 mr-3" />,
-  error: <XCircle className="text-rose-400 w-6 h-6 mr-3" />,
+  success: <CheckCircle className="mr-3 h-6 w-6 text-emerald-400" />,
+  error: <XCircle className="mr-3 h-6 w-6 text-rose-400" />,
 };
 
 type ToasterProps = React.ComponentProps<typeof Sonner>;

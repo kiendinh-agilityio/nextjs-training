@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { Product } from '@/types/product';
 import { getRestaurantList } from '@/actions/product';
-import { cn } from '@/lib/utils';
 
 import RestaurantsCategoryList from './RestaurantsCategoryList/RestaurantsCategoryList';
 import CategorySkeletonSection from '@/components/ProductSkeleton/CategorySkeleton';
@@ -28,7 +27,7 @@ const RestaurantListSection = ({ category }: RestaurantListSectionProps) => {
 
   if (loading) {
     return (
-      <section className={cn('container mx-auto sm:px-0 flex flex-col gap-32')}>
+      <section className="container mx-auto flex flex-col gap-32 sm:px-0">
         <CategorySkeletonSection count={6} />
         <CategorySkeletonSection count={6} />
         <CategorySkeletonSection count={6} />
@@ -39,7 +38,7 @@ const RestaurantListSection = ({ category }: RestaurantListSectionProps) => {
   // If a category is selected and not 'Offers', show only that category
   if (category && category !== 'Offers') {
     return (
-      <section className={cn('container mx-auto sm:px-0 flex flex-col gap-32')}>
+      <section className="container mx-auto flex flex-col gap-32 sm:px-0">
         <RestaurantsCategoryList key={category} category={category} />
       </section>
     );
@@ -57,7 +56,7 @@ const RestaurantListSection = ({ category }: RestaurantListSectionProps) => {
   );
 
   return (
-    <section className={cn('container mx-auto sm:px-0 flex flex-col gap-32')}>
+    <section className="container mx-auto flex flex-col gap-32 sm:px-0">
       {categories.map(([category]) => (
         <RestaurantsCategoryList key={category} category={category} />
       ))}

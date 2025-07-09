@@ -6,10 +6,10 @@ exports[`LoginPage should match snapshot 1`] = `
     class="min-h-screen px-4 pt-[27px] md:px-[100px]"
   >
     <div
-      class="flex items-center justify-center min-h-[calc(100vh-120px)]"
+      class="flex min-h-[calc(100vh-120px)] items-center justify-center"
     >
       <div
-        class="border border-muted shadow-base w-fit rounded-xl p-16 bg-white lg:w-[578px]"
+        class="w-fit rounded-xl border border-muted bg-white p-16 shadow-base lg:w-[578px]"
       >
         <h2
           class="text-primary"
@@ -18,7 +18,7 @@ exports[`LoginPage should match snapshot 1`] = `
           Welcome
         </h2>
         <p
-          class="text-md font-bold text-[#a0aec0] my-[15px]"
+          class="text-md my-[15px] font-bold text-[#a0aec0]"
         >
           Enter your email and password to log in
         </p>

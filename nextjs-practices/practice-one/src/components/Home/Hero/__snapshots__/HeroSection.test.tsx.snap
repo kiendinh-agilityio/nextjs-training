@@ -3,7 +3,7 @@
 exports[`HeroSection should match snapshot 1`] = `
 <DocumentFragment>
   <section
-    class="relative border border-base rounded-xl flex flex-col text-center mt-[47px] bg-[#e2e2e2] text-secondary px-[38px] pt-[10px] pb-[43px] lg:flex-row lg:text-left xl:px-[57px] lg:pt-[134px] lg:pb-[162px] lg:bg-[#fbfbfb] lg:border-sm"
+    class="relative mt-[47px] flex flex-col rounded-xl border border-base bg-[#e2e2e2] px-[38px] pb-[43px] pt-[10px] text-center text-secondary lg:flex-row lg:border-sm lg:bg-[#fbfbfb] lg:pb-[162px] lg:pt-[134px] lg:text-left xl:px-[57px]"
   >
     <div
       class="lg:w-[calc(1024px-600px)] xl:w-[calc(1528px-1000px)]"
@@ -29,16 +29,16 @@ exports[`HeroSection should match snapshot 1`] = `
         Enter a postcode to see what we deliver
       </p>
       <div
-        class="relative rounded-[120px] h-[57px] bg-white flex items-center shadow-md xl:w-[373px]"
+        class="relative flex h-[57px] items-center rounded-[120px] bg-white shadow-md xl:w-[373px]"
       >
         <input
-          class="bg-transparent outline-none border-none text-[15px] placeholder:text-[15px] placeholder:leading-[66px] placeholder:text-black placeholder:opacity-80 px-[30px] py-[6px]"
+          class="border-none bg-transparent px-[30px] py-[6px] text-[15px] outline-none placeholder:text-[15px] placeholder:leading-[66px] placeholder:text-black placeholder:opacity-80"
           placeholder="e.g. EC4R 3TE"
           type="text"
         />
         <button
           aria-label="Search postcode"
-          class="absolute right-0 ml-4 flex items-center justify-center w-[57px] h-[57px] rounded-full bg-primary shadow cursor-not-allowed xl:hidden"
+          class="absolute right-0 ml-4 flex h-[57px] w-[57px] cursor-not-allowed items-center justify-center rounded-full bg-primary shadow xl:hidden"
         >
           <svg
             fill="none"
@@ -75,7 +75,7 @@ exports[`HeroSection should match snapshot 1`] = `
         </button>
         <button
           aria-label="Search postcode"
-          class="hidden absolute right-0 ml-4 xl:flex items-center justify-center w-[188px] h-[57px] rounded-full bg-primary shadow cursor-not-allowed text-white text-base"
+          class="absolute right-0 ml-4 hidden h-[57px] w-[188px] cursor-not-allowed items-center justify-center rounded-full bg-primary text-base text-white shadow xl:flex"
         >
           Search
         </button>
@@ -83,7 +83,7 @@ exports[`HeroSection should match snapshot 1`] = `
     </div>
     <img
       alt="Banner"
-      class="hidden lg:block lg:absolute right-0 lg:w-[600px] xl:w-[850px] 2xl:bottom-0 2xl:w-[1205px]"
+      class="right-0 hidden lg:absolute lg:block lg:w-[600px] xl:w-[850px] 2xl:bottom-0 2xl:w-[1205px]"
       data-nimg="1"
       decoding="async"
       height="565"

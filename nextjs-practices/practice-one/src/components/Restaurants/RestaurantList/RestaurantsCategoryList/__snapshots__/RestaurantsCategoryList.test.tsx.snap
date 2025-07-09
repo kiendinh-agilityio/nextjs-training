@@ -4,7 +4,7 @@ exports[`RestaurantsCategoryList displays correctly when there are no products 1
 <DocumentFragment>
   <div>
     <h2
-      class="text-[44px] leading-[44px] font-bold text-primary mb-[40px]"
+      class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
     >
       Fast Food
     </h2>
@@ -19,7 +19,7 @@ exports[`RestaurantsCategoryList displays heading and product list after loading
 <DocumentFragment>
   <div>
     <h2
-      class="text-[44px] leading-[44px] font-bold text-primary mb-[40px]"
+      class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
     >
       Fast Food
     </h2>
@@ -31,38 +31,38 @@ exports[`RestaurantsCategoryList displays heading and product list after loading
         href="/product-detail/1"
       >
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] transition-all duration-200 hover:scale-100 xl:hover:scale-105"
+          class="text-card-foreground flex justify-between gap-[18px] rounded-[12px] bg-[#fdfdfd] px-[30px] py-[24px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
         >
           <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+            class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
           >
             <p
-              class="text-xl leading-[23px] font-semiBold mb-[15px]"
+              class="mb-[15px] text-xl font-semiBold leading-[23px]"
             >
               Pizza
             </p>
             <p
-              class="font-base text-sm leading-[25px] mb-2"
+              class="mb-2 font-base text-sm leading-[25px]"
             >
               Delicious pizza
             </p>
             <p
-              class="font-bold text-lg leading-[18px]"
+              class="text-lg font-bold leading-[18px]"
             >
               GDP 10
             </p>
           </div>
           <div
-            class="relative w-40 h-40 flex-shrink-0"
+            class="relative h-40 w-40 flex-shrink-0"
           >
             <img
               alt="Pizza"
-              class="object-cover rounded-xl"
+              class="rounded-xl object-cover"
               src="/pizza.jpg"
             />
             <button
               aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
             >
               <svg
                 aria-hidden="true"
@@ -93,38 +93,38 @@ exports[`RestaurantsCategoryList displays heading and product list after loading
         href="/product-detail/2"
       >
         <div
-          class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] transition-all duration-200 hover:scale-100 xl:hover:scale-105"
+          class="text-card-foreground flex justify-between gap-[18px] rounded-[12px] bg-[#fdfdfd] px-[30px] py-[24px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
         >
           <div
-            class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+            class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
           >
             <p
-              class="text-xl leading-[23px] font-semiBold mb-[15px]"
+              class="mb-[15px] text-xl font-semiBold leading-[23px]"
             >
               Burger
             </p>
             <p
-              class="font-base text-sm leading-[25px] mb-2"
+              class="mb-2 font-base text-sm leading-[25px]"
             >
               Juicy burger
             </p>
             <p
-              class="font-bold text-lg leading-[18px]"
+              class="text-lg font-bold leading-[18px]"
             >
               GDP 8
             </p>
           </div>
           <div
-            class="relative w-40 h-40 flex-shrink-0"
+            class="relative h-40 w-40 flex-shrink-0"
           >
             <img
               alt="Burger"
-              class="object-cover rounded-xl"
+              class="rounded-xl object-cover"
               src="/burger.jpg"
             />
             <button
               aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
             >
               <svg
                 aria-hidden="true"

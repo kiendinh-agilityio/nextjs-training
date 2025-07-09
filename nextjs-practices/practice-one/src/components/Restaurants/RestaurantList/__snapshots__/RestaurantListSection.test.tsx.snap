@@ -3,11 +3,11 @@
 exports[`RestaurantListSection renders RestaurantsCategoryList for a specific category: specific category 1`] = `
 <DocumentFragment>
   <section
-    class="container mx-auto sm:px-0 flex flex-col gap-32"
+    class="container mx-auto flex flex-col gap-32 sm:px-0"
   >
     <div>
       <h2
-        class="text-[44px] leading-[44px] font-bold text-primary mb-[40px]"
+        class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
       >
         Fast Food
       </h2>
@@ -22,11 +22,11 @@ exports[`RestaurantListSection renders RestaurantsCategoryList for a specific ca
 exports[`RestaurantListSection renders all categories when category is "Offers": offers category 1`] = `
 <DocumentFragment>
   <section
-    class="container mx-auto sm:px-0 flex flex-col gap-32"
+    class="container mx-auto flex flex-col gap-32 sm:px-0"
   >
     <div>
       <h2
-        class="text-[44px] leading-[44px] font-bold text-primary mb-[40px]"
+        class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
       >
         Fast Food
       </h2>
@@ -38,38 +38,38 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
           href="/product-detail/1"
         >
           <div
-            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] transition-all duration-200 hover:scale-100 xl:hover:scale-105"
+            class="text-card-foreground flex justify-between gap-[18px] rounded-[12px] bg-[#fdfdfd] px-[30px] py-[24px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
           >
             <div
-              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
             >
               <p
-                class="text-xl leading-[23px] font-semiBold mb-[15px]"
+                class="mb-[15px] text-xl font-semiBold leading-[23px]"
               >
                 Pizza
               </p>
               <p
-                class="font-base text-sm leading-[25px] mb-2"
+                class="mb-2 font-base text-sm leading-[25px]"
               >
                 Delicious pizza
               </p>
               <p
-                class="font-bold text-lg leading-[18px]"
+                class="text-lg font-bold leading-[18px]"
               >
                 GDP 10
               </p>
             </div>
             <div
-              class="relative w-40 h-40 flex-shrink-0"
+              class="relative h-40 w-40 flex-shrink-0"
             >
               <img
                 alt="Pizza"
-                class="object-cover rounded-xl"
+                class="rounded-xl object-cover"
                 src="/pizza.jpg"
               />
               <button
                 aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
               >
                 <svg
                   aria-hidden="true"
@@ -100,38 +100,38 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
           href="/product-detail/2"
         >
           <div
-            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] transition-all duration-200 hover:scale-100 xl:hover:scale-105"
+            class="text-card-foreground flex justify-between gap-[18px] rounded-[12px] bg-[#fdfdfd] px-[30px] py-[24px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
           >
             <div
-              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
             >
               <p
-                class="text-xl leading-[23px] font-semiBold mb-[15px]"
+                class="mb-[15px] text-xl font-semiBold leading-[23px]"
               >
                 Sushi
               </p>
               <p
-                class="font-base text-sm leading-[25px] mb-2"
+                class="mb-2 font-base text-sm leading-[25px]"
               >
                 Fresh sushi
               </p>
               <p
-                class="font-bold text-lg leading-[18px]"
+                class="text-lg font-bold leading-[18px]"
               >
                 GDP 15
               </p>
             </div>
             <div
-              class="relative w-40 h-40 flex-shrink-0"
+              class="relative h-40 w-40 flex-shrink-0"
             >
               <img
                 alt="Sushi"
-                class="object-cover rounded-xl"
+                class="rounded-xl object-cover"
                 src="/sushi.jpg"
               />
               <button
                 aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
               >
                 <svg
                   aria-hidden="true"
@@ -161,7 +161,7 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
     </div>
     <div>
       <h2
-        class="text-[44px] leading-[44px] font-bold text-primary mb-[40px]"
+        class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
       >
         Japanese
       </h2>
@@ -173,38 +173,38 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
           href="/product-detail/1"
         >
           <div
-            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] transition-all duration-200 hover:scale-100 xl:hover:scale-105"
+            class="text-card-foreground flex justify-between gap-[18px] rounded-[12px] bg-[#fdfdfd] px-[30px] py-[24px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
           >
             <div
-              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
             >
               <p
-                class="text-xl leading-[23px] font-semiBold mb-[15px]"
+                class="mb-[15px] text-xl font-semiBold leading-[23px]"
               >
                 Pizza
               </p>
               <p
-                class="font-base text-sm leading-[25px] mb-2"
+                class="mb-2 font-base text-sm leading-[25px]"
               >
                 Delicious pizza
               </p>
               <p
-                class="font-bold text-lg leading-[18px]"
+                class="text-lg font-bold leading-[18px]"
               >
                 GDP 10
               </p>
             </div>
             <div
-              class="relative w-40 h-40 flex-shrink-0"
+              class="relative h-40 w-40 flex-shrink-0"
             >
               <img
                 alt="Pizza"
-                class="object-cover rounded-xl"
+                class="rounded-xl object-cover"
                 src="/pizza.jpg"
               />
               <button
                 aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
               >
                 <svg
                   aria-hidden="true"
@@ -235,38 +235,38 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
           href="/product-detail/2"
         >
           <div
-            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] transition-all duration-200 hover:scale-100 xl:hover:scale-105"
+            class="text-card-foreground flex justify-between gap-[18px] rounded-[12px] bg-[#fdfdfd] px-[30px] py-[24px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
           >
             <div
-              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
             >
               <p
-                class="text-xl leading-[23px] font-semiBold mb-[15px]"
+                class="mb-[15px] text-xl font-semiBold leading-[23px]"
               >
                 Sushi
               </p>
               <p
-                class="font-base text-sm leading-[25px] mb-2"
+                class="mb-2 font-base text-sm leading-[25px]"
               >
                 Fresh sushi
               </p>
               <p
-                class="font-bold text-lg leading-[18px]"
+                class="text-lg font-bold leading-[18px]"
               >
                 GDP 15
               </p>
             </div>
             <div
-              class="relative w-40 h-40 flex-shrink-0"
+              class="relative h-40 w-40 flex-shrink-0"
             >
               <img
                 alt="Sushi"
-                class="object-cover rounded-xl"
+                class="rounded-xl object-cover"
                 src="/sushi.jpg"
               />
               <button
                 aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
               >
                 <svg
                   aria-hidden="true"
@@ -301,11 +301,11 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
 exports[`RestaurantListSection renders all categories when no category is selected: all categories 1`] = `
 <DocumentFragment>
   <section
-    class="container mx-auto sm:px-0 flex flex-col gap-32"
+    class="container mx-auto flex flex-col gap-32 sm:px-0"
   >
     <div>
       <h2
-        class="text-[44px] leading-[44px] font-bold text-primary mb-[40px]"
+        class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
       >
         Fast Food
       </h2>
@@ -317,38 +317,38 @@ exports[`RestaurantListSection renders all categories when no category is select
           href="/product-detail/1"
         >
           <div
-            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] transition-all duration-200 hover:scale-100 xl:hover:scale-105"
+            class="text-card-foreground flex justify-between gap-[18px] rounded-[12px] bg-[#fdfdfd] px-[30px] py-[24px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
           >
             <div
-              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
             >
               <p
-                class="text-xl leading-[23px] font-semiBold mb-[15px]"
+                class="mb-[15px] text-xl font-semiBold leading-[23px]"
               >
                 Pizza
               </p>
               <p
-                class="font-base text-sm leading-[25px] mb-2"
+                class="mb-2 font-base text-sm leading-[25px]"
               >
                 Delicious pizza
               </p>
               <p
-                class="font-bold text-lg leading-[18px]"
+                class="text-lg font-bold leading-[18px]"
               >
                 GDP 10
               </p>
             </div>
             <div
-              class="relative w-40 h-40 flex-shrink-0"
+              class="relative h-40 w-40 flex-shrink-0"
             >
               <img
                 alt="Pizza"
-                class="object-cover rounded-xl"
+                class="rounded-xl object-cover"
                 src="/pizza.jpg"
               />
               <button
                 aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
               >
                 <svg
                   aria-hidden="true"
@@ -379,38 +379,38 @@ exports[`RestaurantListSection renders all categories when no category is select
           href="/product-detail/2"
         >
           <div
-            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] transition-all duration-200 hover:scale-100 xl:hover:scale-105"
+            class="text-card-foreground flex justify-between gap-[18px] rounded-[12px] bg-[#fdfdfd] px-[30px] py-[24px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
           >
             <div
-              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
             >
               <p
-                class="text-xl leading-[23px] font-semiBold mb-[15px]"
+                class="mb-[15px] text-xl font-semiBold leading-[23px]"
               >
                 Sushi
               </p>
               <p
-                class="font-base text-sm leading-[25px] mb-2"
+                class="mb-2 font-base text-sm leading-[25px]"
               >
                 Fresh sushi
               </p>
               <p
-                class="font-bold text-lg leading-[18px]"
+                class="text-lg font-bold leading-[18px]"
               >
                 GDP 15
               </p>
             </div>
             <div
-              class="relative w-40 h-40 flex-shrink-0"
+              class="relative h-40 w-40 flex-shrink-0"
             >
               <img
                 alt="Sushi"
-                class="object-cover rounded-xl"
+                class="rounded-xl object-cover"
                 src="/sushi.jpg"
               />
               <button
                 aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
               >
                 <svg
                   aria-hidden="true"
@@ -440,7 +440,7 @@ exports[`RestaurantListSection renders all categories when no category is select
     </div>
     <div>
       <h2
-        class="text-[44px] leading-[44px] font-bold text-primary mb-[40px]"
+        class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
       >
         Japanese
       </h2>
@@ -452,38 +452,38 @@ exports[`RestaurantListSection renders all categories when no category is select
           href="/product-detail/1"
         >
           <div
-            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] transition-all duration-200 hover:scale-100 xl:hover:scale-105"
+            class="text-card-foreground flex justify-between gap-[18px] rounded-[12px] bg-[#fdfdfd] px-[30px] py-[24px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
           >
             <div
-              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
             >
               <p
-                class="text-xl leading-[23px] font-semiBold mb-[15px]"
+                class="mb-[15px] text-xl font-semiBold leading-[23px]"
               >
                 Pizza
               </p>
               <p
-                class="font-base text-sm leading-[25px] mb-2"
+                class="mb-2 font-base text-sm leading-[25px]"
               >
                 Delicious pizza
               </p>
               <p
-                class="font-bold text-lg leading-[18px]"
+                class="text-lg font-bold leading-[18px]"
               >
                 GDP 10
               </p>
             </div>
             <div
-              class="relative w-40 h-40 flex-shrink-0"
+              class="relative h-40 w-40 flex-shrink-0"
             >
               <img
                 alt="Pizza"
-                class="object-cover rounded-xl"
+                class="rounded-xl object-cover"
                 src="/pizza.jpg"
               />
               <button
                 aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
               >
                 <svg
                   aria-hidden="true"
@@ -514,38 +514,38 @@ exports[`RestaurantListSection renders all categories when no category is select
           href="/product-detail/2"
         >
           <div
-            class="text-card-foreground flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] transition-all duration-200 hover:scale-100 xl:hover:scale-105"
+            class="text-card-foreground flex justify-between gap-[18px] rounded-[12px] bg-[#fdfdfd] px-[30px] py-[24px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] 2xl:w-[496px] cursor-pointer transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
           >
             <div
-              class="flex flex-col justify-evenly min-h-[178px] text-black lg:pt-[19px]"
+              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
             >
               <p
-                class="text-xl leading-[23px] font-semiBold mb-[15px]"
+                class="mb-[15px] text-xl font-semiBold leading-[23px]"
               >
                 Sushi
               </p>
               <p
-                class="font-base text-sm leading-[25px] mb-2"
+                class="mb-2 font-base text-sm leading-[25px]"
               >
                 Fresh sushi
               </p>
               <p
-                class="font-bold text-lg leading-[18px]"
+                class="text-lg font-bold leading-[18px]"
               >
                 GDP 15
               </p>
             </div>
             <div
-              class="relative w-40 h-40 flex-shrink-0"
+              class="relative h-40 w-40 flex-shrink-0"
             >
               <img
                 alt="Sushi"
-                class="object-cover rounded-xl"
+                class="rounded-xl object-cover"
                 src="/sushi.jpg"
               />
               <button
                 aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 rounded-full w-[49px] h-[49px] p-0 shadow-lg z-10"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
               >
                 <svg
                   aria-hidden="true"
@@ -580,7 +580,7 @@ exports[`RestaurantListSection renders all categories when no category is select
 exports[`RestaurantListSection renders nothing if getRestaurantList returns empty: empty data 1`] = `
 <DocumentFragment>
   <section
-    class="container mx-auto sm:px-0 flex flex-col gap-32"
+    class="container mx-auto flex flex-col gap-32 sm:px-0"
   >
     <div>
       <div
@@ -590,49 +590,22 @@ exports[`RestaurantListSection renders nothing if getRestaurantList returns empt
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
       >
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
-        />
-      </div>
-    </div>
-    <div>
-      <div
-        class="animate-pulse bg-muted mb-[40px] h-[44px] w-[240px] rounded-md"
-      />
-      <div
-        class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
-      >
-        <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
-        />
-        <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
-        />
-        <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
-        />
-        <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
-        />
-        <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
-        />
-        <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
       </div>
     </div>
@@ -644,22 +617,49 @@ exports[`RestaurantListSection renders nothing if getRestaurantList returns empt
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
       >
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
         <div
-          class="w-full h-[220px] sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] animate-pulse"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="animate-pulse bg-muted mb-[40px] h-[44px] w-[240px] rounded-md"
+      />
+      <div
+        class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+      >
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+        />
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+        />
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+        />
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+        />
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+        />
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
         />
       </div>
     </div>

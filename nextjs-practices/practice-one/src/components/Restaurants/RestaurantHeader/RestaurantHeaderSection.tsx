@@ -5,13 +5,15 @@ import { cn } from '@/lib/utils';
 const RestaurantHeaderSection = () => (
   <section
     className={cn(
-      'container flex flex-col items-center justify-between text-center py-8 px-4 md:px-12 lg:text-left lg:flex-row',
+      'flex flex-col items-center justify-between text-center',
+      'container px-4 py-8 md:px-12',
+      'lg:flex-row lg:text-left',
     )}
   >
-    <Heading size="md" className={cn('mb-8 lg:mb-0')}>
+    <Heading size="md" className="mb-8 lg:mb-0">
       All Offers from McDonald’s East London
     </Heading>
-    <div className={cn('w-full lg:max-w-[344px]')}>
+    <div className="w-full lg:max-w-[344px]">
       <SearchInput />
     </div>
   </section>

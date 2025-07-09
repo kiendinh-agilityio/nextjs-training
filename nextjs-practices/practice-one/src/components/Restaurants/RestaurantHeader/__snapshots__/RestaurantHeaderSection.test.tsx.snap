@@ -3,7 +3,7 @@
 exports[`RestaurantHeaderSection (Restaurants) should match snapshot 1`] = `
 <div>
   <section
-    class="container flex flex-col items-center justify-between text-center py-8 px-4 md:px-12 lg:text-left lg:flex-row"
+    class="flex flex-col items-center justify-between text-center container px-4 py-8 md:px-12 lg:flex-row lg:text-left"
   >
     <h2
       class="text-[16px] lg:text-[32px] lg:leading-[32px] font-bold mb-8 lg:mb-0"
@@ -14,10 +14,10 @@ exports[`RestaurantHeaderSection (Restaurants) should match snapshot 1`] = `
       class="w-full lg:max-w-[344px]"
     >
       <div
-        class="flex items-center w-full border border-secondary bg-background gap-[10px] rounded-[120px] md:px-[28px] px-3 py-2"
+        class="flex w-full items-center border border-secondary bg-background gap-[10px] rounded-[120px] md:px-[28px] px-3 py-2"
       >
         <span
-          class="text-gray-400 pointer-events-none flex-shrink-0"
+          class="pointer-events-none flex-shrink-0 text-gray-400"
         >
           <svg
             aria-hidden="true"
@@ -43,7 +43,7 @@ exports[`RestaurantHeaderSection (Restaurants) should match snapshot 1`] = `
           </svg>
         </span>
         <input
-          class="flex-1 h-10 bg-transparent outline-none border-none file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+          class="file:text-foreground placeholder:text-muted-foreground h-10 flex-1 border-none bg-transparent outline-none file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
           data-slot="input"
           name="input"
           placeholder="Search from menu..."
