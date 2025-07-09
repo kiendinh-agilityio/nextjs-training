@@ -1,3 +1,4 @@
+import { ChevronRight } from 'lucide-react';
 import { Skeleton } from '@/components/common/ui/skeleton';
 import { cn } from '@/lib/utils';
 import ProductSkeleton from '@/components/ProductSkeleton/ProductSkeleton';
@@ -15,7 +16,7 @@ const ProductDetailSkeleton = ({
     {/* Breadcrumb Skeleton */}
     <div className={cn('flex items-center gap-2')}>
       <Skeleton className="h-6 w-32" />
-      <span className="text-gray-400">/</span>
+      <ChevronRight className="h-4 w-4" />
       <Skeleton className="h-6 w-40" />
     </div>
     <div className={cn('mt-20 flex flex-col gap-8 md:flex-row')}>
