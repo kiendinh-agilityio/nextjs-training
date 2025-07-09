@@ -23,7 +23,8 @@ const CategorySection = () => {
     >
       <div
         className={cn(
-          'flex w-full gap-8 overflow-x-auto px-4 [-ms-overflow-style:none] [scrollbar-width:none] 2xl:justify-center 2xl:overflow-x-visible [&::-webkit-scrollbar]:hidden',
+          'flex w-full gap-8 px-4 2xl:justify-center',
+          'overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] 2xl:overflow-x-visible [&::-webkit-scrollbar]:hidden',
         )}
       >
         {CATEGORIES_ITEM.map((category) => (

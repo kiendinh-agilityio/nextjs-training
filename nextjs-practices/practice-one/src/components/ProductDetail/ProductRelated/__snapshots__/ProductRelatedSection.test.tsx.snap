@@ -14,7 +14,7 @@ exports[`ProductRelatedSection matches snapshot 1`] = `
       class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4"
     >
       <a
-        class="flex flex-col items-center justify-end text-center transition hover:shadow-lg rounded-xl border p-6"
+        class="flex flex-col items-center justify-end p-6 text-center transition rounded-xl border hover:shadow-lg"
         href="/product-detail/2"
       >
         <img
@@ -36,7 +36,7 @@ exports[`ProductRelatedSection matches snapshot 1`] = `
         </p>
       </a>
       <a
-        class="flex flex-col items-center justify-end text-center transition hover:shadow-lg rounded-xl border p-6"
+        class="flex flex-col items-center justify-end p-6 text-center transition rounded-xl border hover:shadow-lg"
         href="/product-detail/3"
       >
         <img

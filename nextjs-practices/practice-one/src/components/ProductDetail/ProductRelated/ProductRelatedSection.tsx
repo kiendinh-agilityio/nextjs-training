@@ -25,8 +25,8 @@ const ProductRelatedSection = ({
             key={item.id}
             href={`/product-detail/${item.id}`}
             className={cn(
-              'flex flex-col items-center justify-end text-center transition hover:shadow-lg',
-              'rounded-xl border p-6',
+              'flex flex-col items-center justify-end p-6 text-center transition',
+              'rounded-xl border hover:shadow-lg',
             )}
           >
             <Image

@@ -1,7 +1,6 @@
 import { ChevronRight } from 'lucide-react';
 import { Skeleton } from '@/components/common/ui/skeleton';
 import { cn } from '@/lib/utils';
-import ProductSkeleton from '@/components/ProductSkeleton/ProductSkeleton';
 
 interface ProductDetailSkeletonProps {
   starCount?: number;
@@ -12,19 +11,20 @@ const ProductDetailSkeleton = ({
   starCount = 5,
   ingredientCount = 6,
 }: ProductDetailSkeletonProps) => (
-  <section className={cn('container mx-auto py-8 lg:px-0', 'mb-4')}>
+  <section className="container mx-auto mb-4 py-8 lg:px-0">
     {/* Breadcrumb Skeleton */}
-    <div className={cn('flex items-center gap-2')}>
+    <div className="flex items-center gap-2">
       <Skeleton className="h-6 w-32" />
       <ChevronRight className="h-4 w-4" />
       <Skeleton className="h-6 w-40" />
     </div>
-    <div className={cn('mt-20 flex flex-col gap-8 md:flex-row')}>
+    <div className="mt-20 flex flex-col gap-8 md:flex-row">
       {/* Image Skeleton */}
-      <div className={cn('flex-1')}>
+      <div className="flex-1">
         <Skeleton
           className={cn(
-            'h-[320px] w-full max-w-[400px] rounded-xl object-contain md:h-[400px] lg:h-[488px] lg:max-w-[752px]',
+            'h-[320px] w-full max-w-[400px] md:h-[400px] lg:h-[488px] lg:max-w-[752px]',
+            'rounded-xl object-contain',
           )}
         />
       </div>
@@ -66,13 +66,19 @@ const ProductDetailSkeleton = ({
       </div>
     </div>
     {/* RELATED PRODUCTS Skeleton */}
-    <div className={cn('container mx-auto mt-20')}>
+    <div className="mt-20">
       <div className="mb-12 flex justify-center">
         <Skeleton className="h-10 w-72" />
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
         {Array.from({ length: 4 }).map((_, i) => (
-          <ProductSkeleton key={i} />
+          <Skeleton
+            key={i}
+            className={cn(
+              'flex flex-col items-center justify-end border p-6 text-center transition lg:h-[272px] lg:max-w-[366px]',
+              'rounded-xl border hover:shadow-lg',
+            )}
+          />
         ))}
       </div>
     </div>

@@ -590,49 +590,22 @@ exports[`RestaurantListSection renders nothing if getRestaurantList returns empt
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
       >
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
-        />
-      </div>
-    </div>
-    <div>
-      <div
-        class="animate-pulse bg-muted mb-[40px] h-[44px] w-[240px] rounded-md"
-      />
-      <div
-        class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
-      >
-        <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
-        />
-        <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
-        />
-        <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
-        />
-        <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
-        />
-        <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
-        />
-        <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
       </div>
     </div>
@@ -644,22 +617,49 @@ exports[`RestaurantListSection renders nothing if getRestaurantList returns empt
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
       >
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="animate-pulse bg-muted mb-[40px] h-[44px] w-[240px] rounded-md"
+      />
+      <div
+        class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+      >
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
+        />
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
+        />
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
+        />
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
+        />
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
+        />
+        <div
+          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted shadow-[0_4px_24px_0_rgba(0,0,0,0.08)] rounded-xl border border-black/10"
         />
       </div>
     </div>

@@ -3,7 +3,7 @@
 exports[`ProductDetailSkeleton matches snapshot 1`] = `
 <div>
   <section
-    class="container mx-auto py-8 lg:px-0 mb-4"
+    class="container mx-auto mb-4 py-8 lg:px-0"
   >
     <div
       class="flex items-center gap-2"
@@ -39,7 +39,7 @@ exports[`ProductDetailSkeleton matches snapshot 1`] = `
         class="flex-1"
       >
         <div
-          class="animate-pulse bg-muted h-[320px] w-full max-w-[400px] rounded-xl object-contain md:h-[400px] lg:h-[488px] lg:max-w-[752px]"
+          class="animate-pulse bg-muted h-[320px] w-full max-w-[400px] md:h-[400px] lg:h-[488px] lg:max-w-[752px] rounded-xl object-contain"
         />
       </div>
       <div
@@ -160,7 +160,7 @@ exports[`ProductDetailSkeleton matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="container mx-auto mt-20"
+      class="mt-20"
     >
       <div
         class="mb-12 flex justify-center"
@@ -173,16 +173,16 @@ exports[`ProductDetailSkeleton matches snapshot 1`] = `
         class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4"
       >
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="animate-pulse bg-muted flex flex-col items-center justify-end p-6 text-center transition lg:h-[272px] lg:max-w-[366px] rounded-xl border hover:shadow-lg"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="animate-pulse bg-muted flex flex-col items-center justify-end p-6 text-center transition lg:h-[272px] lg:max-w-[366px] rounded-xl border hover:shadow-lg"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="animate-pulse bg-muted flex flex-col items-center justify-end p-6 text-center transition lg:h-[272px] lg:max-w-[366px] rounded-xl border hover:shadow-lg"
         />
         <div
-          class="w-full h-[220px] animate-pulse sm:h-[220px] md:h-[240px] lg:h-[260px] bg-muted border border-black/10 rounded-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.08)]"
+          class="animate-pulse bg-muted flex flex-col items-center justify-end p-6 text-center transition lg:h-[272px] lg:max-w-[366px] rounded-xl border hover:shadow-lg"
         />
       </div>
     </div>

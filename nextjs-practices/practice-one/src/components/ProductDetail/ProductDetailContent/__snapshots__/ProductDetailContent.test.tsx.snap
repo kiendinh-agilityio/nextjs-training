@@ -61,7 +61,7 @@ exports[`ProductDetailContent matches snapshot 1`] = `
     >
       <img
         alt="Pizza"
-        class="flex flex-1 items-center justify-center rounded-xl object-contain"
+        class="flex flex-1 items-center justify-center rounded-xl object-none"
         data-nimg="1"
         decoding="async"
         height="400"

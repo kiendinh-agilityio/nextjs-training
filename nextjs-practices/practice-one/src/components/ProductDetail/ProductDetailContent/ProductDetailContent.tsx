@@ -32,7 +32,7 @@ const ProductDetailContent = ({ product }: ProductDetailContentProps) => (
         alt={product.name}
         width={400}
         height={400}
-        className="flex flex-1 items-center justify-center rounded-xl object-contain"
+        className="flex flex-1 items-center justify-center rounded-xl object-none"
       />
       <div className="font-regular flex-1 text-gray-700">
         <Heading size="md">{product.name}</Heading>
