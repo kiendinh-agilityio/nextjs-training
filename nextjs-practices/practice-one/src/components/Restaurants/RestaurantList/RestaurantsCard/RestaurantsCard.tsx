@@ -18,9 +18,10 @@ const RestaurantsCard = ({ id, name, description, price, image }: Product) => {
       <Card
         className={cn(
           'flex justify-between py-[24px] px-[30px] bg-[#fdfdfd] gap-[18px] rounded-[12px]',
-          'border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] lg',
+          'border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)]',
           '2xl:w-[496px]',
           'cursor-pointer',
+          'hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] transition-all duration-200 hover:scale-100 xl:hover:scale-105',
         )}
       >
         <div
