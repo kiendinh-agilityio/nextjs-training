@@ -59,22 +59,18 @@ exports[`ProductDetailContent matches snapshot 1`] = `
     <div
       class="flex flex-col md:flex-row gap-8 mt-20"
     >
-      <div
-        class="flex-1 flex justify-center items-center"
-      >
-        <img
-          alt="Pizza"
-          class="rounded-xl object-cover"
-          data-nimg="1"
-          decoding="async"
-          height="400"
-          loading="lazy"
-          src="/_next/image?url=%2Fpizza.jpg&w=828&q=75"
-          srcset="/_next/image?url=%2Fpizza.jpg&w=640&q=75 1x, /_next/image?url=%2Fpizza.jpg&w=828&q=75 2x"
-          style="color: transparent;"
-          width="400"
-        />
-      </div>
+      <img
+        alt="Pizza"
+        class="flex-1 rounded-xl flex justify-center items-center object-contain"
+        data-nimg="1"
+        decoding="async"
+        height="400"
+        loading="lazy"
+        src="/_next/image?url=%2Fpizza.jpg&w=828&q=75"
+        srcset="/_next/image?url=%2Fpizza.jpg&w=640&q=75 1x, /_next/image?url=%2Fpizza.jpg&w=828&q=75 2x"
+        style="color: transparent;"
+        width="400"
+      />
       <div
         class="flex-1 font-regular text-gray-700"
       >
