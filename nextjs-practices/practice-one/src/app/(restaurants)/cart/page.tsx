@@ -3,7 +3,7 @@
 import {
   CartContainer,
   CartLayout,
-  CartItems,
+  CartList,
   CartForm,
 } from '@/components/Cart';
 import { useCartStore } from '@/stores/useCartStore';
@@ -14,7 +14,7 @@ const CartPage = () => {
   return (
     <CartContainer>
       <CartLayout>
-        <CartItems />
+        <CartList />
         <CartForm subTotal={subTotal} discount={discount} total={total} />
       </CartLayout>
     </CartContainer>
