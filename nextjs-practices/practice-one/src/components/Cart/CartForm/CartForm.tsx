@@ -8,7 +8,7 @@ interface CartSummaryProps {
 }
 
 const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => (
-  <div className="flex min-h-[260px] w-full flex-col gap-4 rounded-2xl border p-8 lg:max-w-md">
+  <form className="flex min-h-[260px] w-full flex-col gap-4 rounded-2xl border p-8 lg:max-w-md">
     <div>
       <Heading as="h3" className="mb-4 text-lg font-bold">
         Order Summary
@@ -48,14 +48,7 @@ const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => (
     >
       Go to Checkout <span className="text-2xl">→</span>
     </Button>
-    <Button
-      variant="secondary"
-      className="flex w-full items-center justify-center gap-2 rounded-lg py-4 font-medium"
-      ariaLabel="Button clear cart "
-    >
-      Clear Cart
-    </Button>
-  </div>
+  </form>
 );
 
 export default CartForm;
