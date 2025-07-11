@@ -11,6 +11,8 @@ interface CartProps {
   removeItem: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
+  _hasHydrated: boolean;
+  setHasHydrated: (state: boolean) => void;
 }
 
 export const useCartStore = create<CartProps>()(
@@ -81,6 +83,8 @@ export const useCartStore = create<CartProps>()(
         });
       },
       clearCart: () => set({ items: [], subTotal: 0, discount: 0, total: 0 }),
+      _hasHydrated: false,
+      setHasHydrated: (state: boolean) => set({ _hasHydrated: state }),
     }),
     {
       name: 'cart-storage',
@@ -90,6 +94,9 @@ export const useCartStore = create<CartProps>()(
         discount: state.discount,
         total: state.total,
       }),
+      onRehydrateStorage: () => (state) => {
+        state?.setHasHydrated?.(true);
+      },
     },
   ),
 );
