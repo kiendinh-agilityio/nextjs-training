@@ -66,7 +66,7 @@ const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => (
         'font-medium',
         'rounded-lg border',
       )}
-      ariaLabel="Button checkout "
+      ariaLabel="Button checkout"
     >
       Go to Checkout <span className="text-2xl">→</span>
     </Button>
