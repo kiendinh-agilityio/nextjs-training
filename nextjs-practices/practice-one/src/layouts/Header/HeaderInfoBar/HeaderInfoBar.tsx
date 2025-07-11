@@ -27,9 +27,9 @@ const HeaderInfoBar = () => {
     <div
       className={cn(
         'relative flex justify-between',
+        'px-[37px] pb-[20px] pt-[25px]',
         'rounded-xl border border-base bg-[#fafafa] lg:rounded-b-xl lg:rounded-t-none',
         'text-[15px] font-medium text-black',
-        'px-[37px] pb-[20px] pt-[25px]',
       )}
     >
       <p className="hidden sm:flex md:items-center">
@@ -45,9 +45,10 @@ const HeaderInfoBar = () => {
       <button
         type="button"
         className={cn(
-          'absolute right-0 top-0 flex w-full items-center justify-center sm:w-auto',
-          'rounded-xl bg-success lg:rounded-b-xl lg:rounded-t-none',
+          'absolute right-0 top-0 flex items-center justify-center',
           'px-[37px] pb-[12px] pt-[15px]',
+          'w-full sm:w-auto',
+          'rounded-xl bg-success lg:rounded-b-xl lg:rounded-t-none',
         )}
         onClick={handleCartClick}
       >
@@ -56,7 +57,8 @@ const HeaderInfoBar = () => {
           {cartCount > 0 && (
             <span
               className={cn(
-                'absolute -right-2 -top-2 flex h-6 min-h-[24px] w-6 min-w-[24px] items-center justify-center',
+                'absolute -right-2 -top-2 flex items-center justify-center',
+                'h-6 min-h-[24px] w-6 min-w-[24px]',
                 'rounded-full border-2 border-white bg-primary shadow-lg',
                 'text-xs font-bold text-white',
               )}
