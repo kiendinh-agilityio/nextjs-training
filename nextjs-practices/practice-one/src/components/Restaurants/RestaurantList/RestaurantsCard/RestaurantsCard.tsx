@@ -82,10 +82,10 @@ const RestaurantsCard = ({
     <Link href={`/product-detail/${id}`} className="block">
       <Card
         className={cn(
-          'flex justify-between gap-[18px] rounded-[12px] bg-[#fdfdfd] px-[30px] py-[24px]',
-          'border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)]',
+          'flex justify-between gap-[18px] px-[30px] py-[24px]',
           '2xl:w-[496px]',
-          'cursor-pointer',
+          'bg-[#fdfdfd]',
+          'cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)]',
           'transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105',
         )}
       >
