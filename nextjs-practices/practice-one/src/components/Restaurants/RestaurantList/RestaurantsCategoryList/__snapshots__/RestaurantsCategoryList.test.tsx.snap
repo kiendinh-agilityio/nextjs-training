@@ -49,7 +49,7 @@ exports[`RestaurantsCategoryList displays heading and product list after loading
             <p
               class="text-lg font-bold leading-[18px]"
             >
-              GDP 10
+              $ 10
             </p>
           </div>
           <div
@@ -111,7 +111,7 @@ exports[`RestaurantsCategoryList displays heading and product list after loading
             <p
               class="text-lg font-bold leading-[18px]"
             >
-              GDP 8
+              $ 8
             </p>
           </div>
           <div

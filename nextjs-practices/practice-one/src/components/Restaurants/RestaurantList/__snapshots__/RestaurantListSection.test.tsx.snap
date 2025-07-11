@@ -56,7 +56,7 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
               <p
                 class="text-lg font-bold leading-[18px]"
               >
-                GDP 10
+                $ 10
               </p>
             </div>
             <div
@@ -118,7 +118,7 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
               <p
                 class="text-lg font-bold leading-[18px]"
               >
-                GDP 15
+                $ 15
               </p>
             </div>
             <div
@@ -191,7 +191,7 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
               <p
                 class="text-lg font-bold leading-[18px]"
               >
-                GDP 10
+                $ 10
               </p>
             </div>
             <div
@@ -253,7 +253,7 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
               <p
                 class="text-lg font-bold leading-[18px]"
               >
-                GDP 15
+                $ 15
               </p>
             </div>
             <div
@@ -335,7 +335,7 @@ exports[`RestaurantListSection renders all categories when no category is select
               <p
                 class="text-lg font-bold leading-[18px]"
               >
-                GDP 10
+                $ 10
               </p>
             </div>
             <div
@@ -397,7 +397,7 @@ exports[`RestaurantListSection renders all categories when no category is select
               <p
                 class="text-lg font-bold leading-[18px]"
               >
-                GDP 15
+                $ 15
               </p>
             </div>
             <div
@@ -470,7 +470,7 @@ exports[`RestaurantListSection renders all categories when no category is select
               <p
                 class="text-lg font-bold leading-[18px]"
               >
-                GDP 10
+                $ 10
               </p>
             </div>
             <div
@@ -532,7 +532,7 @@ exports[`RestaurantListSection renders all categories when no category is select
               <p
                 class="text-lg font-bold leading-[18px]"
               >
-                GDP 15
+                $ 15
               </p>
             </div>
             <div
