@@ -1,24 +1,17 @@
-'use client';
+import { auth } from '@/lib/auth';
+import { redirect } from 'next/navigation';
+import { ROUTERS } from '@/constants/router';
+import CartContent from '@/components/Cart/CartContent/CartContent';
 
-import {
-  CartContainer,
-  CartLayout,
-  CartItems,
-  CartForm,
-} from '@/components/Cart';
-import { useCartStore } from '@/stores/useCartStore';
+// Server component to check auth
+const CartPage = async () => {
+  const session = await auth();
 
-const CartPage = () => {
-  const { subTotal, discount, total } = useCartStore();
+  if (!session?.user?.email) {
+    redirect(ROUTERS.LOGIN);
+  }
 
-  return (
-    <CartContainer>
-      <CartLayout>
-        <CartItems />
-        <CartForm subTotal={subTotal} discount={discount} total={total} />
-      </CartLayout>
-    </CartContainer>
-  );
+  return <CartContent />;
 };
 
 export default CartPage;

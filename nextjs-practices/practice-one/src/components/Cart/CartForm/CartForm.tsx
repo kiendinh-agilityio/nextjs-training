@@ -1,5 +1,6 @@
 import { Heading } from '@/components/common/ui/heading';
 import { Button } from '@/components/common/ui/button';
+import { cn } from '@/lib/utils';
 
 interface CartSummaryProps {
   subTotal: number;
@@ -8,7 +9,13 @@ interface CartSummaryProps {
 }
 
 const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => (
-  <div className="flex min-h-[260px] w-full flex-col gap-4 rounded-2xl border p-8 lg:max-w-md">
+  <form
+    className={cn(
+      'flex flex-col gap-4 p-8',
+      'min-h-[260px] w-full lg:max-w-md',
+      'rounded-2xl border',
+    )}
+  >
     <div>
       <Heading as="h3" className="mb-4 text-lg font-bold">
         Order Summary
@@ -28,7 +35,12 @@ const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => (
       </div>
     </div>
     <div className="flex gap-2">
-      <div className="flex flex-1 items-center rounded-lg border border-muted bg-white px-4 py-2">
+      <div
+        className={cn(
+          'flex flex-1 items-center px-4 py-2',
+          'rounded-lg border border-muted bg-white',
+        )}
+      >
         <input
           type="text"
           placeholder="Apply Coupon Code here"
@@ -36,26 +48,29 @@ const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => (
         />
       </div>
       <Button
-        className="rounded-lg bg-[#a3a3a3] px-6 py-2 font-medium text-white hover:bg-[#bdbdbd]"
+        className={cn(
+          'px-6 py-2',
+          'bg-[#a3a3a3] hover:bg-[#bdbdbd]',
+          'font-medium text-white',
+          'rounded-lg border',
+        )}
         ariaLabel="Button apply coupon"
       >
         Apply
       </Button>
     </div>
     <Button
-      className="mt-2 flex w-full items-center justify-center gap-2 rounded-lg py-4 font-medium"
+      className={cn(
+        'mt-2 flex items-center justify-center gap-2 py-4',
+        'w-full',
+        'font-medium',
+        'rounded-lg border',
+      )}
       ariaLabel="Button checkout "
     >
       Go to Checkout <span className="text-2xl">→</span>
     </Button>
-    <Button
-      variant="secondary"
-      className="flex w-full items-center justify-center gap-2 rounded-lg py-4 font-medium"
-      ariaLabel="Button clear cart "
-    >
-      Clear Cart
-    </Button>
-  </div>
+  </form>
 );
 
 export default CartForm;

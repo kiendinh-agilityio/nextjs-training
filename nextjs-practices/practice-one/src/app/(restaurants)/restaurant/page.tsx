@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, Suspense } from 'react';
 import {
   HeroSection,
   RestaurantHeaderSection,
@@ -19,7 +19,9 @@ const RestaurantPage = ({ searchParams }: RestaurantPageProps) => {
       <HeroSection />
       <RestaurantHeaderSection />
       <CategorySection />
-      <RestaurantListSection category={category} />
+      <Suspense fallback={<div>Loading restaurants...</div>}>
+        <RestaurantListSection category={category} />
+      </Suspense>
       <ContactSection />
     </>
   );

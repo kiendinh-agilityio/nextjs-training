@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
+import { SessionProvider } from 'next-auth/react';
 import { FontPoppins } from '@/lib/fonts';
+import { Toaster } from '@/components/common/ui/sonner';
+import { cn } from '@/lib/utils';
+
 import Footer from '@/layouts/Footer/footer';
 import Header from '@/layouts/Header/header';
-import { SessionProvider } from 'next-auth/react';
-import { cn } from '@/lib/utils';
 
 // Components
 import './globals.css';
@@ -29,6 +31,7 @@ const RootLayout = ({
       <body className={cn(FontPoppins.className, 'flex min-h-screen flex-col')}>
         <SessionProvider>
           <Header />
+          <Toaster />
           <main className="flex-grow">{children}</main>
           <Footer />
         </SessionProvider>

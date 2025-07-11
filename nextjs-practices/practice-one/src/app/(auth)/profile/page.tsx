@@ -9,10 +9,12 @@ import { Heading } from '@/components/common/ui/heading';
 import { Skeleton } from '@/components/common/ui/skeleton';
 import { ROUTERS } from '@/constants/router';
 import { cn } from '@/lib/utils';
+import { useCartStore } from '@/stores/useCartStore';
 
 const ProfilePage = () => {
   const { data: session, status } = useSession();
   const [isLoggingOut, setIsLoggingOut] = useState(false);
+  const clearCart = useCartStore((state) => state.clearCart);
 
   if (status === 'loading') {
     return (
@@ -33,7 +35,7 @@ const ProfilePage = () => {
 
   const handleLogout = async () => {
     setIsLoggingOut(true);
-
+    clearCart();
     try {
       await signOut({ callbackUrl: ROUTERS.HOME });
     } catch {
@@ -50,9 +52,8 @@ const ProfilePage = () => {
       </Heading>
       <div
         className={cn(
-          'border shadow-base',
           'mb-6 min-w-[400px] px-8 py-6',
-          'rounded-xl border-muted bg-white',
+          'rounded-xl border border-muted bg-white shadow-base',
         )}
       >
         <p className="mb-2 text-lg font-bold">Email</p>
