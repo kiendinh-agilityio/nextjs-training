@@ -3,11 +3,13 @@
 import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 import { Plus, Minus } from 'lucide-react';
+import { useOptimistic, useTransition } from 'react';
 
 import { useCartStore } from '@/stores/useCartStore';
 import { Button } from '@/components/common/ui/button';
 import { showLoginToast } from '@/utils/showLoginToast';
-import { cartAction } from '@/actions/cart';
+import { CartItem } from '@/types/cart';
+import { useCartAction } from '@/hooks/useCartAction';
 
 import { Product } from '@/types/product';
 import { Heading } from '@/components/common/ui/heading';
@@ -27,8 +29,13 @@ interface ProductDetailContentProps {
 const ProductDetailContent = ({ product }: ProductDetailContentProps) => {
   const { data: session } = useSession();
   const { items, addItem, removeItem } = useCartStore();
+  const [optimisticItems, setOptimisticItems] = useOptimistic(items);
+  const [_, startTransition] = useTransition();
+  const { formAction } = useCartAction();
 
-  const inCart = items.some((item) => String(item.id) === String(product.id));
+  const inCart = optimisticItems.some(
+    (item: CartItem) => String(item.id) === String(product.id),
+  );
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -37,30 +44,50 @@ const ProductDetailContent = ({ product }: ProductDetailContentProps) => {
       return;
     }
 
-    addItem({
+    const newItem: CartItem = {
       id: String(product.id),
       name: product.name,
       price: Number(product.price),
       image: product.image,
       category: product.category,
       quantity: 1,
-    });
+    };
 
-    cartAction({
-      type: 'add',
-      payload: {
-        id: String(product.id),
-        name: product.name,
-        price: Number(product.price),
-        image: product.image,
-        category: product.category,
-      },
+    startTransition(() => {
+      setOptimisticItems([...optimisticItems, newItem]);
+
+      addItem(newItem);
+
+      formAction({
+        type: 'add',
+        payload: {
+          id: String(product.id),
+          name: product.name,
+          price: Number(product.price),
+          image: product.image,
+          category: product.category,
+        },
+      });
     });
   };
 
   const handleRemoveFromCart = (e: React.MouseEvent) => {
     e.preventDefault();
-    removeItem(String(product.id));
+
+    startTransition(() => {
+      setOptimisticItems(
+        optimisticItems.filter(
+          (item: CartItem) => String(item.id) !== String(product.id),
+        ),
+      );
+
+      removeItem(String(product.id));
+
+      formAction({
+        type: 'remove',
+        payload: String(product.id),
+      });
+    });
   };
 
   return (
