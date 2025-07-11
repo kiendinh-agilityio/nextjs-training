@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Minus, Plus, Trash2 } from 'lucide-react';
 import { useTransition } from 'react';
 
-import { cartAction } from '@/actions/cart';
+import { useCartAction } from '@/hooks/useCartAction';
 import { useCartStore } from '@/stores/useCartStore';
 import { Button } from '@/components/common/ui/button';
 import type { CartItem as CartItemType } from '@/types/cart';
@@ -14,13 +14,14 @@ interface CartItemProps {
 
 const CartItem = ({ item }: CartItemProps) => {
   const { updateQuantity, removeItem } = useCartStore();
-  const startTransition = useTransition()[1];
+  const [_, startTransition] = useTransition();
+  const { formAction } = useCartAction();
 
   const handleRemove = () => {
     removeItem(item.id);
 
-    startTransition(async () => {
-      await cartAction({ type: 'remove', payload: item.id });
+    startTransition(() => {
+      formAction({ type: 'remove', payload: item.id });
     });
   };
 
@@ -28,8 +29,8 @@ const CartItem = ({ item }: CartItemProps) => {
     if (item.quantity > 1) {
       updateQuantity(item.id, item.quantity - 1);
 
-      startTransition(async () => {
-        await cartAction({
+      startTransition(() => {
+        formAction({
           type: 'update',
           payload: { id: item.id, quantity: item.quantity - 1 },
         });
@@ -43,7 +44,7 @@ const CartItem = ({ item }: CartItemProps) => {
     updateQuantity(item.id, item.quantity + 1);
 
     startTransition(async () => {
-      await cartAction({
+      await formAction({
         type: 'update',
         payload: { id: item.id, quantity: item.quantity + 1 },
       });
@@ -93,7 +94,7 @@ const CartItem = ({ item }: CartItemProps) => {
             className={cn(
               'h-4 w-4 p-0',
               'bg-transparent hover:bg-transparent',
-              'rounded-full border focus:outline-none focus:ring-0',
+              'rounded-full focus:outline-none focus:ring-0',
             )}
             ariaLabel="Decrease quantity"
             onClick={handleDecrease}
@@ -109,7 +110,7 @@ const CartItem = ({ item }: CartItemProps) => {
               'p-0',
               'h-4 w-4',
               'bg-transparent hover:bg-transparent',
-              'rounded-full border focus:outline-none focus:ring-0',
+              'rounded-full focus:outline-none focus:ring-0',
             )}
             ariaLabel="Increase quantity"
             onClick={handleIncrease}
