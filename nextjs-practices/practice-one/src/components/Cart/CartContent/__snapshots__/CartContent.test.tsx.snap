@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartContent matches snapshot when hydrated and has items 1`] = `
+<div>
+  <div
+    class="container mx-auto mt-12 lg:mt-5 lg:px-0"
+  >
+    <h2
+      class="text-[44px] leading-[44px] font-bold mb-8 text-primary"
+    >
+      Your Cart
+    </h2>
+    <div
+      class="flex flex-col gap-8 text-secondary lg:flex-row lg:items-start"
+    >
+      <div
+        data-testid="cart-list"
+      >
+        CartList
+      </div>
+      <div
+        data-testid="cart-form"
+      >
+        CartForm: 
+        10
+        -
+        2
+        -
+        8
+      </div>
+    </div>
+  </div>
+</div>
+`;
