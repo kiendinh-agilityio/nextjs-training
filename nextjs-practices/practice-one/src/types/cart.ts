@@ -23,3 +23,11 @@ export type CartActionPayload =
   | { type: 'remove'; payload: string }
   | { type: 'update'; payload: UpdatePayload }
   | { type: 'applyCoupon'; payload: string };
+
+export interface CartState {
+  items: CartItem[];
+  subTotal: number;
+  discount: number;
+  total: number;
+  error?: string;
+}
