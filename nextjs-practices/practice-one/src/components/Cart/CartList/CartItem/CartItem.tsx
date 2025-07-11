@@ -43,8 +43,8 @@ const CartItem = ({ item }: CartItemProps) => {
   const handleIncrease = () => {
     updateQuantity(item.id, item.quantity + 1);
 
-    startTransition(async () => {
-      await formAction({
+    startTransition(() => {
+      formAction({
         type: 'update',
         payload: { id: item.id, quantity: item.quantity + 1 },
       });
