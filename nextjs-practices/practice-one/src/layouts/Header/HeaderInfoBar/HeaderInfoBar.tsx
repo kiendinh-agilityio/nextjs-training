@@ -1,6 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import { useOptimistic } from 'react';
 
 import LocationIcon from '@/components/Icons/LocationIcon';
 import CartIcon from '@/components/Icons/CartIcon';
@@ -11,7 +12,11 @@ import { useCartStore } from '@/stores/useCartStore';
 
 const HeaderInfoBar = () => {
   const { items } = useCartStore();
-  const cartCount = items.reduce((sum, item) => sum + item.quantity, 0);
+  const [optimisticItems] = useOptimistic(items);
+  const cartCount = optimisticItems.reduce(
+    (sum, item) => sum + item.quantity,
+    0,
+  );
   const { data: session } = useSession();
   const router = useRouter();
 
