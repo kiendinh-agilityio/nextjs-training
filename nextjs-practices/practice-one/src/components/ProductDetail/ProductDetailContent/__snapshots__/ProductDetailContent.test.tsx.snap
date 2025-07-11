@@ -2,7 +2,9 @@
 
 exports[`ProductDetailContent matches snapshot 1`] = `
 <div>
-  <section>
+  <section
+    class="mt-[50px] lg:mt-0"
+  >
     <nav
       aria-label="breadcrumb"
     >

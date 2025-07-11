@@ -64,7 +64,7 @@ const ProductDetailContent = ({ product }: ProductDetailContentProps) => {
   };
 
   return (
-    <section>
+    <section className="mt-[50px] lg:mt-0">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
