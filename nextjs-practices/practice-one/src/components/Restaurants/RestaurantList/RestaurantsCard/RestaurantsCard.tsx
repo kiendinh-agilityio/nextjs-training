@@ -4,11 +4,12 @@ import { useOptimistic, useTransition } from 'react';
 import { useSession } from 'next-auth/react';
 import { Plus, Minus } from 'lucide-react';
 
-import { cartAction } from '@/actions/cart';
 import type { Product } from '@/types/product';
+import { CartItem } from '@/types/cart';
 import { cn } from '@/lib/utils';
 import { useCartStore } from '@/stores/useCartStore';
 import { showLoginToast } from '@/utils/showLoginToast';
+import { useCartAction } from '@/hooks/useCartAction';
 
 import { Card } from '@/components/common/ui/card';
 import { Button } from '@/components/common/ui/button';
@@ -24,11 +25,12 @@ const RestaurantsCard = ({
   const { items, addItem, removeItem } = useCartStore();
   const [optimisticItems, setOptimisticItems] = useOptimistic(items);
   const [isPending, startTransition] = useTransition();
+  const { formAction } = useCartAction();
   const { data: session } = useSession();
 
   const itemId = String(id);
   const itemPrice = Number(price);
-  const inCart = optimisticItems.some((item) => item.id === itemId);
+  const inCart = optimisticItems.some((item: CartItem) => item.id === itemId);
   const maxLength = 100;
   const shortDescription =
     description.length > maxLength
@@ -40,42 +42,41 @@ const RestaurantsCard = ({
 
     if (!session?.user?.email) {
       showLoginToast();
-
       return;
     }
 
+    const newItem: CartItem = {
+      id: itemId,
+      name,
+      price: itemPrice,
+      image,
+      category,
+      quantity: 1,
+    };
+
     startTransition(() => {
-      setOptimisticItems([
-        ...optimisticItems,
-        { id: itemId, name, price: itemPrice, image, category, quantity: 1 },
-      ]);
-
-      addItem({
-        id: itemId,
-        name,
-        price: itemPrice,
-        image,
-        category,
-        quantity: 1,
-      });
-
-      cartAction({
+      setOptimisticItems([...optimisticItems, newItem]);
+      formAction({
         type: 'add',
         payload: { id: itemId, name, price: itemPrice, image, category },
       });
     });
+
+    addItem(newItem);
   };
 
   const handleRemoveToCart = async (e: React.MouseEvent) => {
     e.preventDefault();
 
     startTransition(() => {
-      setOptimisticItems(optimisticItems.filter((item) => item.id !== itemId));
+      setOptimisticItems(
+        optimisticItems.filter((item: CartItem) => item.id !== itemId),
+      );
 
-      removeItem(itemId);
-
-      cartAction({ type: 'remove', payload: itemId });
+      formAction({ type: 'remove', payload: itemId });
     });
+
+    removeItem(itemId);
   };
 
   return (
