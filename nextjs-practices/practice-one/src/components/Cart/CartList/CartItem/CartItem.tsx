@@ -6,6 +6,7 @@ import { cartAction } from '@/actions/cart';
 import { useCartStore } from '@/stores/useCartStore';
 import { Button } from '@/components/common/ui/button';
 import type { CartItem as CartItemType } from '@/types/cart';
+import { cn } from '@/lib/utils';
 
 interface CartItemProps {
   item: CartItemType;
@@ -80,10 +81,20 @@ const CartItem = ({ item }: CartItemProps) => {
         >
           <Trash2 className="h-[36px] w-[36px] text-white" />
         </Button>
-        <div className="flex items-center rounded-full bg-primary px-4 py-1.5 hover:bg-orange-600 lg:px-6 lg:py-3">
+        <div
+          className={cn(
+            'flex items-center px-4 py-1.5 lg:px-6 lg:py-3',
+            'bg-primary hover:bg-orange-600',
+            'rounded-full border',
+          )}
+        >
           <Button
             variant="primary"
-            className="h-4 w-4 rounded-full bg-transparent p-0 hover:bg-transparent focus:outline-none focus:ring-0"
+            className={cn(
+              'h-4 w-4 p-0',
+              'bg-transparent hover:bg-transparent',
+              'rounded-full border focus:outline-none focus:ring-0',
+            )}
             ariaLabel="Decrease quantity"
             onClick={handleDecrease}
           >
@@ -94,7 +105,12 @@ const CartItem = ({ item }: CartItemProps) => {
           </p>
           <Button
             variant="primary"
-            className="h-4 w-4 rounded-full bg-transparent p-0 hover:bg-transparent focus:outline-none focus:ring-0"
+            className={cn(
+              'p-0',
+              'h-4 w-4',
+              'bg-transparent hover:bg-transparent',
+              'rounded-full border focus:outline-none focus:ring-0',
+            )}
             ariaLabel="Increase quantity"
             onClick={handleIncrease}
           >
