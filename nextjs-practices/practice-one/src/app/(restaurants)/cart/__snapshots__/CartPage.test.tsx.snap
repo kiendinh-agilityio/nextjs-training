@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartPage renders CartContent if authenticated 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="cart-content-mock"
+  >
+    CartContent
+  </div>
+</DocumentFragment>
+`;

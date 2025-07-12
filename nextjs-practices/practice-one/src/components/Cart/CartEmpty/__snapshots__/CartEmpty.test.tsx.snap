@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartEmpty matches snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center justify-center min-h-[260px] w-full rounded-2xl border text-xl text-secondary"
+  >
+    Your cart is empty
+  </div>
+</div>
+`;
