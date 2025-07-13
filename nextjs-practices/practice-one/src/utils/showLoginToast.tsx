@@ -5,7 +5,7 @@ import { ROUTERS } from '@/constants/router';
 
 export const showLoginToast = () => {
   toast(
-    <div>
+    <div className="text-secondary">
       You need to{' '}
       <Link href={ROUTERS.LOGIN} className="font-bold text-primary underline">
         log in
