@@ -9,11 +9,74 @@ exports[`RestaurantListSection renders RestaurantsCategoryList for a specific ca
       <h2
         class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
       >
-        Fast Food
+        Burgers
       </h2>
       <div
         class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
-      />
+      >
+        <a
+          class="block"
+          href="/product-detail/1"
+        >
+          <div
+            class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] min-h-[245px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
+          >
+            <div
+              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
+            >
+              <p
+                class="mb-[15px] text-xl font-semiBold leading-[23px]"
+              >
+                Pizza
+              </p>
+              <p
+                class="mb-2 font-base text-sm leading-[25px]"
+              >
+                Delicious pizza
+              </p>
+              <p
+                class="text-lg font-bold leading-[18px]"
+              >
+                $ 10
+              </p>
+            </div>
+            <div
+              class="relative h-40 w-40 flex-shrink-0"
+            >
+              <img
+                alt="Pizza"
+                class="rounded-xl object-cover"
+                src="/pizza.jpg"
+              />
+              <button
+                aria-label="Button add to cart"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus h-[25px] w-[25px]"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 </DocumentFragment>
@@ -24,275 +87,171 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
   <section
     class="container mx-auto flex flex-col gap-32 sm:px-0"
   >
-    <div>
-      <h2
-        class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
-      >
-        Fast Food
-      </h2>
-      <div
-        class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
-      >
-        <a
-          class="block"
-          href="/product-detail/1"
+    <div
+      class="flex flex-col gap-32"
+    >
+      <div>
+        <h2
+          class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
         >
-          <div
-            class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
+          Burgers
+        </h2>
+        <div
+          class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+        >
+          <a
+            class="block"
+            href="/product-detail/1"
           >
             <div
-              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
+              class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] min-h-[245px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
             >
-              <p
-                class="mb-[15px] text-xl font-semiBold leading-[23px]"
+              <div
+                class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
               >
-                Pizza
-              </p>
-              <p
-                class="mb-2 font-base text-sm leading-[25px]"
-              >
-                Delicious pizza
-              </p>
-              <p
-                class="text-lg font-bold leading-[18px]"
-              >
-                $ 10
-              </p>
-            </div>
-            <div
-              class="relative h-40 w-40 flex-shrink-0"
-            >
-              <img
-                alt="Pizza"
-                class="rounded-xl object-cover"
-                src="/pizza.jpg"
-              />
-              <button
-                aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="lucide lucide-plus h-[25px] w-[25px]"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <p
+                  class="mb-[15px] text-xl font-semiBold leading-[23px]"
                 >
-                  <path
-                    d="M5 12h14"
-                  />
-                  <path
-                    d="M12 5v14"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </a>
-        <a
-          class="block"
-          href="/product-detail/2"
-        >
-          <div
-            class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
-          >
-            <div
-              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
-            >
-              <p
-                class="mb-[15px] text-xl font-semiBold leading-[23px]"
-              >
-                Sushi
-              </p>
-              <p
-                class="mb-2 font-base text-sm leading-[25px]"
-              >
-                Fresh sushi
-              </p>
-              <p
-                class="text-lg font-bold leading-[18px]"
-              >
-                $ 15
-              </p>
-            </div>
-            <div
-              class="relative h-40 w-40 flex-shrink-0"
-            >
-              <img
-                alt="Sushi"
-                class="rounded-xl object-cover"
-                src="/sushi.jpg"
-              />
-              <button
-                aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="lucide lucide-plus h-[25px] w-[25px]"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                  Pizza
+                </p>
+                <p
+                  class="mb-2 font-base text-sm leading-[25px]"
                 >
-                  <path
-                    d="M5 12h14"
-                  />
-                  <path
-                    d="M12 5v14"
-                  />
-                </svg>
-              </button>
+                  Delicious pizza
+                </p>
+                <p
+                  class="text-lg font-bold leading-[18px]"
+                >
+                  $ 10
+                </p>
+              </div>
+              <div
+                class="relative h-40 w-40 flex-shrink-0"
+              >
+                <img
+                  alt="Pizza"
+                  class="rounded-xl object-cover"
+                  src="/pizza.jpg"
+                />
+                <button
+                  aria-label="Button add to cart"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-plus h-[25px] w-[25px]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
-    </div>
-    <div>
-      <h2
-        class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
-      >
-        Japanese
-      </h2>
-      <div
-        class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
-      >
-        <a
-          class="block"
-          href="/product-detail/1"
+      <div>
+        <h2
+          class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
         >
-          <div
-            class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
+          Fries
+        </h2>
+        <div
+          class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+        >
+          <a
+            class="block"
+            href="/product-detail/2"
           >
             <div
-              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
+              class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] min-h-[245px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
             >
-              <p
-                class="mb-[15px] text-xl font-semiBold leading-[23px]"
+              <div
+                class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
               >
-                Pizza
-              </p>
-              <p
-                class="mb-2 font-base text-sm leading-[25px]"
-              >
-                Delicious pizza
-              </p>
-              <p
-                class="text-lg font-bold leading-[18px]"
-              >
-                $ 10
-              </p>
-            </div>
-            <div
-              class="relative h-40 w-40 flex-shrink-0"
-            >
-              <img
-                alt="Pizza"
-                class="rounded-xl object-cover"
-                src="/pizza.jpg"
-              />
-              <button
-                aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="lucide lucide-plus h-[25px] w-[25px]"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <p
+                  class="mb-[15px] text-xl font-semiBold leading-[23px]"
                 >
-                  <path
-                    d="M5 12h14"
-                  />
-                  <path
-                    d="M12 5v14"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </a>
-        <a
-          class="block"
-          href="/product-detail/2"
-        >
-          <div
-            class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
-          >
-            <div
-              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
-            >
-              <p
-                class="mb-[15px] text-xl font-semiBold leading-[23px]"
-              >
-                Sushi
-              </p>
-              <p
-                class="mb-2 font-base text-sm leading-[25px]"
-              >
-                Fresh sushi
-              </p>
-              <p
-                class="text-lg font-bold leading-[18px]"
-              >
-                $ 15
-              </p>
-            </div>
-            <div
-              class="relative h-40 w-40 flex-shrink-0"
-            >
-              <img
-                alt="Sushi"
-                class="rounded-xl object-cover"
-                src="/sushi.jpg"
-              />
-              <button
-                aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="lucide lucide-plus h-[25px] w-[25px]"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                  Sushi
+                </p>
+                <p
+                  class="mb-2 font-base text-sm leading-[25px]"
                 >
-                  <path
-                    d="M5 12h14"
-                  />
-                  <path
-                    d="M12 5v14"
-                  />
-                </svg>
-              </button>
+                  Fresh sushi
+                </p>
+                <p
+                  class="text-lg font-bold leading-[18px]"
+                >
+                  $ 15
+                </p>
+              </div>
+              <div
+                class="relative h-40 w-40 flex-shrink-0"
+              >
+                <img
+                  alt="Sushi"
+                  class="rounded-xl object-cover"
+                  src="/sushi.jpg"
+                />
+                <button
+                  aria-label="Button add to cart"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-plus h-[25px] w-[25px]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
+      <div>
+        <h2
+          class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
+        >
+          Breakfast
+        </h2>
+        <div
+          class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+        />
+      </div>
+      <button
+        aria-label="Load More"
+        class="items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-primary text-white hover:bg-orange-600 h-[61px] py-[17px] px-[27px] text-[18px] leading-[24px] mx-auto mb-32 flex w-[250px] rounded-xl lg:mb-0"
+      >
+        Load More
+      </button>
     </div>
   </section>
 </DocumentFragment>
@@ -303,275 +262,171 @@ exports[`RestaurantListSection renders all categories when no category is select
   <section
     class="container mx-auto flex flex-col gap-32 sm:px-0"
   >
-    <div>
-      <h2
-        class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
-      >
-        Fast Food
-      </h2>
-      <div
-        class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
-      >
-        <a
-          class="block"
-          href="/product-detail/1"
+    <div
+      class="flex flex-col gap-32"
+    >
+      <div>
+        <h2
+          class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
         >
-          <div
-            class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
+          Burgers
+        </h2>
+        <div
+          class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+        >
+          <a
+            class="block"
+            href="/product-detail/1"
           >
             <div
-              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
+              class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] min-h-[245px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
             >
-              <p
-                class="mb-[15px] text-xl font-semiBold leading-[23px]"
+              <div
+                class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
               >
-                Pizza
-              </p>
-              <p
-                class="mb-2 font-base text-sm leading-[25px]"
-              >
-                Delicious pizza
-              </p>
-              <p
-                class="text-lg font-bold leading-[18px]"
-              >
-                $ 10
-              </p>
-            </div>
-            <div
-              class="relative h-40 w-40 flex-shrink-0"
-            >
-              <img
-                alt="Pizza"
-                class="rounded-xl object-cover"
-                src="/pizza.jpg"
-              />
-              <button
-                aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="lucide lucide-plus h-[25px] w-[25px]"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <p
+                  class="mb-[15px] text-xl font-semiBold leading-[23px]"
                 >
-                  <path
-                    d="M5 12h14"
-                  />
-                  <path
-                    d="M12 5v14"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </a>
-        <a
-          class="block"
-          href="/product-detail/2"
-        >
-          <div
-            class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
-          >
-            <div
-              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
-            >
-              <p
-                class="mb-[15px] text-xl font-semiBold leading-[23px]"
-              >
-                Sushi
-              </p>
-              <p
-                class="mb-2 font-base text-sm leading-[25px]"
-              >
-                Fresh sushi
-              </p>
-              <p
-                class="text-lg font-bold leading-[18px]"
-              >
-                $ 15
-              </p>
-            </div>
-            <div
-              class="relative h-40 w-40 flex-shrink-0"
-            >
-              <img
-                alt="Sushi"
-                class="rounded-xl object-cover"
-                src="/sushi.jpg"
-              />
-              <button
-                aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="lucide lucide-plus h-[25px] w-[25px]"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                  Pizza
+                </p>
+                <p
+                  class="mb-2 font-base text-sm leading-[25px]"
                 >
-                  <path
-                    d="M5 12h14"
-                  />
-                  <path
-                    d="M12 5v14"
-                  />
-                </svg>
-              </button>
+                  Delicious pizza
+                </p>
+                <p
+                  class="text-lg font-bold leading-[18px]"
+                >
+                  $ 10
+                </p>
+              </div>
+              <div
+                class="relative h-40 w-40 flex-shrink-0"
+              >
+                <img
+                  alt="Pizza"
+                  class="rounded-xl object-cover"
+                  src="/pizza.jpg"
+                />
+                <button
+                  aria-label="Button add to cart"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-plus h-[25px] w-[25px]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
-    </div>
-    <div>
-      <h2
-        class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
-      >
-        Japanese
-      </h2>
-      <div
-        class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
-      >
-        <a
-          class="block"
-          href="/product-detail/1"
+      <div>
+        <h2
+          class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
         >
-          <div
-            class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
+          Fries
+        </h2>
+        <div
+          class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+        >
+          <a
+            class="block"
+            href="/product-detail/2"
           >
             <div
-              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
+              class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] min-h-[245px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
             >
-              <p
-                class="mb-[15px] text-xl font-semiBold leading-[23px]"
+              <div
+                class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
               >
-                Pizza
-              </p>
-              <p
-                class="mb-2 font-base text-sm leading-[25px]"
-              >
-                Delicious pizza
-              </p>
-              <p
-                class="text-lg font-bold leading-[18px]"
-              >
-                $ 10
-              </p>
-            </div>
-            <div
-              class="relative h-40 w-40 flex-shrink-0"
-            >
-              <img
-                alt="Pizza"
-                class="rounded-xl object-cover"
-                src="/pizza.jpg"
-              />
-              <button
-                aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="lucide lucide-plus h-[25px] w-[25px]"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <p
+                  class="mb-[15px] text-xl font-semiBold leading-[23px]"
                 >
-                  <path
-                    d="M5 12h14"
-                  />
-                  <path
-                    d="M12 5v14"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </a>
-        <a
-          class="block"
-          href="/product-detail/2"
-        >
-          <div
-            class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
-          >
-            <div
-              class="flex min-h-[178px] flex-col justify-evenly text-black lg:pt-[19px]"
-            >
-              <p
-                class="mb-[15px] text-xl font-semiBold leading-[23px]"
-              >
-                Sushi
-              </p>
-              <p
-                class="mb-2 font-base text-sm leading-[25px]"
-              >
-                Fresh sushi
-              </p>
-              <p
-                class="text-lg font-bold leading-[18px]"
-              >
-                $ 15
-              </p>
-            </div>
-            <div
-              class="relative h-40 w-40 flex-shrink-0"
-            >
-              <img
-                alt="Sushi"
-                class="rounded-xl object-cover"
-                src="/sushi.jpg"
-              />
-              <button
-                aria-label="Button add to cart"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="lucide lucide-plus h-[25px] w-[25px]"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                  Sushi
+                </p>
+                <p
+                  class="mb-2 font-base text-sm leading-[25px]"
                 >
-                  <path
-                    d="M5 12h14"
-                  />
-                  <path
-                    d="M12 5v14"
-                  />
-                </svg>
-              </button>
+                  Fresh sushi
+                </p>
+                <p
+                  class="text-lg font-bold leading-[18px]"
+                >
+                  $ 15
+                </p>
+              </div>
+              <div
+                class="relative h-40 w-40 flex-shrink-0"
+              >
+                <img
+                  alt="Sushi"
+                  class="rounded-xl object-cover"
+                  src="/sushi.jpg"
+                />
+                <button
+                  aria-label="Button add to cart"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-plus h-[25px] w-[25px]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
+      <div>
+        <h2
+          class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
+        >
+          Breakfast
+        </h2>
+        <div
+          class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+        />
+      </div>
+      <button
+        aria-label="Load More"
+        class="items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-primary text-white hover:bg-orange-600 h-[61px] py-[17px] px-[27px] text-[18px] leading-[24px] mx-auto mb-32 flex w-[250px] rounded-xl lg:mb-0"
+      >
+        Load More
+      </button>
     </div>
   </section>
 </DocumentFragment>

@@ -26,7 +26,7 @@ describe('RestaurantListSection', () => {
       description: 'Delicious pizza',
       price: '10',
       image: '/pizza.jpg',
-      category: 'Fast Food',
+      category: 'Burgers',
     },
     {
       id: '2',
@@ -34,62 +34,75 @@ describe('RestaurantListSection', () => {
       description: 'Fresh sushi',
       price: '15',
       image: '/sushi.jpg',
-      category: 'Japanese',
+      category: 'Fries',
+    },
+    {
+      id: '3',
+      name: 'Cola',
+      description: 'Refreshing cola',
+      price: '5',
+      image: '/cola.jpg',
+      category: 'Cold drinks',
     },
   ];
 
   beforeEach(() => {
     jest.clearAllMocks();
+    // Mock getRestaurantList to return products based on category
+    (getRestaurantList as jest.Mock).mockImplementation((category?: string) => {
+      if (!category) {
+        return Promise.resolve(mockProducts);
+      }
+      return Promise.resolve(
+        mockProducts.filter((p) => p.category === category),
+      );
+    });
   });
 
   it('renders RestaurantsCategoryList for a specific category', async () => {
-    (getRestaurantList as jest.Mock).mockResolvedValue([]);
-
-    const { asFragment } = render(
-      <RestaurantListSection category="Fast Food" />,
-    );
+    const { asFragment } = render(<RestaurantListSection category="Burgers" />);
 
     await waitFor(() => {
-      expect(screen.getByText('Fast Food')).toBeInTheDocument();
+      expect(screen.getByText('Burgers')).toBeInTheDocument();
     });
 
     expect(asFragment()).toMatchSnapshot('specific category');
   });
 
   it('renders all categories when no category is selected', async () => {
-    (getRestaurantList as jest.Mock).mockResolvedValue(mockProducts);
-
     const { asFragment } = render(<RestaurantListSection />);
 
     await waitFor(() => {
-      expect(screen.getByText('Fast Food')).toBeInTheDocument();
-      expect(screen.getByText('Japanese')).toBeInTheDocument();
+      expect(screen.getByText('Burgers')).toBeInTheDocument();
+      expect(screen.getByText('Fries')).toBeInTheDocument();
+      expect(screen.getByText('Breakfast')).toBeInTheDocument();
     });
 
     expect(asFragment()).toMatchSnapshot('all categories');
   });
 
   it('renders all categories when category is "Offers"', async () => {
-    (getRestaurantList as jest.Mock).mockResolvedValue(mockProducts);
-
     const { asFragment } = render(<RestaurantListSection category="Offers" />);
 
     await waitFor(() => {
-      expect(screen.getByText('Fast Food')).toBeInTheDocument();
-      expect(screen.getByText('Japanese')).toBeInTheDocument();
+      expect(screen.getByText('Burgers')).toBeInTheDocument();
+      expect(screen.getByText('Fries')).toBeInTheDocument();
+      expect(screen.getByText('Breakfast')).toBeInTheDocument();
     });
 
     expect(asFragment()).toMatchSnapshot('offers category');
   });
 
   it('renders nothing if getRestaurantList returns empty', async () => {
+    // Override the mock to return empty array
     (getRestaurantList as jest.Mock).mockResolvedValue([]);
 
     const { asFragment } = render(<RestaurantListSection />);
 
     await waitFor(() => {
-      expect(screen.queryByText('Fast Food')).not.toBeInTheDocument();
-      expect(screen.queryByText('Japanese')).not.toBeInTheDocument();
+      expect(screen.queryByText('Burgers')).not.toBeInTheDocument();
+      expect(screen.queryByText('Fries')).not.toBeInTheDocument();
+      expect(screen.queryByText('Breakfast')).not.toBeInTheDocument();
     });
 
     expect(asFragment()).toMatchSnapshot('empty data');
