@@ -7,7 +7,6 @@ const HeroSection = () => (
   <section
     className={cn(
       'flex flex-col items-center justify-center',
-      'mt-[40px] lg:mt-0',
       'w-full 2xl:mx-auto 2xl:w-[1528px]',
       'bg-hero-restaurant bg-cover bg-center text-white',
     )}
