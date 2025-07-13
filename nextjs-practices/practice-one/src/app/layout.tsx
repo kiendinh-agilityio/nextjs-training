@@ -32,7 +32,9 @@ const RootLayout = ({
         <SessionProvider>
           <Header />
           <Toaster />
-          <main className="flex-grow">{children}</main>
+          <main className="flex-grow pt-[150px] md:pt-[180px] xl:pt-[220px]">
+            {children}
+          </main>
           <Footer />
         </SessionProvider>
       </body>
