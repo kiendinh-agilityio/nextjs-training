@@ -53,10 +53,10 @@ export const CATEGORIES_ITEM = [
   'Offers',
   'Burgers',
   'Fries',
-  'Snacks',
+  'Breakfast',
   'Salads',
   'Cold drinks',
   'Desserts',
-  'Hot drinks',
+  'McCafe',
   'Sauces',
 ];
