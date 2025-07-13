@@ -31,7 +31,7 @@ const RestaurantsCard = ({
   const itemId = String(id);
   const itemPrice = Number(price);
   const inCart = optimisticItems.some((item: CartItem) => item.id === itemId);
-  const maxLength = 100;
+  const maxLength = 70;
   const shortDescription =
     description.length > maxLength
       ? description.slice(0, maxLength) + '...'
@@ -84,7 +84,7 @@ const RestaurantsCard = ({
       <Card
         className={cn(
           'flex justify-between gap-[18px] px-[30px] py-[24px]',
-          '2xl:w-[496px]',
+          'min-h-[245px] 2xl:w-[496px]',
           'bg-[#fdfdfd]',
           'cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)]',
           'transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105',
