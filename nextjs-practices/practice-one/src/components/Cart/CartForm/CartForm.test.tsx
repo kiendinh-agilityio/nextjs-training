@@ -27,7 +27,7 @@ describe('CartForm', () => {
   it('renders checkout button', () => {
     render(<CartForm {...defaultProps} />);
     expect(screen.getByLabelText('Button checkout')).toBeInTheDocument();
-    expect(screen.getByText('Go to Checkout')).toBeInTheDocument();
+    expect(screen.getByText('Checkout')).toBeInTheDocument();
   });
 
   it('matches snapshot', () => {
