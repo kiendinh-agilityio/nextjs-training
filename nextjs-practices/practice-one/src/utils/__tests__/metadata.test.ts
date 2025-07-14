@@ -12,7 +12,9 @@ describe('createMetadata', () => {
   it('should return default metadata when no options are provided', () => {
     const meta = createMetadata();
     expect(meta.title).toBe('Food Delivery Website');
-    expect(meta.description).toBe('Browser out the lastet products');
+    expect(meta.description).toBe(
+      'Welcome to Order.uk – your go-to platform for discovering top restaurants, trending products, and exclusive food deals. Browse, order, and enjoy hassle-free delivery.',
+    );
     expect(meta.openGraph?.siteName).toBe('Food Delivery Website');
   });
 

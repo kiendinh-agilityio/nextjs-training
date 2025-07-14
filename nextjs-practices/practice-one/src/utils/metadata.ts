@@ -30,7 +30,9 @@ const defaultMeta = {
  */
 export function createMetadata(options: MetaOptions = {}): Metadata {
   const title = options.title ? options.title : defaultMeta.siteName;
-  const description = options.description || 'Browser out the lastet products';
+  const description =
+    options.description ||
+    'Welcome to Order.uk – your go-to platform for discovering top restaurants, trending products, and exclusive food deals. Browse, order, and enjoy hassle-free delivery.';
   const url = options.url || defaultMeta.baseUrl;
   const imageUrl =
     defaultMeta.baseUrl +
