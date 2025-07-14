@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import { BASE_URL } from '@/constants/url';
 
-type OpenGraphType = 'website';
+type OpenGraphType = 'website' | 'profile';
 
 interface MetaOptions {
   title?: string;
@@ -34,13 +34,11 @@ export function createMetadata(options: MetaOptions = {}): Metadata {
   const url = options.url || defaultMeta.baseUrl;
   const imageUrl =
     defaultMeta.baseUrl +
-    '/images' +
     (defaultMeta.image.startsWith('/')
       ? defaultMeta.image
       : '/' + defaultMeta.image);
   const twitterImageUrl =
     defaultMeta.baseUrl +
-    '/images' +
     (defaultMeta.twitterImage.startsWith('/')
       ? defaultMeta.twitterImage
       : '/' + defaultMeta.twitterImage);

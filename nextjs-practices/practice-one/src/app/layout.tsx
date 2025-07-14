@@ -1,8 +1,7 @@
-import type { Metadata } from 'next';
 import { SessionProvider } from 'next-auth/react';
 import { FontPoppins } from '@/lib/fonts';
 import { Toaster } from '@/components/common/ui/sonner';
-import { cn } from '@/lib/utils';
+import { createMetadata } from '@/utils/metadata';
 
 import Footer from '@/layouts/Footer/footer';
 import Header from '@/layouts/Header/header';
@@ -10,16 +9,7 @@ import Header from '@/layouts/Header/header';
 // Components
 import './globals.css';
 
-export const metadata: Metadata = {
-  title: 'Food Delivery Website',
-  description: 'Food-Delivery-Website',
-  icons: [
-    {
-      rel: 'icon',
-      url: '/favicon.ico',
-    },
-  ],
-};
+export const metadata = createMetadata();
 
 const RootLayout = ({
   children,
@@ -28,7 +18,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={cn(FontPoppins.className, 'flex min-h-screen flex-col')}>
+      <body className={`${FontPoppins.className} flex min-h-screen flex-col`}>
         <SessionProvider>
           <Header />
           <Toaster />
