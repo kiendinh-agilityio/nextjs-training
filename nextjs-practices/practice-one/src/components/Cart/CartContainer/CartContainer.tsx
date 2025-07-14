@@ -5,7 +5,7 @@ interface CartContainerProps {
 }
 
 const CartContainer = ({ children }: CartContainerProps) => (
-  <div className="container mx-auto mt-12 lg:mt-5 lg:px-0">
+  <div className="container mx-auto mt-12 lg:mt-5 lg:min-h-[600px] lg:px-0">
     <Heading size="lg" className="mb-8 text-primary">
       Your Cart
     </Heading>
