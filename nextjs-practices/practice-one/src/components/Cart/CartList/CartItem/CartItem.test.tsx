@@ -47,7 +47,7 @@ describe('CartItem', () => {
     render(<CartItem item={item} />);
     expect(screen.getByText('Test Product')).toBeInTheDocument();
     expect(screen.getByText('Category: TestCat')).toBeInTheDocument();
-    expect(screen.getByText('$ 50.00')).toBeInTheDocument();
+    expect(screen.getByText('$50.00')).toBeInTheDocument();
     expect(screen.getByText('2')).toBeInTheDocument();
     expect(screen.getByAltText('Test Product')).toHaveAttribute(
       'src',
