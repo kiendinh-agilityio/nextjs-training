@@ -42,7 +42,12 @@ export const applyCoupon = async ({ code, subTotal }: ApplyCouponProps) => {
   );
 
   if (!coupon) {
-    return { valid: false, discount: 0, message: 'Invalid coupon code' };
+    return {
+      valid: false,
+      discount: 0,
+      percent: 0,
+      message: 'Invalid coupon code',
+    };
   }
 
   // Calculate discount as percentage of subTotal (e.g., 15% or 20%)
@@ -51,6 +56,7 @@ export const applyCoupon = async ({ code, subTotal }: ApplyCouponProps) => {
   return {
     valid: true,
     discount,
+    percent: coupon.discount,
     message: `Coupon ${code} applied successfully!`,
   };
 };
