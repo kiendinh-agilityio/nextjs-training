@@ -1,0 +1,6 @@
+{
+  "coupons": [
+    { "code": "SALE15", "discount": 15 },
+    { "code": "SALE20", "discount": 20 }
+  ]
+}
