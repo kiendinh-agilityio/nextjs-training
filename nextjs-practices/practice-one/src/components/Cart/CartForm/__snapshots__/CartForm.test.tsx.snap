@@ -47,6 +47,7 @@ exports[`CartForm matches snapshot 1`] = `
           Total
         </p>
         <p>
+          $
           90
         </p>
       </div>

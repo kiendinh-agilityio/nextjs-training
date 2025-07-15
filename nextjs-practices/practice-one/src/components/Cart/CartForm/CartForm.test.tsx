@@ -13,7 +13,7 @@ describe('CartForm', () => {
     expect(screen.getByText('Order Summary')).toBeInTheDocument();
     expect(screen.getByText('$100.00')).toBeInTheDocument();
     expect(screen.getByText('-10')).toBeInTheDocument();
-    expect(screen.getByText('90')).toBeInTheDocument();
+    expect(screen.getByText('$90')).toBeInTheDocument();
   });
 
   it('renders coupon input and apply button', () => {
