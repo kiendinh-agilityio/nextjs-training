@@ -23,10 +23,6 @@ exports[`CartContent matches snapshot when hydrated and has items 1`] = `
       >
         CartForm: 
         10
-        -
-        2
-        -
-        8
       </div>
     </div>
   </div>

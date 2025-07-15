@@ -13,14 +13,8 @@ jest.mock('@/components/Cart/CartList/CartList', () => {
 });
 
 jest.mock('@/components/Cart/CartForm/CartForm', () => {
-  const MockCartForm = (props: {
-    subTotal: number;
-    discount: number;
-    total: number;
-  }) => (
-    <div data-testid="cart-form">
-      CartForm: {props.subTotal}-{props.discount}-{props.total}
-    </div>
+  const MockCartForm = (props: { subTotal: number }) => (
+    <div data-testid="cart-form">CartForm: {props.subTotal}</div>
   );
   MockCartForm.displayName = 'MockCartForm';
   return MockCartForm;
@@ -71,7 +65,7 @@ describe('CartContent', () => {
     });
     render(<CartContent />);
     expect(screen.getByTestId('cart-list')).toBeInTheDocument();
-    expect(screen.getByTestId('cart-form')).toHaveTextContent('10-2-8');
+    expect(screen.getByTestId('cart-form')).toHaveTextContent('10');
   });
 
   it('renders CartEmpty and CartForm when hydrated and no items', () => {
@@ -84,7 +78,7 @@ describe('CartContent', () => {
     });
     render(<CartContent />);
     expect(screen.getByTestId('cart-empty')).toBeInTheDocument();
-    expect(screen.getByTestId('cart-form')).toHaveTextContent('0-0-0');
+    expect(screen.getByTestId('cart-form')).toHaveTextContent('0');
   });
 
   it('matches snapshot when hydrated and has items', () => {
