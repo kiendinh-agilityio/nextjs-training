@@ -1,19 +1,38 @@
-import { useState } from 'react';
+import { useState, useTransition, useEffect } from 'react';
+import { toast } from 'sonner';
 import { Heading } from '@/components/common/ui/heading';
 import { Button } from '@/components/common/ui/button';
 import { cn } from '@/lib/utils';
 import { useCartStore } from '@/stores/useCartStore';
-import { toast } from 'sonner';
+import { applyCoupon } from '@/actions/cart';
 
 interface CartSummaryProps {
   subTotal: number;
-  discount: number;
-  total: number;
 }
 
-const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => {
-  const { items, clearCart } = useCartStore();
+const CartForm = ({ subTotal }: CartSummaryProps) => {
+  const {
+    items,
+    clearCart,
+    setCouponCart,
+    clearCoupon,
+    discount: storeDiscount,
+  } = useCartStore();
   const [isPending, setIsPending] = useState(false);
+  const [coupon, setCoupon] = useState('');
+  const [couponMessage, setCouponMessage] = useState('');
+  const [couponStatus, setCouponStatus] = useState<'success' | 'error' | null>(
+    null,
+  );
+  const [isCouponPending, startCouponTransition] = useTransition();
+  const [couponPercent, setCouponPercent] = useState<number | null>(null);
+
+  useEffect(() => {
+    clearCoupon();
+    setCoupon('');
+    setCouponMessage('');
+    setCouponStatus(null);
+  }, [items]);
 
   const handleCheckout = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,8 +45,37 @@ const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => {
       toast.success('Your checkout was successful');
 
       clearCart();
+      clearCoupon();
+
+      // Reset local states
+      setCoupon('');
+      setCouponMessage('');
+      setCouponStatus(null);
     }, 1200);
   };
+
+  const handleApplyCoupon = () => {
+    startCouponTransition(async () => {
+      setCouponMessage('');
+      setCouponStatus(null);
+
+      const result = await applyCoupon({ code: coupon, subTotal });
+
+      setCouponMessage(result.message);
+
+      if (result.valid) {
+        setCouponCart(coupon, result.discount);
+        setCouponStatus('success');
+        setCouponPercent(result.percent);
+      } else {
+        setCouponStatus('error');
+        setCouponPercent(null);
+      }
+    });
+  };
+
+  const handleCouponChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setCoupon(e.target.value);
 
   return (
     <form
@@ -46,13 +94,13 @@ const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => {
           <p className="font-bold">${subTotal.toFixed(2)}</p>
         </div>
         <div className="text-neutral-400 mb-2 flex justify-between">
-          <p>Discount (-{discount}%)</p>
-          <p>-{discount}</p>
+          <p>Discount (-{couponPercent ?? 0}%)</p>
+          <p>-{storeDiscount}</p>
         </div>
         <hr className="my-4" />
         <div className="flex justify-between text-lg font-bold">
           <p>Total</p>
-          <p>${total}</p>
+          <p>${(subTotal - storeDiscount).toFixed(2)}</p>
         </div>
       </div>
       <div className="flex gap-2">
@@ -66,6 +114,9 @@ const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => {
             type="text"
             placeholder="Apply Coupon Code here"
             className="bg-transparent text-base outline-none"
+            value={coupon}
+            onChange={handleCouponChange}
+            disabled={isCouponPending}
           />
         </div>
         <Button
@@ -76,10 +127,23 @@ const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => {
             'rounded-lg border',
           )}
           ariaLabel="Button apply coupon"
+          type="button"
+          disabled={isCouponPending || !coupon || items.length === 0}
+          onClick={handleApplyCoupon}
         >
           Apply
         </Button>
       </div>
+      {couponMessage && (
+        <div
+          className={
+            'min-h-[20px] text-sm ' +
+            (couponStatus === 'success' ? 'text-success' : 'text-error')
+          }
+        >
+          {couponMessage}
+        </div>
+      )}
       <Button
         className={cn(
           'mt-2 flex items-center justify-center gap-2 py-4',

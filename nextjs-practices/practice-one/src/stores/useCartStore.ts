@@ -7,6 +7,9 @@ interface CartProps {
   subTotal: number;
   discount: number;
   total: number;
+  couponCode?: string;
+  setCouponCart: (code: string, discount: number) => void;
+  clearCoupon: () => void;
   addItem: (item: CartItem) => void;
   removeItem: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
@@ -22,6 +25,21 @@ export const useCartStore = create<CartProps>()(
       subTotal: 0,
       discount: 0,
       total: 0,
+      couponCode: undefined,
+      setCouponCart: (code, discount) => {
+        set((state) => ({
+          couponCode: code,
+          discount,
+          total: state.subTotal - discount,
+        }));
+      },
+      clearCoupon: () => {
+        set((state) => ({
+          couponCode: undefined,
+          discount: 0,
+          total: state.subTotal,
+        }));
+      },
       addItem: (item) => {
         set((state) => {
           const exist = state.items.find((i) => i.id === item.id);
@@ -82,7 +100,14 @@ export const useCartStore = create<CartProps>()(
           return { items, subTotal, discount, total };
         });
       },
-      clearCart: () => set({ items: [], subTotal: 0, discount: 0, total: 0 }),
+      clearCart: () =>
+        set({
+          items: [],
+          subTotal: 0,
+          discount: 0,
+          total: 0,
+          couponCode: undefined,
+        }),
       _hasHydrated: false,
       setHasHydrated: (state: boolean) => set({ _hasHydrated: state }),
     }),
@@ -93,6 +118,7 @@ export const useCartStore = create<CartProps>()(
         subTotal: state.subTotal,
         discount: state.discount,
         total: state.total,
+        couponCode: state.couponCode,
       }),
       onRehydrateStorage: () => (state) => {
         state?.setHasHydrated?.(true);
