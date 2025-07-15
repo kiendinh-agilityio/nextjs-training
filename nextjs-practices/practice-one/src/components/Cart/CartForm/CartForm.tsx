@@ -52,7 +52,7 @@ const CartForm = ({ subTotal, discount, total }: CartSummaryProps) => {
         <hr className="my-4" />
         <div className="flex justify-between text-lg font-bold">
           <p>Total</p>
-          <p>{total}</p>
+          <p>${total}</p>
         </div>
       </div>
       <div className="flex gap-2">
