@@ -97,7 +97,7 @@ const RestaurantsCard = ({
           <p className="mb-2 font-base text-sm leading-[25px]">
             {shortDescription}
           </p>
-          <p className="text-lg font-bold leading-[18px]">$ {price}</p>
+          <p className="text-lg font-bold leading-[18px]">${price}</p>
         </div>
         <div className="relative h-40 w-40 flex-shrink-0">
           <Image
