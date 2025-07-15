@@ -29,8 +29,8 @@ exports[`CartForm matches snapshot 1`] = `
       >
         <p>
           Discount (-
-          10
-          )
+          0
+          %)
         </p>
         <p>
           -

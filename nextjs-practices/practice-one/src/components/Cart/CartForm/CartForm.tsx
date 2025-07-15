@@ -1,4 +1,4 @@
-import { useState, useTransition } from 'react';
+import { useState, useTransition, useEffect } from 'react';
 import { toast } from 'sonner';
 import { Heading } from '@/components/common/ui/heading';
 import { Button } from '@/components/common/ui/button';
@@ -25,6 +25,14 @@ const CartForm = ({ subTotal }: CartSummaryProps) => {
     null,
   );
   const [isCouponPending, startCouponTransition] = useTransition();
+  const [couponPercent, setCouponPercent] = useState<number | null>(null);
+
+  useEffect(() => {
+    clearCoupon();
+    setCoupon('');
+    setCouponMessage('');
+    setCouponStatus(null);
+  }, [items]);
 
   const handleCheckout = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,8 +66,10 @@ const CartForm = ({ subTotal }: CartSummaryProps) => {
       if (result.valid) {
         setCouponCart(coupon, result.discount);
         setCouponStatus('success');
+        setCouponPercent(result.percent);
       } else {
         setCouponStatus('error');
+        setCouponPercent(null);
       }
     });
   };
@@ -84,7 +94,7 @@ const CartForm = ({ subTotal }: CartSummaryProps) => {
           <p className="font-bold">${subTotal.toFixed(2)}</p>
         </div>
         <div className="text-neutral-400 mb-2 flex justify-between">
-          <p>Discount (-{storeDiscount})</p>
+          <p>Discount (-{couponPercent ?? 0}%)</p>
           <p>-{storeDiscount}</p>
         </div>
         <hr className="my-4" />
