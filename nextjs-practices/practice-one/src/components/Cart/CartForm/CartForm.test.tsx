@@ -1,6 +1,17 @@
 import { render, screen } from '@testing-library/react';
 import CartForm from './CartForm';
 
+// Mock useCartStore
+jest.mock('@/stores/useCartStore', () => ({
+  useCartStore: () => ({
+    items: [{ id: 1, name: 'Test item' }],
+    clearCart: jest.fn(),
+    setCouponCart: jest.fn(),
+    clearCoupon: jest.fn(),
+    discount: 10,
+  }),
+}));
+
 describe('CartForm', () => {
   const defaultProps = {
     subTotal: 100,
@@ -13,7 +24,7 @@ describe('CartForm', () => {
     expect(screen.getByText('Order Summary')).toBeInTheDocument();
     expect(screen.getByText('$100.00')).toBeInTheDocument();
     expect(screen.getByText('-10')).toBeInTheDocument();
-    expect(screen.getByText('$90')).toBeInTheDocument();
+    expect(screen.getByText('$90.00')).toBeInTheDocument();
   });
 
   it('renders coupon input and apply button', () => {

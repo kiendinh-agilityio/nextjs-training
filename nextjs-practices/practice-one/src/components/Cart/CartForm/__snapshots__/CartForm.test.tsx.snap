@@ -30,7 +30,7 @@ exports[`CartForm matches snapshot 1`] = `
         <p>
           Discount (-
           10
-          %)
+          )
         </p>
         <p>
           -
@@ -48,7 +48,7 @@ exports[`CartForm matches snapshot 1`] = `
         </p>
         <p>
           $
-          90
+          90.00
         </p>
       </div>
     </div>
@@ -62,11 +62,14 @@ exports[`CartForm matches snapshot 1`] = `
           class="bg-transparent text-base outline-none"
           placeholder="Apply Coupon Code here"
           type="text"
+          value=""
         />
       </div>
       <button
         aria-label="Button apply coupon"
         class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none h-[61px] text-[18px] leading-[24px] px-6 py-2 bg-[#a3a3a3] hover:bg-[#bdbdbd] font-medium text-white rounded-lg border"
+        disabled=""
+        type="button"
       >
         Apply
       </button>
@@ -74,7 +77,6 @@ exports[`CartForm matches snapshot 1`] = `
     <button
       aria-label="Button checkout"
       class="whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-primary text-white hover:bg-orange-600 h-[61px] px-[27px] text-[18px] leading-[24px] mt-2 flex items-center justify-center gap-2 py-4 w-full font-medium rounded-lg border"
-      disabled=""
     >
       Checkout
     </button>
