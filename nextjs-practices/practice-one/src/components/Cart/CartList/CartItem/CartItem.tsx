@@ -69,7 +69,7 @@ const CartItem = ({ item }: CartItemProps) => {
             Category: {item.category}
           </p>
           <p className="text-[20px] font-semiBold leading-[25px]">
-            $ {item.price.toFixed(2)}
+            ${item.price.toFixed(2)}
           </p>
         </div>
       </div>
