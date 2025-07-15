@@ -32,7 +32,7 @@ exports[`CartItem matches snapshot 1`] = `
         <p
           class="text-[20px] font-semiBold leading-[25px]"
         >
-          $ 
+          $
           50.00
         </p>
       </div>

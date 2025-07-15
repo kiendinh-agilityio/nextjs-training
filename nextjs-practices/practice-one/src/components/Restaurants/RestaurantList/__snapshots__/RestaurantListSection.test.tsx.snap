@@ -37,7 +37,7 @@ exports[`RestaurantListSection renders RestaurantsCategoryList for a specific ca
               <p
                 class="text-lg font-bold leading-[18px]"
               >
-                $ 10
+                $10
               </p>
             </div>
             <div
@@ -122,7 +122,7 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
                 <p
                   class="text-lg font-bold leading-[18px]"
                 >
-                  $ 10
+                  $10
                 </p>
               </div>
               <div
@@ -195,7 +195,7 @@ exports[`RestaurantListSection renders all categories when category is "Offers":
                 <p
                   class="text-lg font-bold leading-[18px]"
                 >
-                  $ 15
+                  $15
                 </p>
               </div>
               <div
@@ -297,7 +297,7 @@ exports[`RestaurantListSection renders all categories when no category is select
                 <p
                   class="text-lg font-bold leading-[18px]"
                 >
-                  $ 10
+                  $10
                 </p>
               </div>
               <div
@@ -370,7 +370,7 @@ exports[`RestaurantListSection renders all categories when no category is select
                 <p
                   class="text-lg font-bold leading-[18px]"
                 >
-                  $ 15
+                  $15
                 </p>
               </div>
               <div

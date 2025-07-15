@@ -8,7 +8,7 @@ describe('RestaurantsCard', () => {
       id: '1',
       name: 'Pizza',
       description: 'Delicious pizza',
-      price: '10',
+      price: '$10',
       image: '/pizza.jpg',
       category: 'Pizza',
     };
