@@ -31,3 +31,8 @@ export interface CartState {
   total: number;
   error?: string;
 }
+
+export interface Coupon {
+  code: string;
+  discount: number;
+}
