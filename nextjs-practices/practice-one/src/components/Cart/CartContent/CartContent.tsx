@@ -15,7 +15,7 @@ import {
 } from '@/components/Cart/CartSkeleton';
 
 const CartContent = () => {
-  const { subTotal, discount, total, items, _hasHydrated } = useCartStore();
+  const { subTotal, items, _hasHydrated } = useCartStore();
 
   if (!_hasHydrated) {
     return (
@@ -34,7 +34,7 @@ const CartContent = () => {
         <Suspense fallback={<div>Loading cart...</div>}>
           {items.length ? <CartList /> : <CartEmpty />}
         </Suspense>
-        <CartForm subTotal={subTotal} discount={discount} total={total} />
+        <CartForm subTotal={subTotal} />
       </CartLayout>
     </CartContainer>
   );
