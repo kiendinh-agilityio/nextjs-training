@@ -51,6 +51,7 @@ const CartForm = ({ subTotal }: CartSummaryProps) => {
       setCoupon('');
       setCouponMessage('');
       setCouponStatus(null);
+      setCouponPercent(null);
     }, 1200);
   };
 
