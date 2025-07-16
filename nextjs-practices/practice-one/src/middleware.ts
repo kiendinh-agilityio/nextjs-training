@@ -28,16 +28,16 @@ export const middleware = auth(async (req: NextRequest) => {
   // Define the CSP header with development-aware script-src policy
   const cspHeader = `
     default-src 'self';
-    script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${unsafeEval};
+    script-src 'self' 'nonce-${nonce}'${unsafeEval};
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-    img-src 'self' blob: data: https:;
-    font-src 'self' data: https://fonts.gstatic.com;
+    img-src 'self' blob: data:;
+    font-src 'self' https://fonts.google.com/specimen/Poppins;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
     frame-ancestors 'none';
     upgrade-insecure-requests;
-    connect-src 'self' https://valuable-health-c8a8ba9845.media.strapiapp.com;
+    connect-src 'self' https://683ff7ba5b39a8039a564c58.mockapi.io;
   `;
 
   const contentSecurityPolicyHeaderValue = cspHeader
