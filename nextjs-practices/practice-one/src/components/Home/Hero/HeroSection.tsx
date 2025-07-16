@@ -51,7 +51,7 @@ const HeroSection = () => (
       height={565}
       sizes="(min-width: 1728px) 1205px, (min-width: 1280px) 1000px, (min-width: 1024px) 651px, 100vw"
       className="right-0 hidden lg:absolute lg:block lg:w-[600px] xl:w-[850px] 2xl:bottom-0 2xl:w-[1205px]"
-      priority
+      loading="lazy"
     />
   </section>
 );
