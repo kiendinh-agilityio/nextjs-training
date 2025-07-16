@@ -42,7 +42,9 @@ const CartForm = ({ subTotal }: CartSummaryProps) => {
     setTimeout(() => {
       setIsPending(false);
 
-      toast.success('Your checkout was successful');
+      toast.success(
+        <p className="ml-2 text-secondary">Your checkout was successful</p>,
+      );
 
       clearCart();
       clearCoupon();

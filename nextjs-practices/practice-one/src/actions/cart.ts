@@ -42,6 +42,18 @@ export const applyCoupon = async ({ code, subTotal }: ApplyCouponProps) => {
         : 'http://localhost:3000');
   }
   const res = await fetch(`${baseUrl}/api/coupons`, { cache: 'no-store' });
+
+  if (!res.ok) {
+    const text = await res.text();
+    console.error('Failed to fetch coupons:', res.status, text);
+    return {
+      valid: false,
+      discount: 0,
+      percent: 0,
+      message: `Failed to fetch coupons: ${res.status}`,
+    };
+  }
+
   const db = await res.json();
   const coupon: Coupon | undefined = db.coupons.find(
     (c: Coupon) => c.code === code.toUpperCase(),
