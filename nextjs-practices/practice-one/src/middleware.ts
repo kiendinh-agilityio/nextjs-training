@@ -28,10 +28,10 @@ export const middleware = auth(async (req: NextRequest) => {
   // Define the CSP header with development-aware script-src policy
   const cspHeader = `
     default-src 'self';
-    script-src 'self' 'nonce-${nonce}'${unsafeEval};
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${unsafeEval};
+    style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data:;
-    font-src 'self' https://fonts.google.com/specimen/Poppins;
+    font-src 'self';
     object-src 'none';
     base-uri 'self';
     form-action 'self';
