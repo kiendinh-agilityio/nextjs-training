@@ -64,12 +64,12 @@ const Navbar = () => {
 
         {/* Desktop Login/Signup */}
         <Link
-          href={session && session.user?.email ? '/profile' : '/login'}
+          href={session?.user?.email ? '/profile' : '/login'}
           className="flex hidden items-center gap-2 rounded-full bg-secondary px-[25px] py-[17px] font-medium text-white transition-colors hover:bg-[#1a1f33] lg:flex"
           aria-label="Login or Signup"
         >
           <UserIcon />
-          <span className="ml-2">Login/Signup</span>
+          Login/Signup
         </Link>
       </div>
 
@@ -167,19 +167,20 @@ const Navbar = () => {
               )}
             </li>
           ))}
-          <Link
-            href={session && session.user?.email ? '/profile' : '/login'}
-            className={cn(
-              'flex items-center justify-center transition-colors',
-              'mt-2 w-full gap-2 px-[25px] py-[17px]',
-              'rounded-full bg-secondary font-medium text-white hover:bg-[#1a1f33]',
-            )}
-            aria-label="Login or Signup"
-            onClick={handleCloseMenu}
-          >
-            <UserIcon />
-            <span className="ml-2">Login/Signup</span>
-          </Link>
+          <li>
+            <Link
+              href={session?.user?.email ? '/profile' : '/login'}
+              className={cn(
+                'flex items-center justify-center transition-colors',
+                'mt-2 w-full gap-2 px-[25px] py-[17px]',
+                'rounded-full bg-secondary font-medium text-white hover:bg-[#1a1f33]',
+              )}
+              aria-label="Login or Signup"
+              onClick={handleCloseMenu}
+            >
+              <UserIcon /> Login/Signup
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

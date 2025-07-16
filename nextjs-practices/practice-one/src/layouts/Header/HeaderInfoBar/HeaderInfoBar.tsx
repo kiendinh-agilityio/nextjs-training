@@ -3,12 +3,13 @@
 import { cn } from '@/lib/utils';
 import { useOptimistic } from 'react';
 
-import LocationIcon from '@/components/Icons/LocationIcon';
-import CartIcon from '@/components/Icons/CartIcon';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { ROUTERS } from '@/constants/router';
 import { useCartStore } from '@/stores/useCartStore';
+import { Button } from '@/components/common/ui/button';
+import LocationIcon from '@/components/Icons/LocationIcon';
+import CartIcon from '@/components/Icons/CartIcon';
 
 const HeaderInfoBar = () => {
   const { items } = useCartStore();
@@ -32,7 +33,7 @@ const HeaderInfoBar = () => {
     <div
       className={cn(
         'relative flex justify-between',
-        'px-[37px] pb-[20px] pt-[25px]',
+        'px-[37px] py-[25px] xl:pb-[20px]',
         'rounded-xl border border-base bg-[#fafafa] lg:rounded-b-xl lg:rounded-t-none',
         'text-[15px] font-medium text-black',
       )}
@@ -47,17 +48,19 @@ const HeaderInfoBar = () => {
         </p>
         <p className="font-bold text-primary">Change Location</p>
       </div>
-      <button
+      <Button
+        variant="tertiary"
         type="button"
         className={cn(
           'absolute right-0 top-0 flex items-center justify-center',
           'px-[37px] pb-[12px] pt-[15px]',
-          'w-full sm:w-auto',
-          'rounded-xl bg-success lg:rounded-b-xl lg:rounded-t-none',
+          'h-[70px] w-full sm:w-auto',
+          'rounded-xl focus:outline-none focus:ring-0 lg:rounded-b-xl lg:rounded-t-none',
         )}
         onClick={handleCartClick}
+        ariaLabel="Button Cart"
       >
-        <div className="relative">
+        <span className="relative">
           <CartIcon className="lg:[w-43px] h-[43px]" />
           {cartCount > 0 && (
             <span
@@ -71,8 +74,8 @@ const HeaderInfoBar = () => {
               {cartCount}
             </span>
           )}
-        </div>
-      </button>
+        </span>
+      </Button>
     </div>
   );
 };

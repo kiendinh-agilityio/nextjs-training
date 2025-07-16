@@ -31,7 +31,9 @@ exports[`Footer should match snapshot 1`] = `
           <div
             class="mb-[21px] flex gap-[2px]"
           >
-            <button>
+            <button
+              aria-label="Download App Store"
+            >
               <img
                 alt="App Store"
                 height="53"
@@ -39,7 +41,9 @@ exports[`Footer should match snapshot 1`] = `
                 width="180"
               />
             </button>
-            <button>
+            <button
+              aria-label="Download Google Play"
+            >
               <img
                 alt="Google Play"
                 height="53"

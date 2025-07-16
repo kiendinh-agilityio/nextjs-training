@@ -27,7 +27,7 @@ const Footer = () => (
             className="mb-[31px] h-[66px] w-[268px]"
           />
           <div className="mb-[21px] flex gap-[2px]">
-            <button>
+            <button aria-label="Download App Store">
               <Image
                 src="/images/app-store.svg"
                 alt="App Store"
@@ -35,7 +35,7 @@ const Footer = () => (
                 height={53}
               />
             </button>
-            <button>
+            <button aria-label="Download Google Play">
               <Image
                 src="/images/google-play.svg"
                 alt="Google Play"
@@ -79,22 +79,22 @@ const Footer = () => (
             </p>
             <ul className="my-4 flex justify-center gap-6">
               <li>
-                <Link href="#">
+                <Link href="#" aria-label="Facebook Social">
                   <FacebookIcon />
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href="#" aria-label="Instagram Social">
                   <InstagramIcon />
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href="#" aria-label="Tik tok Social">
                   <TiktokIcon />
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href="#" aria-label="Snapchat Social">
                   <SnapchatIcon />
                 </Link>
               </li>
