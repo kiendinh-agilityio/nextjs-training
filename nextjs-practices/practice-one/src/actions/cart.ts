@@ -1,7 +1,5 @@
 'use server';
 
-import fs from 'fs/promises';
-import path from 'path';
 import { revalidatePath } from 'next/cache';
 import { CartActionPayload, CartState, Coupon } from '@/types/cart';
 
@@ -35,8 +33,16 @@ export const cartAction = async (
 export const getCartStateAction = async (): Promise<CartState> => initialState;
 
 export const applyCoupon = async ({ code, subTotal }: ApplyCouponProps) => {
-  const dbPath = path.join(process.cwd(), 'db.json');
-  const db = JSON.parse(await fs.readFile(dbPath, 'utf-8'));
+  let baseUrl = '';
+  if (typeof window === 'undefined') {
+    baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL ||
+      (process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : 'http://localhost:3000');
+  }
+  const res = await fetch(`${baseUrl}/api/coupons`, { cache: 'no-store' });
+  const db = await res.json();
   const coupon: Coupon | undefined = db.coupons.find(
     (c: Coupon) => c.code === code.toUpperCase(),
   );
