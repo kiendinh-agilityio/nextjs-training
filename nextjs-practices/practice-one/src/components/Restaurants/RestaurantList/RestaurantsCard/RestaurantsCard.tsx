@@ -8,11 +8,11 @@ import type { Product } from '@/types/product';
 import { CartItem } from '@/types/cart';
 import { cn } from '@/lib/utils';
 import { useCartStore } from '@/stores/useCartStore';
-import { showLoginToast } from '@/utils/showLoginToast';
 import { useCartAction } from '@/hooks/useCartAction';
 
 import { Card } from '@/components/common/ui/card';
 import { Button } from '@/components/common/ui/button';
+import LoginToast from '@/components/LoginToast/LoginToast';
 
 const RestaurantsCard = ({
   id,
@@ -41,7 +41,7 @@ const RestaurantsCard = ({
     e.preventDefault();
 
     if (!session?.user?.email) {
-      showLoginToast();
+      LoginToast();
       return;
     }
 
