@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading matches snapshot 1`] = `
+<div>
+  <div
+    data-testid="product-detail-skeleton"
+  />
+</div>
+`;
