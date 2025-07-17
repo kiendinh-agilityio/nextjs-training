@@ -132,7 +132,7 @@ const ProductDetailContent = ({ product }: ProductDetailContentProps) => {
               ))}
             </ul>
           </div>
-          <div className="mb-4 flex justify-center lg:justify-end">
+          <div className="mb-4 mt-7 flex justify-center lg:justify-end">
             {inCart ? (
               <Button
                 variant="secondary"

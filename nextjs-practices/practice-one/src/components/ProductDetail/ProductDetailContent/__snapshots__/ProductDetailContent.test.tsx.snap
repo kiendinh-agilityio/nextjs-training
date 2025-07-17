@@ -256,7 +256,7 @@ exports[`ProductDetailContent matches snapshot 1`] = `
           </ul>
         </div>
         <div
-          class="mb-4 flex justify-center lg:justify-end"
+          class="mb-4 mt-7 flex justify-center lg:justify-end"
         >
           <button
             aria-label="Button add to cart"
