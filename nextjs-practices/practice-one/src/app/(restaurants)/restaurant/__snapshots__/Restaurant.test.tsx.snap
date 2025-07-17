@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RestaurantPage renders correctly with a category 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="hero-section"
+  />
+  <div
+    data-testid="restaurant-header-section"
+  />
+  <div
+    data-testid="category-section"
+  />
+  <div
+    data-testid="restaurant-list-section"
+  >
+    Category: Burgers
+  </div>
+  <div
+    data-testid="contact-section"
+  />
+</DocumentFragment>
+`;
+
+exports[`RestaurantPage renders correctly with no category (default) 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="hero-section"
+  />
+  <div
+    data-testid="restaurant-header-section"
+  />
+  <div
+    data-testid="category-section"
+  />
+  <div
+    data-testid="restaurant-list-section"
+  >
+    All Categories
+  </div>
+  <div
+    data-testid="contact-section"
+  />
+</DocumentFragment>
+`;
