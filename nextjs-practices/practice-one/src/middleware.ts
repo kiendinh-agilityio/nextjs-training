@@ -2,13 +2,6 @@ import { auth } from '@/lib/auth';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const generateNonce = () => {
-  const array = new Uint8Array(16);
-  globalThis.crypto.getRandomValues(array);
-
-  return btoa(String.fromCharCode(...array));
-};
-
 export const middleware = auth(async (req: NextRequest) => {
   if (req.nextUrl.pathname === '/profile') {
     // @ts-expect-error: auth wrapper injects req.auth
@@ -18,9 +11,6 @@ export const middleware = auth(async (req: NextRequest) => {
     }
   }
 
-  // Generate a unique nonce for each request (Edge Runtime compatible)
-  const nonce = generateNonce();
-
   // Allow 'unsafe-eval' in development for React's development builds
   const isDevelopment = process.env.NODE_ENV === 'development';
   const unsafeEval = isDevelopment ? " 'unsafe-eval'" : '';
@@ -28,7 +18,7 @@ export const middleware = auth(async (req: NextRequest) => {
   // Define the CSP header with development-aware script-src policy
   const cspHeader = `
     default-src 'self';
-    script-src 'self' 'nonce-${nonce}'${unsafeEval};
+    script-src 'self'${unsafeEval} 'unsafe-inline';
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data:;
     font-src 'self';
@@ -49,8 +39,6 @@ export const middleware = auth(async (req: NextRequest) => {
     'Content-Security-Policy',
     contentSecurityPolicyHeaderValue,
   );
-  response.headers.set('x-nonce', nonce);
-
   return response;
 });
 
