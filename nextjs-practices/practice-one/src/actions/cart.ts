@@ -44,8 +44,6 @@ export const applyCoupon = async ({ code, subTotal }: ApplyCouponProps) => {
   const res = await fetch(`${baseUrl}/api/coupons`, { cache: 'no-store' });
 
   if (!res.ok) {
-    const text = await res.text();
-    console.error('Failed to fetch coupons:', res.status, text);
     return {
       valid: false,
       discount: 0,

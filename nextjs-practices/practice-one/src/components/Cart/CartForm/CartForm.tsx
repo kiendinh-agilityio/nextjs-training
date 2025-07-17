@@ -32,7 +32,7 @@ const CartForm = ({ subTotal }: CartSummaryProps) => {
     setCoupon('');
     setCouponMessage('');
     setCouponStatus(null);
-  }, [items]);
+  }, [items, clearCoupon]);
 
   const handleCheckout = async (e: React.FormEvent) => {
     e.preventDefault();
