@@ -23,8 +23,3 @@ jest.mock('@/stores/useCartStore', () => ({
 jest.mock('@/actions/cart', () => ({
   cartAction: jest.fn(),
 }));
-
-// Mock utilities
-jest.mock('@/utils/showLoginToast', () => ({
-  showLoginToast: jest.fn(),
-}));

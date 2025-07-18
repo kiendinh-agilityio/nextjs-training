@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginToast should call toast with correct JSX and options 1`] = `
+<div>
+  <div
+    class="text-secondary"
+  >
+    You need to
+     
+    <a
+      href="/login"
+    >
+      log in
+    </a>
+     
+    to add or remove products from your cart.
+  </div>
+</div>
+`;

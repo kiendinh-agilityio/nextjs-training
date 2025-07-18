@@ -30,7 +30,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
           user = await getUserFromApi(email, password);
 
-          if (!user || (user && user.error)) {
+          if (!user || user?.error) {
             return null;
           }
 

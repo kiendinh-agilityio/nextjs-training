@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderInfoBar matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex justify-between px-[37px] py-[25px] xl:pb-[20px] rounded-xl border border-base bg-[#fafafa] lg:rounded-b-xl lg:rounded-t-none text-[15px] font-medium text-black"
+  >
+    <p
+      class="hidden sm:flex md:items-center"
+    >
+      <span
+        class="mr-[15px]"
+      >
+        🌟
+      </span>
+       Get 5% Off your first order, 
+      <span
+        class="ml-1 font-bold text-primary"
+      >
+        Promo: ORDER5
+      </span>
+    </p>
+    <div
+      class="hidden items-center justify-center gap-[25px] lg:pr-32 xl:flex"
+    >
+      <p
+        class="flex gap-[15px]"
+      >
+        <svg
+          data-testid="location-icon"
+        />
+         Regent Street, A4, A4201, London
+      </p>
+      <p
+        class="font-bold text-primary"
+      >
+        Change Location
+      </p>
+    </div>
+    <button
+      aria-label="Button Cart"
+      class="absolute right-0 top-0 flex items-center justify-center px-[37px] pb-[12px] pt-[15px] h-[70px] w-full sm:w-auto rounded-xl focus:outline-none focus:ring-0 lg:rounded-b-xl lg:rounded-t-none"
+      data-testid="button-mock"
+      type="button"
+      variant="tertiary"
+    >
+      <span
+        class="relative"
+      >
+        <svg
+          class="lg:[w-43px] h-[43px]"
+          data-testid="cart-icon"
+        />
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;

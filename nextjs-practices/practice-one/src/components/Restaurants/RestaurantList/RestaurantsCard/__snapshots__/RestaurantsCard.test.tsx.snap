@@ -3,11 +3,10 @@
 exports[`RestaurantsCard should match snapshot 1`] = `
 <DocumentFragment>
   <a
-    class="block"
     href="/product-detail/1"
   >
     <div
-      class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] min-h-[245px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
+      data-testid="card"
     >
       <div
         class="flex h-[170px] flex-col justify-evenly text-black lg:pt-[19px]"
@@ -25,7 +24,7 @@ exports[`RestaurantsCard should match snapshot 1`] = `
         <p
           class="text-lg font-bold leading-[18px]"
         >
-          $$10
+          $10
         </p>
       </div>
       <div
@@ -34,17 +33,12 @@ exports[`RestaurantsCard should match snapshot 1`] = `
         <img
           alt="Pizza"
           class="rounded-xl object-cover"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
-          sizes="100vw"
-          src="/_next/image?url=%2Fpizza.jpg&w=3840&q=75"
-          srcset="/_next/image?url=%2Fpizza.jpg&w=640&q=75 640w, /_next/image?url=%2Fpizza.jpg&w=750&q=75 750w, /_next/image?url=%2Fpizza.jpg&w=828&q=75 828w, /_next/image?url=%2Fpizza.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fpizza.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fpizza.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fpizza.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fpizza.jpg&w=3840&q=75 3840w"
-          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          src="/pizza.jpg"
         />
         <button
           aria-label="Button add to cart"
-          class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
+          class="absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
+          variant="secondary"
         >
           <svg
             aria-hidden="true"

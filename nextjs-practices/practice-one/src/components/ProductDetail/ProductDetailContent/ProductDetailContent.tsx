@@ -7,7 +7,6 @@ import { useOptimistic, useTransition } from 'react';
 
 import { useCartStore } from '@/stores/useCartStore';
 import { Button } from '@/components/common/ui/button';
-import { showLoginToast } from '@/utils/showLoginToast';
 import { CartItem } from '@/types/cart';
 import { useCartAction } from '@/hooks/useCartAction';
 
@@ -21,6 +20,7 @@ import {
   BreadcrumbLink,
   BreadcrumbPage,
 } from '@/components/common/ui/breadcrumb';
+import LoginToast from '@/components/LoginToast/LoginToast';
 
 interface ProductDetailContentProps {
   product: Product;
@@ -40,7 +40,7 @@ const ProductDetailContent = ({ product }: ProductDetailContentProps) => {
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     if (!session?.user?.email) {
-      showLoginToast();
+      LoginToast();
       return;
     }
 

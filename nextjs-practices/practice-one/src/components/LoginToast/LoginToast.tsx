@@ -1,9 +1,8 @@
 import Link from 'next/link';
-
 import { toast } from 'sonner';
 import { ROUTERS } from '@/constants/router';
 
-export const showLoginToast = () => {
+const LoginToast = () => {
   toast(
     <div className="text-secondary">
       You need to{' '}
@@ -15,3 +14,5 @@ export const showLoginToast = () => {
     { duration: 3000 },
   );
 };
+
+export default LoginToast;
