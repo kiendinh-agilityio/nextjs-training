@@ -70,3 +70,79 @@ describe('getUserFromApi', () => {
     });
   });
 });
+
+describe('fetchProfile', () => {
+  const globalAny: typeof globalThis = global;
+  const mockUser = {
+    id: '1',
+    email: 'test@example.com',
+    password: 'Password1!',
+    name: 'Test User',
+  };
+
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
+
+  it('should return error if no email provided', async () => {
+    const { fetchProfile } = await import('../get-user-from-api');
+    const result = await fetchProfile('');
+    expect(result).toEqual({ user: null, error: 'No email provided' });
+  });
+
+  it('should return error if fetch throws', async () => {
+    const { fetchProfile } = await import('../get-user-from-api');
+    globalAny.fetch = jest.fn().mockRejectedValue(new Error('Network error'));
+    const result = await fetchProfile('test@example.com');
+    expect(result).toEqual({ user: null, error: 'Network error' });
+  });
+
+  it('should return error if response is not ok', async () => {
+    const { fetchProfile } = await import('../get-user-from-api');
+    globalAny.fetch = jest.fn().mockResolvedValue({
+      ok: false,
+      status: 401,
+      statusText: 'Unauthorized',
+      json: async () => [],
+    });
+    const result = await fetchProfile('test@example.com');
+    expect(result).toEqual({
+      user: null,
+      error: 'Failed to fetch profile: 401 Unauthorized',
+    });
+  });
+
+  it('should return error if data is not array or empty', async () => {
+    const { fetchProfile } = await import('../get-user-from-api');
+    globalAny.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      json: async () => [],
+    });
+    const result = await fetchProfile('test@example.com');
+    expect(result).toEqual({ user: null, error: 'User not found' });
+
+    globalAny.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      json: async () => null,
+    });
+    const result2 = await fetchProfile('test@example.com');
+    expect(result2).toEqual({ user: null, error: 'User not found' });
+  });
+
+  it('should return user if data is valid', async () => {
+    const { fetchProfile } = await import('../get-user-from-api');
+    globalAny.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      json: async () => [mockUser],
+    });
+    const result = await fetchProfile('test@example.com');
+    expect(result).toEqual({ user: mockUser, error: null });
+  });
+
+  it('should return error message from unknown error', async () => {
+    const { fetchProfile } = await import('../get-user-from-api');
+    globalAny.fetch = jest.fn().mockRejectedValue('some error');
+    const result = await fetchProfile('test@example.com');
+    expect(result).toEqual({ user: null, error: 'User not found' });
+  });
+});
