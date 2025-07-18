@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProfilePage UI should render ProfileContent and match snapshot 1`] = `
+exports[`should match snapshot 1`] = `
 <DocumentFragment>
   <div
     class="container mx-auto flex min-h-screen flex-col items-start pt-12 sm:px-0"

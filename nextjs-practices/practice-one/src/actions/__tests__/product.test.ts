@@ -3,7 +3,7 @@ import type { Product } from '@/types/product';
 const OLD_ENV = process.env;
 
 describe('product actions', () => {
-  const PRODUCT_API_URL = 'https://api.example.com/products';
+  const NEXT_PUBLIC_PRODUCT_API_URL = 'https://api.example.com/products';
   const mockProducts: Product[] = [
     {
       id: 1,
@@ -28,7 +28,7 @@ describe('product actions', () => {
 
   beforeEach(() => {
     jest.resetModules();
-    process.env = { ...OLD_ENV, PRODUCT_API_URL };
+    process.env = { ...OLD_ENV, NEXT_PUBLIC_PRODUCT_API_URL };
     global.fetch = jest.fn();
   });
 
@@ -47,7 +47,7 @@ describe('product actions', () => {
       // Import after setting env and resetting modules
       const { getRestaurantList } = await import('../product');
       const result = await getRestaurantList();
-      expect(global.fetch).toHaveBeenCalledWith(PRODUCT_API_URL, {
+      expect(global.fetch).toHaveBeenCalledWith(NEXT_PUBLIC_PRODUCT_API_URL, {
         cache: 'no-store',
       });
       expect(result).toEqual(mockProducts);
@@ -59,7 +59,7 @@ describe('product actions', () => {
         json: async () => mockProducts,
       });
       const category = 'Italian';
-      const url = `${PRODUCT_API_URL}?category=Italian`;
+      const url = `${NEXT_PUBLIC_PRODUCT_API_URL}?category=Italian`;
       const { getRestaurantList } = await import('../product');
       const result = await getRestaurantList(category);
       expect(global.fetch).toHaveBeenCalledWith(url, { cache: 'no-store' });
@@ -84,7 +84,7 @@ describe('product actions', () => {
       const { getProductDetail } = await import('../product');
       const result = await getProductDetail(mockProduct.id);
       expect(global.fetch).toHaveBeenCalledWith(
-        `${PRODUCT_API_URL}/${mockProduct.id}`,
+        `${NEXT_PUBLIC_PRODUCT_API_URL}/${mockProduct.id}`,
         { cache: 'no-store' },
       );
       expect(result).toEqual(mockProduct);

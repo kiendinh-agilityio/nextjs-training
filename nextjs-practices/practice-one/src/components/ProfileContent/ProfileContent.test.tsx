@@ -1,10 +1,25 @@
-import { render } from '@testing-library/react';
-import ProfilePage from './ProfileContent';
-
+import { render, screen, waitFor } from '@testing-library/react';
 import { useSession } from 'next-auth/react';
+import { fetchProfile } from '@/lib/get-user-from-api';
+import { toast } from 'sonner';
+import ProfileContent from './ProfileContent';
 
 jest.mock('next-auth/react', () => ({
   useSession: jest.fn(),
+  signOut: jest.fn(),
+}));
+
+let clearCartMock = jest.fn();
+jest.mock('@/stores/useCartStore', () => ({
+  useCartStore: () => ({ clearCart: clearCartMock }),
+}));
+
+jest.mock('@/lib/get-user-from-api', () => ({
+  fetchProfile: jest.fn(),
+}));
+
+jest.mock('sonner', () => ({
+  toast: { error: jest.fn() },
 }));
 
 jest.mock('@/components/common/ui/heading', () => ({
@@ -43,8 +58,45 @@ jest.mock('@/components/common/ui/skeleton', () => ({
   ),
 }));
 
-describe('ProfilePage UI', () => {
+jest.mock('./ProfileSkeleton/ProfileSkeleton', () => ({
+  __esModule: true,
+  default: () => <div data-testid="profile-skeleton-mock" />,
+}));
+
+jest.mock('./ProfileHeader/ProfileHeader', () => ({
+  __esModule: true,
+  default: ({ avatarUrl, name }: { avatarUrl: string; name: string }) => (
+    <div data-testid="profile-header-mock">
+      {avatarUrl}-{name}
+    </div>
+  ),
+}));
+
+jest.mock('./AccountInfoCard/AccountInfoCard', () => ({
+  __esModule: true,
+  default: ({
+    email,
+    phone,
+    address,
+  }: {
+    email: string;
+    phone: string;
+    address: string;
+  }) => (
+    <div data-testid="account-info-card-mock">
+      {email}-{phone}-{address}
+    </div>
+  ),
+}));
+
+describe('ProfileContent', () => {
   const useSessionMock = useSession as jest.Mock;
+  const fetchProfileMock = fetchProfile as jest.Mock;
+  const toastErrorMock = toast.error as jest.Mock;
+
+  beforeEach(() => {
+    clearCartMock = jest.fn();
+  });
 
   afterEach(() => {
     jest.clearAllMocks();
@@ -52,25 +104,56 @@ describe('ProfilePage UI', () => {
 
   it('should render loading state and match snapshot', () => {
     useSessionMock.mockReturnValue({ status: 'loading' });
-    const { asFragment } = render(<ProfilePage />);
+    const { asFragment } = render(<ProfileContent />);
+    expect(screen.getByTestId('profile-skeleton-mock')).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render nothing if no session or no email', () => {
+  it('should render skeleton if no session or no email', async () => {
     useSessionMock.mockReturnValue({
       status: 'authenticated',
       data: { user: {} },
     });
-    const { asFragment } = render(<ProfilePage />);
-    expect(asFragment()).toMatchSnapshot();
+    fetchProfileMock.mockResolvedValue({ user: null, error: null });
+    render(<ProfileContent />);
+    expect(
+      await screen.findByTestId('profile-skeleton-mock'),
+    ).toBeInTheDocument();
   });
 
-  it('should render profile info and logout button, match snapshot', () => {
+  it('should render profile info and logout button, match snapshot', async () => {
     useSessionMock.mockReturnValue({
       status: 'authenticated',
       data: { user: { email: 'test@example.com' } },
     });
-    const { asFragment } = render(<ProfilePage />);
+    fetchProfileMock.mockResolvedValue({
+      user: {
+        email: 'test@example.com',
+        phone: '123',
+        address: 'abc',
+        avatar: 'avatar.png',
+        name: 'Test',
+      },
+      error: null,
+    });
+    const { asFragment } = render(<ProfileContent />);
+    await waitFor(() => {
+      expect(screen.getByTestId('profile-header-mock')).toBeInTheDocument();
+      expect(screen.getByTestId('account-info-card-mock')).toBeInTheDocument();
+      expect(screen.getByTestId('button-mock')).toBeInTheDocument();
+    });
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should call toast.error if fetchProfile returns error', async () => {
+    useSessionMock.mockReturnValue({
+      status: 'authenticated',
+      data: { user: { email: 'test@example.com' } },
+    });
+    fetchProfileMock.mockResolvedValue({ user: null, error: 'Some error' });
+    render(<ProfileContent />);
+    await waitFor(() => {
+      expect(toastErrorMock).toHaveBeenCalledWith('Some error');
+    });
   });
 });
