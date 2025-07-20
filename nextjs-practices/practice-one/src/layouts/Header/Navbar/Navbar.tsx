@@ -13,10 +13,13 @@ import { cn } from '@/lib/utils';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
 
   const handleToggleMenu = () => setOpen((v) => !v);
   const handleCloseMenu = () => setOpen(false);
+
+  const getButtonLabel = () =>
+    session?.user?.email ? 'Profile/Logout' : 'Login/Signup';
 
   return (
     <div className="flex w-full items-center justify-end gap-4 md:gap-8">
@@ -63,14 +66,21 @@ const Navbar = () => {
         </nav>
 
         {/* Desktop Login/Signup */}
-        <Link
-          href={session?.user?.email ? '/profile' : '/login'}
-          className="flex hidden items-center gap-2 rounded-full bg-secondary px-[25px] py-[17px] font-medium text-white transition-colors hover:bg-[#1a1f33] lg:flex"
-          aria-label="Login or Signup"
-        >
-          <UserIcon />
-          Login/Signup
-        </Link>
+        {status === 'loading' ? (
+          <div
+            data-testid="desktop-skeleton"
+            className="hidden h-[61px] w-[202px] animate-pulse items-center gap-2 rounded-full bg-gray-200 px-[25px] py-[17px] lg:flex"
+          />
+        ) : (
+          <Link
+            href={session?.user?.email ? '/profile' : '/login'}
+            className="flex hidden items-center gap-2 rounded-full bg-secondary px-[25px] py-[17px] font-medium text-white transition-colors hover:bg-[#1a1f33] lg:flex"
+            aria-label={getButtonLabel()}
+          >
+            <UserIcon />
+            {getButtonLabel()}
+          </Link>
+        )}
       </div>
 
       {/* Mobile Hamburger */}
@@ -168,18 +178,26 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            <Link
-              href={session?.user?.email ? '/profile' : '/login'}
-              className={cn(
-                'flex items-center justify-center transition-colors',
-                'mt-2 w-full gap-2 px-[25px] py-[17px]',
-                'rounded-full bg-secondary font-medium text-white hover:bg-[#1a1f33]',
-              )}
-              aria-label="Login or Signup"
-              onClick={handleCloseMenu}
-            >
-              <UserIcon /> Login/Signup
-            </Link>
+            {status === 'loading' ? (
+              <div
+                data-testid="mobile-skeleton"
+                className="mt-2 flex h-[48px] w-full animate-pulse items-center justify-center gap-2 rounded-full bg-gray-200 px-[25px] py-[17px]"
+              />
+            ) : (
+              <Link
+                href={session?.user?.email ? '/profile' : '/login'}
+                className={cn(
+                  'flex items-center justify-center transition-colors',
+                  'mt-2 w-full gap-2 px-[25px] py-[17px]',
+                  'rounded-full bg-secondary font-medium text-white hover:bg-[#1a1f33]',
+                )}
+                aria-label={getButtonLabel()}
+                onClick={handleCloseMenu}
+              >
+                <UserIcon />
+                {getButtonLabel()}
+              </Link>
+            )}
           </li>
         </ul>
       </nav>
