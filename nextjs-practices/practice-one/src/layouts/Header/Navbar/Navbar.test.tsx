@@ -1,9 +1,16 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import { usePathname } from 'next/navigation';
 
 import { NAV_LINKS } from '@/constants/nav-links';
 import Navbar from './Navbar';
+
+const mockUseSession = jest.fn();
+
+jest.mock('next-auth/react', () => ({
+  useSession: (
+    ...args: Parameters<(typeof import('next-auth/react'))['useSession']>
+  ) => mockUseSession(...args),
+}));
 
 jest.mock('@/components/common/ui/logo', () => ({
   Logo: (props: React.ComponentPropsWithoutRef<'div'>) => (
@@ -38,17 +45,14 @@ jest.mock('next/navigation', () => ({
   }),
 }));
 
-jest.mock('next-auth/react', () => ({
-  useSession: () => ({
-    data: null,
-    status: 'unauthenticated',
-  }),
-}));
-
 describe('Navbar', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     (usePathname as jest.Mock).mockReturnValue('/');
+    mockUseSession.mockReturnValue({
+      data: null,
+      status: 'unauthenticated',
+    });
   });
 
   it('should match snapshot', () => {
@@ -58,6 +62,7 @@ describe('Navbar', () => {
 
   it('renders all nav links', () => {
     render(<Navbar />);
+
     NAV_LINKS.forEach((link) => {
       const el = screen.getAllByText(link.label)[0];
       expect(el).toBeInTheDocument();
@@ -66,6 +71,7 @@ describe('Navbar', () => {
 
   it('renders Login/Signup button', () => {
     render(<Navbar />);
+
     expect(screen.getAllByText(/login\/signup/i)[0]).toBeInTheDocument();
   });
 
@@ -81,5 +87,37 @@ describe('Navbar', () => {
     fireEvent.click(closeBtn);
 
     expect(navDrawer).toHaveClass('translate-x-full');
+  });
+
+  it('renders Profile/Logout button when user is logged in', () => {
+    mockUseSession.mockReturnValue({
+      data: { user: { email: 'test@example.com' } },
+      status: 'authenticated',
+    });
+    render(<Navbar />);
+
+    expect(screen.getAllByText(/profile\/logout/i)[0]).toBeInTheDocument();
+  });
+
+  it('renders loading skeleton when status is loading (desktop)', () => {
+    mockUseSession.mockReturnValue({
+      data: null,
+      status: 'loading',
+    });
+    render(<Navbar />);
+
+    expect(screen.getByTestId('desktop-skeleton')).toBeInTheDocument();
+  });
+
+  it('renders loading skeleton when status is loading (mobile)', () => {
+    mockUseSession.mockReturnValue({
+      data: null,
+      status: 'loading',
+    });
+    render(<Navbar />);
+    const hamburger = screen.getByLabelText(/toggle menu/i);
+    fireEvent.click(hamburger);
+
+    expect(screen.getByTestId('mobile-skeleton')).toBeInTheDocument();
   });
 });
