@@ -30,7 +30,7 @@ const ProductDetailContent = ({ product }: ProductDetailContentProps) => {
   const { data: session } = useSession();
   const { items, addItem, removeItem } = useCartStore();
   const [optimisticItems, setOptimisticItems] = useOptimistic(items);
-  const [_, startTransition] = useTransition();
+  const [isLoading, startTransition] = useTransition();
   const { formAction } = useCartAction();
 
   const inCart = optimisticItems.some(
@@ -141,6 +141,7 @@ const ProductDetailContent = ({ product }: ProductDetailContentProps) => {
                 onClick={handleRemoveFromCart}
                 icon={<Minus className="h-[20px] w-[20px]" />}
                 className="flex w-[256px] rounded-full"
+                disabled={isLoading}
               >
                 Remove from Cart
               </Button>
@@ -152,6 +153,7 @@ const ProductDetailContent = ({ product }: ProductDetailContentProps) => {
                 onClick={handleAddToCart}
                 icon={<Plus className="h-[20px] w-[20px]" />}
                 className="w-[256px] rounded-full"
+                disabled={isLoading}
               >
                 Add to Cart
               </Button>
