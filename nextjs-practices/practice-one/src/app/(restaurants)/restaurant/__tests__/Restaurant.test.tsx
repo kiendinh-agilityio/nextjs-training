@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import RestaurantPage from './page';
+import RestaurantPage from '../page';
 
 // Mock all child components
 jest.mock('@/components/Restaurants', () => ({
