@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Minus, Plus, Trash2 } from 'lucide-react';
-import { useTransition } from 'react';
+import { startTransition } from 'react';
 
 import { useCartAction } from '@/hooks/useCartAction';
 import { useCartStore } from '@/stores/useCartStore';
@@ -14,7 +14,6 @@ interface CartItemProps {
 
 const CartItem = ({ item }: CartItemProps) => {
   const { updateQuantity, removeItem } = useCartStore();
-  const [_, startTransition] = useTransition();
   const { formAction } = useCartAction();
 
   const handleRemove = () => {
