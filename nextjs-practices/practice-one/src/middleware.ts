@@ -11,35 +11,7 @@ export const middleware = auth(async (req: NextRequest) => {
     }
   }
 
-  // Allow 'unsafe-eval' in development for React's development builds
-  const isDevelopment = process.env.NODE_ENV === 'development';
-  const unsafeEval = isDevelopment ? " 'unsafe-eval'" : '';
-
-  // Define the CSP header with development-aware script-src policy
-  const cspHeader = `
-    default-src 'self';
-    script-src 'self'${unsafeEval} 'unsafe-inline';
-    style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data:;
-    font-src 'self';
-    object-src 'none';
-    base-uri 'self';
-    form-action 'self';
-    frame-ancestors 'none';
-    upgrade-insecure-requests;
-    connect-src 'self' https://683ff7ba5b39a8039a564c58.mockapi.io;
-  `;
-
-  const contentSecurityPolicyHeaderValue = cspHeader
-    .replace(/\s{2,}/g, ' ')
-    .trim();
-
-  const response = NextResponse.next();
-  response.headers.set(
-    'Content-Security-Policy',
-    contentSecurityPolicyHeaderValue,
-  );
-  return response;
+  return NextResponse.next();
 });
 
 export const config = {
