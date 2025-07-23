@@ -1,33 +1,32 @@
 import { MetadataRoute } from 'next';
 import { ROUTERS } from '@/constants/router';
+import { CATEGORIES_ITEM } from '@/constants/restaurants-data';
+import { BASE_URL } from '@/constants/url';
+import { getRestaurantList } from '@/actions/product';
+import { createEntry } from '@/utils/createEntry';
 
-export const sitemap = (): MetadataRoute.Sitemap => {
-  return [
-    {
-      url: `${process.env.BASE_URL}${ROUTERS.HOME}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 1,
-    },
-    {
-      url: `${process.env.BASE_URL}${ROUTERS.LOGIN}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${process.env.BASE_URL}${ROUTERS.RESTAURANT}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${process.env.BASE_URL}${ROUTERS.PRODUCT_DETAIL}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
+export const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
+  const products = await getRestaurantList();
+  const categories = CATEGORIES_ITEM.filter((cat) => cat !== 'Offers');
+
+  const staticUrls = [
+    createEntry(`${BASE_URL}${ROUTERS.HOME}`, 1),
+    createEntry(`${BASE_URL}${ROUTERS.LOGIN}`, 0.8),
+    createEntry(`${BASE_URL}${ROUTERS.RESTAURANT}`, 0.8),
   ];
+
+  const categoryUrls = categories.map((category) =>
+    createEntry(
+      `${BASE_URL}${ROUTERS.RESTAURANT}?category=${encodeURIComponent(category)}`,
+      0.6,
+    ),
+  );
+
+  const productUrls = products.map((product) =>
+    createEntry(`${BASE_URL}${ROUTERS.PRODUCT_DETAIL}/${product.id}`, 0.7),
+  );
+
+  return [...staticUrls, ...categoryUrls, ...productUrls];
 };
 
 export default sitemap;
