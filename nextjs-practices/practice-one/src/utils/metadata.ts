@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-
 import { BASE_URL } from '@/constants/url';
 
 type OpenGraphType = 'website' | 'profile';
@@ -11,6 +10,7 @@ interface MetaOptions {
   url?: string;
   imageAlt?: string;
   type?: OpenGraphType;
+  image?: string;
 }
 
 const defaultMeta = {
@@ -34,16 +34,26 @@ export function createMetadata(options: MetaOptions = {}): Metadata {
     options.description ||
     'Welcome to Order.uk – your go-to platform for discovering top restaurants, trending products, and exclusive food deals. Browse, order, and enjoy hassle-free delivery.';
   const url = options.url || defaultMeta.baseUrl;
-  const imageUrl =
-    defaultMeta.baseUrl +
-    (defaultMeta.image.startsWith('/')
-      ? defaultMeta.image
-      : '/' + defaultMeta.image);
-  const twitterImageUrl =
-    defaultMeta.baseUrl +
-    (defaultMeta.twitterImage.startsWith('/')
-      ? defaultMeta.twitterImage
-      : '/' + defaultMeta.twitterImage);
+
+  let imageUrl: string;
+
+  if (options.image) {
+    if (options.image.startsWith('http')) {
+      imageUrl = options.image;
+    } else {
+      imageUrl =
+        defaultMeta.baseUrl +
+        (options.image.startsWith('/') ? options.image : '/' + options.image);
+    }
+  } else {
+    imageUrl =
+      defaultMeta.baseUrl +
+      (defaultMeta.image.startsWith('/')
+        ? defaultMeta.image
+        : '/' + defaultMeta.image);
+  }
+
+  const twitterImageUrl = imageUrl;
   const type: OpenGraphType = options.type || 'website';
 
   return {
