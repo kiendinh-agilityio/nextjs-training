@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import CartPage from './page';
+import CartPage from '../page';
 import { ROUTERS } from '@/constants/router';
 
 jest.mock('@/components/Cart/CartContent/CartContent', () => {
