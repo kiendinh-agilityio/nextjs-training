@@ -5,11 +5,7 @@ import { useSearchParams } from 'next/navigation';
 
 import { CATEGORIES_ITEM } from '@/constants/restaurants-data';
 import { cn } from '@/lib/utils';
-
-const getCategoryHref = (category: string) =>
-  category === 'Offers'
-    ? '/restaurant'
-    : `/restaurant?category=${encodeURIComponent(category)}`;
+import { getCategoryHref } from '@/utils/getCategoryHref';
 
 const CategorySection = () => {
   const searchParams = useSearchParams();

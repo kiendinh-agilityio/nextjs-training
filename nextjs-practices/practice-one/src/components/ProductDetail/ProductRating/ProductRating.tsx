@@ -1,4 +1,5 @@
 import { Star } from 'lucide-react';
+import { getRatingStars } from '@/utils/getRatingStars';
 
 const ProductRating = ({
   rating,
@@ -7,15 +8,14 @@ const ProductRating = ({
   rating: number;
   max?: number;
 }) => {
-  const fullStars = Math.floor(rating);
-
-  const hasHalfStar = rating % 1 >= 0.25 && rating % 1 < 0.75;
-
-  const emptyStars = max - fullStars - (hasHalfStar ? 1 : 0);
+  const { fullStarCount, hasHalfStar, emptyStarCount } = getRatingStars(
+    rating,
+    max,
+  );
 
   return (
     <div className="mt-8 flex items-center gap-1">
-      {Array.from({ length: fullStars }).map((_, i) => (
+      {Array.from({ length: fullStarCount }).map((_, i) => (
         <Star
           key={`full-${i}`}
           fill="#ffc107"
@@ -37,7 +37,7 @@ const ProductRating = ({
           />
         </span>
       )}
-      {Array.from({ length: emptyStars }).map((_, i) => (
+      {Array.from({ length: emptyStarCount }).map((_, i) => (
         <Star
           key={`empty-${i}`}
           fill="white"
