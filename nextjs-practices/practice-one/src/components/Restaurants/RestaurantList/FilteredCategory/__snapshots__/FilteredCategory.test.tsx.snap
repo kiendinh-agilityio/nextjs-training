@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilteredCategory renders section and RestaurantsCategoryList if category is valid 1`] = `
+<DocumentFragment>
+  <section
+    class="container mx-auto flex flex-col gap-32 sm:px-0"
+  >
+    <div
+      data-testid="mock-category-list"
+    >
+      Category: Burgers
+    </div>
+  </section>
+</DocumentFragment>
+`;
