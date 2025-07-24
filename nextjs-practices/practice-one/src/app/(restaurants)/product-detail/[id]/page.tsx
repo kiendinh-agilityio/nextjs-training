@@ -5,6 +5,7 @@ import {
   ProductDetailContent,
 } from '@/components/ProductDetail';
 import { createMetadata } from '@/utils/metadata';
+import { getRelatedProducts } from '@/utils/getRelatedProducts';
 import { BASE_URL } from '@/constants/url';
 import { ROUTERS } from '@/constants/router';
 
@@ -41,13 +42,17 @@ const ProductDetailPage = async ({ params }: ProductDetailPageProps) => {
 
   if (!product) return <div>Product not found</div>;
 
-  const all = await getRestaurantList(product.category);
-  const related = all.filter((p) => p.id !== product.id).slice(0, 4);
+  const categoryProducts = await getRestaurantList(product.category);
 
   return (
     <div className="container mx-auto py-8 lg:px-0">
       <ProductDetailContent product={product} />
-      <ProductRelatedSection relatedProducts={related} />
+      <ProductRelatedSection
+        relatedProducts={getRelatedProducts(
+          categoryProducts,
+          product.id.toString(),
+        )}
+      />
     </div>
   );
 };
