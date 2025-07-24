@@ -9,6 +9,7 @@ import {
 import { createMetadata } from '@/utils/metadata';
 import { BASE_URL } from '@/constants/url';
 import { ROUTERS } from '@/constants/router';
+import CategorySkeletonSection from '@/components/ProductSkeleton/CategorySkeleton';
 
 export const metadata = createMetadata({
   title: 'Restaurants Page',
@@ -31,7 +32,15 @@ const RestaurantPage = ({ searchParams }: RestaurantPageProps) => {
       <HeroSection />
       <RestaurantHeaderSection />
       <CategorySection />
-      <Suspense fallback={<div>Loading restaurants...</div>}>
+      <Suspense
+        fallback={
+          <section className="container mx-auto flex flex-col gap-32 sm:px-0">
+            <CategorySkeletonSection count={6} />
+            <CategorySkeletonSection count={6} />
+            <CategorySkeletonSection count={6} />
+          </section>
+        }
+      >
         <RestaurantListSection category={category} />
       </Suspense>
       <ContactSection />
