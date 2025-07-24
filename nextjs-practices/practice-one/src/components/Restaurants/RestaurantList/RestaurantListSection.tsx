@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { getRestaurantList } from '@/actions/product';
 import { Product } from '@/types/product';
 import { CATEGORIES_ITEM } from '@/constants/restaurants-data';
+import { getOrderedCategories } from '@/utils/getOrderedCategories';
+import { groupProductsByCategory } from '@/utils/groupProductsByCategory';
 
 import RestaurantsCategoryList from './RestaurantsCategoryList/RestaurantsCategoryList';
 import CategorySkeletonSection from '@/components/ProductSkeleton/CategorySkeleton';
@@ -46,23 +48,7 @@ const RestaurantListSection = ({ category }: RestaurantListSectionProps) => {
   }
 
   // Otherwise, group products by category
-  const categories: [string, Product[]][] = Array.from(
-    data.reduce((map: Map<string, Product[]>, item) => {
-      if (!map.has(item.category)) map.set(item.category, []);
-      map.get(item.category)!.push(item);
-      return map;
-    }, new Map()),
-  );
-
-  const orderedCategories = CATEGORIES_ITEM.filter(
-    (cat) => cat !== 'Offers',
-  ).map(
-    (cat) =>
-      [cat, categories.find(([c]) => c === cat)?.[1] || []] as [
-        string,
-        Product[],
-      ],
-  );
+  const categories = groupProductsByCategory(data);
 
   const renderCategoryList = ([category]: [string, Product[]]) => (
     <RestaurantsCategoryList key={category} category={category} />
@@ -71,7 +57,7 @@ const RestaurantListSection = ({ category }: RestaurantListSectionProps) => {
   return (
     <section className="container mx-auto flex flex-col gap-32 sm:px-0">
       <LoadMore
-        items={orderedCategories}
+        items={getOrderedCategories(categories, CATEGORIES_ITEM)}
         initialCount={3}
         step={3}
         renderItem={renderCategoryList}
