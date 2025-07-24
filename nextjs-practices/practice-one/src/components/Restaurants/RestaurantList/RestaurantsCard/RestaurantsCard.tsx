@@ -7,8 +7,10 @@ import { Plus, Minus } from 'lucide-react';
 import type { Product } from '@/types/product';
 import { CartItem } from '@/types/cart';
 import { cn } from '@/lib/utils';
+import { truncateText } from '@/utils/common';
 import { useCartStore } from '@/stores/useCartStore';
 import { useCartAction } from '@/hooks/useCartAction';
+import { DESCRIPTION_MAX_LENGTH } from '@/constants/common';
 
 import { Card } from '@/components/common/ui/card';
 import { Button } from '@/components/common/ui/button';
@@ -31,11 +33,6 @@ const RestaurantsCard = ({
   const itemId = String(id);
   const itemPrice = Number(price);
   const inCart = optimisticItems.some((item: CartItem) => item.id === itemId);
-  const maxLength = 65;
-  const shortDescription =
-    description.length > maxLength
-      ? description.slice(0, maxLength) + '...'
-      : description;
 
   const handleAddToCart = async (e: React.MouseEvent) => {
     e.preventDefault();
@@ -95,7 +92,7 @@ const RestaurantsCard = ({
             {name}
           </p>
           <p className="mb-3 font-base text-sm leading-[25px] lg:h-[90px]">
-            {shortDescription}
+            {truncateText(description, DESCRIPTION_MAX_LENGTH)}
           </p>
           <p className="text-lg font-bold leading-[18px]">${price}</p>
         </div>
