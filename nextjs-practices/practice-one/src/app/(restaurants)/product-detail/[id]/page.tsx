@@ -8,18 +8,32 @@ import { createMetadata } from '@/utils/metadata';
 import { BASE_URL } from '@/constants/url';
 import { ROUTERS } from '@/constants/router';
 
-export const metadata = createMetadata({
-  title: 'Product Detail Page',
-  description:
-    'Explore detailed product information, mouth-watering dishes, and exclusive offers on Order.uk. Check ingredients, reviews, and order your favorite meal today',
-  keywords: ['restaurant', 'products detail', 'Order.uk'],
-  url: `${BASE_URL}${ROUTERS.PRODUCT_DETAIL}`,
-  imageAlt: 'Order.uk Product Detail',
-});
-
 interface ProductDetailPageProps {
   params: Promise<{ id: string }>;
 }
+
+export const generateMetadata = async ({ params }: ProductDetailPageProps) => {
+  const { id } = await params;
+  const product = (await getProductDetail(id)) as Product;
+
+  if (!product) {
+    return createMetadata({
+      title: 'Product Not Found',
+      description: 'This product does not exist.',
+      url: `${BASE_URL}${ROUTERS.PRODUCT_DETAIL}/${id}`,
+      imageAlt: 'Product Not Found',
+    });
+  }
+
+  return createMetadata({
+    title: product.name,
+    description: product.description,
+    url: `${BASE_URL}${ROUTERS.PRODUCT_DETAIL}/${product.id}`,
+    image: product.image,
+    imageAlt: product.name,
+    keywords: [product.name, 'restaurant', 'Order.uk'],
+  });
+};
 
 const ProductDetailPage = async ({ params }: ProductDetailPageProps) => {
   const { id } = await params;

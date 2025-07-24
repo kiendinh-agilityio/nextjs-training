@@ -109,3 +109,55 @@ describe('ProductDetailPage (server snapshot)', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 });
+
+describe('generateMetadata', () => {
+  const params = Promise.resolve({ id: '1' });
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('returns metadata for found product', async () => {
+    (getProductDetail as jest.Mock).mockResolvedValue(mockProduct);
+    const { generateMetadata } = await import('../page');
+    const metadata = await generateMetadata({ params });
+
+    expect(metadata).toMatchObject({
+      title: mockProduct.name,
+      description: mockProduct.description,
+      keywords: expect.arrayContaining([
+        mockProduct.name,
+        'restaurant',
+        'Order.uk',
+      ]),
+      openGraph: {
+        url: expect.stringContaining(`/product-detail/${mockProduct.id}`),
+        images: [
+          expect.objectContaining({
+            url: expect.stringContaining(mockProduct.image),
+            alt: mockProduct.name,
+          }),
+        ],
+      },
+    });
+  });
+
+  it('returns metadata for missing product', async () => {
+    (getProductDetail as jest.Mock).mockResolvedValue(null);
+    const { generateMetadata } = await import('../page');
+    const metadata = await generateMetadata({ params });
+
+    expect(metadata).toMatchObject({
+      title: 'Product Not Found',
+      description: 'This product does not exist.',
+      openGraph: {
+        url: expect.stringContaining(`/product-detail/1`),
+        images: [
+          expect.objectContaining({
+            alt: 'Product Not Found',
+          }),
+        ],
+      },
+    });
+  });
+});
