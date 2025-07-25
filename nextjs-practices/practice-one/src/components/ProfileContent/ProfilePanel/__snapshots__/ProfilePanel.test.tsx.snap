@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfilePanel renders loading state 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="profile-skeleton-mock"
+  />
+</DocumentFragment>
+`;
+
+exports[`ProfilePanel renders profile info and actions 1`] = `
+<DocumentFragment>
+  <div
+    class="mx-auto flex w-full max-w-3xl flex-col overflow-hidden rounded-xl bg-white shadow-base"
+  >
+    <div
+      data-testid="profile-header-mock"
+    >
+      avatar.png-Test
+    </div>
+    <div
+      class="flex flex-col items-center bg-[#f8f9fb] px-8 pb-8"
+    >
+      <div
+        class="flex w-full justify-center"
+      >
+        <div
+          data-testid="account-info-card-mock"
+        >
+          test@example.com-123-abc
+        </div>
+      </div>
+      <button
+        data-testid="profile-actions-mock"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProfilePanel renders skeleton if loadingProfile is true 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="profile-skeleton-mock"
+  />
+</DocumentFragment>
+`;

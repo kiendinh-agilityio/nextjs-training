@@ -260,7 +260,7 @@ exports[`ProductDetailContent matches snapshot (in cart) 1`] = `
         >
           <button
             aria-label="Button remove from cart"
-            class="items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] h-[61px] py-[17px] px-[27px] text-[18px] leading-[24px] flex w-[256px] rounded-full"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] h-[61px] py-[17px] px-[27px] text-[18px] leading-[24px] w-[256px] rounded-full"
           >
             <span
               class="mr-2 flex items-center"
