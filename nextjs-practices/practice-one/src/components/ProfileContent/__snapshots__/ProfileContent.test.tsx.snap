@@ -3,8 +3,19 @@
 exports[`ProfileContent should render loading state and match snapshot 1`] = `
 <DocumentFragment>
   <div
-    data-testid="profile-skeleton-mock"
-  />
+    class="container mx-auto flex min-h-screen flex-col items-start pt-12 sm:px-0"
+  >
+    <h1
+      as="h1"
+      class="mb-12"
+      data-testid="heading-mock"
+    >
+      Profile
+    </h1>
+    <div
+      data-testid="profile-skeleton-mock"
+    />
+  </div>
 </DocumentFragment>
 `;
 
