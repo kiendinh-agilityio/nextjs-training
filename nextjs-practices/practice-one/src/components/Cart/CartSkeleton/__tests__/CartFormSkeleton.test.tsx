@@ -5,9 +5,7 @@ describe('CartFormSkeleton', () => {
   it('renders skeleton container', () => {
     const { container } = render(<CartFormSkeleton />);
     expect(container.firstChild).toHaveClass(
-      'flex',
-      'animate-pulse',
-      'rounded-2xl',
+      'flex min-h-[260px] w-full flex-col gap-4 rounded-2xl border p-8 lg:max-w-md',
     );
   });
 
