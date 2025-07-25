@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { LoadMoreProps } from '@/types/common';
 import { Button } from '@/components/common/ui/button';

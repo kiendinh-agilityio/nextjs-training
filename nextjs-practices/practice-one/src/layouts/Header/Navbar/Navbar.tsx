@@ -66,21 +66,26 @@ const Navbar = () => {
         </nav>
 
         {/* Desktop Login/Signup */}
-        {status === 'loading' ? (
-          <div
-            data-testid="desktop-skeleton"
-            className="hidden h-[61px] w-[202px] animate-pulse items-center gap-2 rounded-full bg-gray-200 px-[25px] py-[17px] lg:flex"
-          />
-        ) : (
-          <Link
-            href={session?.user?.email ? '/profile' : '/login'}
-            className="flex hidden items-center gap-2 rounded-full bg-secondary px-[25px] py-[17px] font-medium text-white transition-colors hover:bg-[#1a1f33] lg:flex"
-            aria-label={getButtonLabel()}
-          >
-            <UserIcon />
-            {getButtonLabel()}
-          </Link>
-        )}
+        <Link
+          href={session?.user?.email ? '/profile' : '/login'}
+          className="flex hidden items-center gap-2 rounded-full bg-secondary px-[25px] py-[17px] font-medium text-white transition-colors hover:bg-[#1a1f33] lg:flex"
+          aria-label={getButtonLabel()}
+        >
+          {status === 'loading' ? (
+            <>
+              <span
+                data-testid="desktop-skeleton"
+                className="h-7 w-7 animate-pulse rounded-full bg-gray-200"
+              />
+              <span className="h-6 w-28 animate-pulse rounded bg-gray-200" />
+            </>
+          ) : (
+            <>
+              <UserIcon />
+              {getButtonLabel()}
+            </>
+          )}
+        </Link>
       </div>
 
       {/* Mobile Hamburger */}
@@ -178,26 +183,31 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            {status === 'loading' ? (
-              <div
-                data-testid="mobile-skeleton"
-                className="mt-2 flex h-[48px] w-full animate-pulse items-center justify-center gap-2 rounded-full bg-gray-200 px-[25px] py-[17px]"
-              />
-            ) : (
-              <Link
-                href={session?.user?.email ? '/profile' : '/login'}
-                className={cn(
-                  'flex items-center justify-center transition-colors',
-                  'mt-2 w-full gap-2 px-[25px] py-[17px]',
-                  'rounded-full bg-secondary font-medium text-white hover:bg-[#1a1f33]',
-                )}
-                aria-label={getButtonLabel()}
-                onClick={handleCloseMenu}
-              >
-                <UserIcon />
-                {getButtonLabel()}
-              </Link>
-            )}
+            <Link
+              href={session?.user?.email ? '/profile' : '/login'}
+              className={cn(
+                'flex items-center justify-center transition-colors',
+                'mt-2 w-full gap-2 px-[25px] py-[17px]',
+                'rounded-full bg-secondary font-medium text-white hover:bg-[#1a1f33]',
+              )}
+              aria-label={getButtonLabel()}
+              onClick={handleCloseMenu}
+            >
+              {status === 'loading' ? (
+                <>
+                  <span
+                    data-testid="mobile-skeleton"
+                    className="h-8 w-8 animate-pulse rounded-full bg-gray-200"
+                  />
+                  <span className="h-6 w-24 animate-pulse rounded bg-gray-200" />
+                </>
+              ) : (
+                <>
+                  <UserIcon />
+                  {getButtonLabel()}
+                </>
+              )}
+            </Link>
           </li>
         </ul>
       </nav>
