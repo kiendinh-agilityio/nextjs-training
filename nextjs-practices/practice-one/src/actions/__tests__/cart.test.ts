@@ -80,41 +80,38 @@ describe('applyCoupon', () => {
     globalWithFetch.fetch = jest
       .fn()
       .mockRejectedValue(new Error('Network error'));
-    await expect(
-      applyCoupon({ code: 'SAVE10', subTotal: 100 }),
-    ).rejects.toThrow('Network error');
+    await expect(applyCoupon({ code: 'SAVE10' })).rejects.toThrow(
+      'Network error',
+    );
   });
 
   it('returns error if response is not ok', async () => {
     mockFetch({ ok: false, json: async () => ({}) });
-    const result = await applyCoupon({ code: 'SAVE10', subTotal: 100 });
+    const result = await applyCoupon({ code: 'SAVE10' });
     expect(result).toEqual({
       valid: false,
-      discount: 0,
-      percent: 0,
+      coupon: null,
       message: 'Failed to fetch coupons: undefined',
     });
   });
 
   it('returns error if coupon not found', async () => {
     mockFetch({ ok: true, json: async () => ({ coupons: [] }) });
-    const result = await applyCoupon({ code: 'SAVE10', subTotal: 100 });
+    const result = await applyCoupon({ code: 'SAVE10' });
     expect(result).toEqual({
       valid: false,
-      discount: 0,
-      percent: 0,
+      coupon: null,
       message: 'Invalid coupon code',
     });
   });
 
-  it('returns valid coupon and discount', async () => {
+  it('returns valid coupon and message', async () => {
     const coupon: Coupon = { code: 'SAVE10', discount: 10 };
     mockFetch({ ok: true, json: async () => ({ coupons: [coupon] }) });
-    const result = await applyCoupon({ code: 'save10', subTotal: 200 });
+    const result = await applyCoupon({ code: 'save10' });
     expect(result).toEqual({
       valid: true,
-      discount: 20,
-      percent: 10,
+      coupon,
       message: 'Coupon save10 applied successfully!',
     });
   });
@@ -125,12 +122,12 @@ describe('applyCoupon', () => {
     process.env.NEXT_PUBLIC_BASE_URL = 'http://test-url';
     const coupon: Coupon = { code: 'SERVER', discount: 15 };
     mockFetch({ ok: true, json: async () => ({ coupons: [coupon] }) });
-    const result = await applyCoupon({ code: 'server', subTotal: 100 });
+    const result = await applyCoupon({ code: 'server' });
     const fetchMock = globalWithFetch.fetch as jest.Mock;
     const calledUrl = fetchMock.mock.calls[0][0];
     expect(calledUrl.endsWith('/api/coupons')).toBe(true);
     expect(calledUrl.startsWith('http://test-url')).toBe(true);
     expect(result.valid).toBe(true);
-    expect(result.discount).toBe(15);
+    expect(result.coupon).toEqual(coupon);
   });
 });
