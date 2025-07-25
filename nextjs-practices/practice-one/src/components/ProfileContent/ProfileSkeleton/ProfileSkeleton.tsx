@@ -1,11 +1,7 @@
 import { Skeleton } from '@/components/common/ui/skeleton';
-import { Heading } from '@/components/common/ui/heading';
 
 const ProfileSkeleton = () => (
   <div className="container mx-auto flex min-h-screen flex-col items-start pt-12 sm:px-0">
-    <Heading as="h1" size="lg" className="mb-12">
-      Profile
-    </Heading>
     <div className="mx-auto flex w-full max-w-3xl flex-col overflow-hidden rounded-xl bg-white shadow-base">
       {/* Skeleton Header */}
       <div className="flex w-full flex-col items-center justify-between rounded-t-xl bg-[#0b163f] px-8 pb-6 pt-8 md:flex-row">
