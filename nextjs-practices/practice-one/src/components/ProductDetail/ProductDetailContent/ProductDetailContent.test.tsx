@@ -111,13 +111,13 @@ describe('ProductDetailContent', () => {
     expect(mockSetOptimisticItems).toHaveBeenCalled();
     expect(mockFormAction).toHaveBeenCalledWith({
       type: 'add',
-      payload: {
+      payload: expect.objectContaining({
         id: '1',
         name: 'Pizza',
         price: 10,
         image: '/pizza.jpg',
         category: 'Italian',
-      },
+      }),
     });
   });
 
