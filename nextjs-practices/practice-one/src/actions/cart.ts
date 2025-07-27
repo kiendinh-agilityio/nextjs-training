@@ -3,11 +3,6 @@
 import { revalidatePath } from 'next/cache';
 import { CartActionPayload, CartState, Coupon } from '@/types/cart';
 
-interface ApplyCouponProps {
-  code: string;
-  subTotal: number;
-}
-
 const initialState: CartState = {
   items: [],
   subTotal: 0,
@@ -32,7 +27,24 @@ export const cartAction = async (
 // Server action to get cart state from client
 export const getCartStateAction = async (): Promise<CartState> => initialState;
 
-export const applyCoupon = async ({ code, subTotal }: ApplyCouponProps) => {
+export const getCoupons = async (): Promise<Coupon[]> => {
+  let baseUrl = '';
+  if (typeof window === 'undefined') {
+    baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL ||
+      (process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : 'http://localhost:3000');
+  }
+  const res = await fetch(`${baseUrl}/api/coupons`, { cache: 'no-store' });
+
+  if (!res.ok) throw new Error('Failed to fetch coupons');
+  const db = await res.json();
+
+  return db.coupons;
+};
+
+export const applyCoupon = async ({ code }: { code: string }) => {
   let baseUrl = '';
   if (typeof window === 'undefined') {
     baseUrl =
@@ -46,8 +58,7 @@ export const applyCoupon = async ({ code, subTotal }: ApplyCouponProps) => {
   if (!res.ok) {
     return {
       valid: false,
-      discount: 0,
-      percent: 0,
+      coupon: null,
       message: `Failed to fetch coupons: ${res.status}`,
     };
   }
@@ -60,19 +71,14 @@ export const applyCoupon = async ({ code, subTotal }: ApplyCouponProps) => {
   if (!coupon) {
     return {
       valid: false,
-      discount: 0,
-      percent: 0,
+      coupon: null,
       message: 'Invalid coupon code',
     };
   }
 
-  // Calculate discount as percentage of subTotal (e.g., 15% or 20%)
-  const discount = Math.round((subTotal * coupon.discount) / 100);
-
   return {
     valid: true,
-    discount,
-    percent: coupon.discount,
+    coupon,
     message: `Coupon ${code} applied successfully!`,
   };
 };

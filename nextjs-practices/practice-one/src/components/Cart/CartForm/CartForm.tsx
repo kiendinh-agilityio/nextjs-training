@@ -5,6 +5,7 @@ import { Button } from '@/components/common/ui/button';
 import { cn } from '@/lib/utils';
 import { useCartStore } from '@/stores/useCartStore';
 import { applyCoupon } from '@/actions/cart';
+import { calculateDiscount } from '@/utils/calculateDiscount';
 
 interface CartSummaryProps {
   subTotal: number;
@@ -62,14 +63,18 @@ const CartForm = ({ subTotal }: CartSummaryProps) => {
       setCouponMessage('');
       setCouponStatus(null);
 
-      const result = await applyCoupon({ code: coupon, subTotal });
+      const result = await applyCoupon({ code: coupon });
 
       setCouponMessage(result.message);
 
-      if (result.valid) {
-        setCouponCart(coupon, result.discount);
+      if (result.valid && result.coupon) {
+        const { discount, percent } = calculateDiscount(
+          subTotal,
+          result.coupon,
+        );
+        setCouponCart(coupon, discount);
         setCouponStatus('success');
-        setCouponPercent(result.percent);
+        setCouponPercent(percent);
       } else {
         setCouponStatus('error');
         setCouponPercent(null);

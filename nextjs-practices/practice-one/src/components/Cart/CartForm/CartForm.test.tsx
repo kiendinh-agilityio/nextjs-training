@@ -7,11 +7,11 @@ import {
 } from '@testing-library/react';
 import CartForm from './CartForm';
 
+type Coupon = { code: string; discount: number };
 type ApplyCouponResult = {
   valid: boolean;
   message: string;
-  discount: number;
-  percent: number;
+  coupon: Coupon | null;
 };
 
 type UseCartStoreMock = {
@@ -48,12 +48,11 @@ jest.mock('@/stores/useCartStore', () => ({
 // Mock applyCoupon
 const applyCouponMock: jest.Mock<
   Promise<ApplyCouponResult>,
-  [{ code: string; subTotal: number }]
+  [{ code: string }]
 > = jest.fn();
 
 jest.mock('@/actions/cart', () => ({
-  applyCoupon: (params: { code: string; subTotal: number }) =>
-    applyCouponMock(params),
+  applyCoupon: (params: { code: string }) => applyCouponMock(params),
 }));
 
 describe('CartForm', () => {
@@ -136,8 +135,7 @@ describe('CartForm', () => {
     applyCouponMock.mockResolvedValue({
       valid: true,
       message: 'Success',
-      discount: 20,
-      percent: 10,
+      coupon: { code: 'SAVE10', discount: 20 },
     });
     render(<CartForm {...defaultProps} />);
     const input = screen.getByPlaceholderText('Apply Coupon Code here');
@@ -149,7 +147,6 @@ describe('CartForm', () => {
     await waitFor(() =>
       expect(applyCouponMock).toHaveBeenCalledWith({
         code: 'SAVE10',
-        subTotal: 100,
       }),
     );
     await waitFor(() =>
@@ -162,8 +159,7 @@ describe('CartForm', () => {
     applyCouponMock.mockResolvedValue({
       valid: false,
       message: 'Invalid',
-      discount: 0,
-      percent: 0,
+      coupon: null,
     });
     render(<CartForm {...defaultProps} />);
     const input = screen.getByPlaceholderText('Apply Coupon Code here');
@@ -175,7 +171,6 @@ describe('CartForm', () => {
     await waitFor(() =>
       expect(applyCouponMock).toHaveBeenCalledWith({
         code: 'WRONG',
-        subTotal: 100,
       }),
     );
     expect(screen.getByText('Invalid')).toBeInTheDocument();
@@ -194,8 +189,7 @@ describe('CartForm', () => {
     applyCouponMock.mockResolvedValue({
       valid: true,
       message: 'Coupon OK',
-      discount: 10,
-      percent: 5,
+      coupon: { code: 'OK', discount: 5 },
     });
     render(<CartForm {...defaultProps} />);
     const input = screen.getByPlaceholderText('Apply Coupon Code here');
@@ -219,8 +213,7 @@ describe('CartForm', () => {
     applyCouponMock.mockResolvedValue({
       valid: true,
       message: 'Coupon OK',
-      discount: 10,
-      percent: 5,
+      coupon: { code: 'OK', discount: 5 },
     });
     const { container } = render(<CartForm {...defaultProps} />);
     const input = screen.getByPlaceholderText('Apply Coupon Code here');
@@ -239,8 +232,7 @@ describe('CartForm', () => {
     applyCouponMock.mockResolvedValue({
       valid: false,
       message: 'Invalid',
-      discount: 0,
-      percent: 0,
+      coupon: null,
     });
     const { container } = render(<CartForm {...defaultProps} />);
     const input = screen.getByPlaceholderText('Apply Coupon Code here');
