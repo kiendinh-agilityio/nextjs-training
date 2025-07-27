@@ -2,7 +2,7 @@
 jest.mock('@/constants/api-setup', () => ({
   API_BASE_URL: 'http://localhost:3000',
   API_ENDPOINTS: {
-    V1: '/api/v1',
+    COMMERCE: '/api/commerce',
   },
   API_PARAMS: {
     ENDPOINT: 'endpoint',
@@ -48,7 +48,7 @@ describe('ApiClient', () => {
       const result = await apiClient.getCoupons();
 
       expect(globalAny.fetch).toHaveBeenCalledWith(
-        'http://localhost:3000/api/v1?endpoint=coupons',
+        'http://localhost:3000/api/commerce?endpoint=coupons',
         expect.objectContaining({
           headers: { 'Content-Type': 'application/json' },
         }),
@@ -68,7 +68,7 @@ describe('ApiClient', () => {
       const result = await apiClient.getProducts();
 
       expect(globalAny.fetch).toHaveBeenCalledWith(
-        'http://localhost:3000/api/v1?endpoint=products',
+        'http://localhost:3000/api/commerce?endpoint=products',
         expect.objectContaining({
           headers: { 'Content-Type': 'application/json' },
         }),
@@ -86,7 +86,7 @@ describe('ApiClient', () => {
       const result = await apiClient.getProducts('Italian');
 
       expect(globalAny.fetch).toHaveBeenCalledWith(
-        'http://localhost:3000/api/v1?endpoint=products&category=Italian',
+        'http://localhost:3000/api/commerce?endpoint=products&category=Italian',
         expect.objectContaining({
           headers: { 'Content-Type': 'application/json' },
         }),
@@ -106,7 +106,7 @@ describe('ApiClient', () => {
       const result = await apiClient.getProduct(1);
 
       expect(globalAny.fetch).toHaveBeenCalledWith(
-        'http://localhost:3000/api/v1?endpoint=products&id=1',
+        'http://localhost:3000/api/commerce?endpoint=products&id=1',
         expect.objectContaining({
           headers: { 'Content-Type': 'application/json' },
         }),
@@ -127,7 +127,7 @@ describe('ApiClient', () => {
       const result = await apiClient.authenticate(credentials);
 
       expect(globalAny.fetch).toHaveBeenCalledWith(
-        'http://localhost:3000/api/v1?endpoint=auth',
+        'http://localhost:3000/api/commerce?endpoint=auth',
         expect.objectContaining({
           method: 'POST',
           body: JSON.stringify(credentials),

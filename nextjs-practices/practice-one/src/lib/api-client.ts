@@ -27,7 +27,7 @@ class ApiClient {
     options: RequestInit = {},
   ): Promise<ApiResponse<T>> {
     try {
-      const url = `${this.baseUrl}${API_ENDPOINTS.V1}?${API_PARAMS.ENDPOINT}=${endpoint}`;
+      const url = `${this.baseUrl}${API_ENDPOINTS.COMMERCE}?${API_PARAMS.ENDPOINT}=${endpoint}`;
       const response = await fetch(url, {
         headers: {
           'Content-Type': 'application/json',
