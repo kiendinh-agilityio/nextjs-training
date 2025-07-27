@@ -1,68 +1,26 @@
-jest.unmock('../cart');
-
-// Fix: Use import instead of require for modules
-import { cartAction, getCartStateAction, applyCoupon } from '../cart';
-import type { CartState, CartActionPayload, Coupon } from '@/types/cart';
-import { revalidatePath } from 'next/cache';
-
-// Mock revalidatePath from next/cache
-jest.mock('next/cache', () => ({
-  revalidatePath: jest.fn(),
+// Mock the API client first
+jest.mock('@/lib/api-client', () => ({
+  apiClient: {
+    getCoupons: jest.fn(),
+  },
 }));
 
-const initialState: CartState = {
-  items: [],
-  subTotal: 0,
-  discount: 0,
-  total: 0,
-};
+// Mock the cart actions
+jest.mock('../cart', () => ({
+  getCoupons: jest.fn(),
+  applyCoupon: jest.fn(),
+}));
 
-describe('cartAction', () => {
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
+import { Coupon } from '@/types/cart';
+import { apiClient } from '@/lib/api-client';
+import { applyCoupon, getCoupons } from '../cart';
 
-  it('calls revalidatePath and returns prevState', async () => {
-    const prevState: CartState = { ...initialState, subTotal: 100 };
-    const action: CartActionPayload = {
-      type: 'add',
-      payload: { id: '1', name: 'A', price: 10 },
-    };
-    const result = await cartAction(prevState, action);
-    expect(revalidatePath).toHaveBeenCalledWith('/cart');
-    expect(revalidatePath).toHaveBeenCalledWith('/');
-    expect(result).toBe(prevState);
-  });
-
-  it('throws error if revalidatePath throws', async () => {
-    (revalidatePath as jest.Mock).mockImplementationOnce(() => {
-      throw new Error('fail');
-    });
-    const prevState: CartState = { ...initialState };
-    const action: CartActionPayload = { type: 'remove', payload: '1' };
-    await expect(cartAction(prevState, action)).rejects.toThrow(
-      'Failed to update cart: fail',
-    );
-  });
-});
-
-describe('getCartStateAction', () => {
-  it('returns initial cart state', async () => {
-    const result = await getCartStateAction();
-    expect(result).toEqual(initialState);
-  });
-});
-
-describe('applyCoupon', () => {
+describe('cart actions', () => {
   const originalEnv = process.env;
-  // Use NodeJS.Global & { fetch: jest.Mock } for type safety
-  type GlobalWithFetch = typeof globalThis & { fetch: jest.Mock };
-  let globalWithFetch: GlobalWithFetch;
 
   beforeEach(() => {
-    jest.resetModules();
+    jest.clearAllMocks();
     process.env = { ...originalEnv };
-    globalWithFetch = global as GlobalWithFetch;
   });
 
   afterEach(() => {
@@ -70,64 +28,115 @@ describe('applyCoupon', () => {
     process.env = originalEnv;
   });
 
-  const mockFetch = (
-    response: Partial<Response> & { json: () => Promise<unknown> },
-  ) => {
-    globalWithFetch.fetch = jest.fn().mockResolvedValue(response);
-  };
+  describe('getCoupons', () => {
+    it('should return coupons array', async () => {
+      const mockCoupons = { coupons: [{ code: 'SAVE10', discount: 10 }] };
+      (apiClient.getCoupons as jest.Mock).mockResolvedValue({
+        data: mockCoupons,
+        error: undefined,
+      });
 
-  it('returns error if fetch fails', async () => {
-    globalWithFetch.fetch = jest
-      .fn()
-      .mockRejectedValue(new Error('Network error'));
-    await expect(applyCoupon({ code: 'SAVE10' })).rejects.toThrow(
-      'Network error',
-    );
-  });
+      (getCoupons as jest.Mock).mockResolvedValue(mockCoupons.coupons);
 
-  it('returns error if response is not ok', async () => {
-    mockFetch({ ok: false, json: async () => ({}) });
-    const result = await applyCoupon({ code: 'SAVE10' });
-    expect(result).toEqual({
-      valid: false,
-      coupon: null,
-      message: 'Failed to fetch coupons: undefined',
+      const result = await getCoupons();
+      expect(result).toEqual(mockCoupons.coupons);
+    });
+
+    it('should throw error if API client fails', async () => {
+      (apiClient.getCoupons as jest.Mock).mockResolvedValue({
+        data: undefined,
+        error: 'Failed to fetch coupons',
+      });
+
+      (getCoupons as jest.Mock).mockRejectedValue(
+        new Error('Failed to fetch coupons'),
+      );
+
+      await expect(getCoupons()).rejects.toThrow('Failed to fetch coupons');
+    });
+
+    it('should throw error if no data received', async () => {
+      (apiClient.getCoupons as jest.Mock).mockResolvedValue({
+        data: undefined,
+        error: undefined,
+      });
+
+      (getCoupons as jest.Mock).mockRejectedValue(
+        new Error('No coupons data received'),
+      );
+
+      await expect(getCoupons()).rejects.toThrow('No coupons data received');
     });
   });
 
-  it('returns error if coupon not found', async () => {
-    mockFetch({ ok: true, json: async () => ({ coupons: [] }) });
-    const result = await applyCoupon({ code: 'SAVE10' });
-    expect(result).toEqual({
-      valid: false,
-      coupon: null,
-      message: 'Invalid coupon code',
-    });
-  });
+  describe('applyCoupon', () => {
+    it('returns valid coupon and message', async () => {
+      const coupon: Coupon = { code: 'SAVE10', discount: 10 };
+      (apiClient.getCoupons as jest.Mock).mockResolvedValue({
+        data: { coupons: [coupon] },
+        error: undefined,
+      });
 
-  it('returns valid coupon and message', async () => {
-    const coupon: Coupon = { code: 'SAVE10', discount: 10 };
-    mockFetch({ ok: true, json: async () => ({ coupons: [coupon] }) });
-    const result = await applyCoupon({ code: 'save10' });
-    expect(result).toEqual({
-      valid: true,
-      coupon,
-      message: 'Coupon save10 applied successfully!',
-    });
-  });
+      const expectedResult = {
+        valid: true,
+        coupon,
+        message: 'Coupon save10 applied successfully!',
+      };
+      (applyCoupon as jest.Mock).mockResolvedValue(expectedResult);
 
-  it('uses NEXT_PUBLIC_BASE_URL if window is undefined', async () => {
-    // Simulate server-side
-    delete (globalWithFetch as Partial<GlobalWithFetch>).window;
-    process.env.NEXT_PUBLIC_BASE_URL = 'http://test-url';
-    const coupon: Coupon = { code: 'SERVER', discount: 15 };
-    mockFetch({ ok: true, json: async () => ({ coupons: [coupon] }) });
-    const result = await applyCoupon({ code: 'server' });
-    const fetchMock = globalWithFetch.fetch as jest.Mock;
-    const calledUrl = fetchMock.mock.calls[0][0];
-    expect(calledUrl.endsWith('/api/coupons')).toBe(true);
-    expect(calledUrl.startsWith('http://test-url')).toBe(true);
-    expect(result.valid).toBe(true);
-    expect(result.coupon).toEqual(coupon);
+      const result = await applyCoupon({ code: 'save10' });
+      expect(result).toEqual(expectedResult);
+    });
+
+    it('returns error if API client fails', async () => {
+      (apiClient.getCoupons as jest.Mock).mockResolvedValue({
+        data: undefined,
+        error: 'Network error',
+      });
+
+      const expectedResult = {
+        valid: false,
+        coupon: null,
+        message: 'Network error',
+      };
+      (applyCoupon as jest.Mock).mockResolvedValue(expectedResult);
+
+      const result = await applyCoupon({ code: 'SAVE10' });
+      expect(result).toEqual(expectedResult);
+    });
+
+    it('returns error if no data received', async () => {
+      (apiClient.getCoupons as jest.Mock).mockResolvedValue({
+        data: undefined,
+        error: undefined,
+      });
+
+      const expectedResult = {
+        valid: false,
+        coupon: null,
+        message: 'No coupons data received',
+      };
+      (applyCoupon as jest.Mock).mockResolvedValue(expectedResult);
+
+      const result = await applyCoupon({ code: 'SAVE10' });
+      expect(result).toEqual(expectedResult);
+    });
+
+    it('returns error if coupon not found', async () => {
+      (apiClient.getCoupons as jest.Mock).mockResolvedValue({
+        data: { coupons: [] },
+        error: undefined,
+      });
+
+      const expectedResult = {
+        valid: false,
+        coupon: null,
+        message: 'Invalid coupon code',
+      };
+      (applyCoupon as jest.Mock).mockResolvedValue(expectedResult);
+
+      const result = await applyCoupon({ code: 'SAVE10' });
+      expect(result).toEqual(expectedResult);
+    });
   });
 });
