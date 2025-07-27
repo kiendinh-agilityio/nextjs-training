@@ -1,38 +1,36 @@
 'use server';
 
-import { PRODUCT_API_URL } from '@/constants/api-endpoint';
+import { apiClient } from '@/lib/api-client';
 import { Product } from '@/types/product';
 
 export const getRestaurantList = async (
   category?: string,
 ): Promise<Product[]> => {
-  let url = PRODUCT_API_URL ?? '';
+  const response = await apiClient.getProducts(category);
 
-  if (category) {
-    url += `?category=${encodeURIComponent(category)}`;
+  if (response.error) {
+    throw new Error(response.error);
   }
 
-  const response = await fetch(url, {
-    cache: 'no-store',
-  });
-
-  if (!response.ok) {
-    throw new Error('Failed to fetch foods');
+  if (!response.data) {
+    throw new Error('No data received');
   }
 
-  return response.json();
+  return response.data;
 };
 
 export const getProductDetail = async (
   id: string | number,
 ): Promise<Product> => {
-  const url = `${PRODUCT_API_URL}/${id}`;
+  const response = await apiClient.getProduct(id);
 
-  const response = await fetch(url, { cache: 'no-store' });
-
-  if (!response.ok) {
-    throw new Error('Failed to fetch product detail');
+  if (response.error) {
+    throw new Error(response.error);
   }
 
-  return response.json();
+  if (!response.data) {
+    throw new Error('No data received');
+  }
+
+  return response.data;
 };
