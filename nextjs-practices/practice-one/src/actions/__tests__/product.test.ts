@@ -1,9 +1,18 @@
+// Mock the API client first
+jest.mock('@/lib/api-client', () => ({
+  apiClient: {
+    getProducts: jest.fn(),
+    getProduct: jest.fn(),
+  },
+}));
+
 import type { Product } from '@/types/product';
+import { apiClient } from '@/lib/api-client';
+import { getRestaurantList, getProductDetail } from '../product';
 
 const OLD_ENV = process.env;
 
 describe('product actions', () => {
-  const NEXT_PUBLIC_PRODUCT_API_URL = 'https://api.example.com/products';
   const mockProducts: Product[] = [
     {
       id: 1,
@@ -28,8 +37,8 @@ describe('product actions', () => {
 
   beforeEach(() => {
     jest.resetModules();
-    process.env = { ...OLD_ENV, NEXT_PUBLIC_PRODUCT_API_URL };
-    global.fetch = jest.fn();
+    process.env = { ...OLD_ENV };
+    jest.clearAllMocks();
   });
 
   afterAll(() => {
@@ -40,61 +49,83 @@ describe('product actions', () => {
 
   describe('getRestaurantList', () => {
     it('fetches products without category', async () => {
-      (global.fetch as jest.Mock).mockResolvedValueOnce({
-        ok: true,
-        json: async () => mockProducts,
+      (apiClient.getProducts as jest.Mock).mockResolvedValue({
+        data: mockProducts,
+        error: undefined,
       });
-      // Import after setting env and resetting modules
-      const { getRestaurantList } = await import('../product');
+
       const result = await getRestaurantList();
-      expect(global.fetch).toHaveBeenCalledWith(NEXT_PUBLIC_PRODUCT_API_URL, {
-        cache: 'no-store',
-      });
+
+      expect(apiClient.getProducts).toHaveBeenCalledWith(undefined);
       expect(result).toEqual(mockProducts);
     });
 
     it('fetches products with category', async () => {
-      (global.fetch as jest.Mock).mockResolvedValueOnce({
-        ok: true,
-        json: async () => mockProducts,
+      (apiClient.getProducts as jest.Mock).mockResolvedValue({
+        data: mockProducts,
+        error: undefined,
       });
+
       const category = 'Italian';
-      const url = `${NEXT_PUBLIC_PRODUCT_API_URL}?category=Italian`;
-      const { getRestaurantList } = await import('../product');
       const result = await getRestaurantList(category);
-      expect(global.fetch).toHaveBeenCalledWith(url, { cache: 'no-store' });
+
+      expect(apiClient.getProducts).toHaveBeenCalledWith(category);
       expect(result).toEqual(mockProducts);
     });
 
     it('throws error if fetch fails', async () => {
-      (global.fetch as jest.Mock).mockResolvedValueOnce({ ok: false });
-      const { getRestaurantList } = await import('../product');
+      (apiClient.getProducts as jest.Mock).mockResolvedValue({
+        data: undefined,
+        error: 'Failed to fetch foods',
+      });
+
       await expect(getRestaurantList()).rejects.toThrow(
         'Failed to fetch foods',
       );
+    });
+
+    it('throws error if no data received', async () => {
+      (apiClient.getProducts as jest.Mock).mockResolvedValue({
+        data: undefined,
+        error: undefined,
+      });
+
+      await expect(getRestaurantList()).rejects.toThrow('No data received');
     });
   });
 
   describe('getProductDetail', () => {
     it('fetches product detail by id', async () => {
-      (global.fetch as jest.Mock).mockResolvedValueOnce({
-        ok: true,
-        json: async () => mockProduct,
+      (apiClient.getProduct as jest.Mock).mockResolvedValue({
+        data: mockProduct,
+        error: undefined,
       });
-      const { getProductDetail } = await import('../product');
+
       const result = await getProductDetail(mockProduct.id);
-      expect(global.fetch).toHaveBeenCalledWith(
-        `${NEXT_PUBLIC_PRODUCT_API_URL}/${mockProduct.id}`,
-        { cache: 'no-store' },
-      );
+
+      expect(apiClient.getProduct).toHaveBeenCalledWith(mockProduct.id);
       expect(result).toEqual(mockProduct);
     });
 
     it('throws error if fetch fails', async () => {
-      (global.fetch as jest.Mock).mockResolvedValueOnce({ ok: false });
-      const { getProductDetail } = await import('../product');
+      (apiClient.getProduct as jest.Mock).mockResolvedValue({
+        data: undefined,
+        error: 'Failed to fetch product detail',
+      });
+
       await expect(getProductDetail(mockProduct.id)).rejects.toThrow(
         'Failed to fetch product detail',
+      );
+    });
+
+    it('throws error if no data received', async () => {
+      (apiClient.getProduct as jest.Mock).mockResolvedValue({
+        data: undefined,
+        error: undefined,
+      });
+
+      await expect(getProductDetail(mockProduct.id)).rejects.toThrow(
+        'No data received',
       );
     });
   });
