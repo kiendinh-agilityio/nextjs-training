@@ -1,4 +1,4 @@
-import { AUTH_API_URL } from '@/constants/api-endpoint';
+import { apiClient } from '@/lib/api-client';
 import { User } from '@/types/user';
 
 export const fetchProfile = async (
@@ -8,51 +8,43 @@ export const fetchProfile = async (
   error: string | null;
 }> => {
   if (!email) return { user: null, error: 'No email provided' };
-  try {
-    const res = await fetch(
-      `${AUTH_API_URL}?email=${encodeURIComponent(email)}`,
-    );
-    if (!res.ok) {
-      return {
-        user: null,
-        error: `Failed to fetch profile: ${res.status} ${res.statusText}`,
-      };
-    }
-    const data = await res.json();
-    if (!Array.isArray(data) || data.length === 0) {
-      return { user: null, error: 'User not found' };
-    }
-    return { user: data[0], error: null };
-  } catch (err: unknown) {
-    return {
-      user: null,
-      error: err instanceof Error ? err.message : 'User not found',
-    };
+
+  const response = await apiClient.getProfile(email);
+
+  if (response.error) {
+    return { user: null, error: response.error };
   }
+
+  if (
+    !response.data ||
+    !Array.isArray(response.data) ||
+    response.data.length === 0
+  ) {
+    return { user: null, error: 'User not found' };
+  }
+
+  return { user: response.data[0], error: null };
 };
 
 export const getUserFromApi = async (email: string, password: string) => {
-  try {
-    const res = await fetch(
-      `${AUTH_API_URL}?email=${encodeURIComponent(email)}`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      },
-    );
+  const response = await apiClient.getProfile(email);
 
-    const data = await res.json();
-    if (!res.ok || !Array.isArray(data) || data.length === 0) {
-      return { error: 'Email or password is invalid' };
-    }
-    const user = data[0];
-    if (user.password !== password) {
-      return { error: 'Email or password is invalid' };
-    }
-    return user;
-  } catch (error) {
+  if (response.error) {
     return { error: 'Email or password is invalid' };
   }
+
+  if (
+    !response.data ||
+    !Array.isArray(response.data) ||
+    response.data.length === 0
+  ) {
+    return { error: 'Email or password is invalid' };
+  }
+
+  const user = response.data[0];
+  if (user.password !== password) {
+    return { error: 'Email or password is invalid' };
+  }
+
+  return user;
 };
