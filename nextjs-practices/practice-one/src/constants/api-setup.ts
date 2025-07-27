@@ -8,8 +8,7 @@ export const PRODUCT_API_URL = process.env.NEXT_PUBLIC_PRODUCT_API_URL;
 
 // Unified API Endpoints
 export const API_ENDPOINTS = {
-  V1: '/api/v1',
-  COUPONS: '/api/coupons',
+  COMMERCE: '/api/commerce',
   AUTH: '/api/auth/[...nextauth]',
 };
 
