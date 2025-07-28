@@ -17,15 +17,6 @@ export const generateMetadata = async ({ params }: ProductDetailPageProps) => {
   const { id } = await params;
   const product = (await getProductDetail(id)) as Product;
 
-  if (!product) {
-    return createMetadata({
-      title: 'Product Not Found',
-      description: 'This product does not exist.',
-      url: `${BASE_URL}${ROUTERS.PRODUCT_DETAIL}/${id}`,
-      imageAlt: 'Product Not Found',
-    });
-  }
-
   return createMetadata({
     title: product.name,
     description: product.description,
@@ -39,8 +30,6 @@ export const generateMetadata = async ({ params }: ProductDetailPageProps) => {
 const ProductDetailPage = async ({ params }: ProductDetailPageProps) => {
   const { id } = await params;
   const product = (await getProductDetail(id)) as Product;
-
-  if (!product) return <div>Product not found</div>;
 
   const categoryProducts = await getRestaurantList(product.category);
 

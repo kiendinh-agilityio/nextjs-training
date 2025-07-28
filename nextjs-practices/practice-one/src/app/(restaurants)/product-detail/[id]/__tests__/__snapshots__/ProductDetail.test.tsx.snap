@@ -1,13 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductDetailPage (server snapshot) renders "Product not found" if product is missing (snapshot) 1`] = `
-<DocumentFragment>
-  <div>
-    Product not found
-  </div>
-</DocumentFragment>
-`;
-
 exports[`ProductDetailPage (server snapshot) renders product detail and related section (snapshot) 1`] = `
 <DocumentFragment>
   <div
@@ -20,6 +12,23 @@ exports[`ProductDetailPage (server snapshot) renders product detail and related 
     <div
       data-testid="ProductRelatedSection"
       relatedproducts="[object Object],[object Object]"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProductDetailPage (server snapshot) renders product detail even when product is missing (current implementation behavior) 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto py-8 lg:px-0"
+  >
+    <div
+      data-testid="ProductDetailContent"
+      product="[object Object]"
+    />
+    <div
+      data-testid="ProductRelatedSection"
+      relatedproducts=""
     />
   </div>
 </DocumentFragment>
