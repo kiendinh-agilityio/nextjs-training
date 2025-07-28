@@ -59,7 +59,7 @@ export const useCartStore = create<CartProps>()(
             0,
           );
 
-          const discount = 0;
+          const discount = state.discount;
 
           const total = subTotal - discount;
 
@@ -75,7 +75,7 @@ export const useCartStore = create<CartProps>()(
             0,
           );
 
-          const discount = 0;
+          const discount = state.discount;
 
           const total = subTotal - discount;
 
@@ -93,7 +93,7 @@ export const useCartStore = create<CartProps>()(
             0,
           );
 
-          const discount = 0;
+          const discount = state.discount;
 
           const total = subTotal - discount;
 
