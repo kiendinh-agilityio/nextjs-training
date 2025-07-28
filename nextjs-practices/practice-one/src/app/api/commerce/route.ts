@@ -30,28 +30,23 @@ export const POST = async (request: NextRequest) => {
   const { searchParams } = new URL(request.url);
   const endpoint = searchParams.get(API_PARAMS.ENDPOINT);
 
-  switch (endpoint) {
-    case ENDPOINT_VALUES.AUTH:
-      return await handleAuth(request);
-    default:
-      return NextResponse.json(
-        { error: API_ERRORS.INVALID_ENDPOINT },
-        { status: API_STATUS.BAD_REQUEST },
-      );
+  if (endpoint === ENDPOINT_VALUES.AUTH) {
+    return await handleAuth(request);
   }
+
+  return NextResponse.json(
+    { error: API_ERRORS.INVALID_ENDPOINT },
+    { status: API_STATUS.BAD_REQUEST },
+  );
 };
 
 // Coupons handler
 const handleCoupons = async () => {
   try {
-    const { promises: fs } = await import('fs');
-    const path = await import('path');
+    // Import the coupons data directly
+    const couponsData = await import('@/data/coupons.json');
 
-    const filePath = path.join(process.cwd(), 'src/data/coupons.json');
-    const fileContents = await fs.readFile(filePath, 'utf-8');
-    const coupons = JSON.parse(fileContents);
-
-    return NextResponse.json(coupons);
+    return NextResponse.json(couponsData);
   } catch (error) {
     return NextResponse.json(
       { error: API_ERRORS.FAILED_TO_FETCH_COUPONS },
