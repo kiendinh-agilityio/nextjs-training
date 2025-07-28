@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache';
 import { CartActionPayload, CartState, Coupon } from '@/types/cart';
+import { apiClient } from '@/lib/api-client';
 
 const initialState: CartState = {
   items: [],
@@ -28,43 +29,39 @@ export const cartAction = async (
 export const getCartStateAction = async (): Promise<CartState> => initialState;
 
 export const getCoupons = async (): Promise<Coupon[]> => {
-  let baseUrl = '';
-  if (typeof window === 'undefined') {
-    baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL ||
-      (process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : 'http://localhost:3000');
+  const response = await apiClient.getCoupons();
+
+  if (response.error) {
+    throw new Error(response.error);
   }
-  const res = await fetch(`${baseUrl}/api/coupons`, { cache: 'no-store' });
 
-  if (!res.ok) throw new Error('Failed to fetch coupons');
-  const db = await res.json();
+  if (!response.data) {
+    throw new Error('No coupons data received');
+  }
 
-  return db.coupons;
+  return response.data.coupons;
 };
 
 export const applyCoupon = async ({ code }: { code: string }) => {
-  let baseUrl = '';
-  if (typeof window === 'undefined') {
-    baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL ||
-      (process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : 'http://localhost:3000');
-  }
-  const res = await fetch(`${baseUrl}/api/coupons`, { cache: 'no-store' });
+  const response = await apiClient.getCoupons();
 
-  if (!res.ok) {
+  if (response.error) {
     return {
       valid: false,
       coupon: null,
-      message: `Failed to fetch coupons: ${res.status}`,
+      message: response.error,
     };
   }
 
-  const db = await res.json();
-  const coupon: Coupon | undefined = db.coupons.find(
+  if (!response.data) {
+    return {
+      valid: false,
+      coupon: null,
+      message: 'No coupons data received',
+    };
+  }
+
+  const coupon: Coupon | undefined = response.data.coupons.find(
     (c: Coupon) => c.code === code.toUpperCase(),
   );
 

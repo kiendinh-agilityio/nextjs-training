@@ -4,9 +4,15 @@ import { CATEGORIES_ITEM } from '@/constants/restaurants-data';
 import { BASE_URL } from '@/constants/url';
 import { getRestaurantList } from '@/actions/product';
 import { createEntry } from '@/utils/createEntry';
+import { Product } from '@/types/product';
 
 export const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
-  const products = await getRestaurantList();
+  let products: Product[] = [];
+  try {
+    products = await getRestaurantList();
+  } catch (e) {
+    products = [];
+  }
   const categories = CATEGORIES_ITEM.filter((cat) => cat !== 'Offers');
 
   const staticUrls = [

@@ -5,6 +5,7 @@ import Credentials from 'next-auth/providers/credentials';
 import { loginSchema } from '@/lib/schema';
 import { getUserFromApi } from '@/lib/get-user-from-api';
 import { ROUTERS } from '@/constants/router';
+import { User } from '@/types/user';
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   secret: process.env.AUTH_SECRET,
@@ -24,17 +25,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
       authorize: async (credentials) => {
         try {
-          let user = null;
-
           const { email, password } = await loginSchema.parseAsync(credentials);
 
-          user = await getUserFromApi(email, password);
+          const result = await getUserFromApi(email, password);
 
-          if (!user || user?.error) {
+          if (result && 'error' in result) {
             return null;
           }
 
-          return user;
+          return result as User;
         } catch (error) {
           if (error instanceof ZodError) {
             return null;
