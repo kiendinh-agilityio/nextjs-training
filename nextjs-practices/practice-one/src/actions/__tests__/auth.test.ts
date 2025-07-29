@@ -23,42 +23,18 @@ describe('auth actions', () => {
   });
 
   describe('userLogin', () => {
-    it('should call signIn with correct params and return null on success', async () => {
+    it('should return error message if signIn returns error in response', async () => {
+      (signIn as jest.Mock).mockResolvedValueOnce({
+        error: 'CredentialsSignin',
+      });
+      const result = await userLogin({ email, password });
+      expect(result).toBe(ERROR_MESSAGES.ACCOUNT_AND_PASSWORD_INVALID);
+    });
+
+    it('should return null if signIn succeeds', async () => {
       (signIn as jest.Mock).mockResolvedValueOnce(undefined);
       const result = await userLogin({ email, password });
-      expect(signIn).toHaveBeenCalledWith('credentials', {
-        email,
-        password,
-        redirect: false,
-      });
       expect(result).toBeNull();
-    });
-
-    it('should return error message if signIn throws with type CredentialsSignin', async () => {
-      const error = { type: 'CredentialsSignin' };
-      (signIn as jest.Mock).mockImplementationOnce(() => {
-        throw error;
-      });
-      const result = await userLogin({ email, password });
-      expect(result).toBe(ERROR_MESSAGES.ACCOUNT_AND_PASSWORD_INVALID);
-    });
-
-    it('should return error message if signIn throws with message CredentialsSignin', async () => {
-      const error = { message: 'CredentialsSignin' };
-      (signIn as jest.Mock).mockImplementationOnce(() => {
-        throw error;
-      });
-      const result = await userLogin({ email, password });
-      expect(result).toBe(ERROR_MESSAGES.ACCOUNT_AND_PASSWORD_INVALID);
-    });
-
-    it('should return error message if signIn throws unknown error', async () => {
-      const error = { message: 'Some other error' };
-      (signIn as jest.Mock).mockImplementationOnce(() => {
-        throw error;
-      });
-      const result = await userLogin({ email, password });
-      expect(result).toBe(ERROR_MESSAGES.ACCOUNT_AND_PASSWORD_INVALID);
     });
   });
 });

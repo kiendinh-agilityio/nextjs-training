@@ -16,27 +16,15 @@ const userLogin = async ({
   email: string;
   password: string;
 }) => {
-  try {
-    await signIn('credentials', {
-      email,
-      password,
-      redirect: false,
-    });
-
-    return null;
-  } catch (error: unknown) {
-    if (
-      typeof error === 'object' &&
-      error !== null &&
-      ('type' in error || 'message' in error) &&
-      ((error as { type?: string }).type === 'CredentialsSignin' ||
-        (error as { message?: string }).message === 'CredentialsSignin')
-    ) {
-      return ERROR_MESSAGES.ACCOUNT_AND_PASSWORD_INVALID;
-    }
-
+  const res = await signIn('credentials', {
+    email,
+    password,
+    redirect: false,
+  });
+  if (res?.error) {
     return ERROR_MESSAGES.ACCOUNT_AND_PASSWORD_INVALID;
   }
+  return null;
 };
 
 export { userLogin, userLogOut };
