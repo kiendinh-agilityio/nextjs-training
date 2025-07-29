@@ -15,14 +15,9 @@ export const cartAction = async (
   prevState: CartState,
   _action: CartActionPayload,
 ): Promise<CartState> => {
-  try {
-    revalidatePath('/cart');
-    revalidatePath('/');
+  revalidatePath('/cart');
 
-    return prevState;
-  } catch (error) {
-    throw new Error('Failed to update cart: ' + (error as Error).message);
-  }
+  return prevState;
 };
 
 // Server action to get cart state from client
