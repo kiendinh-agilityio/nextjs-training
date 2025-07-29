@@ -107,26 +107,24 @@ describe('product actions', () => {
       expect(result).toEqual(mockProduct);
     });
 
-    it('throws error if fetch fails', async () => {
+    it('returns null if fetch fails', async () => {
       (apiClient.getProduct as jest.Mock).mockResolvedValue({
         data: undefined,
         error: 'Failed to fetch product detail',
       });
 
-      await expect(getProductDetail(mockProduct.id)).rejects.toThrow(
-        'Failed to fetch product detail',
-      );
+      const result = await getProductDetail(mockProduct.id);
+      expect(result).toBeNull();
     });
 
-    it('throws error if no data received', async () => {
+    it('returns null if no data received', async () => {
       (apiClient.getProduct as jest.Mock).mockResolvedValue({
         data: undefined,
         error: undefined,
       });
 
-      await expect(getProductDetail(mockProduct.id)).rejects.toThrow(
-        'No data received',
-      );
+      const result = await getProductDetail(mockProduct.id);
+      expect(result).toBeNull();
     });
   });
 });
