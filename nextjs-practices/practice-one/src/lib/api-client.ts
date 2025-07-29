@@ -18,7 +18,10 @@ interface ApiResponse<T> {
 class ApiClient {
   private readonly baseUrl: string;
 
-  constructor(baseUrl: string = API_BASE_URL) {
+  constructor(baseUrl: string = API_BASE_URL ?? '') {
+    if (!baseUrl) {
+      throw new Error('API_BASE_URL is not set!');
+    }
     this.baseUrl = baseUrl;
   }
 

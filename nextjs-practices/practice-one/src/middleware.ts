@@ -1,11 +1,12 @@
 import { auth } from '@/lib/auth';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import type { User } from '@/types/user';
 
 export const middleware = auth(async (req: NextRequest) => {
-  if (req.nextUrl.pathname === '/profile') {
-    // @ts-expect-error: auth wrapper injects req.auth
-    if (!req.auth?.user) {
+  const reqWithAuth = req as NextRequest & { auth?: { user?: User } };
+  if (reqWithAuth.nextUrl.pathname === '/profile') {
+    if (!reqWithAuth.auth?.user) {
       const loginUrl = new URL('/login', req.url);
       return NextResponse.redirect(loginUrl);
     }
