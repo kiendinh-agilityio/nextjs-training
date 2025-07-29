@@ -10,19 +10,16 @@ describe('NotFound (product detail not found page)', () => {
         'We couldn’t find the product you are looking for. Please check the URL or return to the restaurant list.',
       ),
     ).toBeInTheDocument();
-    expect(screen.getByText('Return to Restaurants')).toBeInTheDocument();
-    expect(screen.getByText('Go Home')).toBeInTheDocument();
+    expect(screen.getByText('Go back')).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('has correct links', () => {
     render(<NotFound />);
     const returnLink = screen.getByRole('link', {
-      name: 'Return to Restaurants',
+      name: 'Go back',
     });
-    const homeLink = screen.getByRole('link', { name: 'Go Home' });
 
     expect(returnLink).toHaveAttribute('href', '/restaurant');
-    expect(homeLink).toHaveAttribute('href', '/');
   });
 });

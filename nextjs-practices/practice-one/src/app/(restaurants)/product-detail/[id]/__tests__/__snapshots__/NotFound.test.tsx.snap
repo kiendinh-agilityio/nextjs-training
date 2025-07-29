@@ -38,30 +38,12 @@ exports[`NotFound (product detail not found page) renders with correct title and
     >
       We couldn’t find the product you are looking for. Please check the URL or return to the restaurant list.
     </p>
-    <div
-      class="flex gap-4"
+    <a
+      class="rounded-xl bg-gray-200 px-8 py-4 text-lg font-semiBold text-secondary transition hover:bg-gray-300"
+      href="/restaurant"
     >
-      <a
-        href="/restaurant"
-      >
-        <button
-          aria-label="Button Return to Restaurants"
-          class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none h-[61px] text-[18px] leading-[24px] rounded-xl bg-blue-600 px-8 py-2 text-white transition hover:bg-blue-700"
-        >
-          Return to Restaurants
-        </button>
-      </a>
-      <a
-        href="/"
-      >
-        <button
-          aria-label="Button Go Home"
-          class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none h-[61px] text-[18px] leading-[24px] rounded-xl bg-gray-200 px-8 py-2 text-gray-800 transition hover:bg-gray-300"
-        >
-          Go Home
-        </button>
-      </a>
-    </div>
+      Go back
+    </a>
   </div>
 </DocumentFragment>
 `;
