@@ -21,16 +21,8 @@ export const getRestaurantList = async (
 
 export const getProductDetail = async (
   id: string | number,
-): Promise<Product> => {
+): Promise<Product | null> => {
   const response = await apiClient.getProduct(id);
 
-  if (response.error) {
-    throw new Error(response.error);
-  }
-
-  if (!response.data) {
-    throw new Error('No data received');
-  }
-
-  return response.data;
+  return response.error || !response.data ? null : response.data;
 };

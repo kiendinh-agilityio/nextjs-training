@@ -1,5 +1,4 @@
 import { getProductDetail, getRestaurantList } from '@/actions/product';
-import { Product } from '@/types/product';
 import {
   ProductRelatedSection,
   ProductDetailContent,
@@ -8,6 +7,7 @@ import { createMetadata } from '@/utils/metadata';
 import { getRelatedProducts } from '@/utils/getRelatedProducts';
 import { BASE_URL } from '@/constants/url';
 import { ROUTERS } from '@/constants/router';
+import { notFound } from 'next/navigation';
 
 interface ProductDetailPageProps {
   params: Promise<{ id: string }>;
@@ -15,7 +15,11 @@ interface ProductDetailPageProps {
 
 export const generateMetadata = async ({ params }: ProductDetailPageProps) => {
   const { id } = await params;
-  const product = (await getProductDetail(id)) as Product;
+  const product = await getProductDetail(id);
+
+  if (!product) {
+    notFound();
+  }
 
   return createMetadata({
     title: product.name,
@@ -29,7 +33,11 @@ export const generateMetadata = async ({ params }: ProductDetailPageProps) => {
 
 const ProductDetailPage = async ({ params }: ProductDetailPageProps) => {
   const { id } = await params;
-  const product = (await getProductDetail(id)) as Product;
+  const product = await getProductDetail(id);
+
+  if (!product) {
+    notFound();
+  }
 
   const categoryProducts = await getRestaurantList(product.category);
 
