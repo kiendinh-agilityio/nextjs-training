@@ -8,22 +8,15 @@ export const PRODUCT_API_URL = process.env.NEXT_PUBLIC_PRODUCT_API_URL;
 
 // Unified API Endpoints
 export const API_ENDPOINTS = {
-  COMMERCE: '/api/commerce',
+  COUPONS: '/api/coupons',
+  PRODUCTS: '/api/products',
   AUTH: '/api/auth/[...nextauth]',
 };
 
 // API Query Parameters
 export const API_PARAMS = {
-  ENDPOINT: 'endpoint',
   CATEGORY: 'category',
   ID: 'id',
-};
-
-// API Endpoint Values
-export const ENDPOINT_VALUES = {
-  COUPONS: 'coupons',
-  PRODUCTS: 'products',
-  AUTH: 'auth',
 };
 
 // API Response Status Codes
