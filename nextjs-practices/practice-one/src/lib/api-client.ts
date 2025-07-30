@@ -5,7 +5,6 @@ import {
   API_BASE_URL,
   API_ENDPOINTS,
   API_PARAMS,
-  ENDPOINT_VALUES,
   AUTH_API_URL,
   API_ERRORS,
 } from '@/constants/api-setup';
@@ -26,11 +25,10 @@ class ApiClient {
   }
 
   private async request<T>(
-    endpoint: string,
+    url: string,
     options: RequestInit = {},
   ): Promise<ApiResponse<T>> {
     try {
-      const url = `${this.baseUrl}${API_ENDPOINTS.COMMERCE}?${API_PARAMS.ENDPOINT}=${endpoint}`;
       const response = await fetch(url, {
         headers: {
           'Content-Type': 'application/json',
@@ -58,20 +56,28 @@ class ApiClient {
 
   // Coupons API
   async getCoupons(): Promise<ApiResponse<{ coupons: Coupon[] }>> {
-    return this.request<{ coupons: Coupon[] }>(ENDPOINT_VALUES.COUPONS);
+    return this.request<{ coupons: Coupon[] }>(
+      `${this.baseUrl}${API_ENDPOINTS.COUPONS}`,
+    );
+  }
+
+  async getCoupon(code: string): Promise<ApiResponse<{ coupon: Coupon }>> {
+    return this.request<{ coupon: Coupon }>(
+      `${this.baseUrl}${API_ENDPOINTS.COUPONS}/${code}`,
+    );
   }
 
   // Products API
   async getProducts(category?: string): Promise<ApiResponse<Product[]>> {
     const url = category
-      ? `${ENDPOINT_VALUES.PRODUCTS}&${API_PARAMS.CATEGORY}=${encodeURIComponent(category)}`
-      : ENDPOINT_VALUES.PRODUCTS;
+      ? `${this.baseUrl}${API_ENDPOINTS.PRODUCTS}?${API_PARAMS.CATEGORY}=${encodeURIComponent(category)}`
+      : `${this.baseUrl}${API_ENDPOINTS.PRODUCTS}`;
     return this.request<Product[]>(url);
   }
 
   async getProduct(id: string | number): Promise<ApiResponse<Product>> {
     return this.request<Product>(
-      `${ENDPOINT_VALUES.PRODUCTS}&${API_PARAMS.ID}=${id}`,
+      `${this.baseUrl}${API_ENDPOINTS.PRODUCTS}/${id}`,
     );
   }
 
@@ -80,7 +86,7 @@ class ApiClient {
     email: string;
     password: string;
   }): Promise<ApiResponse<User>> {
-    return this.request<User>(ENDPOINT_VALUES.AUTH, {
+    return this.request<User>(`${this.baseUrl}${API_ENDPOINTS.AUTH}`, {
       method: 'POST',
       body: JSON.stringify(credentials),
     });
