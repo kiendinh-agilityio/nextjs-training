@@ -2,17 +2,13 @@
 jest.mock('@/constants/api-setup', () => ({
   API_BASE_URL: 'http://localhost:3000',
   API_ENDPOINTS: {
-    COMMERCE: '/api/commerce',
+    COUPONS: '/api/coupons',
+    PRODUCTS: '/api/products',
+    AUTH: '/api/auth/[...nextauth]',
   },
   API_PARAMS: {
-    ENDPOINT: 'endpoint',
     CATEGORY: 'category',
     ID: 'id',
-  },
-  ENDPOINT_VALUES: {
-    COUPONS: 'coupons',
-    PRODUCTS: 'products',
-    AUTH: 'auth',
   },
   AUTH_API_URL: process.env.NEXT_PUBLIC_AUTH_API_URL,
   API_ERRORS: {
@@ -48,12 +44,32 @@ describe('ApiClient', () => {
       const result = await apiClient.getCoupons();
 
       expect(globalAny.fetch).toHaveBeenCalledWith(
-        'http://localhost:3000/api/commerce?endpoint=coupons',
+        'http://localhost:3000/api/coupons',
         expect.objectContaining({
           headers: { 'Content-Type': 'application/json' },
         }),
       );
       expect(result.data).toEqual(mockCoupons);
+    });
+  });
+
+  describe('getCoupon', () => {
+    it('should fetch coupon by code successfully', async () => {
+      const mockCoupon = { coupon: { code: 'SAVE10', discount: 10 } };
+      globalAny.fetch = jest.fn().mockResolvedValue({
+        ok: true,
+        json: async () => mockCoupon,
+      });
+
+      const result = await apiClient.getCoupon('SAVE10');
+
+      expect(globalAny.fetch).toHaveBeenCalledWith(
+        'http://localhost:3000/api/coupons/SAVE10',
+        expect.objectContaining({
+          headers: { 'Content-Type': 'application/json' },
+        }),
+      );
+      expect(result.data).toEqual(mockCoupon);
     });
   });
 
@@ -68,7 +84,7 @@ describe('ApiClient', () => {
       const result = await apiClient.getProducts();
 
       expect(globalAny.fetch).toHaveBeenCalledWith(
-        'http://localhost:3000/api/commerce?endpoint=products',
+        'http://localhost:3000/api/products',
         expect.objectContaining({
           headers: { 'Content-Type': 'application/json' },
         }),
@@ -86,7 +102,7 @@ describe('ApiClient', () => {
       const result = await apiClient.getProducts('Italian');
 
       expect(globalAny.fetch).toHaveBeenCalledWith(
-        'http://localhost:3000/api/commerce?endpoint=products&category=Italian',
+        'http://localhost:3000/api/products?category=Italian',
         expect.objectContaining({
           headers: { 'Content-Type': 'application/json' },
         }),
@@ -106,7 +122,7 @@ describe('ApiClient', () => {
       const result = await apiClient.getProduct(1);
 
       expect(globalAny.fetch).toHaveBeenCalledWith(
-        'http://localhost:3000/api/commerce?endpoint=products&id=1',
+        'http://localhost:3000/api/products/1',
         expect.objectContaining({
           headers: { 'Content-Type': 'application/json' },
         }),
@@ -127,7 +143,7 @@ describe('ApiClient', () => {
       const result = await apiClient.authenticate(credentials);
 
       expect(globalAny.fetch).toHaveBeenCalledWith(
-        'http://localhost:3000/api/commerce?endpoint=auth',
+        'http://localhost:3000/api/auth/[...nextauth]',
         expect.objectContaining({
           method: 'POST',
           body: JSON.stringify(credentials),
