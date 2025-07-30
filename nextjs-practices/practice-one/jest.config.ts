@@ -18,6 +18,8 @@ const config: Config = {
     '!<rootDir>/src/types/**',
     '!<rootDir>/src/components/common/ui/**',
     '!<rootDir>/src/components/Icons/**',
+    '!<rootDir>/src/middleware.ts',
+    '!<rootDir>/src/app/api/**',
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
