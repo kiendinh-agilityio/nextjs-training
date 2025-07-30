@@ -26,24 +26,20 @@ const LoginForm = () => {
   // Use useActionState for better state management
   const [state, formAction, isPending] = useActionState(
     async (prevState: { error?: string }, formData: FormData) => {
-      try {
-        const res = await signIn('credentials', {
-          email: formData.email,
-          password: formData.password,
-          redirect: false,
-        });
-        if (res?.error) {
-          return { error: authValidations(res.error) };
-        }
-        // Success - redirect
-        router.push(ROUTERS.HOME);
+      const res = await signIn('credentials', {
+        email: formData.email,
+        password: formData.password,
+        redirect: false,
+      });
 
-        return { error: undefined };
-      } catch {
+      if (res?.error) {
         toast.error('Failed to log in. Please try again.');
-
-        return { error: 'Failed to log in. Please try again.' };
+        return { error: authValidations(res.error) };
       }
+
+      // Success - redirect
+      router.push(ROUTERS.HOME);
+      return { error: undefined };
     },
     { error: undefined },
   );

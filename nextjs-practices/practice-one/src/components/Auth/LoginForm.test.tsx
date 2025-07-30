@@ -1,7 +1,6 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import LoginForm from './LoginForm';
 import { signIn } from 'next-auth/react';
-import { toast } from 'sonner';
 
 jest.mock('next-auth/react', () => ({
   useSession: jest.fn(() => ({
@@ -81,19 +80,5 @@ describe('LoginForm', () => {
     expect(
       await screen.findByText(/email or password is invalid/i),
     ).toBeInTheDocument();
-  });
-
-  it('should show toast error on exception', async () => {
-    (signIn as jest.Mock).mockImplementation(() => {
-      throw new Error('Network error');
-    });
-    render(<LoginForm />);
-    fillForm();
-    fireEvent.click(screen.getByRole('button', { name: /button login/i }));
-    await waitFor(() => {
-      expect(toast.error).toHaveBeenCalledWith(
-        'Failed to log in. Please try again.',
-      );
-    });
   });
 });

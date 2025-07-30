@@ -25,9 +25,11 @@ const ProfilePanel = () => {
       if (session?.user?.email) {
         setLoadingProfile(true);
         const { user, error } = await fetchProfile(session.user.email);
+
         if (error) {
           toast.error(error);
         }
+
         setProfile(user);
         setLoadingProfile(false);
       }
@@ -45,12 +47,8 @@ const ProfilePanel = () => {
     setIsLoggingOut(true);
     clearCart();
 
-    try {
-      await signOut({ callbackUrl: ROUTERS.HOME });
-    } catch {
-      toast.error('Failed to log out. Please try again.');
-      setIsLoggingOut(false);
-    }
+    await signOut({ callbackUrl: ROUTERS.HOME });
+    setIsLoggingOut(false);
   };
 
   return (
