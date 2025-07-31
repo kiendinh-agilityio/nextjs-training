@@ -112,21 +112,14 @@ const CartForm = ({ subTotal }: CartSummaryProps) => {
         </div>
       </div>
       <div className="flex gap-2">
-        <div
-          className={cn(
-            'flex flex-1 items-center px-4 py-2',
-            'rounded-lg border border-muted bg-white',
-          )}
-        >
-          <input
-            type="text"
-            placeholder="Apply Coupon Code here"
-            className="bg-transparent text-base outline-none"
-            value={coupon}
-            onChange={handleCouponChange}
-            disabled={isCouponPending}
-          />
-        </div>
+        <input
+          type="text"
+          placeholder="Apply Coupon Code here"
+          className="w-full rounded-lg border border-muted bg-white px-4 py-2 text-base outline-none"
+          value={coupon}
+          onChange={handleCouponChange}
+          disabled={isCouponPending}
+        />
         <Button
           className={cn(
             'px-6 py-2',

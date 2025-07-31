@@ -22,16 +22,19 @@ const CartFormSkeleton = () => (
     </div>
     <div className="flex gap-2">
       <input
-        className="flex-1 rounded-lg border border-gray-200 bg-white px-4 py-2"
-        placeholder="Apply Coupon Code"
+        className="h-[61px] w-full rounded-lg border border-muted bg-white px-4 py-2"
+        placeholder="Apply Coupon Code here"
         disabled
       />
-      <button className="h-10 w-20 rounded bg-gray-200 text-white" disabled>
+      <button
+        className="rounded-lg bg-[#a3a3a3] px-6 py-2 font-medium text-white"
+        disabled
+      >
         Apply
       </button>
     </div>
     <button
-      className="mt-2 h-12 w-full rounded bg-orange-200 font-bold text-white"
+      className="mt-2 h-[61px] w-full rounded bg-orange-200 py-4 font-bold text-white"
       disabled
     >
       Checkout

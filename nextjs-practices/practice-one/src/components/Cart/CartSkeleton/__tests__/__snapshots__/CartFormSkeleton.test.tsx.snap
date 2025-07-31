@@ -55,19 +55,19 @@ exports[`CartFormSkeleton matches snapshot 1`] = `
       class="flex gap-2"
     >
       <input
-        class="flex-1 rounded-lg border border-gray-200 bg-white px-4 py-2"
+        class="h-[61px] w-full rounded-lg border border-muted bg-white px-4 py-2"
         disabled=""
-        placeholder="Apply Coupon Code"
+        placeholder="Apply Coupon Code here"
       />
       <button
-        class="h-10 w-20 rounded bg-gray-200 text-white"
+        class="rounded-lg bg-[#a3a3a3] px-6 py-2 font-medium text-white"
         disabled=""
       >
         Apply
       </button>
     </div>
     <button
-      class="mt-2 h-12 w-full rounded bg-orange-200 font-bold text-white"
+      class="mt-2 h-[61px] w-full rounded bg-orange-200 py-4 font-bold text-white"
       disabled=""
     >
       Checkout
