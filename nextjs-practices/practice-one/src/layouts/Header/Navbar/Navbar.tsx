@@ -19,7 +19,7 @@ const Navbar = () => {
   const handleCloseMenu = () => setOpen(false);
 
   const getButtonLabel = () =>
-    session?.user?.email ? 'Profile/Logout' : 'Login/Signup';
+    session?.user?.email ? 'Profile/Logout' : 'Login Page';
 
   return (
     <div className="flex w-full items-center justify-end gap-4 md:gap-8">
@@ -68,7 +68,7 @@ const Navbar = () => {
         {/* Desktop Login/Signup */}
         <Link
           href={session?.user?.email ? '/profile' : '/login'}
-          className="flex hidden items-center gap-2 rounded-full bg-secondary px-[25px] py-[17px] font-medium text-white transition-colors hover:bg-[#1a1f33] lg:flex"
+          className="flex hidden w-[202px] items-center gap-2 rounded-full bg-secondary px-[25px] py-[17px] font-medium text-white transition-colors hover:bg-[#1a1f33] lg:flex lg:justify-center"
           aria-label={getButtonLabel()}
         >
           {status === 'loading' ? (
