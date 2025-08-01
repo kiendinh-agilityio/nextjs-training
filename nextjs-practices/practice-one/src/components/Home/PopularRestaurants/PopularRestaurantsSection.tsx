@@ -13,7 +13,7 @@ const PopularRestaurantsSection = () => (
         'lg:mt-[51px] lg:overflow-hidden',
       )}
     >
-      <div className="flex gap-[10px] lg:justify-between">
+      <div className="flex w-full gap-[10px] lg:justify-between">
         {POPULAR_RESTAURANTS_DATA.map((restaurant) => (
           <div
             key={restaurant.name}
