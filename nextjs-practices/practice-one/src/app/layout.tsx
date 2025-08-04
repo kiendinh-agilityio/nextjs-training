@@ -1,12 +1,19 @@
 import { SessionProvider } from 'next-auth/react';
+
+// import lib
 import { FontPoppins } from '@/lib/fonts';
+
+// import components
 import { Toaster } from '@/components/common/ui/sonner';
+
+// import function utils
 import { createMetadata } from '@/utils/metadata';
 
+// import layouts
 import Footer from '@/layouts/Footer/footer';
 import Header from '@/layouts/Header/header';
 
-// Components
+// import styles
 import './globals.css';
 
 export const metadata = createMetadata();

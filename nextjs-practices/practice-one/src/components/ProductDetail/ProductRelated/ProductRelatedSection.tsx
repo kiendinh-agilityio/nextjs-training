@@ -1,8 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+// import lib
 import { cn } from '@/lib/utils';
+
+// import types
 import { Product } from '@/types/product';
+
+// import components
 import { Heading } from '@/components/common/ui/heading';
 
 interface ProductRelatedSectionProps {

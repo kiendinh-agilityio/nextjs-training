@@ -1,6 +1,9 @@
 'use client';
 
+// import types
 import { Product } from '@/types/product';
+
+// import components
 import LoadMore from '@/components/LoadMore/LoadMore';
 import RestaurantsCategoryList from '../RestaurantsCategoryList/RestaurantsCategoryList';
 

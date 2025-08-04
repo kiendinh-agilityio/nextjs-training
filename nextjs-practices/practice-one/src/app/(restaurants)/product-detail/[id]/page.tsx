@@ -1,13 +1,21 @@
+import { notFound } from 'next/navigation';
+
+// import function actions
 import { getProductDetail, getRestaurantList } from '@/actions/product';
+
+// import components
 import {
   ProductRelatedSection,
   ProductDetailContent,
 } from '@/components/ProductDetail';
+
+// import function utils
 import { createMetadata } from '@/utils/metadata';
 import { getRelatedProducts } from '@/utils/getRelatedProducts';
+
+// import constants
 import { BASE_URL } from '@/constants/url';
 import { ROUTERS } from '@/constants/router';
-import { notFound } from 'next/navigation';
 
 interface ProductDetailPageProps {
   params: Promise<{ id: string }>;

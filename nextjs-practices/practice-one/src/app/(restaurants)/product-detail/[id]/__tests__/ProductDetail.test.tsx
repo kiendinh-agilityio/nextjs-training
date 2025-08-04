@@ -1,5 +1,9 @@
 import React from 'react';
+
+// import test utility
 import { render } from '@testing-library/react';
+
+// import types
 import type { Product } from '@/types/product';
 
 // Mock child components to avoid duplicate rendering and focus on page logic

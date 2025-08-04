@@ -1,17 +1,34 @@
+// import nextjs UI components
 import Image from 'next/image';
 import Link from 'next/link';
+
+// import react hooks
 import { useOptimistic, useTransition } from 'react';
 import { useSession } from 'next-auth/react';
+
+// import icons
 import { Plus, Minus } from 'lucide-react';
 
+// import types
 import type { Product } from '@/types/product';
 import { CartItem } from '@/types/cart';
+
+// import lib
 import { cn } from '@/lib/utils';
+
+// import utils
 import { truncateText } from '@/utils/common';
+
+//import stores
 import { useCartStore } from '@/stores/useCartStore';
+
+// import hooks
 import { useCartAction } from '@/hooks/useCartAction';
+
+// import constants
 import { DESCRIPTION_MAX_LENGTH } from '@/constants/common';
 
+// import components
 import { Card } from '@/components/common/ui/card';
 import { Button } from '@/components/common/ui/button';
 import LoginToast from '@/components/LoginToast/LoginToast';

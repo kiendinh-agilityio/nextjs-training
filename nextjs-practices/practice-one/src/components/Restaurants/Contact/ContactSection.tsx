@@ -1,7 +1,11 @@
+// import components
 import ContactInfo from './ContactInfo/ContactInfo';
-
 import { TrackingIcon, IDVerifyIcon, ClockIcon } from '@/components/Icons';
+
+// import constants
 import { TIMES, CONTACT_INFO } from '@/constants/restaurants-data';
+
+// import lib
 import { cn } from '@/lib/utils';
 
 const ContactSection = () => {

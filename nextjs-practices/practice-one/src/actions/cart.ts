@@ -1,8 +1,13 @@
 'use server';
 
+// import cache revalidation for dynamic routes
 import { revalidatePath } from 'next/cache';
-import { CartActionPayload, CartState, Coupon } from '@/types/cart';
+
+// import api request handler
 import { apiClient } from '@/lib/api-client';
+
+// import types
+import { CartActionPayload, CartState, Coupon } from '@/types/cart';
 
 const initialState: CartState = {
   items: [],

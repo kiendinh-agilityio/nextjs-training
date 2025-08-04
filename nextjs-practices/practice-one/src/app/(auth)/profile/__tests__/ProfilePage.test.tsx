@@ -1,4 +1,7 @@
+// import test utility
 import { render } from '@testing-library/react';
+
+// import shared UI
 import ProfilePage from '../page';
 
 describe('ProfilePage UI', () => {

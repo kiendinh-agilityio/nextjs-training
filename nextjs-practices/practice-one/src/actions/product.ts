@@ -1,6 +1,9 @@
 'use server';
 
+// import api request handler
 import { apiClient } from '@/lib/api-client';
+
+// import types
 import { Product } from '@/types/product';
 
 export const getRestaurantList = async (

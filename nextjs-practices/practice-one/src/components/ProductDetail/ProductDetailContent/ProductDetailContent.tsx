@@ -1,5 +1,9 @@
 import Image from 'next/image';
+
+// import types
 import { Product } from '@/types/product';
+
+// import components
 import { Heading } from '@/components/common/ui/heading';
 import { ProductRating } from '@/components/ProductDetail';
 import {

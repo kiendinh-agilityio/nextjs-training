@@ -1,5 +1,8 @@
+// import nextjs UI components
 import Link from 'next/link';
 import Image from 'next/image';
+
+// import components
 import { Logo } from '@/components/common/ui/logo';
 import {
   FacebookIcon,
@@ -7,6 +10,8 @@ import {
   SnapchatIcon,
   TiktokIcon,
 } from '@/components/Icons';
+
+// import lib
 import { cn } from '@/lib/utils';
 
 const Footer = () => (

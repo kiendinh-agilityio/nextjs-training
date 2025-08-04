@@ -1,4 +1,6 @@
 import { Star } from 'lucide-react';
+
+// import function utils
 import { getRatingStars } from '@/utils/getRatingStars';
 
 const ProductRating = ({

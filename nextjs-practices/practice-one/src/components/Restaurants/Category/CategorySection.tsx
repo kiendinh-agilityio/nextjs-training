@@ -1,10 +1,17 @@
 'use client';
 
 import Link from 'next/link';
+
+// import nextjs hooks
 import { useSearchParams } from 'next/navigation';
 
+// import constants
 import { CATEGORIES_ITEM } from '@/constants/restaurants-data';
+
+// import lib
 import { cn } from '@/lib/utils';
+
+// import function utils
 import { getCategoryHref } from '@/utils/getCategoryHref';
 
 const CategorySection = () => {

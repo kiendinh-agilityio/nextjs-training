@@ -6,7 +6,7 @@ exports[`HeroSection (Restaurants) should match snapshot 1`] = `
     class="flex flex-col items-center justify-center w-full 2xl:mx-auto 2xl:w-[1528px] bg-hero-restaurant bg-cover bg-center text-white"
   >
     <div
-      class="container flex flex-col-reverse pb-[49px] pt-[48px] sm:px-0 lg:flex-row lg:justify-between lg:gap-[81px] lg:pb-[51px] lg:pt-[57px] xl:px-[57px]"
+      class="container flex flex-col-reverse pb-[49px] pt-[48px] sm:px-0 lg:flex-row lg:justify-between lg:gap-[65px] lg:pb-[51px] lg:pt-[57px] 2xl:gap-[81px] xl:px-[57px]"
     >
       <article
         class="mt-[34px] flex flex-col justify-center text-center lg:mt-0 lg:text-left"

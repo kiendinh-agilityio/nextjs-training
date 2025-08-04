@@ -1,4 +1,6 @@
 import Image from 'next/image';
+
+// import components
 import { Heading } from '@/components/common/ui/heading';
 
 interface ProfileHeaderProps {

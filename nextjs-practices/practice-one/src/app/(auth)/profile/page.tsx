@@ -1,5 +1,10 @@
+// import function utils
 import { createMetadata } from '@/utils/metadata';
+
+// import constants
 import { BASE_URL } from '@/constants/url';
+
+// import components
 import ProfileContent from '@/components/ProfileContent/ProfileContent';
 
 export const metadata = createMetadata({

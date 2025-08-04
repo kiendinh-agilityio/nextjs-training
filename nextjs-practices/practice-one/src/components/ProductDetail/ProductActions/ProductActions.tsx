@@ -1,14 +1,24 @@
 'use client';
 
+// import react hooks
 import { useSession } from 'next-auth/react';
 import { useOptimistic, useTransition } from 'react';
+
+// import icons
 import { Plus, Minus } from 'lucide-react';
 
+// import stores
 import { useCartStore } from '@/stores/useCartStore';
-import { Button } from '@/components/common/ui/button';
-import { CartItem } from '@/types/cart';
+
+// import hooks
 import { useCartAction } from '@/hooks/useCartAction';
+
+// import types
+import { CartItem } from '@/types/cart';
 import { Product } from '@/types/product';
+
+// import components
+import { Button } from '@/components/common/ui/button';
 import LoginToast from '@/components/LoginToast/LoginToast';
 
 interface Props {

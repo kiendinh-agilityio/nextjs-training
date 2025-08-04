@@ -1,6 +1,9 @@
 'use server';
 
+// import actions auth
 import { signIn, signOut } from '@/lib/auth';
+
+// import constants
 import { ERROR_MESSAGES } from '@/constants/message';
 
 const userLogOut = async () => {

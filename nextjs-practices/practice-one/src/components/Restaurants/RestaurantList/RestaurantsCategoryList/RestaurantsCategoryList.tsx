@@ -1,12 +1,19 @@
 'use client';
 
+// import react hooks
 import { useEffect, useState } from 'react';
 
+// import actions
 import { getRestaurantList } from '@/actions/product';
-import { Heading } from '@/components/common/ui/heading';
+
+// import types
 import { Product } from '@/types/product';
+
+// import lib
 import { cn } from '@/lib/utils';
 
+// import components
+import { Heading } from '@/components/common/ui/heading';
 import RestaurantsCard from '../RestaurantsCard/RestaurantsCard';
 import CategorySkeletonSection from '@/components/ProductSkeleton/CategorySkeleton';
 

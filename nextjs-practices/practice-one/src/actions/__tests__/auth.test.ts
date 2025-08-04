@@ -1,5 +1,9 @@
 import { userLogin, userLogOut } from '../auth';
+
+// import actions auth
 import { signIn, signOut } from '@/lib/auth';
+
+// import constants
 import { ERROR_MESSAGES } from '@/constants/message';
 
 jest.mock('@/lib/auth', () => ({

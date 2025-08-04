@@ -1,6 +1,12 @@
 import Image from 'next/image';
+
+// import components
 import { Heading } from '@/components/common/ui/heading';
+
+// import constants
 import { POPULAR_CATEGORIES_DATA } from '@/constants/home-data';
+
+// import lib
 import { cn } from '@/lib/utils';
 
 const PopularCategoriesSection = () => (

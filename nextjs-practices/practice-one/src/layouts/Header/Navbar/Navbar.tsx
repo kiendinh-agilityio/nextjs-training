@@ -1,13 +1,21 @@
 'use client';
 
+// import react hooks
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+
+// import nextjs components and hooks
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 
+// import components
 import { Logo } from '@/components/common/ui/logo';
 import { UserIcon } from '@/components/Icons/UserIcon';
+
+// import constants
 import { NAV_LINKS } from '@/constants/nav-links';
+
+// import lib
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {

@@ -1,9 +1,13 @@
-import { BASE_URL } from '@/constants/url';
-import { ROUTERS } from '@/constants/router';
+// import components
 import { Heading } from '@/components/common/ui/heading';
+import LoginForm from '@/components/Auth/LoginForm';
+
+// import function utils
 import { createMetadata } from '@/utils/metadata';
 
-import LoginForm from '@/components/Auth/LoginForm';
+// import constants
+import { BASE_URL } from '@/constants/url';
+import { ROUTERS } from '@/constants/router';
 
 export const metadata = createMetadata({
   title: 'Login',

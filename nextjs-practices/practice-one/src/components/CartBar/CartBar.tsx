@@ -1,6 +1,9 @@
 'use client';
 
+// import react hooks
 import { useOptimistic } from 'react';
+
+// import nextjs hooks
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { ROUTERS } from '@/constants/router';
