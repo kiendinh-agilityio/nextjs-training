@@ -81,17 +81,17 @@ const RestaurantsCard = ({
       <Card
         className={cn(
           'flex justify-between gap-[18px] px-[30px] py-[24px]',
-          'min-h-[245px] 2xl:w-[496px]',
+          'min-h-[300px] md:min-h-[245px] 2xl:w-[496px]',
           'bg-[#fdfdfd]',
           'cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)]',
           'transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105',
         )}
       >
         <div className="flex h-[170px] flex-col justify-evenly text-black lg:pt-[19px]">
-          <p className="mb-6 text-xl font-semiBold leading-[23px] lg:h-[46px]">
+          <p className="mb-6 text-sm font-semiBold leading-[23px] md:text-xl lg:h-[46px]">
             {name}
           </p>
-          <p className="mb-3 font-base text-sm leading-[25px] lg:h-[90px]">
+          <p className="mb-3 font-base text-xs leading-[25px] md:text-sm lg:h-[90px]">
             {truncateText(description, DESCRIPTION_MAX_LENGTH)}
           </p>
           <p className="text-lg font-bold leading-[18px]">${price}</p>
