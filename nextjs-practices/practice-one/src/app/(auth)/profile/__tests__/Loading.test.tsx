@@ -1,4 +1,7 @@
+// import test utility
 import { render, screen } from '@testing-library/react';
+
+// import shared UI
 import Loading from '../loading';
 
 jest.mock(

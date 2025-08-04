@@ -1,5 +1,8 @@
+// import components
 import { SearchInput } from '@/components/SearchInput/SearchInput';
 import { Heading } from '@/components/common/ui/heading';
+
+// import lib
 import { cn } from '@/lib/utils';
 
 const RestaurantHeaderSection = () => (

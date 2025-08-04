@@ -1,4 +1,7 @@
+// import lib
 import { cn } from '@/lib/utils';
+
+// import components
 import { Button } from '@/components/common/ui/button';
 import CartBar from '@/components/CartBar/CartBar';
 import LocationIcon from '@/components/Icons/LocationIcon';

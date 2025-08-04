@@ -1,5 +1,9 @@
 import { ChevronRight } from 'lucide-react';
+
+// import components
 import { Skeleton } from '@/components/common/ui/skeleton';
+
+// import lib
 import { cn } from '@/lib/utils';
 
 interface ProductDetailSkeletonProps {

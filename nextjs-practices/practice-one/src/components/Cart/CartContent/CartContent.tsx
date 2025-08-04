@@ -1,7 +1,11 @@
 'use client';
 
 import { Suspense } from 'react';
+
+// import stores
 import { useCartStore } from '@/stores/useCartStore';
+
+// import components
 import {
   CartContainer,
   CartLayout,

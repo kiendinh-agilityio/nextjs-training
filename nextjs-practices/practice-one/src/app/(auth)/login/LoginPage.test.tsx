@@ -1,5 +1,10 @@
+// import react types
 import { ReactNode, HTMLAttributes } from 'react';
+
+// import test utility
 import { render } from '@testing-library/react';
+
+// import shared UI
 import LoginPage from './page';
 
 jest.mock('@/components/common/ui/heading', () => ({

@@ -1,5 +1,9 @@
 import Link from 'next/link';
+
+// import icons
 import { AlertTriangle } from 'lucide-react';
+
+// import components
 import { Heading } from '@/components/common/ui/heading';
 
 export default function NotFound() {

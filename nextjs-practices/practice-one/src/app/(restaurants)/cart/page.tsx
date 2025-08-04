@@ -1,8 +1,16 @@
-import { auth } from '@/lib/auth';
 import { redirect } from 'next/navigation';
+
+// import lib
+import { auth } from '@/lib/auth';
+
+// import function utils
 import { createMetadata } from '@/utils/metadata';
+
+// import constants
 import { ROUTERS } from '@/constants/router';
 import { BASE_URL } from '@/constants/url';
+
+// import component
 import CartContent from '@/components/Cart/CartContent/CartContent';
 
 export const metadata = createMetadata({

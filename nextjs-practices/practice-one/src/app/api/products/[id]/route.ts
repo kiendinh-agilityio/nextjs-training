@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+
+// import constants
 import { API_ERRORS, API_STATUS, PRODUCT_API_URL } from '@/constants/api-setup';
 
 export const GET = async (

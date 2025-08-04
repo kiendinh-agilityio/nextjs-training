@@ -1,5 +1,9 @@
 import Link from 'next/link';
+
+// import toast
 import { toast } from 'sonner';
+
+// import constants
 import { ROUTERS } from '@/constants/router';
 
 const LoginToast = () => {

@@ -1,13 +1,25 @@
 'use client';
 
+// import react hooks
 import { useSession, signOut } from 'next-auth/react';
 import { useState, useEffect } from 'react';
+
+// import toast
 import { toast } from 'sonner';
 
+// import constants
 import { ROUTERS } from '@/constants/router';
+
+// import stores
 import { useCartStore } from '@/stores/useCartStore';
+
+// import lib
 import { fetchProfile } from '@/lib/get-user-from-api';
+
+// import types
 import { User } from '@/types/user';
+
+// import components
 import ProfileHeader from '../ProfileHeader/ProfileHeader';
 import AccountInfoCard from '../AccountInfoCard/AccountInfoCard';
 import ProfileActions from '../ProfileActions/ProfileActions';

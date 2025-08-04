@@ -1,10 +1,23 @@
+// import react hook
 import { useState, useTransition, useEffect } from 'react';
+
+// import toast notification
 import { toast } from 'sonner';
+
+// import components
 import { Heading } from '@/components/common/ui/heading';
 import { Button } from '@/components/common/ui/button';
+
+// import lib
 import { cn } from '@/lib/utils';
+
+// import stores
 import { useCartStore } from '@/stores/useCartStore';
+
+// import actions
 import { applyCoupon } from '@/actions/cart';
+
+// import function utils
 import { calculateDiscount } from '@/utils/calculateDiscount';
 
 interface CartSummaryProps {

@@ -1,9 +1,15 @@
 'use client';
 
+// import react hooks
 import React, { useOptimistic, useTransition } from 'react';
 
+// import stores
 import { useCartStore } from '@/stores/useCartStore';
+
+// import types
 import { CartItem } from '@/types/cart';
+
+// import components
 import CartEmpty from '../CartEmpty/CartEmpty';
 import CartItemComponent from './CartItem/CartItem';
 

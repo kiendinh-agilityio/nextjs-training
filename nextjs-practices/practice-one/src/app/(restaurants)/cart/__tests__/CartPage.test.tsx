@@ -1,6 +1,10 @@
 import { render } from '@testing-library/react';
-import CartPage from '../page';
+
+// import constants
 import { ROUTERS } from '@/constants/router';
+
+// import shared UI
+import CartPage from '../page';
 
 jest.mock('@/components/Cart/CartContent/CartContent', () => {
   const MockCartContent = () => (

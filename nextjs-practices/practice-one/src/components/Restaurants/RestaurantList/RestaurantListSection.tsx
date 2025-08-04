@@ -1,4 +1,7 @@
+// import function utils
 import { fetchGroupedRestaurantCategories } from '@/utils/services';
+
+// import components
 import RestaurantsGroup from './RestaurantsGroup/RestaurantsGroup';
 import FilteredCategory from './FilteredCategory/FilteredCategory';
 

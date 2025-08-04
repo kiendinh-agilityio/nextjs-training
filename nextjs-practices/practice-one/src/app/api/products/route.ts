@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+
+// import constants
 import {
   API_PARAMS,
   API_ERRORS,

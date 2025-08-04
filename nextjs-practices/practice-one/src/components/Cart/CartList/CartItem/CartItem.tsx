@@ -1,11 +1,24 @@
 import Image from 'next/image';
-import { Minus, Plus, Trash2 } from 'lucide-react';
+
+// import react hooks
 import { startTransition } from 'react';
 
+// import icons
+import { Minus, Plus, Trash2 } from 'lucide-react';
+
+// import hooks
 import { useCartAction } from '@/hooks/useCartAction';
+
+// import stores
 import { useCartStore } from '@/stores/useCartStore';
+
+// import components
 import { Button } from '@/components/common/ui/button';
+
+// import types
 import type { CartItem as CartItemType } from '@/types/cart';
+
+// import function utils
 import { cn } from '@/lib/utils';
 
 interface CartItemProps {

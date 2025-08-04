@@ -1,6 +1,10 @@
 import Image from 'next/image';
+
+// import components
 import { Heading } from '@/components/common/ui/heading';
 import { MotoIcon, OrderCompletedIcon } from '@/components/Icons';
+
+// import lib
 import { cn } from '@/lib/utils';
 
 const HeroSection = () => (

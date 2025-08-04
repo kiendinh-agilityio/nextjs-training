@@ -1,7 +1,12 @@
 'use client';
 
+// import react hooks
 import { useState } from 'react';
+
+// import types
 import { LoadMoreProps } from '@/types/common';
+
+// import components
 import { Button } from '@/components/common/ui/button';
 
 const LoadMore = <T,>({

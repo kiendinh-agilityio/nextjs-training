@@ -1,6 +1,10 @@
 import { forwardRef } from 'react';
-import { Input } from '@/components/common/ui/input';
+
+// import icons
 import { Search } from 'lucide-react';
+
+// import components
+import { Input } from '@/components/common/ui/input';
 
 interface SearchInputProps extends React.ComponentProps<typeof Input> {}
 

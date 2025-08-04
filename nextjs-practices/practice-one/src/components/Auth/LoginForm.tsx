@@ -1,20 +1,34 @@
 'use client';
 
+// import react hooks
 import { useState, useActionState, startTransition } from 'react';
+
+// import icons
 import { EyeIcon, EyeOffIcon } from 'lucide-react';
+
+// import form and validation
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { toast } from 'sonner';
 import { z } from 'zod';
+
+// import toast notification
+import { toast } from 'sonner';
+
+// import nextjs router and auth
 import { useRouter } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 
+// import constants
 import { ROUTERS } from '@/constants/router';
 
+// import components
 import { Button } from '@/components/common/ui/button';
 import { Input } from '@/components/common/ui/input';
 
+// import lib
 import { loginSchema } from '@/lib/schema';
+
+// import function utils
 import { authValidations } from '@/utils/authValidations';
 
 const LoginForm = () => {
