@@ -3,7 +3,7 @@
 exports[`HeroSection should match snapshot 1`] = `
 <DocumentFragment>
   <section
-    class="relative mt-[47px] flex flex-col rounded-xl border border-base bg-[#e2e2e2] px-[38px] pb-[43px] pt-[10px] text-center text-secondary lg:flex-row lg:border-sm lg:bg-[#fbfbfb] lg:pb-[162px] lg:pt-[134px] lg:text-left xl:px-[57px]"
+    class="relative mt-[47px] px-[15px] pb-[43px] pt-[10px] sm:px-[38px] lg:pb-[162px] lg:pt-[134px] xl:px-[57px] flex flex-col text-center lg:flex-row rounded-xl border border-base text-secondary lg:border-sm lg:text-left bg-[#e2e2e2] lg:bg-[#fbfbfb]"
   >
     <div
       class="lg:w-[calc(1024px-600px)] xl:w-[calc(1528px-1000px)]"
