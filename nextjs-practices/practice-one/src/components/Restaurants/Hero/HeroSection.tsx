@@ -27,8 +27,9 @@ const HeroSection = () => (
         </Heading>
         <ul
           className={cn(
-            'mt-7 flex flex-col gap-[15px] px-[34px] text-[16px] font-semiBold leading-[66px]',
+            'mt-7 flex flex-col gap-[15px] px-[34px]',
             'lg:px-0 xl:flex-row',
+            'text-xs font-semiBold leading-[66px] md:text-[18px]',
           )}
         >
           <li className="flex items-center justify-center gap-[17px] rounded-[120px] border border-white px-[33px] text-white">
