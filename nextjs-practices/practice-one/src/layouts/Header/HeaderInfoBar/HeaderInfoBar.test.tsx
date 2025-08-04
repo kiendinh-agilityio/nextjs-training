@@ -80,7 +80,7 @@ describe('HeaderInfoBar', () => {
 
     render(<HeaderInfoBar />);
 
-    fireEvent.click(screen.getByTestId('button-mock'));
+    fireEvent.click(screen.getByLabelText('Button Cart'));
     expect(mockPush).toHaveBeenCalledWith('/cart');
   });
 
@@ -90,7 +90,7 @@ describe('HeaderInfoBar', () => {
 
     render(<HeaderInfoBar />);
 
-    fireEvent.click(screen.getByTestId('button-mock'));
+    fireEvent.click(screen.getByLabelText('Button Cart'));
     expect(mockPush).toHaveBeenCalledWith('/login');
   });
 

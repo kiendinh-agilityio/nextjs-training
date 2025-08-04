@@ -12,12 +12,12 @@ exports[`RestaurantsCard should match snapshot 1`] = `
         class="flex h-[170px] flex-col justify-evenly text-black lg:pt-[19px]"
       >
         <p
-          class="mb-6 text-xl font-semiBold leading-[23px] lg:h-[46px]"
+          class="mb-6 text-sm font-semiBold leading-[23px] md:text-xl lg:h-[46px]"
         >
           Pizza
         </p>
         <p
-          class="mb-3 font-base text-sm leading-[25px] lg:h-[90px]"
+          class="mb-3 font-base text-xs leading-[25px] md:text-sm lg:h-[90px]"
         >
           Delicious pizza
         </p>

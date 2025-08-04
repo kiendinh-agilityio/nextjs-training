@@ -69,10 +69,10 @@ describe('Navbar', () => {
     });
   });
 
-  it('renders Login/Signup button', () => {
+  it('renders Login Page button', () => {
     render(<Navbar />);
 
-    expect(screen.getAllByText(/login\/signup/i)[0]).toBeInTheDocument();
+    expect(screen.getAllByText(/login page/i)[0]).toBeInTheDocument();
   });
 
   it('opens and closes mobile menu', () => {

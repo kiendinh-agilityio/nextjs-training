@@ -18,7 +18,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       >
         <img
           alt="Burgers & Fast food"
-          class="h-[161px] w-full object-cover md:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"
@@ -49,7 +49,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       >
         <img
           alt="Salads"
-          class="h-[161px] w-full object-cover md:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"
@@ -80,7 +80,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       >
         <img
           alt="Pasta & Casuals"
-          class="h-[161px] w-full object-cover md:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"
@@ -111,7 +111,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       >
         <img
           alt="Pizza"
-          class="h-[161px] w-full object-cover md:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"
@@ -142,7 +142,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       >
         <img
           alt="Breakfast"
-          class="h-[161px] w-full object-cover md:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"
@@ -173,7 +173,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       >
         <img
           alt="Soups"
-          class="h-[161px] w-full object-cover md:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"

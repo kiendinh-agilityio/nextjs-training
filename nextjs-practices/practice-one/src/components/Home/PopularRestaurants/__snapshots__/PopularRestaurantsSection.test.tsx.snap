@@ -14,7 +14,7 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
       class="scroll-snap-x -mx-4 mt-4 flex overflow-x-auto px-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mt-[51px] lg:overflow-hidden"
     >
       <div
-        class="flex gap-[10px] lg:justify-between"
+        class="flex w-full gap-[10px] lg:justify-between"
       >
         <div
           class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"

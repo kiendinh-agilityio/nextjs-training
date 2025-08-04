@@ -20,7 +20,7 @@ const PopularCategoriesSection = () => (
             width={238}
             height={203}
             sizes="(max-width: 1023px) 189px, 238px"
-            className="h-[161px] w-full object-cover md:h-[203px] 2xl:w-[238px]"
+            className="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           />
           <div
             className={cn(

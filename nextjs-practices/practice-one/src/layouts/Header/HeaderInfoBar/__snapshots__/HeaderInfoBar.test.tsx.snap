@@ -31,11 +31,13 @@ exports[`HeaderInfoBar matches snapshot 1`] = `
         />
          Regent Street, A4, A4201, London
       </p>
-      <p
-        class="font-bold text-primary"
+      <button
+        aria-label="Change Location Button"
+        class="border-unset h-0 cursor-not-allowed bg-transparent p-0 font-bold text-primary focus:border-transparent focus:outline-none focus:ring-0"
+        data-testid="button-mock"
       >
         Change Location
-      </p>
+      </button>
     </div>
     <button
       aria-label="Button Cart"

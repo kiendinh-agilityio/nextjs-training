@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/common/ui/button';
 import CartBar from '@/components/CartBar/CartBar';
 import LocationIcon from '@/components/Icons/LocationIcon';
 
@@ -19,7 +20,12 @@ const HeaderInfoBar = () => (
       <p className="flex gap-[15px]">
         <LocationIcon /> Regent Street, A4, A4201, London
       </p>
-      <p className="font-bold text-primary">Change Location</p>
+      <Button
+        ariaLabel="Change Location Button"
+        className="border-unset h-0 cursor-not-allowed bg-transparent p-0 font-bold text-primary focus:border-transparent focus:outline-none focus:ring-0"
+      >
+        Change Location
+      </Button>
     </div>
     <CartBar />
   </div>
