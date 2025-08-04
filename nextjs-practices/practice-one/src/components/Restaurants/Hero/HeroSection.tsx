@@ -15,7 +15,7 @@ const HeroSection = () => (
       className={cn(
         'container flex flex-col-reverse',
         'pb-[49px] pt-[48px] sm:px-0',
-        'lg:flex-row lg:justify-between lg:gap-[81px] lg:pb-[51px] lg:pt-[57px]',
+        'lg:flex-row lg:justify-between lg:gap-[65px] lg:pb-[51px] lg:pt-[57px] 2xl:gap-[81px]',
         'xl:px-[57px]',
       )}
     >
