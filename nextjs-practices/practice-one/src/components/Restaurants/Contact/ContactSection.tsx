@@ -68,7 +68,7 @@ const ContactSection = () => {
     <section className="container mt-[28px] sm:px-0 lg:mt-[151px]">
       <div
         className={cn(
-          'rounded bg-[#fbfbfb] shadow-[5px_5px_14px_0_rgba(0,0,0,0.25)]',
+          'rounded bg-gray-75 shadow-md',
           'px-[11px] pb-9 pt-[69px]',
           'lg:flex lg:flex-row lg:rounded-xl lg:p-0 xl:gap-7 2xl:gap-[45px]',
         )}
@@ -99,7 +99,7 @@ const ContactSection = () => {
           items={getOperationalItems()}
           containerClassName={cn(
             'bg-secondary text-white rounded pt-4 pb-[26px] px-[43px]',
-            'shadow-[5px_5px_14px_0_rgba(0,0,0,0.25)]',
+            'shadow-md',
             'lg:w-1/3 lg:pt-[67px] lg:pb-[43px] 2xl:px-[60px]',
           )}
           listClassName="text-base font-base leading-[46px]"

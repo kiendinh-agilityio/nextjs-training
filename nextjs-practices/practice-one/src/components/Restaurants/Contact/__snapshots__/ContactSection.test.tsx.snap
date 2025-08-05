@@ -6,7 +6,7 @@ exports[`ContactSection should render correctly and match snapshot 1`] = `
     class="container mt-[28px] sm:px-0 lg:mt-[151px]"
   >
     <div
-      class="rounded bg-[#fbfbfb] shadow-[5px_5px_14px_0_rgba(0,0,0,0.25)] px-[11px] pb-9 pt-[69px] lg:flex lg:flex-row lg:rounded-xl lg:p-0 xl:gap-7 2xl:gap-[45px]"
+      class="bg-gray-75 rounded shadow-md px-[11px] pb-9 pt-[69px] lg:flex lg:flex-row lg:rounded-xl lg:p-0 xl:gap-7 2xl:gap-[45px]"
     >
       <div
         class="mb-6 px-[15px] lg:w-1/3 lg:px-0 lg:pl-[56px] lg:pt-[67px] lg:pb-[43px]"
@@ -212,7 +212,7 @@ exports[`ContactSection should render correctly and match snapshot 1`] = `
         </ul>
       </div>
       <div
-        class="bg-secondary text-white rounded pt-4 pb-[26px] px-[43px] shadow-[5px_5px_14px_0_rgba(0,0,0,0.25)] lg:w-1/3 lg:pt-[67px] lg:pb-[43px] 2xl:px-[60px]"
+        class="bg-secondary text-white rounded pt-4 pb-[26px] px-[43px] shadow-md lg:w-1/3 lg:pt-[67px] lg:pb-[43px] 2xl:px-[60px]"
       >
         <p
           class="mb-[22px] flex items-center gap-[22px] text-xl font-bold leading-[48px] lg:gap-[15px] 2xl:text-[32px]"
