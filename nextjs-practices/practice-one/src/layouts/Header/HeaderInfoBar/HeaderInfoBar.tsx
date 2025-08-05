@@ -11,7 +11,7 @@ const HeaderInfoBar = () => (
     className={cn(
       'relative flex justify-between',
       'px-[37px] py-[25px] xl:pb-[20px]',
-      'rounded-xl border border-base bg-[#fafafa] lg:rounded-b-xl lg:rounded-t-none',
+      'rounded-xl border border-base bg-gray-50 lg:rounded-b-xl lg:rounded-t-none',
       'text-[15px] font-medium text-black',
     )}
   >
