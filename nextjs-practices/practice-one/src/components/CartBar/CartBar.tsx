@@ -1,8 +1,5 @@
 'use client';
 
-// import react hooks
-import { useOptimistic } from 'react';
-
 // import nextjs hooks
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -14,11 +11,7 @@ import CartIcon from '@/components/Icons/CartIcon';
 
 const CartBar = () => {
   const { items } = useCartStore();
-  const [optimisticItems] = useOptimistic(items);
-  const cartCount = optimisticItems.reduce(
-    (sum, item) => sum + item.quantity,
-    0,
-  );
+  const cartCount = items.reduce((sum, item) => sum + item.quantity, 0);
   const { data: session } = useSession();
   const router = useRouter();
 
