@@ -30,7 +30,7 @@ const PromotionsSection = () => (
             'lg:relative',
           )}
         >
-          <ul className="relative w-full overflow-hidden rounded-[12px] shadow-md">
+          <ul className="relative w-full overflow-hidden rounded-xl shadow-md">
             <li>
               <Image
                 src={promo.image}
