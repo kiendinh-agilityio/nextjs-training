@@ -63,7 +63,7 @@ const Footer = () => (
                 type="email"
                 placeholder="youremail@gmail.com"
                 className={cn(
-                  'flex-1 rounded-full bg-[#d9d9d9] px-[25px] py-[10px] text-secondary outline-none',
+                  'flex-1 rounded-full bg-muted px-[25px] py-[10px] text-secondary outline-none',
                   'placeholder:text-[14px] placeholder:leading-[43px]',
                 )}
               />
