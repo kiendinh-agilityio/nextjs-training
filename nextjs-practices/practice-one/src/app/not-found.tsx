@@ -13,7 +13,7 @@ const NotFound = () => (
     <Heading size="md" className="mb-8 text-error">
       404 - Page Not Found
     </Heading>
-    <p className="mb-8 max-w-[500px] text-center text-lg font-semiBold text-[#a0aec0]">
+    <p className="mb-8 max-w-[500px] text-center text-lg font-semiBold text-gray-450">
       Sorry, we couldn’t find the page you’re looking for. It might have been
       moved, deleted, or you entered the wrong URL.
     </p>
