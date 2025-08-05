@@ -9,7 +9,7 @@ interface ProfileHeaderProps {
 }
 
 const ProfileHeader = ({ avatarUrl, name }: ProfileHeaderProps) => (
-  <div className="flex w-full flex-col items-center justify-between rounded-t-xl bg-[#0b163f] px-8 pb-6 pt-8 md:flex-row">
+  <div className="flex w-full flex-col items-center justify-between rounded-t-xl bg-navy px-8 pb-6 pt-8 md:flex-row">
     <div className="relative mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-orange-400 shadow-lg">
       <Image
         src={avatarUrl}
