@@ -14,7 +14,7 @@ const PopularCategoriesSection = () => (
     <Heading size="md">Up to -40% Discount Offers 🎊</Heading>
     <div
       className={cn(
-        'mt-[29px] grid grid-cols-2 gap-[20px] rounded-[12px] border border-base',
+        'mt-[29px] grid grid-cols-2 gap-[20px] rounded-xl border border-base',
         'lg:mt-[51px] lg:grid-cols-3 2xl:grid-cols-6',
       )}
     >
@@ -26,11 +26,11 @@ const PopularCategoriesSection = () => (
             width={238}
             height={203}
             sizes="(max-width: 1023px) 189px, 238px"
-            className="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+            className="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           />
           <div
             className={cn(
-              'flex w-full flex-col rounded-bl-[12px] rounded-br-[12px] bg-[#f5f5f5] px-[18px] py-[7px] text-[13px] leading-[13px]',
+              'flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[13px]',
               'leading-[18px] lg:text-[18px]',
             )}
           >
