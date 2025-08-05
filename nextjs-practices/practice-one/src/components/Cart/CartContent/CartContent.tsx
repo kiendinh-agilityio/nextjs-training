@@ -19,26 +19,17 @@ import {
 } from '@/components/Cart/CartSkeleton';
 
 const CartContent = () => {
-  const { subTotal, items, _hasHydrated } = useCartStore();
-
-  if (!_hasHydrated) {
-    return (
-      <CartContainer>
-        <CartLayout>
-          <CartListSkeleton />
-          <CartFormSkeleton />
-        </CartLayout>
-      </CartContainer>
-    );
-  }
+  const { subTotal, items } = useCartStore();
 
   return (
     <CartContainer>
       <CartLayout>
-        <Suspense fallback={<div>Loading cart...</div>}>
+        <Suspense fallback={<CartListSkeleton />}>
           {items.length ? <CartList /> : <CartEmpty />}
         </Suspense>
-        <CartForm subTotal={subTotal} />
+        <Suspense fallback={<CartFormSkeleton />}>
+          <CartForm subTotal={subTotal} />
+        </Suspense>
       </CartLayout>
     </CartContainer>
   );
