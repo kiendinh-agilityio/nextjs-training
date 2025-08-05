@@ -14,7 +14,7 @@ exports[`RestaurantHeaderSection (Restaurants) should match snapshot 1`] = `
       class="w-full lg:max-w-[344px]"
     >
       <div
-        class="flex w-full items-center border border-secondary bg-background gap-[10px] rounded-[120px] md:px-[28px] px-3 py-2"
+        class="flex w-full items-center border border-secondary bg-background gap-[10px] rounded-4xl md:px-[28px] px-3 py-2"
       >
         <span
           class="pointer-events-none flex-shrink-0 text-gray-400"
