@@ -31,7 +31,7 @@ exports[`RestaurantsCategoryList displays heading and product list after loading
         href="/product-detail/1"
       >
         <div
-          class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] min-h-[300px] md:min-h-[245px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
+          class="text-card-foreground shadow-sm flex justify-between gap-[18px] px-[30px] py-[24px] min-h-[300px] md:min-h-[245px] 2xl:w-[496px] bg-background-card cursor-pointer rounded-xl border border-black/10 shadow-base transition-all duration-200 hover:scale-100 hover:shadow-xl xl:hover:scale-105"
         >
           <div
             class="flex h-[170px] flex-col justify-evenly text-black lg:pt-[19px]"
@@ -62,7 +62,7 @@ exports[`RestaurantsCategoryList displays heading and product list after loading
             />
             <button
               aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-navy-900 text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
             >
               <svg
                 aria-hidden="true"
@@ -93,7 +93,7 @@ exports[`RestaurantsCategoryList displays heading and product list after loading
         href="/product-detail/2"
       >
         <div
-          class="text-card-foreground flex justify-between gap-[18px] px-[30px] py-[24px] min-h-[300px] md:min-h-[245px] 2xl:w-[496px] bg-[#fdfdfd] cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)] transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105"
+          class="text-card-foreground shadow-sm flex justify-between gap-[18px] px-[30px] py-[24px] min-h-[300px] md:min-h-[245px] 2xl:w-[496px] bg-background-card cursor-pointer rounded-xl border border-black/10 shadow-base transition-all duration-200 hover:scale-100 hover:shadow-xl xl:hover:scale-105"
         >
           <div
             class="flex h-[170px] flex-col justify-evenly text-black lg:pt-[19px]"
@@ -124,7 +124,7 @@ exports[`RestaurantsCategoryList displays heading and product list after loading
             />
             <button
               aria-label="Button add to cart"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-[#1a1f33] text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-white hover:bg-navy-900 text-[18px] leading-[24px] absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
             >
               <svg
                 aria-hidden="true"

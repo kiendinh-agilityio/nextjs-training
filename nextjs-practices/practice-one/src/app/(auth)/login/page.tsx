@@ -25,7 +25,7 @@ const LoginPage = () => (
         <Heading size="md" className="text-primary">
           Welcome
         </Heading>
-        <p className="text-md my-[15px] font-bold text-[#a0aec0]">
+        <p className="text-md my-[15px] font-bold text-gray-450">
           Enter your email and password to log in
         </p>
         <LoginForm />

@@ -99,9 +99,9 @@ const RestaurantsCard = ({
         className={cn(
           'flex justify-between gap-[18px] px-[30px] py-[24px]',
           'min-h-[300px] md:min-h-[245px] 2xl:w-[496px]',
-          'bg-[#fdfdfd]',
-          'cursor-pointer rounded-[12px] border border-black/10 shadow-[5px_5px_34px_0_rgba(0,0,0,0.25)]',
-          'transition-all duration-200 hover:scale-100 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.40)] xl:hover:scale-105',
+          'bg-background-card',
+          'cursor-pointer rounded-xl border border-black/10 shadow-base',
+          'transition-all duration-200 hover:scale-100 hover:shadow-xl xl:hover:scale-105',
         )}
       >
         <div className="flex h-[170px] flex-col justify-evenly text-black lg:pt-[19px]">

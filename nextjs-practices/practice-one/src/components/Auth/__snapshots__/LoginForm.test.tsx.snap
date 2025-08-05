@@ -9,7 +9,7 @@ exports[`LoginForm should match snapshot 1`] = `
       class="mb-2 flex items-center gap-2"
     >
       <div
-        class="flex w-full items-center border border-secondary bg-background rounded-[12px] px-3 py-2"
+        class="flex w-full items-center border border-secondary bg-background rounded-xl px-3 py-2"
       >
         <input
           aria-invalid="false"
@@ -26,7 +26,7 @@ exports[`LoginForm should match snapshot 1`] = `
       class="relative mb-2 flex items-center gap-2"
     >
       <div
-        class="flex w-full items-center border border-secondary bg-background rounded-[12px] px-3 py-2"
+        class="flex w-full items-center border border-secondary bg-background rounded-xl px-3 py-2"
       >
         <input
           aria-invalid="false"

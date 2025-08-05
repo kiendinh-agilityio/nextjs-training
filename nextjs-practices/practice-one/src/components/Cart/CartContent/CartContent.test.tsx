@@ -46,13 +46,17 @@ describe('CartContent', () => {
     jest.clearAllMocks();
   });
 
-  it('renders skeletons when not hydrated', () => {
+  it('renders CartEmpty and CartForm when not hydrated and no items', () => {
     (mockUseCartStore as unknown as jest.Mock).mockReturnValue({
       _hasHydrated: false,
+      items: [],
+      subTotal: 0,
+      discount: 0,
+      total: 0,
     });
     render(<CartContent />);
-    expect(screen.getByTestId('cart-list-skeleton')).toBeInTheDocument();
-    expect(screen.getByTestId('cart-form-skeleton')).toBeInTheDocument();
+    expect(screen.getByTestId('cart-empty')).toBeInTheDocument();
+    expect(screen.getByTestId('cart-form')).toHaveTextContent('0');
   });
 
   it('renders CartList and CartForm when hydrated and has items', () => {

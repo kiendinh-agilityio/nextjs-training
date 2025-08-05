@@ -40,7 +40,7 @@ exports[`ProfileContent should render profile info and logout button, match snap
         avatar.png-Test
       </div>
       <div
-        class="flex flex-col items-center bg-[#f8f9fb] px-8 pb-8"
+        class="flex flex-col items-center bg-gray-270 px-8 pb-8"
       >
         <div
           class="flex w-full justify-center"

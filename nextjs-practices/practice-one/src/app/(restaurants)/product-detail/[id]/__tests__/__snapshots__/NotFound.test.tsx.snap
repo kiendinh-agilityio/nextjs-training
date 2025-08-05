@@ -34,7 +34,7 @@ exports[`NotFound (product detail not found page) renders with correct title and
       404 - Product Not Found
     </h2>
     <p
-      class="mb-8 max-w-[500px] text-center text-lg font-semiBold text-[#a0aec0]"
+      class="mb-8 max-w-[500px] text-center text-lg font-semiBold text-gray-450"
     >
       We couldn’t find the product you are looking for. Please check the URL or return to the restaurant list.
     </p>

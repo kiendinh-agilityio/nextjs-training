@@ -66,7 +66,7 @@ const ProfilePanel = () => {
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col overflow-hidden rounded-xl bg-white shadow-base">
       <ProfileHeader avatarUrl={profile.avatar} name={profile.name} />
-      <div className="flex flex-col items-center bg-[#f8f9fb] px-8 pb-8">
+      <div className="flex flex-col items-center bg-gray-270 px-8 pb-8">
         <div className="flex w-full justify-center">
           <AccountInfoCard
             email={profile.email}

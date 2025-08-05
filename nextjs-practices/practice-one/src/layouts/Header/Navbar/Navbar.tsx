@@ -76,7 +76,7 @@ const Navbar = () => {
         {/* Desktop Login/Signup */}
         <Link
           href={session?.user?.email ? '/profile' : '/login'}
-          className="flex hidden w-[202px] items-center gap-2 rounded-full bg-secondary px-[25px] py-[17px] font-medium text-white transition-colors hover:bg-[#1a1f33] lg:flex lg:justify-center"
+          className="flex hidden w-[202px] items-center gap-2 rounded-full bg-secondary px-[25px] py-[17px] font-medium text-white transition-colors hover:bg-navy-900 lg:flex lg:justify-center"
           aria-label={getButtonLabel()}
         >
           {status === 'loading' ? (
@@ -196,7 +196,7 @@ const Navbar = () => {
               className={cn(
                 'flex items-center justify-center transition-colors',
                 'mt-2 w-full gap-2 px-[25px] py-[17px]',
-                'rounded-full bg-secondary font-medium text-white hover:bg-[#1a1f33]',
+                'rounded-full bg-secondary font-medium text-white hover:bg-navy-900',
               )}
               aria-label={getButtonLabel()}
               onClick={handleCloseMenu}

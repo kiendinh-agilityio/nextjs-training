@@ -17,7 +17,7 @@ exports[`ProfilePage UI should render ProfileContent and match snapshot 1`] = `
         class="mx-auto flex w-full max-w-3xl flex-col overflow-hidden rounded-xl bg-white shadow-base"
       >
         <div
-          class="flex w-full flex-col items-center justify-between rounded-t-xl bg-[#0b163f] px-8 pb-6 pt-8 md:flex-row"
+          class="flex w-full flex-col items-center justify-between rounded-t-xl bg-navy px-8 pb-6 pt-8 md:flex-row"
         >
           <div
             class="relative mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-orange-400 shadow-lg"
@@ -38,7 +38,7 @@ exports[`ProfilePage UI should render ProfileContent and match snapshot 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-col items-center bg-[#F8F9FB] px-8 pb-8"
+          class="flex flex-col items-center bg-gray-270 px-8 pb-8"
         >
           <div
             class="flex w-full justify-center"

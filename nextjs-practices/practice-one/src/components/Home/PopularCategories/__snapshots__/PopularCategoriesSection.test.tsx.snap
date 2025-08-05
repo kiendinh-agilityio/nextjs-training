@@ -11,14 +11,14 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       Up to -40% Discount Offers 🎊
     </h2>
     <div
-      class="mt-[29px] grid grid-cols-2 gap-[20px] rounded-[12px] border border-base lg:mt-[51px] lg:grid-cols-3 2xl:grid-cols-6"
+      class="mt-[29px] grid grid-cols-2 gap-[20px] rounded-xl border border-base lg:mt-[51px] lg:grid-cols-3 2xl:grid-cols-6"
     >
       <div
         class="flex flex-col items-center"
       >
         <img
           alt="Burgers & Fast food"
-          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"
@@ -30,7 +30,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="flex w-full flex-col rounded-bl-[12px] rounded-br-[12px] bg-[#f5f5f5] px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
         >
           <p
             class="font-bold leading-tight text-secondary"
@@ -49,7 +49,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       >
         <img
           alt="Salads"
-          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"
@@ -61,7 +61,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="flex w-full flex-col rounded-bl-[12px] rounded-br-[12px] bg-[#f5f5f5] px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
         >
           <p
             class="font-bold leading-tight text-secondary"
@@ -80,7 +80,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       >
         <img
           alt="Pasta & Casuals"
-          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"
@@ -92,7 +92,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="flex w-full flex-col rounded-bl-[12px] rounded-br-[12px] bg-[#f5f5f5] px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
         >
           <p
             class="font-bold leading-tight text-secondary"
@@ -111,7 +111,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       >
         <img
           alt="Pizza"
-          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"
@@ -123,7 +123,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="flex w-full flex-col rounded-bl-[12px] rounded-br-[12px] bg-[#f5f5f5] px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
         >
           <p
             class="font-bold leading-tight text-secondary"
@@ -142,7 +142,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       >
         <img
           alt="Breakfast"
-          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"
@@ -154,7 +154,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="flex w-full flex-col rounded-bl-[12px] rounded-br-[12px] bg-[#f5f5f5] px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
         >
           <p
             class="font-bold leading-tight text-secondary"
@@ -173,7 +173,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
       >
         <img
           alt="Soups"
-          class="h-[161px] w-full rounded-tl-[12px] rounded-tr-[12px] object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
           data-nimg="1"
           decoding="async"
           height="203"
@@ -185,7 +185,7 @@ exports[`PopularCategoriesSection should match snapshot 1`] = `
           width="238"
         />
         <div
-          class="flex w-full flex-col rounded-bl-[12px] rounded-br-[12px] bg-[#f5f5f5] px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
         >
           <p
             class="font-bold leading-tight text-secondary"

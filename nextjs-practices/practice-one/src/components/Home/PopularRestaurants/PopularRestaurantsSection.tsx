@@ -25,7 +25,7 @@ const PopularRestaurantsSection = () => (
             key={restaurant.name}
             className={cn(
               'flex flex-col items-center overflow-hidden',
-              'rounded-[12px] border-primary shadow-md',
+              'rounded-xl border-primary shadow-md',
               'h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]',
             )}
           >

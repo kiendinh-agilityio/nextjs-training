@@ -13,7 +13,7 @@ export default function NotFound() {
       <Heading size="md" className="mb-8 text-error">
         404 - Product Not Found
       </Heading>
-      <p className="mb-8 max-w-[500px] text-center text-lg font-semiBold text-[#a0aec0]">
+      <p className="mb-8 max-w-[500px] text-center text-lg font-semiBold text-gray-450">
         We couldn’t find the product you are looking for. Please check the URL
         or return to the restaurant list.
       </p>

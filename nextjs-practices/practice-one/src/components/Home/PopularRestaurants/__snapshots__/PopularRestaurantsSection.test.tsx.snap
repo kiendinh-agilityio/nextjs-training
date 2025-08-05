@@ -17,7 +17,7 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
         class="flex w-full gap-[10px] lg:justify-between"
       >
         <div
-          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="McDonald's London"
@@ -39,7 +39,7 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
           </p>
         </div>
         <div
-          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="Papa Johns"
@@ -61,7 +61,7 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
           </p>
         </div>
         <div
-          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="KFC West London"
@@ -83,7 +83,7 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
           </p>
         </div>
         <div
-          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="Texas Chicken"
@@ -105,7 +105,7 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
           </p>
         </div>
         <div
-          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="Burger King"
@@ -127,7 +127,7 @@ exports[`PopularRestaurantsSection should match snapshot 1`] = `
           </p>
         </div>
         <div
-          class="flex flex-col items-center overflow-hidden rounded-[12px] border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
         >
           <img
             alt="Shaurma 1"
