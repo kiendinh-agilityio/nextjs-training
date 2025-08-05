@@ -136,7 +136,7 @@ const CartForm = ({ subTotal }: CartSummaryProps) => {
         <Button
           className={cn(
             'px-6 py-2',
-            'bg-[#a3a3a3] hover:bg-[#bdbdbd]',
+            'bg-gray-400 hover:bg-gray-300',
             'font-medium text-white',
             'rounded-lg border',
           )}
