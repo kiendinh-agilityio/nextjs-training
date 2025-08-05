@@ -120,8 +120,12 @@ export const useCartStore = create<CartProps>()(
         total: state.total,
         couponCode: state.couponCode,
       }),
-      onRehydrateStorage: () => (state) => {
-        state?.setHasHydrated?.(true);
+      onRehydrateStorage: () => (state, error) => {
+        if (error) {
+          state?.setHasHydrated?.(false);
+        } else {
+          state?.setHasHydrated?.(true);
+        }
       },
     },
   ),
