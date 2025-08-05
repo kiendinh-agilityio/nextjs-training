@@ -37,7 +37,7 @@ const CategorySection = () => {
             className={cn(
               'flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none',
               activeCategory === category
-                ? 'bg-[#0a0a16] text-white'
+                ? 'bg-neutral-950 text-white'
                 : 'bg-transparent text-white',
             )}
           >

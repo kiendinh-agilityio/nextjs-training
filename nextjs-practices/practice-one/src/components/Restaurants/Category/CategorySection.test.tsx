@@ -50,6 +50,6 @@ describe('CategorySection', () => {
     (useSearchParams as jest.Mock).mockReturnValue({ get: () => 'Fries' });
     render(<CategorySection />);
     const active = screen.getByText('Fries');
-    expect(active).toHaveClass('bg-[#0a0a16]');
+    expect(active).toHaveClass('bg-neutral-950');
   });
 });

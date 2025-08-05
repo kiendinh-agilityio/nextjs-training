@@ -9,7 +9,7 @@ exports[`CategorySection matches snapshot 1`] = `
       class="flex w-full gap-8 px-4 2xl:justify-center overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] 2xl:overflow-x-visible [&::-webkit-scrollbar]:hidden"
     >
       <a
-        class="flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none bg-[#0a0a16] text-white"
+        class="flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none bg-neutral-950 text-white"
         href="/restaurant"
       >
         Offers
