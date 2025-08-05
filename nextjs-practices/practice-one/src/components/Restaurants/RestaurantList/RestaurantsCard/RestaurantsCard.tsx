@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 // import react hooks
-import { useOptimistic, useTransition } from 'react';
+import { useTransition } from 'react';
 import { useSession } from 'next-auth/react';
 
 // import icons
@@ -42,14 +42,13 @@ const RestaurantsCard = ({
   category,
 }: Product) => {
   const { items, addItem, removeItem } = useCartStore();
-  const [optimisticItems, setOptimisticItems] = useOptimistic(items);
   const [isPending, startTransition] = useTransition();
   const { formAction } = useCartAction();
   const { data: session } = useSession();
 
   const itemId = String(id);
   const itemPrice = Number(price);
-  const inCart = optimisticItems.some((item: CartItem) => item.id === itemId);
+  const inCart = items.some((item: CartItem) => item.id === itemId);
 
   const handleAddToCart = async (e: React.MouseEvent) => {
     e.preventDefault();
@@ -69,7 +68,6 @@ const RestaurantsCard = ({
     };
 
     startTransition(() => {
-      setOptimisticItems([...optimisticItems, newItem]);
       formAction({
         type: 'add',
         payload: { id: itemId, name, price: itemPrice, image, category },
@@ -83,10 +81,6 @@ const RestaurantsCard = ({
     e.preventDefault();
 
     startTransition(() => {
-      setOptimisticItems(
-        optimisticItems.filter((item: CartItem) => item.id !== itemId),
-      );
-
       formAction({ type: 'remove', payload: itemId });
     });
 
