@@ -24,7 +24,6 @@ const HeroSection = () => (
       )}
     >
       <article className="mt-[34px] flex flex-col justify-center text-center lg:mt-0 lg:text-left">
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <p className="font-base text-[20px] leading-[66px]">I’m lovin’ it!</p>
         <Heading as="h1" size="xl">
           McDonald’s East London
@@ -36,10 +35,10 @@ const HeroSection = () => (
             'text-xs font-semiBold leading-[66px] md:text-[18px]',
           )}
         >
-          <li className="flex items-center justify-center gap-[17px] rounded-[120px] border border-white px-[33px] text-white">
+          <li className="flex items-center justify-center gap-[17px] rounded-4xl border border-white px-[33px] text-white">
             <OrderCompletedIcon /> Minimum Order: 12 GBP
           </li>
-          <li className="flex items-center justify-center gap-[17px] rounded-[120px] border border-white px-[33px] text-white">
+          <li className="flex items-center justify-center gap-[17px] rounded-4xl border border-white px-[33px] text-white">
             <MotoIcon />
             Delivery in 20-25 Minutes
           </li>
