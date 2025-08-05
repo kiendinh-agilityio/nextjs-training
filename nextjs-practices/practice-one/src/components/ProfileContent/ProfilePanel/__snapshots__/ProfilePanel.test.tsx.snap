@@ -19,7 +19,7 @@ exports[`ProfilePanel renders profile info and actions 1`] = `
       avatar.png-Test
     </div>
     <div
-      class="flex flex-col items-center bg-[#f8f9fb] px-8 pb-8"
+      class="bg-gray-270 flex flex-col items-center px-8 pb-8"
     >
       <div
         class="flex w-full justify-center"
