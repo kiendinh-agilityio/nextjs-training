@@ -18,7 +18,7 @@ exports[`LoginPage should match snapshot 1`] = `
           Welcome
         </h2>
         <p
-          class="text-md text-gray-450 my-[15px] font-bold"
+          class="text-md my-[15px] font-bold text-gray-450"
         >
           Enter your email and password to log in
         </p>

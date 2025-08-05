@@ -3,7 +3,7 @@
 exports[`ProfileHeader renders without crashing and matches snapshot 1`] = `
 <div>
   <div
-    class="bg-navy flex w-full flex-col items-center justify-between rounded-t-xl px-8 pb-6 pt-8 md:flex-row"
+    class="flex w-full flex-col items-center justify-between rounded-t-xl bg-navy px-8 pb-6 pt-8 md:flex-row"
   >
     <div
       class="relative mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-orange-400 shadow-lg"

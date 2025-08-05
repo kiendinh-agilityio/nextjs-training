@@ -29,7 +29,7 @@ exports[`HeroSection should match snapshot 1`] = `
         Enter a postcode to see what we deliver
       </p>
       <div
-        class="rounded-4xl relative flex h-[57px] items-center bg-white shadow-md xl:w-[373px]"
+        class="relative flex h-[57px] items-center rounded-4xl bg-white shadow-md xl:w-[373px]"
       >
         <input
           class="border-none bg-transparent px-[30px] py-[6px] text-[15px] outline-none placeholder:text-[15px] placeholder:leading-[66px] placeholder:text-black placeholder:opacity-80"
