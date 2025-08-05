@@ -13,7 +13,7 @@ const HeroSection = () => (
       'relative mt-[47px] px-[15px] pb-[43px] pt-[10px] sm:px-[38px] lg:pb-[162px] lg:pt-[134px] xl:px-[57px]',
       'flex flex-col text-center lg:flex-row',
       'rounded-xl border border-base text-secondary lg:border-sm lg:text-left',
-      'bg-[#e2e2e2] lg:bg-[#fbfbfb]',
+      'bg-gray-250 lg:bg-gray-75',
     )}
   >
     <div className={cn('lg:w-[calc(1024px-600px)] xl:w-[calc(1528px-1000px)]')}>
@@ -28,7 +28,7 @@ const HeroSection = () => (
       </p>
       <div
         className={cn(
-          'relative flex h-[57px] items-center rounded-[120px] bg-white shadow-md xl:w-[373px]',
+          'relative flex h-[57px] items-center rounded-4xl bg-white shadow-md xl:w-[373px]',
         )}
       >
         <input
