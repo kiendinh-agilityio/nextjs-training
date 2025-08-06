@@ -6,7 +6,6 @@ import ProductDetailContent from './ProductDetailContent';
 
 const mockAddItem = jest.fn();
 const mockRemoveItem = jest.fn();
-const mockSetOptimisticItems = jest.fn();
 const mockFormAction = jest.fn();
 const mockLoginToast = jest.fn();
 
@@ -24,12 +23,11 @@ jest.mock('@/components/LoginToast/LoginToast', () => ({
   default: () => mockLoginToast(),
 }));
 
-// Mock useOptimistic, useTransition
+// Mock useTransition
 jest.mock('react', () => {
   const actualReact = jest.requireActual('react');
   return {
     ...actualReact,
-    useOptimistic: (items: unknown) => [items, mockSetOptimisticItems],
     useTransition: () => [false, (cb: () => void) => cb()],
   };
 });
@@ -95,7 +93,7 @@ describe('ProductDetailContent', () => {
     expect(mockFormAction).not.toHaveBeenCalled();
   });
 
-  it('calls addItem, setOptimisticItems, and formAction when Add to Cart is clicked and logged in', () => {
+  it('calls addItem and formAction when Add to Cart is clicked and logged in', () => {
     (useSession as jest.Mock).mockReturnValue({
       data: { user: { email: 'test@example.com' } },
     });
@@ -108,7 +106,6 @@ describe('ProductDetailContent', () => {
     const btn = screen.getByRole('button', { name: /add to cart/i });
     fireEvent.click(btn);
     expect(mockAddItem).toHaveBeenCalled();
-    expect(mockSetOptimisticItems).toHaveBeenCalled();
     expect(mockFormAction).toHaveBeenCalledWith({
       type: 'add',
       payload: expect.objectContaining({
@@ -121,7 +118,7 @@ describe('ProductDetailContent', () => {
     });
   });
 
-  it('calls removeItem, setOptimisticItems, and formAction when Remove from Cart is clicked', () => {
+  it('calls removeItem and formAction when Remove from Cart is clicked', () => {
     (useSession as jest.Mock).mockReturnValue({
       data: { user: { email: 'test@example.com' } },
     });
@@ -134,7 +131,6 @@ describe('ProductDetailContent', () => {
     const btn = screen.getByRole('button', { name: /remove from cart/i });
     fireEvent.click(btn);
     expect(mockRemoveItem).toHaveBeenCalledWith('1');
-    expect(mockSetOptimisticItems).toHaveBeenCalled();
     expect(mockFormAction).toHaveBeenCalledWith({
       type: 'remove',
       payload: '1',

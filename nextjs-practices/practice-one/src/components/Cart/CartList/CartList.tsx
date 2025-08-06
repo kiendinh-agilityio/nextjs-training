@@ -1,7 +1,7 @@
 'use client';
 
 // import react hooks
-import React, { useOptimistic, useTransition } from 'react';
+import React from 'react';
 
 // import stores
 import { useCartStore } from '@/stores/useCartStore';
@@ -15,20 +15,15 @@ import CartItemComponent from './CartItem/CartItem';
 
 const CartList = () => {
   const { items } = useCartStore();
-  const [optimisticItems] = useOptimistic(items);
-  const [isTransitioning] = useTransition();
 
-  // Use optimistic items when there's a transition
-  const displayItems = isTransitioning ? optimisticItems : items;
-
-  if (!displayItems.length) return <CartEmpty />;
+  if (!items.length) return <CartEmpty />;
 
   return (
     <div className="w-full rounded-3xl border bg-white p-6">
-      {displayItems.map((item: CartItem, idx: number) => (
+      {items.map((item: CartItem, idx: number) => (
         <React.Fragment key={item.id}>
           <CartItemComponent item={item} />
-          {idx < displayItems.length - 1 && <div className="my-6 border-t" />}
+          {idx < items.length - 1 && <div className="my-6 border-t" />}
         </React.Fragment>
       ))}
     </div>

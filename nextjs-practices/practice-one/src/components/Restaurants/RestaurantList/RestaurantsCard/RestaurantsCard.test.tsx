@@ -1,7 +1,7 @@
 import * as nextAuthReact from 'next-auth/react';
 import * as useCartStoreModule from '@/stores/useCartStore';
 import * as useCartActionModule from '@/hooks/useCartAction';
-import * as useOptimisticModule from 'react';
+import * as useTransitionModule from 'react';
 
 import { render, fireEvent, screen } from '@testing-library/react';
 import RestaurantsCard from './RestaurantsCard';
@@ -97,11 +97,7 @@ describe('RestaurantsCard', () => {
     });
 
     jest
-      .spyOn(useOptimisticModule, 'useOptimistic')
-      .mockReturnValue([[], jest.fn()]);
-
-    jest
-      .spyOn(useOptimisticModule, 'useTransition')
+      .spyOn(useTransitionModule, 'useTransition')
       .mockReturnValue([false, (cb: unknown) => (cb as () => void)()]);
     const loginToastMock = LoginToast as jest.Mock;
     render(<RestaurantsCard {...mockProduct} />);
@@ -131,11 +127,7 @@ describe('RestaurantsCard', () => {
     });
 
     jest
-      .spyOn(useOptimisticModule, 'useOptimistic')
-      .mockReturnValue([[], jest.fn()]);
-
-    jest
-      .spyOn(useOptimisticModule, 'useTransition')
+      .spyOn(useTransitionModule, 'useTransition')
       .mockReturnValue([false, (cb: unknown) => (cb as () => void)()]);
     render(<RestaurantsCard {...mockProduct} />);
     fireEvent.click(screen.getByRole('button'));
@@ -174,14 +166,7 @@ describe('RestaurantsCard', () => {
     });
 
     jest
-      .spyOn(useOptimisticModule, 'useOptimistic')
-      .mockReturnValue([
-        [{ id: '1', name: 'Pizza', price: 10, quantity: 1 }],
-        jest.fn(),
-      ]);
-
-    jest
-      .spyOn(useOptimisticModule, 'useTransition')
+      .spyOn(useTransitionModule, 'useTransition')
       .mockReturnValue([false, (cb: unknown) => (cb as () => void)()]);
     render(<RestaurantsCard {...mockProduct} />);
     fireEvent.click(screen.getByRole('button'));
@@ -208,11 +193,7 @@ describe('RestaurantsCard', () => {
     });
 
     jest
-      .spyOn(useOptimisticModule, 'useOptimistic')
-      .mockReturnValue([[], jest.fn()]);
-
-    jest
-      .spyOn(useOptimisticModule, 'useTransition')
+      .spyOn(useTransitionModule, 'useTransition')
       .mockReturnValue([false, (cb: unknown) => (cb as () => void)()]);
     const { rerender } = render(<RestaurantsCard {...mockProduct} />);
     expect(screen.getByLabelText('Button add to cart')).toBeInTheDocument();
@@ -222,13 +203,6 @@ describe('RestaurantsCard', () => {
       addItem: jest.fn(),
       removeItem: jest.fn(),
     });
-
-    jest
-      .spyOn(useOptimisticModule, 'useOptimistic')
-      .mockReturnValue([
-        [{ id: '1', name: 'Pizza', price: 10, quantity: 1 }],
-        jest.fn(),
-      ]);
     rerender(<RestaurantsCard {...mockProduct} />);
     expect(
       screen.getByLabelText('Button remove from cart'),
@@ -256,11 +230,7 @@ describe('RestaurantsCard', () => {
     });
 
     jest
-      .spyOn(useOptimisticModule, 'useOptimistic')
-      .mockReturnValue([[], jest.fn()]);
-
-    jest
-      .spyOn(useOptimisticModule, 'useTransition')
+      .spyOn(useTransitionModule, 'useTransition')
       .mockReturnValue([false, (cb: unknown) => (cb as () => void)()]);
     render(<RestaurantsCard {...mockProduct} description={longDesc} />);
     expect(screen.getByText(`${longDesc.slice(0, 65)}...`)).toBeInTheDocument();
@@ -285,11 +255,7 @@ describe('RestaurantsCard', () => {
     });
 
     jest
-      .spyOn(useOptimisticModule, 'useOptimistic')
-      .mockReturnValue([[], jest.fn()]);
-
-    jest
-      .spyOn(useOptimisticModule, 'useTransition')
+      .spyOn(useTransitionModule, 'useTransition')
       .mockReturnValue([false, (cb: unknown) => (cb as () => void)()]);
     render(<RestaurantsCard {...mockProduct} />);
     expect(screen.getByRole('link')).toHaveAttribute(

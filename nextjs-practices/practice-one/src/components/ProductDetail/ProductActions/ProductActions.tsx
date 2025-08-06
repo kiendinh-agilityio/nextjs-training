@@ -2,7 +2,7 @@
 
 // import react hooks
 import { useSession } from 'next-auth/react';
-import { useOptimistic, useTransition } from 'react';
+import { useTransition } from 'react';
 
 // import icons
 import { Plus, Minus } from 'lucide-react';
@@ -28,13 +28,10 @@ interface Props {
 const ProductActions = ({ product }: Props) => {
   const { data: session } = useSession();
   const { items, addItem, removeItem } = useCartStore();
-  const [optimisticItems, setOptimisticItems] = useOptimistic(items);
   const [isLoading, startTransition] = useTransition();
   const { formAction } = useCartAction();
 
-  const inCart = optimisticItems.some(
-    (item) => String(item.id) === String(product.id),
-  );
+  const inCart = items.some((item) => String(item.id) === String(product.id));
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -53,7 +50,6 @@ const ProductActions = ({ product }: Props) => {
     };
 
     startTransition(() => {
-      setOptimisticItems([...optimisticItems, newItem]);
       addItem(newItem);
       formAction({ type: 'add', payload: newItem });
     });
@@ -63,11 +59,6 @@ const ProductActions = ({ product }: Props) => {
     e.preventDefault();
 
     startTransition(() => {
-      setOptimisticItems(
-        optimisticItems.filter(
-          (item) => String(item.id) !== String(product.id),
-        ),
-      );
       removeItem(String(product.id));
       formAction({ type: 'remove', payload: String(product.id) });
     });
