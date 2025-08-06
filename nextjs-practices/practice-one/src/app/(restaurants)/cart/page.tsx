@@ -1,8 +1,3 @@
-import { redirect } from 'next/navigation';
-
-// import lib
-import { auth } from '@/lib/auth';
-
 // import function utils
 import { createMetadata } from '@/utils/metadata';
 
@@ -23,14 +18,6 @@ export const metadata = createMetadata({
 });
 
 // Server component to check auth
-const CartPage = async () => {
-  const session = await auth();
-
-  if (!session?.user?.email) {
-    redirect(ROUTERS.LOGIN);
-  }
-
-  return <CartContent />;
-};
+const CartPage = async () => <CartContent />;
 
 export default CartPage;

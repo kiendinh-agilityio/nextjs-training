@@ -1,8 +1,5 @@
 import { render } from '@testing-library/react';
 
-// import constants
-import { ROUTERS } from '@/constants/router';
-
 // import shared UI
 import CartPage from '../page';
 
@@ -27,12 +24,6 @@ jest.mock('@/lib/auth', () => ({
 describe('CartPage', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-  });
-
-  it('redirects to login if not authenticated', async () => {
-    authMock.mockResolvedValue({ user: undefined });
-    await (CartPage as () => Promise<React.ReactElement>)();
-    expect(redirectMock).toHaveBeenCalledWith(ROUTERS.LOGIN);
   });
 
   it('renders CartContent if authenticated', async () => {
