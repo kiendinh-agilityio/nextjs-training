@@ -25,9 +25,9 @@ const userLogin = async ({
     redirect: false,
   });
   if (res?.error) {
-    return ERROR_MESSAGES.ACCOUNT_AND_PASSWORD_INVALID;
+    return { error: ERROR_MESSAGES.ACCOUNT_AND_PASSWORD_INVALID };
   }
-  return null;
+  return { error: undefined };
 };
 
 export { userLogin, userLogOut };
