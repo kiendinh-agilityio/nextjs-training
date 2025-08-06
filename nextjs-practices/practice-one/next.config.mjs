@@ -7,7 +7,7 @@ const cspHeader = `
   default-src 'self';
   script-src 'self' 'unsafe-inline' ${unsafeEval};
   style-src 'self' 'unsafe-inline';
-  img-src 'self' blob: data:;
+  img-src 'self' blob: data: https://s7d1.scene7.com https://i.postimg.cc https://img.freepik.com;
   font-src 'self';
   object-src 'none';
   base-uri 'self';
@@ -25,7 +25,15 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '*',
+        hostname: 's7d1.scene7.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.postimg.cc',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.freepik.com',
       },
     ],
   },
