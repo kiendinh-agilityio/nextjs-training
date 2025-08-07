@@ -133,11 +133,22 @@ describe('auth module exports', () => {
         callbacks: { session: (args: unknown) => Promise<unknown> };
       };
       const session = { user: { name: 'A' } };
-      const token = { foo: 'bar' };
+      const token = {
+        foo: 'bar',
+        id: '1',
+        email: 'a@a.com',
+        name: 'A',
+        emailVerified: null,
+      };
       const result = await config.callbacks.session({ session, token });
 
-      expect(token).toMatchObject(session.user);
-      expect(session.user).toMatchObject(token);
+      // Chỉ kiểm tra các trường thực sự được lưu vào session.user
+      expect(session.user).toEqual({
+        id: '1',
+        email: 'a@a.com',
+        name: 'A',
+        emailVerified: null,
+      });
       expect(result).toBe(session);
     });
 

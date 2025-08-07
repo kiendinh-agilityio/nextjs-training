@@ -48,9 +48,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   callbacks: {
     async session({ session, token }) {
-      if (session?.user) Object.assign(token, session.user);
       if (session && session.user) {
-        Object.assign(session.user, token);
+        // Only persist necessary user info
+        const { id = '', email = '', name = '' } = token as Partial<User>;
+        session.user = { id, email, name, emailVerified: null };
       }
       return session;
     },

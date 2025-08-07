@@ -32,13 +32,15 @@ describe('auth actions', () => {
         error: 'CredentialsSignin',
       });
       const result = await userLogin({ email, password });
-      expect(result).toBe(ERROR_MESSAGES.ACCOUNT_AND_PASSWORD_INVALID);
+      expect(result).toEqual({
+        error: ERROR_MESSAGES.ACCOUNT_AND_PASSWORD_INVALID,
+      });
     });
 
     it('should return null if signIn succeeds', async () => {
       (signIn as jest.Mock).mockResolvedValueOnce(undefined);
       const result = await userLogin({ email, password });
-      expect(result).toBeNull();
+      expect(result).toEqual({ error: undefined });
     });
   });
 });

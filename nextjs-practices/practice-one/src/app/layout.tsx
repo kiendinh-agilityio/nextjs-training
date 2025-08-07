@@ -1,9 +1,8 @@
-import { SessionProvider } from 'next-auth/react';
-
 // import lib
 import { FontPoppins } from '@/lib/fonts';
 
 // import components
+import AppProvider from '@/components/Provider/AppProvider';
 import { Toaster } from '@/components/common/ui/sonner';
 
 // import function utils
@@ -26,14 +25,14 @@ const RootLayout = ({
   return (
     <html lang="en">
       <body className={`${FontPoppins.className} flex min-h-screen flex-col`}>
-        <SessionProvider>
+        <AppProvider>
           <Header />
           <Toaster />
           <main className="flex-grow pt-[150px] md:pt-[180px] xl:pt-[220px]">
             {children}
           </main>
           <Footer />
-        </SessionProvider>
+        </AppProvider>
       </body>
     </html>
   );
