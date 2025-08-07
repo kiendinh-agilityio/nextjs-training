@@ -3,7 +3,7 @@
 exports[`HeaderInfoBar matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex justify-between px-[37px] py-[25px] xl:pb-[20px] rounded-xl border border-base bg-gray-50 lg:rounded-b-xl lg:rounded-t-none text-[15px] font-medium text-black"
+    class="relative flex justify-between px-[37px] py-[25px] xl:pb-[20px] rounded-xl border border-base bg-gray-50 lg:rounded-b-xl lg:rounded-t-none text-xs font-medium text-black lg:text-[15px]"
   >
     <p
       class="hidden sm:flex md:items-center"
@@ -21,10 +21,10 @@ exports[`HeaderInfoBar matches snapshot 1`] = `
       </span>
     </p>
     <div
-      class="hidden items-center justify-center gap-[25px] lg:pr-32 xl:flex"
+      class="hidden items-center justify-center gap-[25px] lg:pr-60 xl:flex"
     >
       <p
-        class="flex gap-[15px]"
+        class="flex items-center gap-[15px]"
       >
         <svg
           data-testid="location-icon"
@@ -41,18 +41,28 @@ exports[`HeaderInfoBar matches snapshot 1`] = `
     </div>
     <button
       aria-label="Button Cart"
-      class="absolute right-0 top-0 flex items-center justify-center px-[37px] pb-[12px] pt-[15px] h-[70px] w-full sm:w-auto rounded-xl focus:outline-none focus:ring-0 lg:rounded-b-xl lg:rounded-t-none"
+      class="absolute right-0 top-0 flex items-center justify-between gap-4 h-[70px] w-full px-4 sm:w-auto sm:px-6 xl:w-[250px] rounded-xl focus:outline-none focus:ring-0 lg:rounded-b-xl lg:rounded-t-none bg-green-700 text-white"
       data-testid="button-mock"
       type="button"
       variant="tertiary"
     >
       <span
-        class="relative"
+        class="relative flex items-center"
       >
         <svg
-          class="lg:[w-43px] h-[43px]"
+          class="h-[32px] w-[32px]"
           data-testid="cart-icon"
         />
+      </span>
+      <span
+        class="whitespace-nowrap border-l border-r border-white px-4 text-sm font-semiBold"
+      >
+        0 Items
+      </span>
+      <span
+        class="whitespace-nowrap text-sm font-semiBold"
+      >
+        $ 0.00
       </span>
     </button>
   </div>
