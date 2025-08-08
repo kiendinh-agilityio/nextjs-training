@@ -12,6 +12,7 @@ import { ROUTERS } from '@/constants/router';
 
 // import stores
 import { useCartStore } from '@/stores/useCartStore';
+import { useUserStore } from '@/stores/useUserStore';
 
 // import lib
 import { fetchProfile } from '@/lib/get-user-from-api';
@@ -31,6 +32,7 @@ const ProfilePanel = () => {
   const [profile, setProfile] = useState<User | null>(null);
   const [loadingProfile, setLoadingProfile] = useState(true);
   const clearCart = useCartStore((state) => state.clearCart);
+  const { setProfile: setUserProfile } = useUserStore();
 
   useEffect(() => {
     const getProfile = async () => {
@@ -43,11 +45,22 @@ const ProfilePanel = () => {
         }
 
         setProfile(user);
+
+        // Sync to user store for header display
+        if (user) {
+          setUserProfile({
+            id: user.id,
+            name: user.name,
+            avatar: user.avatar,
+            email: user.email,
+          });
+        }
+
         setLoadingProfile(false);
       }
     };
     getProfile();
-  }, [session?.user?.email]);
+  }, [session?.user?.email, setUserProfile]);
 
   if (status === 'loading' || loadingProfile) {
     return <ProfileSkeleton />;
