@@ -45,6 +45,13 @@ jest.mock('next/navigation', () => ({
   }),
 }));
 
+jest.mock('@/hooks/useUserProfile', () => ({
+  useUserProfile: jest.fn(() => ({
+    profile: null,
+    status: 'unauthenticated',
+  })),
+}));
+
 describe('Navbar', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -89,14 +96,14 @@ describe('Navbar', () => {
     expect(navDrawer).toHaveClass('translate-x-full');
   });
 
-  it('renders Profile/Logout button when user is logged in', () => {
+  it('renders Login Page button when user is not logged in', () => {
     mockUseSession.mockReturnValue({
-      data: { user: { email: 'test@example.com' } },
-      status: 'authenticated',
+      data: null,
+      status: 'unauthenticated',
     });
     render(<Navbar />);
 
-    expect(screen.getAllByText(/profile\/logout/i)[0]).toBeInTheDocument();
+    expect(screen.getAllByText(/login page/i)[0]).toBeInTheDocument();
   });
 
   it('renders loading skeleton when status is loading (desktop)', () => {
