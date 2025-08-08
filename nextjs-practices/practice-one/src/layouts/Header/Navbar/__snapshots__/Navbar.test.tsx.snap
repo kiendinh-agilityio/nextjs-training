@@ -18,24 +18,22 @@ exports[`Navbar should match snapshot 1`] = `
         >
           Home
         </a>
-        <a
+        <span
           class="cursor-not-allowed select-none px-3 py-2 font-medium text-black opacity-60"
-          href="#"
         >
           Special Offers
-        </a>
+        </span>
         <a
           class="px-3 py-2 font-medium text-black"
           href="/restaurant"
         >
           Restaurants
         </a>
-        <a
+        <span
           class="cursor-not-allowed select-none px-3 py-2 font-medium text-black opacity-60"
-          href="#"
         >
           Track Order
-        </a>
+        </span>
       </nav>
       <a
         aria-label="Login Page"

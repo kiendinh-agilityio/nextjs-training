@@ -21,6 +21,12 @@ import { signIn } from 'next-auth/react';
 // import constants
 import { ROUTERS } from '@/constants/router';
 
+// import stores
+import { useUserStore } from '@/stores/useUserStore';
+
+// import lib
+import { fetchProfile } from '@/lib/get-user-from-api';
+
 // import components
 import { Button } from '@/components/common/ui/button';
 import { Input } from '@/components/common/ui/input';
@@ -34,6 +40,7 @@ import { authValidations } from '@/utils/authValidations';
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
+  const { setProfile } = useUserStore();
 
   type FormData = z.infer<typeof loginSchema>;
 
@@ -49,6 +56,21 @@ const LoginForm = () => {
       if (res?.error) {
         toast.error('Failed to log in. Please try again.');
         return { error: authValidations(res.error) };
+      }
+
+      // Success - fetch and sync user profile
+      try {
+        const { user, error } = await fetchProfile(formData.email);
+        if (!error && user) {
+          setProfile({
+            id: user.id,
+            name: user.name,
+            avatar: user.avatar,
+            email: user.email,
+          });
+        }
+      } catch (error) {
+        console.error('Failed to fetch user profile after login:', error);
       }
 
       // Success - redirect
