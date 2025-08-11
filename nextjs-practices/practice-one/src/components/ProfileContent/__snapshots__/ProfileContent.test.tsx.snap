@@ -37,7 +37,7 @@ exports[`ProfileContent should render profile info and logout button, match snap
       <div
         data-testid="profile-header-mock"
       >
-        avatar.png-Test
+        /test-avatar.png-Kien Dinh
       </div>
       <div
         class="flex flex-col items-center bg-gray-270 px-8 pb-8"
@@ -48,7 +48,7 @@ exports[`ProfileContent should render profile info and logout button, match snap
           <div
             data-testid="account-info-card-mock"
           >
-            test@example.com-123-abc
+            kien@example.com-0123456789-123 Main St
           </div>
         </div>
         <div

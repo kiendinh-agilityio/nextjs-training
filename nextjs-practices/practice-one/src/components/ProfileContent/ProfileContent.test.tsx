@@ -3,6 +3,7 @@ import { useSession } from 'next-auth/react';
 import { fetchProfile } from '@/lib/get-user-from-api';
 import { toast } from 'sonner';
 import ProfileContent from './ProfileContent';
+import { PROFILE_DATA } from '@/mocks/profile';
 
 jest.mock('next-auth/react', () => ({
   useSession: jest.fn(),
@@ -128,11 +129,11 @@ describe('ProfileContent', () => {
     });
     fetchProfileMock.mockResolvedValue({
       user: {
-        email: 'test@example.com',
-        phone: '123',
-        address: 'abc',
-        avatar: 'avatar.png',
-        name: 'Test',
+        email: PROFILE_DATA.email,
+        phone: PROFILE_DATA.phone,
+        address: PROFILE_DATA.address,
+        avatar: PROFILE_DATA.avatarUrl,
+        name: PROFILE_DATA.name,
       },
       error: null,
     });
