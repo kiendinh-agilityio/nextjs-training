@@ -24,7 +24,7 @@ exports[`RestaurantsCard should match snapshot 1`] = `
         <p
           class="text-lg font-bold leading-[18px]"
         >
-          $10
+          $10.00
         </p>
       </div>
       <div

@@ -5,8 +5,9 @@ import * as useTransitionModule from 'react';
 
 import { render, fireEvent, screen } from '@testing-library/react';
 import RestaurantsCard from './RestaurantsCard';
-import type { Product } from '@/types/product';
 import LoginToast from '@/components/LoginToast/LoginToast';
+import type { Product } from '@/types/product';
+import { PRODUCTS_DATA } from '@/mocks/products';
 
 jest.mock('@/components/common/ui/card', () => {
   const Card = ({ children }: { children: React.ReactNode }) => (
@@ -41,7 +42,6 @@ jest.mock('next/image', () => {
 });
 
 jest.mock('next/link', () => {
-  // eslint-disable-next-line react/display-name
   const Link = ({
     children,
     href,
@@ -55,14 +55,7 @@ jest.mock('next/link', () => {
 jest.mock('@/components/LoginToast/LoginToast');
 jest.mock('@/hooks/useCartAction');
 
-const mockProduct: Product = {
-  id: '1',
-  name: 'Pizza',
-  description: 'Delicious pizza',
-  price: '10',
-  image: '/pizza.jpg',
-  category: 'Pizza',
-};
+const mockProduct: Product = PRODUCTS_DATA[0];
 
 describe('RestaurantsCard', () => {
   beforeEach(() => {
