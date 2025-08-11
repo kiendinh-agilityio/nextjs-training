@@ -1,12 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import AccountInfoCard from './AccountInfoCard';
+import { PROFILE_DATA } from '@/mocks/profile';
 
 describe('AccountInfoCard', () => {
-  const mockProps = {
-    email: 'kien@example.com',
-    phone: '0123456789',
-    address: '123 Main St',
-  };
+  const mockProps = PROFILE_DATA;
 
   it('renders all account info items with correct labels and values', () => {
     render(<AccountInfoCard {...mockProps} />);
