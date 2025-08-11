@@ -17,7 +17,10 @@ export const GET = async (
   }
 
   const url = `${PRODUCT_API_URL}/${id}`;
-  const response = await fetch(url, { cache: 'no-store' });
+  const response = await fetch(url, {
+    cache: 'force-cache',
+    next: { revalidate: 3600 },
+  });
 
   if (!response.ok) {
     return NextResponse.json(
