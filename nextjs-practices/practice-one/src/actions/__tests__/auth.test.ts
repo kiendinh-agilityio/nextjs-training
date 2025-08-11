@@ -5,6 +5,7 @@ import { signIn, signOut } from '@/lib/auth';
 
 // import constants
 import { ERROR_MESSAGES } from '@/constants/message';
+import { AUTH_DATA } from '@/mocks/auth';
 
 jest.mock('@/lib/auth', () => ({
   signIn: jest.fn(),
@@ -12,8 +13,7 @@ jest.mock('@/lib/auth', () => ({
 }));
 
 describe('auth actions', () => {
-  const email = 'test@example.com';
-  const password = 'password123';
+  const { EMAIL: email, PASSWORD: password } = AUTH_DATA;
 
   afterEach(() => {
     jest.clearAllMocks();
