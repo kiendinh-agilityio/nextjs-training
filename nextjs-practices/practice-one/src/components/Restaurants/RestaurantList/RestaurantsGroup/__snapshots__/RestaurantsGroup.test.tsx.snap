@@ -12,7 +12,7 @@ exports[`RestaurantsGroup renders all categories: all categories 1`] = `
         <h2
           class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
         >
-          Burgers
+          Pizza
         </h2>
         <div
           class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
@@ -22,7 +22,7 @@ exports[`RestaurantsGroup renders all categories: all categories 1`] = `
         <h2
           class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
         >
-          Fries
+          Burgers
         </h2>
         <div
           class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
