@@ -9,30 +9,12 @@ jest.mock('@/lib/api-client', () => ({
 import type { Product } from '@/types/product';
 import { apiClient } from '@/lib/api-client';
 import { getRestaurantList, getProductDetail } from '../product';
+import { PRODUCTS_DATA } from '@/mocks/products';
 
 const OLD_ENV = process.env;
 
 describe('product actions', () => {
-  const mockProducts: Product[] = [
-    {
-      id: 1,
-      name: 'Pizza',
-      description: 'Delicious pizza',
-      price: '10.00',
-      image: '/pizza.jpg',
-      category: 'Italian',
-      rating: '4.5',
-      ingredients: ['cheese', 'tomato'],
-    },
-    {
-      id: 2,
-      name: 'Burger',
-      description: 'Juicy burger',
-      price: '8.00',
-      image: '/burger.jpg',
-      category: 'American',
-    },
-  ];
+  const mockProducts: Product[] = PRODUCTS_DATA;
   const mockProduct: Product = mockProducts[0];
 
   beforeEach(() => {
