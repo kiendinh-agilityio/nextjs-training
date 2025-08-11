@@ -1,9 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import ProfileHeader from './ProfileHeader';
+import { PROFILE_DATA } from '@/mocks/profile';
 
 const mockProps = {
-  avatarUrl: '/test-avatar.png',
-  name: 'John Doe',
+  avatarUrl: PROFILE_DATA.avatarUrl,
+  name: PROFILE_DATA.name,
 };
 
 describe('ProfileHeader', () => {
