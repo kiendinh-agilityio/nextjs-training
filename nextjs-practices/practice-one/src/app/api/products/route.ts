@@ -24,7 +24,10 @@ export const GET = async (request: NextRequest) => {
     url += `?category=${encodeURIComponent(category)}`;
   }
 
-  const response = await fetch(url, { cache: 'no-store' });
+  const response = await fetch(url, {
+    cache: 'force-cache',
+    next: { revalidate: 1800 },
+  });
 
   if (!response.ok) {
     return NextResponse.json(
