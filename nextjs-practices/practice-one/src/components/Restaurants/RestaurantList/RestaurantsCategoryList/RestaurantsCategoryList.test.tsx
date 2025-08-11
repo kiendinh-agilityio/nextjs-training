@@ -2,6 +2,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import type { Product } from '@/types/product';
 import { getRestaurantList } from '@/actions/product';
 import RestaurantsCategoryList from './RestaurantsCategoryList';
+import { PRODUCTS_DATA } from '@/mocks/products';
 
 // Mock next/image
 jest.mock('next/image', () => ({
@@ -10,7 +11,6 @@ jest.mock('next/image', () => ({
     props: React.ImgHTMLAttributes<HTMLImageElement> & { fill?: boolean },
   ) => {
     const { fill: _fill, alt = '', ...rest } = props;
-    // eslint-disable-next-line @next/next/no-img-element
     return <img alt={alt} {...rest} />;
   },
 }));
@@ -20,24 +20,7 @@ jest.mock('@/actions/product', () => ({
   getRestaurantList: jest.fn(),
 }));
 
-const mockProducts: Product[] = [
-  {
-    id: '1',
-    name: 'Pizza',
-    description: 'Delicious pizza',
-    price: '10',
-    image: '/pizza.jpg',
-    category: 'Fast Food',
-  },
-  {
-    id: '2',
-    name: 'Burger',
-    description: 'Juicy burger',
-    price: '8',
-    image: '/burger.jpg',
-    category: 'Fast Food',
-  },
-];
+const mockProducts: Product[] = PRODUCTS_DATA;
 
 describe('RestaurantsCategoryList', () => {
   beforeEach(() => {
