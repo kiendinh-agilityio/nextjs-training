@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartContainer matches snapshot 1`] = `
+<div>
+  <div
+    class="container mx-auto mt-12 lg:mt-5 lg:min-h-[600px] lg:px-0"
+  >
+    <h2
+      class="text-[44px] leading-[44px] font-bold mb-8 text-primary"
+    >
+      Your Cart
+    </h2>
+    <div>
+      Snapshot Children
+    </div>
+  </div>
+</div>
+`;

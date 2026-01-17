@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroSection should match snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="relative mt-[47px] px-[15px] pb-[43px] pt-[10px] sm:px-[38px] lg:pb-[162px] lg:pt-[134px] xl:px-[57px] flex flex-col text-center lg:flex-row rounded-xl border border-base text-secondary lg:border-sm lg:text-left bg-gray-250 lg:bg-gray-75"
+  >
+    <div
+      class="lg:w-[calc(1024px-600px)] xl:w-[calc(1528px-1000px)]"
+    >
+      <p
+        class="text-[12px] leading-[66px] lg:text-[16px]"
+      >
+        Order Restaurant food, takeaway and groceries.
+      </p>
+      <h1
+        class="text-[34px] leading-[36px] lg:text-[54px] lg:leading-[66px] font-semiBold"
+      >
+        Feast Your Senses, 
+        <span
+          class="text-primary"
+        >
+          Fast and Fresh
+        </span>
+      </h1>
+      <p
+        class="text-[12px] leading-[66px]"
+      >
+        Enter a postcode to see what we deliver
+      </p>
+      <div
+        class="relative flex h-[57px] items-center rounded-4xl bg-white shadow-md xl:w-[373px]"
+      >
+        <input
+          class="border-none bg-transparent px-[30px] py-[6px] text-[15px] outline-none placeholder:text-[15px] placeholder:leading-[66px] placeholder:text-black placeholder:opacity-80"
+          placeholder="e.g. EC4R 3TE"
+          type="text"
+        />
+        <button
+          aria-label="Search postcode"
+          class="absolute right-0 ml-4 flex h-[57px] w-[57px] cursor-not-allowed items-center justify-center rounded-full bg-primary shadow xl:hidden"
+        >
+          <svg
+            fill="none"
+            height="34"
+            width="34"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <path
+              d="M0 0h34v34H0z"
+              fill="url(#a)"
+            />
+            <defs>
+              <pattern
+                height="1"
+                id="a"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+              >
+                <use
+                  transform="scale(.01111)"
+                  xlink:href="#b"
+                />
+              </pattern>
+              <image
+                height="90"
+                id="b"
+                preserveAspectRatio="none"
+                width="90"
+                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE7klEQVR4nO2dSY9bRRDHS9UeVz0PywkNYfyqHGKExJHAiUQgxCIOCDgAEhBE2C5EYokgw40byykaia/BegDBBwChILYLl4ELAbFMZjgxI82MUT1bQ0jGg4lfL7b7L5Vkydvrn9vV3dXV9QCysrKysrKysrKysrKyRpZrFO2bkeQpR/oWsryHrN861hVHes6xbFZWPdYVe85e40jftPc0ivIm+4zRv26WVCy2sdAXkPVDx/KnY+2NZ7KOrB9gs3weivYizLbaBbIcQ9ZPHev2+HCH2hayfoIsjwEow+zoqsuspznSsx7h7m0kvznS1wCuvRKmV4fnkOVlR7oaHPBFwHUVWU/aNcE0qcHlUWT9Ljrgi335947kDph8KTuWtx3rTnyoQ82ubRmgSzCRIu0gyecJgOyNYkj6JVC7C5Mk+zvWM03T0K5k3ZHcDpMgV+gDjuWv+ND0UmFvIncehpSFJM96nhP3Atk2kjwDKcoVer8tDhKA1KsNNpcPQUoyv+ZYNhKA06vXLKbSuQuSUHPxuskc+HRU2OtA5aHIlLtk06L4MNSrIemZqPPswWKk9r8rspyCll5tZo8TcUvLUSA3uHOrjxUfGuQLf9Cm3pMA7J0Gl0eCc0aWb3w0CKwn7yFHnbtjz88tXhM0EFVF4Tw1BlpyYNj3ptCzsdAXA2G+/nKfoU5kXdrv26PDJv3dYureMSPLK34bIxsGM2XY/Vi2Vyk70p/9N0Y2XbO8d1/YMX02yS+2FecNM3L5eLgGSdKwkfURj6CrjdSADZJkYSPLR34oF+3FOEEjSRX2tpdUBsu7CA9Zkx4gkeRE/aCr5JZYoDXJno0k79TN2TmStbigNT3YJGu1pp9ZLlx8yJqkG5lryeHaQCPJ0/EBa5I9G0mP1wbasjrjw9U0YZO8XhtoZH0/PlhNEnatA6KvkKibAp+NJF/VBtqx/BgfqKYK+4f6QJP+ER+mjg3bQrB+wqZ1ga6OM8QGqeP77PmDCz5+4Az6QhXlNWmDnh7X8WrqriMPhhxgMMzTOw0zvcsLFg2zYMlLcA20BLdTrGkNfJuxl97/9Gh9ojbQOUyqQ0HPteTG2kDnwL+GCfyb7Gx1dhfqbyDcBW3HiuP55I2UdlXOA/1c7aAHy9ecbsC7oLeGZb6OLasSMKuzCxcsgaa/QjyWIav/lLBBkuPZWe7JLkSSo+8kdJfwwPdvt6EvweQnosuplCH3w6IL8wFAV4PiSV8NgX1G8uiQrSNYnabAh4W+DgnazeJhoYo0l0f9HH/TpXSPv8ktQSHvAmBd9nOgU5eq01ktOdDfuY4O2ew0RD6ifCYBCD2fhqRfANzQjFzSpzxUVW5JAIjzFaEjOQgpyJHeFnugct7KSJR3Qkpyzc5901YYxRXyIKQoK48zJaV+tiwnHFJWv+TPJLsR2UiuxM9/lP6ZvAGSZM3GG5gocUeR5LPo8Ph/VJmJX9LnUtWlwaJmJzbIfcyu7XT8eXINanB5JMW0MrumaMtqj2pYURELM8YGbNcwiMI1YHq1MD8o1P1TeMDya79Qd/cKmB0pI8ujyPKx54XOlm2k9vf4Zqr0/B6yKB3JCSR5d3A3inFdwzn7rCrvwldKwBTIWT4bkj7pSN+wbCDLQR7cHmT1vNuD2Hbaij1nr+m/Vo8PcuHy7UGysrKysrKysrKysrJgRP0NJtcI3QIvzzwAAAAASUVORK5CYII="
+              />
+            </defs>
+          </svg>
+        </button>
+        <button
+          aria-label="Search postcode"
+          class="absolute right-0 ml-4 hidden h-[57px] w-[188px] cursor-not-allowed items-center justify-center rounded-full bg-primary text-base text-white shadow xl:flex"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+    <img
+      alt="Banner"
+      class="right-0 hidden lg:absolute lg:block lg:w-[600px] xl:w-[850px] 2xl:bottom-0 2xl:w-[1205px]"
+      data-nimg="1"
+      decoding="async"
+      height="565"
+      loading="lazy"
+      sizes="(min-width: 1728px) 1205px, (min-width: 1280px) 1000px, (min-width: 1024px) 651px, 100vw"
+      src="/_next/image?url=%2Fimages%2Fbanner.webp&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbanner.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbanner.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbanner.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbanner.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbanner.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbanner.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbanner.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbanner.webp&w=3840&q=75 3840w"
+      style="color: transparent;"
+      width="1205"
+    />
+  </section>
+</DocumentFragment>
+`;

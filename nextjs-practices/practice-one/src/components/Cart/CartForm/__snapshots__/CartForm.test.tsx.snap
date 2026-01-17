@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartForm matches snapshot (default) 1`] = `
+<div>
+  <form
+    class="flex flex-col gap-4 p-8 min-h-[260px] w-full lg:max-w-md rounded-2xl border"
+  >
+    <div>
+      <h3
+        class="mb-4 text-lg font-bold"
+      >
+        Order Summary
+      </h3>
+      <div
+        class="text-neutral-700 mb-2 flex justify-between"
+      >
+        <p>
+          Sub Total
+        </p>
+        <p
+          class="font-bold"
+        >
+          $
+          100.00
+        </p>
+      </div>
+      <div
+        class="text-neutral-400 mb-2 flex justify-between"
+      >
+        <p>
+          Discount (-
+          0
+          %)
+        </p>
+        <p>
+          -
+          10
+        </p>
+      </div>
+      <hr
+        class="my-4"
+      />
+      <div
+        class="flex justify-between text-lg font-bold"
+      >
+        <p>
+          Total
+        </p>
+        <p>
+          $
+          90.00
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex gap-2"
+    >
+      <input
+        class="w-full rounded-lg border border-muted bg-white px-4 py-2 text-base outline-none"
+        placeholder="Apply Coupon Code here"
+        type="text"
+        value=""
+      />
+      <button
+        aria-label="Button apply coupon"
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none h-[61px] text-[18px] leading-[24px] px-6 py-2 bg-gray-400 hover:bg-gray-300 font-medium text-white rounded-lg border"
+        disabled=""
+        type="button"
+      >
+        Apply
+      </button>
+    </div>
+    <button
+      aria-label="Button checkout"
+      class="whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-primary text-white hover:bg-orange-600 h-[61px] px-[27px] text-[18px] leading-[24px] mt-2 flex items-center justify-center gap-2 py-4 w-full font-medium rounded-lg border"
+    >
+      Checkout
+    </button>
+  </form>
+</div>
+`;
+
+exports[`CartForm matches snapshot (with coupon error) 1`] = `
+<div>
+  <form
+    class="flex flex-col gap-4 p-8 min-h-[260px] w-full lg:max-w-md rounded-2xl border"
+  >
+    <div>
+      <h3
+        class="mb-4 text-lg font-bold"
+      >
+        Order Summary
+      </h3>
+      <div
+        class="text-neutral-700 mb-2 flex justify-between"
+      >
+        <p>
+          Sub Total
+        </p>
+        <p
+          class="font-bold"
+        >
+          $
+          100.00
+        </p>
+      </div>
+      <div
+        class="text-neutral-400 mb-2 flex justify-between"
+      >
+        <p>
+          Discount (-
+          0
+          %)
+        </p>
+        <p>
+          -
+          10
+        </p>
+      </div>
+      <hr
+        class="my-4"
+      />
+      <div
+        class="flex justify-between text-lg font-bold"
+      >
+        <p>
+          Total
+        </p>
+        <p>
+          $
+          90.00
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex gap-2"
+    >
+      <input
+        class="w-full rounded-lg border border-muted bg-white px-4 py-2 text-base outline-none"
+        placeholder="Apply Coupon Code here"
+        type="text"
+        value="WRONG"
+      />
+      <button
+        aria-label="Button apply coupon"
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none h-[61px] text-[18px] leading-[24px] px-6 py-2 bg-gray-400 hover:bg-gray-300 font-medium text-white rounded-lg border"
+        type="button"
+      >
+        Apply
+      </button>
+    </div>
+    <div
+      class="min-h-[20px] text-sm text-error"
+    >
+      Invalid
+    </div>
+    <button
+      aria-label="Button checkout"
+      class="whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-primary text-white hover:bg-orange-600 h-[61px] px-[27px] text-[18px] leading-[24px] mt-2 flex items-center justify-center gap-2 py-4 w-full font-medium rounded-lg border"
+    >
+      Checkout
+    </button>
+  </form>
+</div>
+`;
+
+exports[`CartForm matches snapshot (with coupon success) 1`] = `
+<div>
+  <form
+    class="flex flex-col gap-4 p-8 min-h-[260px] w-full lg:max-w-md rounded-2xl border"
+  >
+    <div>
+      <h3
+        class="mb-4 text-lg font-bold"
+      >
+        Order Summary
+      </h3>
+      <div
+        class="text-neutral-700 mb-2 flex justify-between"
+      >
+        <p>
+          Sub Total
+        </p>
+        <p
+          class="font-bold"
+        >
+          $
+          100.00
+        </p>
+      </div>
+      <div
+        class="text-neutral-400 mb-2 flex justify-between"
+      >
+        <p>
+          Discount (-
+          5
+          %)
+        </p>
+        <p>
+          -
+          10
+        </p>
+      </div>
+      <hr
+        class="my-4"
+      />
+      <div
+        class="flex justify-between text-lg font-bold"
+      >
+        <p>
+          Total
+        </p>
+        <p>
+          $
+          90.00
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex gap-2"
+    >
+      <input
+        class="w-full rounded-lg border border-muted bg-white px-4 py-2 text-base outline-none"
+        placeholder="Apply Coupon Code here"
+        type="text"
+        value="OK"
+      />
+      <button
+        aria-label="Button apply coupon"
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none h-[61px] text-[18px] leading-[24px] px-6 py-2 bg-gray-400 hover:bg-gray-300 font-medium text-white rounded-lg border"
+        type="button"
+      >
+        Apply
+      </button>
+    </div>
+    <div
+      class="min-h-[20px] text-sm text-success"
+    >
+      Coupon OK
+    </div>
+    <button
+      aria-label="Button checkout"
+      class="whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-primary text-white hover:bg-orange-600 h-[61px] px-[27px] text-[18px] leading-[24px] mt-2 flex items-center justify-center gap-2 py-4 w-full font-medium rounded-lg border"
+    >
+      Checkout
+    </button>
+  </form>
+</div>
+`;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartList matches snapshot with items 1`] = `
+<div>
+  <div
+    class="w-full rounded-3xl border bg-white p-6"
+  >
+    <div
+      data-testid="cart-item"
+    >
+      CartItem: 
+      1
+    </div>
+    <div
+      class="my-6 border-t"
+    />
+    <div
+      data-testid="cart-item"
+    >
+      CartItem: 
+      2
+    </div>
+  </div>
+</div>
+`;

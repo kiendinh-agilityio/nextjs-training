@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`groupProductsByCategory groups products by category 1`] = `
+[
+  [
+    "Cat1",
+    [
+      {
+        "category": "Cat1",
+        "description": "",
+        "id": "1",
+        "image": "",
+        "name": "A",
+        "price": "",
+      },
+      {
+        "category": "Cat1",
+        "description": "",
+        "id": "3",
+        "image": "",
+        "name": "C",
+        "price": "",
+      },
+    ],
+  ],
+  [
+    "Cat2",
+    [
+      {
+        "category": "Cat2",
+        "description": "",
+        "id": "2",
+        "image": "",
+        "name": "B",
+        "price": "",
+      },
+    ],
+  ],
+]
+`;

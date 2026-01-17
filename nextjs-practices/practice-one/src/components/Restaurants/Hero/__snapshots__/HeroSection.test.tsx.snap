@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroSection (Restaurants) should match snapshot 1`] = `
+<div>
+  <section
+    class="flex flex-col items-center justify-center w-full 2xl:mx-auto 2xl:w-[1528px] bg-hero-restaurant bg-cover bg-center text-white"
+  >
+    <div
+      class="container flex flex-col-reverse pb-[49px] pt-[48px] sm:px-0 lg:flex-row lg:justify-between lg:gap-[65px] lg:pb-[51px] lg:pt-[57px] 2xl:gap-[81px] xl:px-[57px]"
+    >
+      <article
+        class="mt-[34px] flex flex-col justify-center text-center lg:mt-0 lg:text-left"
+      >
+        <p
+          class="font-base text-[20px] leading-[66px]"
+        >
+          I’m lovin’ it!
+        </p>
+        <h1
+          class="text-[34px] leading-[36px] lg:text-[54px] lg:leading-[66px] font-semiBold"
+        >
+          McDonald’s East London
+        </h1>
+        <ul
+          class="mt-7 flex flex-col gap-[15px] px-[34px] lg:px-0 xl:flex-row text-xs font-semiBold leading-[66px] md:text-[18px]"
+        >
+          <li
+            class="flex items-center justify-center gap-[17px] rounded-4xl border border-white px-[33px] text-white"
+          >
+            <svg
+              fill="none"
+              height="34"
+              viewBox="0 0 34 34"
+              width="34"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect
+                fill="url(#pattern0_4_262)"
+                height="34"
+                width="34"
+              />
+              <defs>
+                <pattern
+                  height="1"
+                  id="pattern0_4_262"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                >
+                  <use
+                    transform="scale(0.0111111)"
+                    xlink:href="#image0_4_262"
+                  />
+                </pattern>
+                <image
+                  height="90"
+                  id="image0_4_262"
+                  preserveAspectRatio="none"
+                  width="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAELklEQVR4nO2dSWsUQRiGC8HtphdNogdBQ07ihooH14t48E94EDTq0cSTmqsSERGXnyC4ISqevLkc4q43/4A7RDDj9shHV0AGe7G7urauBwYCyWS+eVKprn7r62mlEolEwh7AfOAw8Aj4Svh8BR4Ch4B5ygeAZcAz4uUJMOTDSI5Z8ixTTkc2cITuMOpS9GO6w0OXoqfpDtMuRXcKlUTbIYm2RBJtiSTaEkm0JZJoSyTRlkiiLRGS6B5w1GUaJq8NjOlaohU9pjwBGI9Z9KDyBKklZtFDyhP0hkW0oseVJwDHYhbd03PjkOORfCz2g2HQJNGWSKItkURbIom2RBJtiSTaEkm0JZJoSwQZk1ItrjQeq3Y2JqU4rmwtVu1cTEpxXNlarNq5mJTiuLK18KlzMSnFcWVrsWpnYlKqxZXGY9UUkwaAqT92ndHRKVQSbYckuhm/9ZVXl4CDwDZgGFiiL4ZaACwFRpLoetzXYpcr3yE8esAVYKMKiRCzjiAJOeuIXfSgL1lH7KKHfMk6+mqQ1cVOYAK4DrwBPgHf9fQlX7/W3zsJ7JDn2KhttsBgsw4B2ABcBr7UeC+f9ZJwvWqbELMOQeQA9zDHXWCtagv8Y6Kk3oXAWeBnC6/9AzgjJzixi74DzCmodQR4YaEO+ViN4VhFvwUWF9S5GfhgsZ73wKYYRe8ukeziUximjcnGD26WTBc2R/K/RnbzaQT39PLeiE7dnrouUB8XFkabdZCtLnxhMsqsg2yd3MYSrsnSb010WQdmT0ZMcTuqrIPstNoGM3rqG9CPsmlQdnLWRZN1kGUXNiTvqdFmdjGKrIMshasTEDWWXLHN7FOtDyrEHedy6tnV8uvKH35vgQ8ZQGVsC0n0gZx6JE+2PpL/s83sREiit+fUc8Oh5D3658q4FpLoVTn1yM5IlX///tXCjCXJwquQRC/JqedDzZOmPFGmJQvvQxI9P6eeKpdLDOQ8dzfwreqBL+c5VZgJSfRc06L7xLUlOTjRixpMHeMVpgLT00WwU8eKBgfD0nm3Rcm1D4bTgS7vemVTg+Hp4m+u1hEtd6lwwb6ceqS5pSr/NbINjORZjtcRLbfPcMH5nHqkgwjTsg1Krn0KPk83cdtmqiBUkg4iY7INS/5Y++4XOkixLftXwXpY2rRMxZ4mJQsXaknuG9mjwAOLB8j9BdtYdZjRkeygfowblvy71bYxF5D1wvnGLRUbwGq9IRrH5qzPkDUc+sIpFStkDTQuVkT9PG/cQOM7ZNcLSluWK94BK1UXADY5bHIM6zK7psgb1qPLFnJiskV1EbJpxMa9F590ZrooOUBOtrT0k995upVLK0IFWCO9cPpsrSnyO27J2t31+/IWYJ20aekOojrz8IXoTqtVi+isRj4+4oT0XcguiN4Wkw0CecjXLyW01z+ztck9aP8ACV/3qs1ONRIAAAAASUVORK5CYII="
+                />
+              </defs>
+            </svg>
+             Minimum Order: 12 GBP
+          </li>
+          <li
+            class="flex items-center justify-center gap-[17px] rounded-4xl border border-white px-[33px] text-white"
+          >
+            <svg
+              fill="none"
+              height="34"
+              viewBox="0 0 34 34"
+              width="34"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect
+                fill="url(#pattern0_4_264)"
+                height="34"
+                width="34"
+              />
+              <defs>
+                <pattern
+                  height="1"
+                  id="pattern0_4_264"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                >
+                  <use
+                    transform="scale(0.0111111)"
+                    xlink:href="#image0_4_264"
+                  />
+                </pattern>
+                <image
+                  height="90"
+                  id="image0_4_264"
+                  preserveAspectRatio="none"
+                  width="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFeUlEQVR4nO2cS2hdRRjHT60asbURLQhWsGqbRkXFhaBtBKWKG22EWuoDF7Z1U1C0LuLG1IUY24UvRHShQldSRXzUNlLrQlpf9bFRW1xYkZo0EZ/10VTtTz7uF4yXO3Pm3HPOPTPnzg8uhCTzne/877nzffOfSZIkEolEIpFIpOsBjgNuBd4AxoC/caTrxXMFOA/4zFXYKHQbAOcCk+2KHJ9o9+ni0zwiR6Ed0Dk5C78D7+s8vnX65XKtroaGYC78BKwFTqo65yCh0V2k8Q8wUHWuQQNMOQi9veo8gwe3buOhqvMMHuBNB6FfBC6sOtegAW7BnYPA88DNwPyqcw8KYDawl+xIgfwYeBi4Cjix6nvxHuAcx+7DxmtV30cQAGcD7+UQ+u6q7yG05fiNwDbgt4xCL6o6f59EXC0fceA74ChwCHhdi9vspt/vAa4GRnQuljnZxFfV3ZlHAAsdCp6I2WeJMV/fqOeAb5vGPpF0O8BFwLjjx/9XYJVj3H7gLvVKlifdDHB+BpFn8mxs18oXeRqZahaW+ygEDvlFnuZ74Lqq78fnOXmS4pAN2geka3G49vHA5cAQsEPzkIXQI/KzpC4AFxcs8ky2A6enCHsYMyNJHShZ5Gm+AW4C7ncQtpmxJHQ6JHJexuogshQt3xlJAnfdJvCbn9VK/d8SPzTv4hP847AWziEtlGF3G2oEFckXwEvA544btvUUthl13YrgGPDYzPMa2rYtBgZVwBeAD4Ef9VVfYZtRqzMvB4FrO5jzCcD14vbpJsOE2rVH9Wv53mZgmcsCqSNocnnYCpzWoVzF274vY+Ee1zE9ncjRlvxkCNtONHZsZKHTLjJ2sFP5tnsew4T4DytLzm8W8KDWgLxIjI0Ss8ycizoF2opXgQUlibyF4tnScbH1PEbuc83AL8D6IouPPsllsbGoPLPc0GLdYC2CPcAFBc3JadOFGFJrZI8SmKOvPj0WPJoyVmKvKEbBbDe2SDdWi2BKn8a2Kr304imF70tgqUMcae/2WeIcqKQb0eX4bTkPwDQLkvk8tLZjJt4G5mWI1QvsssTbkHjg5j2lZk4e5CP6uCwyMixGJixvXG8b99JrebLHvVjUACfrPPhBTsE3OV5PVnwmUqcLS9yBMuKWAnAJ8LR2GFmRo2FzHK7xpGH8jgLyf8sQe3PiIzSK1SpgZ0axVzvENtWHOwrIe50h9u7Ed4BLgWf0dFIarzjEM83PfQXkusQQ+1ASCvz3lO+2CP1nWjGzeNhzC8hxriH2kbyxK7EZgY8sYt9eodCndEToTtmMNLoUE9tqPXV00mak0RLKDkorpmz+taUYrvG6GFZlMwKPWuKss4yTKasVo962d1XajDQ+pqY3d6dlnNQFE8tyaHFlaQuWqm1GzH22HHg8w+K3jBe8BD8V2F/KEtwHmxFYaRm/3jJug2Xcrixiq8jvlGIq+WIz0jhuIDvkrXg3pTuS2Cb2ubiCOl2YnmTh61w2qU82I+bpS/466yzLuEGHT+SodhL9Mz6R/fo9U+GbRmLfkFVbb21GYAHwl2HsvSnXlQ6nLIaz6uC9zQi83E7/6vXmrI82I3CNYdwPDtecpU92UeuA4UJ2wEteWa3N8WTuz1IQW8RYkVIg0ziQa04OxSsAlgN/zBgjW2SXZbx+j7Z+Wf5SbFzHFLsJ67P7RePA+z1ylAw4M0cesqhZqsv1PXpUQu77iH4tVu0m/Z1y9gNLFnpeHqFrha9TR+0ouRjeGeyeW9EEaTOGSIrNOFCSzXhF0m0EZzOGTDA2Y+gEYzPWAe9txjpR8lbWcNX35w1e24w1FXso5f/NuXJM/wtMd3YZQdqMdcYrm7Eb8MJmjEQikUgkEolEIpFIkot/AXFdQMeMzavCAAAAAElFTkSuQmCC"
+                />
+              </defs>
+            </svg>
+            Delivery in 20-25 Minutes
+          </li>
+        </ul>
+      </article>
+      <img
+        alt="Hero Restaurant"
+        class="mx-auto h-[145px] w-[250px] md:h-[230px] md:w-[400px] 2xl:h-[369px] 2xl:w-[637px] lg:mx-0"
+        data-nimg="1"
+        decoding="async"
+        height="369"
+        sizes="(min-width: 1728px) 637px, (max-width: 767px) 250px, 100vw"
+        src="/_next/image?url=%2Fimages%2Fhero-restaurant.webp&w=3840&q=75"
+        srcset="/_next/image?url=%2Fimages%2Fhero-restaurant.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhero-restaurant.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fhero-restaurant.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fhero-restaurant.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fhero-restaurant.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fhero-restaurant.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fhero-restaurant.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fhero-restaurant.webp&w=3840&q=75 3840w"
+        style="color: transparent;"
+        width="637"
+      />
+    </div>
+  </section>
+</div>
+`;

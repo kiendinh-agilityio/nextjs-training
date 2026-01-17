@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopularRestaurantsSection should match snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="mt-[29px] lg:mt-[56px]"
+  >
+    <h2
+      class="text-[16px] lg:text-[32px] lg:leading-[32px] font-bold"
+    >
+      Popular Restaurants
+    </h2>
+    <div
+      class="scroll-snap-x -mx-4 mt-4 flex overflow-x-auto px-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mt-[51px] lg:overflow-hidden"
+    >
+      <div
+        class="flex w-full gap-[10px] lg:justify-between"
+      >
+        <div
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+        >
+          <img
+            alt="McDonald's London"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
+            data-nimg="1"
+            decoding="async"
+            height="203"
+            loading="lazy"
+            sizes="(max-width: 1023px) 121px, 160px, 238px"
+            src="/_next/image?url=%2Fimages%2Fmcdonald.webp&w=3840&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fmcdonald.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fmcdonald.webp&w=3840&q=75 3840w"
+            style="color: transparent;"
+            width="238"
+          />
+          <p
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
+          >
+            McDonald's London
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+        >
+          <img
+            alt="Papa Johns"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
+            data-nimg="1"
+            decoding="async"
+            height="203"
+            loading="lazy"
+            sizes="(max-width: 1023px) 121px, 160px, 238px"
+            src="/_next/image?url=%2Fimages%2Fpapa-johns.webp&w=3840&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fpapa-johns.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fpapa-johns.webp&w=3840&q=75 3840w"
+            style="color: transparent;"
+            width="238"
+          />
+          <p
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
+          >
+            Papa Johns
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+        >
+          <img
+            alt="KFC West London"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
+            data-nimg="1"
+            decoding="async"
+            height="203"
+            loading="lazy"
+            sizes="(max-width: 1023px) 121px, 160px, 238px"
+            src="/_next/image?url=%2Fimages%2Fkfc.webp&w=3840&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fkfc.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fkfc.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fkfc.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fkfc.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fkfc.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fkfc.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fkfc.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fkfc.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fkfc.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fkfc.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fkfc.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fkfc.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fkfc.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fkfc.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fkfc.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fkfc.webp&w=3840&q=75 3840w"
+            style="color: transparent;"
+            width="238"
+          />
+          <p
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
+          >
+            KFC West London
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+        >
+          <img
+            alt="Texas Chicken"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
+            data-nimg="1"
+            decoding="async"
+            height="203"
+            loading="lazy"
+            sizes="(max-width: 1023px) 121px, 160px, 238px"
+            src="/_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=3840&q=75"
+            srcset="/_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Ftexas-chicken.webp&w=3840&q=75 3840w"
+            style="color: transparent;"
+            width="238"
+          />
+          <p
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
+          >
+            Texas Chicken
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+        >
+          <img
+            alt="Burger King"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
+            data-nimg="1"
+            decoding="async"
+            height="203"
+            loading="lazy"
+            sizes="(max-width: 1023px) 121px, 160px, 238px"
+            src="/_next/image?url=%2Fimages%2Fburger-king.webp&w=3840&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fburger-king.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fburger-king.webp&w=3840&q=75 3840w"
+            style="color: transparent;"
+            width="238"
+          />
+          <p
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
+          >
+            Burger King
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center overflow-hidden rounded-xl border-primary shadow-md h-[156px] w-[122px] min-w-[122px] md:w-[160px] lg:h-[266px] lg:w-[200px] 2xl:w-[238px]"
+        >
+          <img
+            alt="Shaurma 1"
+            class="object-cover h-[103px] w-[122px] md:w-[160px] lg:h-[203px] lg:w-[200px] 2xl:w-[238px]"
+            data-nimg="1"
+            decoding="async"
+            height="203"
+            loading="lazy"
+            sizes="(max-width: 1023px) 121px, 160px, 238px"
+            src="/_next/image?url=%2Fimages%2Fshaurma.webp&w=3840&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fshaurma.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fshaurma.webp&w=3840&q=75 3840w"
+            style="color: transparent;"
+            width="238"
+          />
+          <p
+            class="w-full bg-primary text-center font-bold text-white h-[52px] px-[14px] py-[10px] text-[13px] leading-[16px] lg:[leading-18px] lg:h-[63px] lg:px-[28px] lg:py-[18px] lg:text-[18px]"
+          >
+            Shaurma 1
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

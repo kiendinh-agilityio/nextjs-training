@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadMore matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class=""
+  >
+    <div
+      data-testid="item"
+    >
+      Item 1
+    </div>
+    <div
+      data-testid="item"
+    >
+      Item 2
+    </div>
+    <div
+      data-testid="item"
+    >
+      Item 3
+    </div>
+    <button
+      aria-label="Show More"
+      class="items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-primary text-white hover:bg-orange-600 h-[61px] py-[17px] px-[27px] text-[18px] leading-[24px] mx-auto mb-32 flex w-[250px] rounded-xl lg:mb-0"
+    >
+      Show More
+    </button>
+  </div>
+</DocumentFragment>
+`;

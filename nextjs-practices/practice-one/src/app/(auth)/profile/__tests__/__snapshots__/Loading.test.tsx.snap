@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading (Profile loading page) matches snapshot 1`] = `
+<div>
+  <div
+    data-testid="profile-skeleton"
+  />
+</div>
+`;

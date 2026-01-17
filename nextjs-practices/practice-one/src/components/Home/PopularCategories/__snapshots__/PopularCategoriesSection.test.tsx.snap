@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopularCategoriesSection should match snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="mt-[51px]"
+  >
+    <h2
+      class="text-[16px] lg:text-[32px] lg:leading-[32px] font-bold"
+    >
+      Up to -40% Discount Offers 🎊
+    </h2>
+    <div
+      class="mt-[29px] grid grid-cols-2 gap-[20px] rounded-xl border border-base lg:mt-[51px] lg:grid-cols-3 2xl:grid-cols-6"
+    >
+      <div
+        class="flex flex-col items-center"
+      >
+        <img
+          alt="Burgers & Fast food"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          data-nimg="1"
+          decoding="async"
+          height="203"
+          loading="lazy"
+          sizes="(max-width: 1023px) 189px, 238px"
+          src="/_next/image?url=%2Fimages%2Fburgers-fast.webp&w=3840&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fburgers-fast.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fburgers-fast.webp&w=3840&q=75 3840w"
+          style="color: transparent;"
+          width="238"
+        />
+        <div
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+        >
+          <p
+            class="font-bold leading-tight text-secondary"
+          >
+            Burgers & Fast food
+          </p>
+          <p
+            class="mt-[2px] text-[13px] text-primary lg:mt-[4px]"
+          >
+            21 Restaurants
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center"
+      >
+        <img
+          alt="Salads"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          data-nimg="1"
+          decoding="async"
+          height="203"
+          loading="lazy"
+          sizes="(max-width: 1023px) 189px, 238px"
+          src="/_next/image?url=%2Fimages%2Fsalads.webp&w=3840&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fsalads.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fsalads.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fsalads.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fsalads.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fsalads.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fsalads.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fsalads.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fsalads.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fsalads.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fsalads.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fsalads.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fsalads.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fsalads.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fsalads.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fsalads.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fsalads.webp&w=3840&q=75 3840w"
+          style="color: transparent;"
+          width="238"
+        />
+        <div
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+        >
+          <p
+            class="font-bold leading-tight text-secondary"
+          >
+            Salads
+          </p>
+          <p
+            class="mt-[2px] text-[13px] text-primary lg:mt-[4px]"
+          >
+            32 Restaurants
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center"
+      >
+        <img
+          alt="Pasta & Casuals"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          data-nimg="1"
+          decoding="async"
+          height="203"
+          loading="lazy"
+          sizes="(max-width: 1023px) 189px, 238px"
+          src="/_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=3840&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fpasta-casuals.webp&w=3840&q=75 3840w"
+          style="color: transparent;"
+          width="238"
+        />
+        <div
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+        >
+          <p
+            class="font-bold leading-tight text-secondary"
+          >
+            Pasta & Casuals
+          </p>
+          <p
+            class="mt-[2px] text-[13px] text-primary lg:mt-[4px]"
+          >
+            4 Restaurants
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center"
+      >
+        <img
+          alt="Pizza"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          data-nimg="1"
+          decoding="async"
+          height="203"
+          loading="lazy"
+          sizes="(max-width: 1023px) 189px, 238px"
+          src="/_next/image?url=%2Fimages%2Fpizza.webp&w=3840&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fpizza.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fpizza.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fpizza.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fpizza.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fpizza.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fpizza.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fpizza.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fpizza.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fpizza.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fpizza.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fpizza.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fpizza.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fpizza.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fpizza.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fpizza.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fpizza.webp&w=3840&q=75 3840w"
+          style="color: transparent;"
+          width="238"
+        />
+        <div
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+        >
+          <p
+            class="font-bold leading-tight text-secondary"
+          >
+            Pizza
+          </p>
+          <p
+            class="mt-[2px] text-[13px] text-primary lg:mt-[4px]"
+          >
+            32 Restaurants
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center"
+      >
+        <img
+          alt="Breakfast"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          data-nimg="1"
+          decoding="async"
+          height="203"
+          loading="lazy"
+          sizes="(max-width: 1023px) 189px, 238px"
+          src="/_next/image?url=%2Fimages%2Fbreakfast.webp&w=3840&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fbreakfast.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbreakfast.webp&w=3840&q=75 3840w"
+          style="color: transparent;"
+          width="238"
+        />
+        <div
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+        >
+          <p
+            class="font-bold leading-tight text-secondary"
+          >
+            Breakfast
+          </p>
+          <p
+            class="mt-[2px] text-[13px] text-primary lg:mt-[4px]"
+          >
+            4 Restaurants
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center"
+      >
+        <img
+          alt="Soups"
+          class="h-[161px] w-full rounded-tl-xl rounded-tr-xl object-fill md:h-[203px] lg:h-[300px] 2xl:h-[203px] 2xl:w-[238px]"
+          data-nimg="1"
+          decoding="async"
+          height="203"
+          loading="lazy"
+          sizes="(max-width: 1023px) 189px, 238px"
+          src="/_next/image?url=%2Fimages%2Fsoups.webp&w=3840&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fsoups.webp&w=16&q=75 16w, /_next/image?url=%2Fimages%2Fsoups.webp&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fsoups.webp&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fsoups.webp&w=64&q=75 64w, /_next/image?url=%2Fimages%2Fsoups.webp&w=96&q=75 96w, /_next/image?url=%2Fimages%2Fsoups.webp&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fsoups.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fsoups.webp&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fsoups.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fsoups.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fsoups.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fsoups.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fsoups.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fsoups.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fsoups.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fsoups.webp&w=3840&q=75 3840w"
+          style="color: transparent;"
+          width="238"
+        />
+        <div
+          class="flex w-full flex-col rounded-bl-xl rounded-br-xl bg-gray-100 px-[18px] py-[7px] text-[13px] leading-[18px] lg:text-[18px]"
+        >
+          <p
+            class="font-bold leading-tight text-secondary"
+          >
+            Soups
+          </p>
+          <p
+            class="mt-[2px] text-[13px] text-primary lg:mt-[4px]"
+          >
+            32 Restaurants
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

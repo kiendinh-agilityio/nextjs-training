@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RestaurantsCard should match snapshot 1`] = `
+<DocumentFragment>
+  <a
+    href="/product-detail/1"
+  >
+    <div
+      data-testid="card"
+    >
+      <div
+        class="flex h-[170px] flex-col justify-evenly text-black lg:pt-[19px]"
+      >
+        <p
+          class="mb-6 text-sm font-semiBold leading-[23px] md:text-xl lg:h-[46px]"
+        >
+          Pizza
+        </p>
+        <p
+          class="mb-3 font-base text-xs leading-[25px] md:text-sm lg:h-[90px]"
+        >
+          Delicious pizza
+        </p>
+        <p
+          class="text-lg font-bold leading-[18px]"
+        >
+          $10.00
+        </p>
+      </div>
+      <div
+        class="relative h-40 w-40 flex-shrink-0"
+      >
+        <img
+          alt="Pizza"
+          class="rounded-xl object-cover"
+          src="/pizza.jpg"
+        />
+        <button
+          aria-label="Button add to cart"
+          class="absolute bottom-0 right-0 z-10 h-[49px] w-[49px] rounded-full p-0 shadow-lg"
+          variant="secondary"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-plus h-[25px] w-[25px]"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12h14"
+            />
+            <path
+              d="M12 5v14"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </a>
+</DocumentFragment>
+`;

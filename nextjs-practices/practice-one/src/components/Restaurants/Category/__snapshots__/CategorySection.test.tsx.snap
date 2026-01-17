@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategorySection matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="mb-12 flex w-full items-center justify-center bg-primary py-6 lg:mb-[71px]"
+  >
+    <div
+      class="flex w-full gap-8 px-4 2xl:justify-center overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] 2xl:overflow-x-visible [&::-webkit-scrollbar]:hidden"
+    >
+      <a
+        class="flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none bg-neutral-950 text-white"
+        href="/restaurant"
+      >
+        Offers
+      </a>
+      <a
+        class="flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none bg-transparent text-white"
+        href="/restaurant?category=Burgers"
+      >
+        Burgers
+      </a>
+      <a
+        class="flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none bg-transparent text-white"
+        href="/restaurant?category=Fries"
+      >
+        Fries
+      </a>
+      <a
+        class="flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none bg-transparent text-white"
+        href="/restaurant?category=Breakfast"
+      >
+        Breakfast
+      </a>
+      <a
+        class="flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none bg-transparent text-white"
+        href="/restaurant?category=Salads"
+      >
+        Salads
+      </a>
+      <a
+        class="flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none bg-transparent text-white"
+        href="/restaurant?category=Cold%20drinks"
+      >
+        Cold drinks
+      </a>
+      <a
+        class="flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none bg-transparent text-white"
+        href="/restaurant?category=Desserts"
+      >
+        Desserts
+      </a>
+      <a
+        class="flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none bg-transparent text-white"
+        href="/restaurant?category=McCafe"
+      >
+        McCafe
+      </a>
+      <a
+        class="flex-shrink-0 rounded-full px-8 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none bg-transparent text-white"
+        href="/restaurant?category=Sauces"
+      >
+        Sauces
+      </a>
+    </div>
+  </section>
+</DocumentFragment>
+`;

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getOrderedCategories matches snapshot for normal case 1`] = `
+[
+  [
+    "A",
+    [
+      {
+        "category": "A",
+        "description": "",
+        "id": "1",
+        "image": "",
+        "name": "A",
+        "price": "",
+      },
+    ],
+  ],
+  [
+    "B",
+    [
+      {
+        "category": "B",
+        "description": "",
+        "id": "2",
+        "image": "",
+        "name": "B",
+        "price": "",
+      },
+    ],
+  ],
+]
+`;

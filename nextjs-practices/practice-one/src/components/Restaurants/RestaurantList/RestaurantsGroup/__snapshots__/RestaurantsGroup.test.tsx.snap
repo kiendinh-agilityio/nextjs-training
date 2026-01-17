@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RestaurantsGroup renders all categories: all categories 1`] = `
+<DocumentFragment>
+  <section
+    class="container mx-auto flex flex-col gap-32 sm:px-0"
+  >
+    <div
+      class="flex flex-col gap-32"
+    >
+      <div>
+        <h2
+          class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
+        >
+          Pizza
+        </h2>
+        <div
+          class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+        />
+      </div>
+      <div>
+        <h2
+          class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
+        >
+          Burgers
+        </h2>
+        <div
+          class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+        />
+      </div>
+      <div>
+        <h2
+          class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
+        >
+          Breakfast
+        </h2>
+        <div
+          class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`RestaurantsGroup renders nothing if categories is empty: empty data 1`] = `
+<DocumentFragment>
+  <section
+    class="container mx-auto flex flex-col gap-32 sm:px-0"
+  >
+    <div
+      class="flex flex-col gap-32"
+    />
+  </section>
+</DocumentFragment>
+`;
+
+exports[`RestaurantsGroup renders only one category if filtered: filtered category 1`] = `
+<DocumentFragment>
+  <section
+    class="container mx-auto flex flex-col gap-32 sm:px-0"
+  >
+    <div
+      class="flex flex-col gap-32"
+    >
+      <div>
+        <h2
+          class="text-[44px] leading-[44px] font-bold mb-[40px] text-primary"
+        >
+          Burgers
+        </h2>
+        <div
+          class="grid grid-cols-1 gap-[20px] lg:grid-cols-2 2xl:grid-cols-3"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

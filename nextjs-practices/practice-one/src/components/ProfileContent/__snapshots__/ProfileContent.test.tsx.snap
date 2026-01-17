@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileContent should render loading state and match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto flex min-h-screen flex-col items-start pt-12 sm:px-0"
+  >
+    <h1
+      as="h1"
+      class="mb-12"
+      data-testid="heading-mock"
+    >
+      Profile
+    </h1>
+    <div
+      data-testid="profile-skeleton-mock"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProfileContent should render profile info and logout button, match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto flex min-h-screen flex-col items-start pt-12 sm:px-0"
+  >
+    <h1
+      as="h1"
+      class="mb-12"
+      data-testid="heading-mock"
+    >
+      Profile
+    </h1>
+    <div
+      class="mx-auto flex w-full max-w-3xl flex-col overflow-hidden rounded-xl bg-white shadow-base"
+    >
+      <div
+        data-testid="profile-header-mock"
+      >
+        /test-avatar.png-Kien Dinh
+      </div>
+      <div
+        class="flex flex-col items-center bg-gray-270 px-8 pb-8"
+      >
+        <div
+          class="flex w-full justify-center"
+        >
+          <div
+            data-testid="account-info-card-mock"
+          >
+            kien@example.com-0123456789-123 Main St
+          </div>
+        </div>
+        <div
+          class="mt-8 flex w-full justify-center gap-4 md:justify-end"
+        >
+          <button
+            aria-label="Logout"
+            class="rounded-md px-12 py-2"
+            data-testid="button-mock"
+            type="submit"
+            variant="primary"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

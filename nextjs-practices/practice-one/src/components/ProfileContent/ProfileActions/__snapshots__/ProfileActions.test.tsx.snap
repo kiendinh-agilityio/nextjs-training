@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileActions should match snapshot when logging out 1`] = `
+<DocumentFragment>
+  <div
+    class="mt-8 flex w-full justify-center gap-4 md:justify-end"
+  >
+    <button
+      aria-label="Logout"
+      class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-primary text-white hover:bg-orange-600 h-[61px] text-[18px] leading-[24px] rounded-md px-12 py-2"
+      disabled=""
+      type="submit"
+    >
+      Logging out...
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProfileActions should match snapshot when not logging out 1`] = `
+<DocumentFragment>
+  <div
+    class="mt-8 flex w-full justify-center gap-4 md:justify-end"
+  >
+    <button
+      aria-label="Logout"
+      class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none bg-primary text-white hover:bg-orange-600 h-[61px] text-[18px] leading-[24px] rounded-md px-12 py-2"
+      type="submit"
+    >
+      Logout
+    </button>
+  </div>
+</DocumentFragment>
+`;
